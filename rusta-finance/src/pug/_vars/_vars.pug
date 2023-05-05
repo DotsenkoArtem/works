@@ -1,0 +1,54 @@
+//- Common variables
+-
+  let author = 'Artem Dots'
+  let themeColor = '#ffffff'
+
+  // Если требуется заглушка для Internet Explorer
+  let ieBung = false
+
+  //- Массив наименований шрифтов для перебора в head.pug и предзагрузки
+  let fontsPreload = [
+    'sitka-regular.woff2',
+    'avenirnextcyr-regular.woff2',
+    'avenirnextcyr-medium.woff2',
+    'avenirnextcyr-bold.woff2'
+    ]
+  
+  //- ! URL определяется автоматом в миксине "меню" : pages-key+.html
+  let pages = {
+    index: {
+      name:   'главная',
+      url: '#',
+      title:  'Главная - Руста Финанс',
+      descr:  'Краткое описание главной страницы',
+      author:  author,
+    },
+    page2: {
+      name:   'О компании',
+      url: '#about',
+      title:  'Проект - вторая',
+      descr:  'Краткое описание страницы-2',
+      author:  author,
+    },
+    page3: {
+      name:   'Условия договора',
+      url: '#consult',
+      title:  'Проект - третья',
+      descr:  'Краткое описание страницы-3',
+      author:  author,
+    },
+    page4: {
+      name:   'Реквизиты',
+      url: '#requisites',
+      title:  'Проект - четвертая',
+      descr:  'Краткое описание страницы-4',
+      author:  author,
+    },
+    'page-grid-test': {
+      name:   'Контакты',
+      url: '#location',
+      title:  'Проект - Grid-Test',
+      descr:  'Страница для разработки и тестирования сетки',
+      author:  author,
+    },
+  };

@@ -1,0 +1,65 @@
+header.header#header
+
+
+  .navbar 
+    .navbar-top 
+      .container.navbar-top__container
+        a(href="#") 
+          .logo.navbar__logo
+            picture
+              source(srcset='img/logo.webp', type='image/webp')
+              |
+              |
+              img(src='img/logo.png', alt='Лого')
+        .navbar__contacts 
+          .contact-link.contact-link_mail 
+            .contact-link__icon
+              i.svg-envelop-icon.svg-envelop-icon-dims 
+            a(href="mailto:info@rusta–financ.ru") info@rusta–financ.ru
+          .contact-link.contact-link_phone
+            .contact-link__icon
+              i.svg-phone-icon.svg-phone-icon-dims  
+            a(href="tel:+74872751052") +7 (4872) 75–10–52
+
+
+        .navbar-mobile-trigger.js-navbar-mobile-trigger
+          .navbar-mobile-trigger__item
+          .navbar-mobile-trigger__item
+          .navbar-mobile-trigger__item
+
+    .navbar-bottom
+      .container.navbar-bottom__container
+        nav.navbar-mobile.js-navbar-mobile
+          .navbar-mobile__inner
+            //- .navbar-mobile__header
+              //- .navbar-mobile-logo.nav-bar__logo 
+                picture
+                  source(media='(max-width: 414.98px)', srcset='img/415/logo-260x53.webp', type='image/webp')
+                  source(media='(max-width: 414.98px)', srcset='img/415/logo-260x53.png', type='image/png')
+                  source(srcset='img/logo.webp', type='image/webp')
+                  |
+                  |
+                  img(src='img/logo.png', alt='Лого')
+
+
+              //- .navbar-mobile-trigger-wrap
+
+
+            +topMenu
+
+            .navbar-mobile__footer 
+              .navbar-mobile__contacts 
+                .contact-link.contact-link_mail.js-menu-item
+                  .contact-link__icon
+                    i.svg-envelop-icon.svg-envelop-icon-dims 
+                  a(href="mailto:info@rusta–financ.ru") info@rusta–financ.ru
+                .contact-link.contact-link_phone.js-menu-item
+                  .contact-link__icon
+                    i.svg-phone-icon.svg-phone-icon-dims  
+                  a(href="tel:+74872751052") +7 (4872) 75–10–52
+
+              button.btn.btn_primary.navbar-mobile-get-consult.js-modal-trigger.js-menu-item(data-target="getConsult") Получить консультацию
+        //- .navbar-mobile-overl.js-overl
+
+        button.btn.btn_primary.navbar-get-consult.js-modal-trigger(data-target="getConsult") Получить консультацию
+

@@ -1,0 +1,7 @@
+//- TOP MENU - 1 level
+mixin topMenu 
+  ul.top-menu
+    each menuItem, key in pages
+      if key !== 'index'
+        li.top-menu__item.js-menu-item(class= (menuItem.name == page.name) ? 'menu__item_current': '')
+          a(href= `${menuItem.url}`)= menuItem.name

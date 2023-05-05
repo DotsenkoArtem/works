@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <!--  Basic Page Needs ==============================================-->
+    <meta charset="UTF-8">
+    <title>Проект - Grid-Test</title>
+    <meta name="description" content="Страница для разработки и тестирования сетки">
+    <meta name="author" content="Artem Dots">
+    <meta name="robots" content="index, nofollow">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!--  Fonts preload ==================================================-->
+    <link rel="preload" as="font" href="fonts/sitka-regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/avenirnextcyr-regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/avenirnextcyr-medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/avenirnextcyr-bold.woff2" type="font/woff2" crossorigin="anonymous">
+    
+    <!--  Mobile Specific Metas ==================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--  CSS ==================================================-->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--  Favicons ==================================================-->
+    <link rel="icon" href="img/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" type="image/png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body> 
+    <div class="preloader" id="preloader"></div>
+    <div class="wrapper" id="wrapper">
+      
+      
+      <!--  Header ================================================== -->
+      <header class="header" id="header">
+        <div class="navbar"> 
+          <div class="navbar-top"> 
+            <div class="container navbar-top__container"><a href="#"> 
+                <div class="logo navbar__logo">
+                  <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img src="img/logo.png" alt="Лого">
+                  </picture>
+                </div></a>
+              <div class="navbar__contacts"> 
+                <div class="contact-link contact-link_mail"> 
+                  <div class="contact-link__icon"><i class="svg-envelop-icon svg-envelop-icon-dims"> </i></div><a href="mailto:info@rusta–financ.ru">info@rusta–financ.ru</a>
+                </div>
+                <div class="contact-link contact-link_phone">
+                  <div class="contact-link__icon"><i class="svg-phone-icon svg-phone-icon-dims"> </i></div><a href="tel:+74872751052">+7 (4872) 75–10–52</a>
+                </div>
+              </div>
+              <div class="navbar-mobile-trigger js-navbar-mobile-trigger">
+                <div class="navbar-mobile-trigger__item"></div>
+                <div class="navbar-mobile-trigger__item"></div>
+                <div class="navbar-mobile-trigger__item"></div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-bottom">
+            <div class="container navbar-bottom__container">
+              <nav class="navbar-mobile js-navbar-mobile">
+                <div class="navbar-mobile__inner">
+                    <ul class="top-menu">
+                      <li class="top-menu__item js-menu-item"><a href="#about">О компании</a></li>
+                      <li class="top-menu__item js-menu-item"><a href="#consult">Условия договора</a></li>
+                      <li class="top-menu__item js-menu-item"><a href="#requisites">Реквизиты</a></li>
+                      <li class="top-menu__item js-menu-item menu__item_current"><a href="#location">Контакты</a></li>
+                    </ul>
+                  <div class="navbar-mobile__footer"> 
+                    <div class="navbar-mobile__contacts"> 
+                      <div class="contact-link contact-link_mail js-menu-item">
+                        <div class="contact-link__icon"><i class="svg-envelop-icon svg-envelop-icon-dims"> </i></div><a href="mailto:info@rusta–financ.ru">info@rusta–financ.ru</a>
+                      </div>
+                      <div class="contact-link contact-link_phone js-menu-item">
+                        <div class="contact-link__icon"><i class="svg-phone-icon svg-phone-icon-dims"> </i></div><a href="tel:+74872751052">+7 (4872) 75–10–52</a>
+                      </div>
+                    </div>
+                    <button class="btn btn_primary navbar-mobile-get-consult js-modal-trigger js-menu-item" data-target="getConsult">Получить консультацию</button>
+                  </div>
+                </div>
+              </nav>
+              <button class="btn btn_primary navbar-get-consult js-modal-trigger" data-target="getConsult">Получить консультацию</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <main>
+        <!--
+        Section-name
+        ==================================================
+        -->
+        <section class="section" style="padding-bottom: 20px">
+          <div class="container">
+            <h1 style="text-align: center; font-size: 35px;">My Grid System</h1>
+          </div>
+          <div class="container"> 
+            <div class="row" style="box-shadow: 0 0 0 1px rgba(0, 0, 0, .85); background-color: rgba(220, 220, 220, .75)">
+              <div class="col col-2_xl col_lg col-6_md col_sm" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)">.col.col-2_xl.col_lg.col-6_md.col_sm</div>
+              <div class="col col-2_xl col_lg col-6_md col_sm" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)">.col.col-2_xl.col_lg.col-6_md.col_sm</div>
+              <div class="col col-2_xl col_lg col-6_md col_sm" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)">.col.col-2_xl.col_lg.col-6_md.col_sm</div>
+            </div><br><br>
+            <div class="row" style="box-shadow: 0 0 0 1px rgba(0, 0, 0, .85); background-color: rgba(220, 220, 220, .75)">
+              <div class="offset-4 col-3 offset-1_lg col-3_lg" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)">col-3</div>
+              <div class="col-3" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)">col-3</div>
+              <div class="col-3" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)">col-3</div>
+            </div><br><br>
+          </div>
+          <div class="container"> 
+            <div class="col-3_xl" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)"></div>
+            <div class="col-3_xl" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)"></div>
+            <div class="col-3_xl" style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)"></div>
+          </div>
+        </section>
+      </main>
+      
+      <!--  Footer ================================================== -->
+      
+    </div>
+    
+    <!-- Scripts ================================================== -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

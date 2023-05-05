@@ -1,0 +1,749 @@
+@use '_partials/variables' as v
+@use '_partials/mixins' as m
+
+@import "comments.sass"
+@import "fonts.sass"
+@import "default.sass"
+
+@import "grid.sass"
+
+/* V. Sprite
+ --------------------------------------- */ 
+
+/* 1. Sprite:svg 
+ -------------------------*/
+// Для добавления svg-спрайтов: необходимо только задать нужный класс а html.
+// например     i.svg-icons.svg-icons-dims
+@import "../../../tmp/sass/sprite-svg.scss"
+
+/* 2. Sprite:png  
+ -------------------------*/
+// sass-свойства спрайтов не добавлены по умочанию, свойство каждого спрайта нужно добавлять отдельно.
+// Для добавления png-спрайтов:
+//      - добавить в html разметку
+//                                  div.sprite-class либо 
+//                                  i.sprite-class
+//      - добавить в sass-файл свойство 
+//                                   .icon-home 
+//                                          @include sprite($icon-email)
+//                                  
+// 
+
+@import "../../../tmp/sass/sprite-png.sass"
+
+// Sprite:png styles
+// .icon-email 
+//   @include sprite($icon-email)
+// 
+
+.house-blue
+  +sprite($house-blue)
+
+.sad-icon
+  +sprite($sad-icon)
+
+.chrome
+  +sprite($chrome)
+
+.yandex
+  +sprite($yandex)
+
+.firefox
+  +sprite($firefox)
+
+.opera
+  +sprite($opera)
+
+.edge
+  +sprite($edge)
+
+// Здесь будут основные стили проекта
+
+/* VI. Layout
+ --------------------------------------- */
+
+  
+/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
+// Texts
+.text-content_light
+  color: v.$text-light
+// Backgrounds
+.bg
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: -1
+
+  img
+    display: block
+    width: 100%
+    height: 100%
+  
+  &_cover
+    img
+      object-fit: cover
+  
+  &_contain
+    img
+      object-fit: contain
+
+.section
+  overflow: hidden
+  &_p-top
+    padding-top: 10rem
+  &__img
+    position: absolute
+    z-index: 1
+
+.col
+  padding: 0 v.$gutter
+  flex: 1
+
+.preloader
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 9999
+  background: #fff
+
+  &.fade-out
+    opacity: 0
+
+/* HEADER */
+.navbar
+  &-top,
+  &-bottom
+    padding-top: 1rem
+    padding-bottom: 1rem
+    &__container
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-top
+    border-bottom: 1px solid #D9D9D9
+  &-mobile
+    &-logo,
+    &__footer,
+    &-overl,
+    &__contacts,
+    &-get-consult,
+    &-trigger
+      display: none
+  &__logo
+    width: 100%
+    max-width: 29.5rem
+    overflow: hidden
+  &__contacts
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.contact-link
+  display: flex
+  align-items: center
+  font-weight: 500
+  transition: opacity .3s
+  &:hover,
+  &:active
+    opacity: 0.8
+  &:not(:last-child) 
+    margin-right: 3rem
+
+  &__icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 3.8rem
+    height: 3.8rem
+    border-radius: 50%
+    border: 1px solid v.$primary-color
+    
+  a
+    margin-left: 1rem
+  &_mail
+    a
+      font-size: 1.9rem 
+  &_phone
+    a
+      font-size: 1.8rem
+
+
+
+.top-menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__item
+    transition: opacity .3s
+    &:not(:last-child) 
+      margin-right: 3rem
+    &:hover,
+    &:active
+      opacity: 0.8
+    a 
+      font:
+        size: 1.8rem
+        weight: 500
+      text-transform: uppercase
+
+
+
+
+/* HERO */
+.hero
+  padding-top: 16.4rem
+  padding-bottom: 16.4rem
+  position: relative
+  &__container
+    position: relative
+    z-index: 1
+    h1
+      max-width: 78rem
+  &__img 
+    bottom: 0
+    left: calc(50% + 19rem)
+    img
+      max-width: 37.2rem
+  &-bg
+    &-filter
+      background: linear-gradient(90deg, #FFFFFF 9.89%, rgba(255, 255, 255, 0) 100%)
+
+
+/* ABOUT */
+.about
+  &__img,
+  &__heading
+    margin-bottom: 3rem
+  &__text
+    margin-bottom: 5rem
+
+
+
+/* REQUISITES */
+.requisites
+  &__heading 
+    margin-bottom: 3rem
+  &-table
+    &__caption 
+      margin-bottom: 2.2rem
+      color: v.$text-accent
+      h3
+        font:
+          family: v.$ff-primary
+          size: 25px
+          weight: 500
+    &__row
+      display: flex
+      padding-top: 1.4rem
+      padding-bottom: 1.4rem
+      border-bottom: solid 1px v.$border-color
+      &:first-child
+        border-top: solid 1px v.$border-color
+
+    &__value
+      flex: 1
+    &__value
+      padding-left: 6.5rem
+      width: 55%
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+    &__prop
+      width: 52.5rem
+      font-weight: 500
+
+/* REQUEST */
+.request
+  padding-bottom: 10rem
+  &-row 
+    display: flex
+  // &__img,
+  // &__form
+  //   flex: 1
+  &__img
+    margin-top: #{v.$gutter - .5}
+    margin-left: v.$gutter
+    position: relative
+    
+    display: block
+    img
+      width: 52.5rem
+    
+  &__content
+    padding-top: 3.5rem
+    padding-left: 5rem
+    flex: 1
+  &__heading 
+    margin-bottom: 1.2rem
+  &__text 
+    margin-bottom: 3rem
+  &__form
+    padding-left: v.$gutter
+    // width: 55%
+  &-form
+    &-row
+      display: flex
+      &__col
+        width: 50%
+        flex: 1
+        &:not(:last-child)
+          margin-right: 1.5rem
+
+.img-frame__before
+  &::before
+    content: ''
+    position: absolute
+    width: 97%
+    height: 95%
+    top: -#{v.$gutter}
+    left: -#{v.$gutter}
+    z-index: -1
+    border-radius: 1.3rem
+    border: 3px solid v.$text-accent
+  
+
+
+
+/* LOCATION */
+.location
+  position: relative
+  height: 44.5vw
+  background: #EDEDED
+  &__label
+    position: absolute
+    top: 15%
+    left: calc(50% + 12rem)
+    padding: 3rem 3rem 3.5rem 3rem
+    width: 48rem
+    background: #ffffff
+    border-radius: 1.2rem
+  &__heading
+    margin-bottom: 1.5rem
+    font:
+      family: v.$ff-headings
+      size: 2.6rem
+      weight: 400
+  &__data 
+    font:
+      size: 1.9rem
+      weight: 400
+  &-prop
+    font-weight: 500
+  &__phone,
+  &__mail
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  &__address
+    margin-bottom: 2rem
+  &__phone
+    margin-bottom: 1.5rem
+  
+
+
+
+
+/* FOOTER */
+.footer
+  &-top
+    padding-top: 4rem
+    padding-bottom: 4.5rem
+  &__logo-nav
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 4rem
+  &__logo
+    width: 100%
+    max-width: 34.3rem  
+    img
+      width: 117%
+  &-menu
+    ul
+      display: flex
+    &__item
+      &:not(:last-child) 
+        margin-right: 3rem
+      a
+        font-size: 1.9rem
+        font-weight: 500
+        text-transform: uppercase
+        color: v.$text-primary-color
+  &__contacts 
+    display: flex
+    font-size: 2.5rem
+    font-weight: 400
+    &-link
+      &:not(:last-child)
+        margin-right: 3rem
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+  &-bottom
+    padding-top: 2rem
+    padding-bottom: 2rem
+    font:
+      size: 1.8rem
+    border-top: 1px solid #D9D9D9
+
+.modal 
+  padding: 2rem
+  display: flex
+  align-items: flex-start
+  width: 100vw
+  height: 100vh
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 999
+  overflow: auto
+  opacity: 0
+  visibility: hidden
+  &__content
+    margin-top: 20rem
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    // flex-direction: column
+    max-width: 46rem
+    // max-height: 80%
+    height: 65.5rem
+    position: relative
+    z-index: 1001
+    border-radius: 1.2rem
+    // background-color: v.$modal-content-bg
+    font-size: 1.6rem
+    line-height: 1.2
+    opacity: 0
+    
+    &-inner
+      display: flex
+      flex-direction: column
+      padding: 3rem 3rem 3.5rem 3rem
+      width: 100%
+      height: 100%
+      border-radius: 1.2rem
+      background-color: v.$modal-content-bg
+      overflow: auto
+
+  &__header
+    margin-bottom: 3rem
+    padding-right: 2.5rem
+    position: relative
+    .modal__title 
+      margin-bottom: 1.2rem
+      font:
+        family: v.$ff-headings
+        size: 3.6rem
+        weght: 400
+    p
+      font:
+        size: 2rem
+        weght: 400
+
+
+  &__body
+    // margin-bottom: 5rem
+    flex-grow: 1
+    text-align: justify
+    overflow: auto
+
+  &__footer
+    padding-top: 0rem
+
+  &__close
+    padding: 0
+    width: 2.5rem
+    height: 2.5rem
+    position: absolute
+    top: -6%
+    right: -8%
+    border: none
+    background: none
+
+  &-close
+    &__item
+      display: block
+      width: 2.3rem
+      height: 2px
+      position: absolute
+      left: 0
+      top: 50%
+      border-radius: 2px
+      background-color: v.$modal-close-item-bg
+      transition: background-color .3s
+      &:first-child
+        transform: rotate(45deg)
+
+      &:last-child
+        transform: rotate(-45deg)
+
+
+    &:hover
+      .modal
+        &-close
+          &__item
+            background-color: v.$modal-close-item-bg-hover
+
+  &__overlay
+    display: block
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1000
+    background-color: v.$modal-overlay-bg
+    opacity: 0
+    visibility: hidden
+
+
+  &.opened
+    animation: fadeIn .5s ease-out forwards
+    .modal
+      &__content
+        animation: slideUpIn .3s ease-out forwards
+
+      &__overlay
+        animation: fadeIn 0.5s ease forwards
+
+
+
+  &.closed
+    animation: fadeOut .5s ease-in forwards
+    .modal
+      &__content
+        animation: slideUpOut .3s ease-in forwards
+
+      &__overlay
+        animation: fadeOut .5s ease-in forwards
+
+
+
+.get-consult
+  &__form
+    &-control-group
+      margin-bottom: 2rem
+      &:last-child
+        margin-bottom: 2.5rem
+    &-message-group
+      margin-bottom: 5rem
+    &-control
+      width: 100%
+    &-message
+      height: 14rem
+
+
+
+
+/* ANIMATIONS
+  ------------------------------  */
+
+@keyframes fadeIn 
+  from 
+    visibility: hidden
+    opacity: 0
+
+  to 
+    visibility: visible
+    opacity: 1
+
+
+@keyframes fadeOut 
+  from 
+    visibility: visible
+    opacity: 1
+
+  to 
+    visibility: hidden
+    opacity: 0
+
+
+@keyframes slideUpIn 
+  from 
+    opacity: 0
+    visibility: hidden
+    transform: translateY(10%)
+    
+  to 
+    opacity: 1
+    visibility: visible
+    transform: translateY(0%)
+
+
+@keyframes slideUpOut 
+  from 
+    opacity: 1
+    visibility: visible
+    transform: translateY(0%)
+    
+  to 
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10%)
+
+
+
+
+
+
+
+
+.thanks
+  padding: 1em
+  display: flex
+  justify-content: center
+  align-items: center
+  width: calc( 100% - 3rem )
+  max-width: 17em
+  position: fixed
+  right: 1.5rem
+  bottom: 1.5rem
+  text-align: center
+  border-radius: 15px
+  box-shadow: 0 15px 55px 0px rgba(0, 0, 0, .35)
+  opacity: 1
+  z-index: 99999
+
+.thanks_success
+  color: #146c43
+  border: solid 1px #a3cfbb
+  background: rgb(209, 232, 222)
+
+
+.thanks_error
+  color: #b02a37
+  border: solid 1px #f1aeb5
+  background: #f8d7da
+
+
+.thanks__close
+  position: absolute
+  top: 1rem
+  right: 1rem
+  width: 2.4rem
+  height: 2.4rem
+  transition: transform .2s
+
+
+.thanks__close::before,
+.thanks__close::after
+  display: block
+  position: absolute
+  top: 50%
+  content: ''
+  width: 100%
+  height: 0.3rem
+  border-radius: 10px
+  background: rgb(75, 75, 75)
+  transition: background-color .2s
+
+
+.thanks__close::before
+  transform: rotate(45deg)
+
+
+.thanks__close::after
+  transform: rotate(-45deg)
+
+
+.thanks__close:hover
+  transform: scale(1.05)
+
+
+.thanks__close:hover.thanks__close::before,
+.thanks__close:hover.thanks__close::after
+  background: rgb(25, 25, 25)
+
+
+.thanks__close:active
+  transform: scale(1)
+  transition: transform 0s
+
+
+.thanks.active 
+  animation: slideInRightBottom .5s ease forwards
+
+
+
+.thanks h3 
+  font-size: 2rem
+  font-weight: 500
+  font-family: sans-serif
+
+.thanks span 
+  display: block
+  margin-bottom: 2rem
+
+.thanks h3 span 
+  font-weight: 700
+  font-size: 2.4rem
+
+
+
+
+
+.loader-container
+  position: relative
+  z-index: 50
+ 
+ 
+.submit-loader
+  display: block
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 55
+  background: rgba(255, 255, 255, .5) url('../img/loader.gif') center no-repeat
+  background-size: 100px 100px
+  border-radius: 10px
+
+
+@keyframes slideInRightBottom 
+  from 
+    opacity: .5
+    transform: translateX(150%)
+
+  to 
+    opacity: 1
+    transform: translateX(0)
+ 
+@keyframes slideOutRightBottom 
+  from 
+    opacity: 1
+    transform: translateX(0)
+  to 
+    opacity: .5
+    transform: translateX(150%)
+
+
+
+
+
+/* ANIMATIONS
+ ------------------------------  */
+// !!! Добавляется любой пустой селектор перед @import, так как после использования @include в свойствах выше директива @import смещается на один tab и некорректно отрабатывает импорт
+// ! То есть, после @include следует запускать @import только после объявления нормаьного свойства
+.fake-class-to-add-import-rule
+  visibility: inherit
+
+@import "animations"
+@import "media-queries"
+@import "gte-ie10-style"

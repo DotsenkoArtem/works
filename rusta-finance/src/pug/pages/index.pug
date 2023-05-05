@@ -1,0 +1,206 @@
+extends ../_templates/_base.pug
+
+block page-vars
+    -
+        let page = pages.index;
+
+
+//- block head
+//-     h2 Wow, Block Head is undefined!
+
+
+//- block header
+//-     h2 Wow, Block Header is undefined!
+
+
+block main 
+    main
+
+        //  Section-HERO ================================================== 
+        section.section.hero
+            .container.hero__container
+                h1
+                    span.text-accent.d-block_md Поможем 
+                    span.d-block_md в погашении кредита перед Банком 
+                    span.text-accent в случае наступления финансовых трудностей 
+
+            .bg.bg_cover
+                picture
+                    source(media='(max-width: 767.98px)' srcset='img/415/hero-bg-375x932.jpg' type='image/jpg')
+                    |
+                    |
+                    img(src="img/hero-bg.jpg" alt="")
+            .bg.hero-bg-filter
+            .section__img.hero__img 
+                picture
+                    source(media='(max-width: 767.98px)' srcset='img/415/hero-woman-306x432.webp' type='image/webp')
+                    source(media='(max-width: 767.98px)' srcset='img/415/hero-woman-306x432.png' type='image/png')
+                    source(srcset='img/hero-woman.webp' type='image/webp')
+                    |
+                    |
+                    img(src='img/hero-woman.png' alt='Девушка')
+
+
+
+
+        //  Section-ABOUT ================================================== 
+        .section.section_p-top.about#about
+            .container.about__container
+                .row.about__row
+                    .col.abou__item
+                        .about__img 
+                            i.svg-about-icon.svg-about-icon-dims 
+                        .about__heading 
+                            h3 О компании
+                        .about__text 
+                            p Наша компания выступает Гарантом по обязательствам Заемщика перед Кредитором. В случае возникновения у Заемщика финансовых трудностей, РУСТА Финанс сохранит его платежеспособность, не допустит просрочки по кредиту, осуществит необходимые выплаты и сохранит его положительную кредитную историю.
+
+                    .col.abou__item
+                        .about__img 
+                            i.svg-agree-icon.svg-agree-icon-dims 
+                        .about__heading 
+                            h3 Гарантия
+                        .about__text 
+                            p Независимая гарантия – простая и понятная услуга, которая предоставляется компанией–Гарантом (ООО «РУСТА Финанс»), готовой осуществить выплату Банку–кредитору в тех случаях, когда владелец этой услуги (Заемщик) не может исполнять свои обязательства по кредиту по причине потери работы.
+                div 
+                    button.btn.btn_primary.btn_lg.js-modal-trigger(data-target="getConsult") Получить консультацию
+
+
+
+
+
+        //  Section-REQUISITES ================================================== 
+        .section.section_p-top.requisites#requisites
+            .container.requisites__container
+                .requisites__heading 
+                    h2 Реквизиты компании
+                .requisites-table
+                    .requisites-table__caption 
+                        h3 «ООО "РУСТА ФИНАНС»
+                    .requisites-table__body 
+                        // 1
+                        .requisites-table__row
+                            .requisites-table__prop Наименование в соответствии с учредительными документами
+                            .requisites-table__value Общество с ограниченной ответственностью «ООО "РУСТА ФИНАНС»
+                        // 2
+                        .requisites-table__row
+                            .requisites-table__prop Юридический адрес
+                            .requisites-table__value 195112, Санкт–Петербург г, Новочеркасский пр–кт, дом № 32, корпус 1, литера А, помещение 11-H
+                        // 3
+                        .requisites-table__row
+                            .requisites-table__prop Email
+                            .requisites-table__value 
+                                a(href="mailto:info@rusta-financ.ru") info@rusta–financ.ru
+                                    
+                        // 4
+                        .requisites-table__row
+                            .requisites-table__prop Телефон (факс)
+                            .requisites-table__value
+                                a(href="tel:+74872751052") +7 (4872) 75–10–52
+                                    
+                        // 5
+                        .requisites-table__row
+                            .requisites-table__prop ИНН
+                            .requisites-table__value 7806235184
+                        // 6
+                        .requisites-table__row
+                            .requisites-table__prop КПП
+                            .requisites-table__value 780601001
+                        // 7
+                        .requisites-table__row
+                            .requisites-table__prop ОГРН
+                            .requisites-table__value 1167847205866
+                        // 8
+                        .requisites-table__row
+                            .requisites-table__prop Расчетный счет
+                            .requisites-table__value 40702810932000006670 в Филиале «Санкт-Петербургский» АО «АЛЬФА–БАНК»
+                        // 9
+                        .requisites-table__row
+                            .requisites-table__prop Корр. Счет
+                            .requisites-table__value 30101810600000000786
+                        // 10
+                        .requisites-table__row
+                            .requisites-table__prop БИК банка
+                            .requisites-table__value 044030786
+
+
+        //  Section-REQUEST ================================================== 
+        .section.section_p-top.request#consult
+            .container.request__container
+                .request-row 
+                    .request__img.img-frame__before
+
+                        picture
+                            source(media='(max-width: 767.98px)' srcset='img/415/request-415.jpg' type='image/jpg')
+                            |
+                            |
+                            img(src='img/request.jpg' alt='')
+                    .request__content
+                        .request__heading 
+                            h2 
+                                | Получить 
+                                span.text-accent консультацию
+                        .request__text 
+                            p Государственные и муниципальные заказчики включают в свои тендеры требование
+                        .request-form 
+
+                            form.form.get-consult.loader-container
+
+                                .request-form-row
+                                    .form-group.get-consult__form-control-group.request-form-row__col
+                                        input#userName2.form-control.get-consult__form-control(type="text" placeholder="Имя" name="name" required)
+
+
+                                    .form-group.get-consult__form-control-group.request-form-row__col
+                                        input#uerPhone2.form-control.get-consult__form-control(type="text" placeholder="Телефон" name="phone" required)
+
+                                .form-group.get-consult__form-message-group
+                                    textarea#userMessage2.form-message.get-consult__form-message(name="message" cols="30" rows="10" placeholder="Сообщение")
+
+                                .form-group
+                                    button.btn.btn_primary.btn_lg(type="submit") Получить консультацию
+
+
+
+
+
+        //  Section-LOCATION ================================================== 
+        .location#location
+            .location__label.d-none_md
+                .location__heading
+                    | Наши 
+                    span.text-accent контакты
+                .location__data 
+
+                    div.location__address
+                        span.location-prop Адрес: 
+                        span 195112, Санкт–Петербург г, Новочеркасский пр–кт, дом № 32, корпус 1, литера А, помещение 11-H
+
+                    div.location__phone
+                        span.location-prop Телефон: 
+                        a(href="tel:+74872751052")
+                            span +7 (4872) 75–10–52
+
+                    div.location__mail
+                        span.location-prop E–mal: 
+                        a(href="mailto:info@rusta-financ.ru")
+                            span info@rusta-financ.ru
+
+
+
+    |
+    |
+
+
+
+
+//- block footer
+//-     h2 Wow, Block Footer is undefined!
+
+
+//- block modals
+//-     h2 Wow, Block Modals is undefined!
+
+
+//- block scripts
+//-     h2 Wow, Block Scripts is undefined!

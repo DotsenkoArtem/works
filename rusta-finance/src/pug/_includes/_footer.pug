@@ -1,0 +1,78 @@
+footer.footer
+  
+  .footer-top
+    .container.footer__logo-nav
+      a(href="#")  
+        .footer__logo
+          picture
+            source(srcset='img/logo.webp', type='image/webp')
+            |
+            |
+            img(src='img/logo.png', alt='Лого')
+
+      nav.footer-menu
+        <ul>
+          <li class="footer-menu__item"><a href="#about">О компании</a></li>
+          <li class="footer-menu__item"><a href="#consult">Условия договора</a></li>
+          <li class="footer-menu__item"><a href="#requisites">Реквизиты</a></li>
+          <li class="footer-menu__item"><a href="#location">Контакты</a></li>
+        </ul>
+
+
+    .container
+      .footer__contacts 
+        .footer__contacts-link
+          a(href="tel:+74872751052") +7 (4872) 75–10–52
+        .footer__contacts-link
+          a(href="mailto:info@rusta–financ.ru") info@rusta–financ.ru
+
+
+  .footer-bottom
+    .container
+      p Любое ислользование материалов сданного сайта, допскается не иначе как с письменного разрешения его правообладателя – ИП Смирнова Татьяна Александровна 400403924165/320508100034147. В случае Использования материала с сайта и нарушение авторских и смежных прав, правообпадателя наказывается в соответствии со ст 146 УК РФ. Вся информация предоставленная на сайте ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ
+
+
+
+
+
+
+
+#getConsult.modal
+  .modal__content
+    button.modal-close.modal__close.js-modal-close
+      |
+      span.modal-close__item
+      |
+      |
+      span.modal-close__item
+
+    .modal__content-inner
+      .modal__header
+        .modal__title 
+          |Оставить 
+          span.text-accent заявку
+        p Государственные и муниципальные заказчики включают в свои тендеры требование
+
+
+      .modal__body
+        //- form.form.get-consult.loader-container(onsubmit="send(event, 'php/mail.php')")
+        form.form.get-consult.loader-container
+    
+          .form-group.get-consult__form-control-group
+            input#userName.form-control.get-consult__form-control(type="text" placeholder="Имя" name="name" required)
+
+
+          .form-group.get-consult__form-control-group
+            input#uerPhone.form-control.get-consult__form-control(type="text" placeholder="Телефон" name="phone" required)
+        
+          .form-group.get-consult__form-message-group
+            textarea#userMessage.form-message.get-consult__form-message(name="message" cols="30" rows="10" placeholder="Сообщение")
+    
+          .form-group
+            button#formSubmit.btn.btn_primary.btn_lg(type="submit") Получить консультацию
+      
+          //- <div id="myFormStatus"></div>
+      
+
+
+  .modal__overlay.js-modal-close

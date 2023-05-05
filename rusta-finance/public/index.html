@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <!--  Basic Page Needs ==============================================-->
+    <meta charset="UTF-8">
+    <title>Главная - Руста Финанс</title>
+    <meta name="description" content="Краткое описание главной страницы">
+    <meta name="author" content="Artem Dots">
+    <meta name="robots" content="index, nofollow">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!--  Fonts preload ==================================================-->
+    <link rel="preload" as="font" href="fonts/sitka-regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/avenirnextcyr-regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/avenirnextcyr-medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/avenirnextcyr-bold.woff2" type="font/woff2" crossorigin="anonymous">
+    
+    <!--  Mobile Specific Metas ==================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--  CSS ==================================================-->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--  Favicons ==================================================-->
+    <link rel="icon" href="img/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" type="image/png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body> 
+    <div class="preloader" id="preloader"></div>
+    <div class="wrapper" id="wrapper">
+      
+      
+      <!--  Header ================================================== -->
+      <header class="header" id="header">
+        <div class="navbar"> 
+          <div class="navbar-top"> 
+            <div class="container navbar-top__container"><a href="#"> 
+                <div class="logo navbar__logo">
+                  <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img src="img/logo.png" alt="Лого">
+                  </picture>
+                </div></a>
+              <div class="navbar__contacts"> 
+                <div class="contact-link contact-link_mail"> 
+                  <div class="contact-link__icon"><i class="svg-envelop-icon svg-envelop-icon-dims"> </i></div><a href="mailto:info@rusta–financ.ru">info@rusta–financ.ru</a>
+                </div>
+                <div class="contact-link contact-link_phone">
+                  <div class="contact-link__icon"><i class="svg-phone-icon svg-phone-icon-dims"> </i></div><a href="tel:+74872751052">+7 (4872) 75–10–52</a>
+                </div>
+              </div>
+              <div class="navbar-mobile-trigger js-navbar-mobile-trigger">
+                <div class="navbar-mobile-trigger__item"></div>
+                <div class="navbar-mobile-trigger__item"></div>
+                <div class="navbar-mobile-trigger__item"></div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-bottom">
+            <div class="container navbar-bottom__container">
+              <nav class="navbar-mobile js-navbar-mobile">
+                <div class="navbar-mobile__inner">
+                    <ul class="top-menu">
+                      <li class="top-menu__item js-menu-item"><a href="#about">О компании</a></li>
+                      <li class="top-menu__item js-menu-item"><a href="#consult">Условия договора</a></li>
+                      <li class="top-menu__item js-menu-item"><a href="#requisites">Реквизиты</a></li>
+                      <li class="top-menu__item js-menu-item"><a href="#location">Контакты</a></li>
+                    </ul>
+                  <div class="navbar-mobile__footer"> 
+                    <div class="navbar-mobile__contacts"> 
+                      <div class="contact-link contact-link_mail js-menu-item">
+                        <div class="contact-link__icon"><i class="svg-envelop-icon svg-envelop-icon-dims"> </i></div><a href="mailto:info@rusta–financ.ru">info@rusta–financ.ru</a>
+                      </div>
+                      <div class="contact-link contact-link_phone js-menu-item">
+                        <div class="contact-link__icon"><i class="svg-phone-icon svg-phone-icon-dims"> </i></div><a href="tel:+74872751052">+7 (4872) 75–10–52</a>
+                      </div>
+                    </div>
+                    <button class="btn btn_primary navbar-mobile-get-consult js-modal-trigger js-menu-item" data-target="getConsult">Получить консультацию</button>
+                  </div>
+                </div>
+              </nav>
+              <button class="btn btn_primary navbar-get-consult js-modal-trigger" data-target="getConsult">Получить консультацию</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <main>
+        <!--  Section-HERO ================================================== -->
+        <section class="section hero">
+          <div class="container hero__container">
+            <h1><span class="text-accent d-block_md">Поможем </span><span class="d-block_md">в погашении кредита перед Банком </span><span class="text-accent">в случае наступления финансовых трудностей </span></h1>
+          </div>
+          <div class="bg bg_cover">
+            <picture>
+              <source media="(max-width: 767.98px)" srcset="img/415/hero-bg-375x932.jpg" type="image/jpg">
+              <img src="img/hero-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="bg hero-bg-filter"></div>
+          <div class="section__img hero__img"> 
+            <picture>
+              <source media="(max-width: 767.98px)" srcset="img/415/hero-woman-306x432.webp" type="image/webp">
+              <source media="(max-width: 767.98px)" srcset="img/415/hero-woman-306x432.png" type="image/png">
+              <source srcset="img/hero-woman.webp" type="image/webp">
+              <img src="img/hero-woman.png" alt="Девушка">
+            </picture>
+          </div>
+        </section>
+        <!--  Section-ABOUT ================================================== -->
+        <div class="section section_p-top about" id="about">
+          <div class="container about__container">
+            <div class="row about__row">
+              <div class="col abou__item">
+                <div class="about__img"> <i class="svg-about-icon svg-about-icon-dims"> </i></div>
+                <div class="about__heading"> 
+                  <h3>О компании</h3>
+                </div>
+                <div class="about__text"> 
+                  <p>Наша компания выступает Гарантом по обязательствам Заемщика перед Кредитором. В случае возникновения у Заемщика финансовых трудностей, РУСТА Финанс сохранит его платежеспособность, не допустит просрочки по кредиту, осуществит необходимые выплаты и сохранит его положительную кредитную историю.</p>
+                </div>
+              </div>
+              <div class="col abou__item">
+                <div class="about__img"> <i class="svg-agree-icon svg-agree-icon-dims"> </i></div>
+                <div class="about__heading"> 
+                  <h3>Гарантия</h3>
+                </div>
+                <div class="about__text"> 
+                  <p>Независимая гарантия – простая и понятная услуга, которая предоставляется компанией–Гарантом (ООО «РУСТА Финанс»), готовой осуществить выплату Банку–кредитору в тех случаях, когда владелец этой услуги (Заемщик) не может исполнять свои обязательства по кредиту по причине потери работы.</p>
+                </div>
+              </div>
+            </div>
+            <div> 
+              <button class="btn btn_primary btn_lg js-modal-trigger" data-target="getConsult">Получить консультацию</button>
+            </div>
+          </div>
+        </div>
+        <!--  Section-REQUISITES ================================================== -->
+        <div class="section section_p-top requisites" id="requisites">
+          <div class="container requisites__container">
+            <div class="requisites__heading"> 
+              <h2>Реквизиты компании</h2>
+            </div>
+            <div class="requisites-table">
+              <div class="requisites-table__caption"> 
+                <h3>«ООО "РУСТА ФИНАНС»</h3>
+              </div>
+              <div class="requisites-table__body"> 
+                <!-- 1-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">Наименование в соответствии с учредительными документами</div>
+                  <div class="requisites-table__value">Общество с ограниченной ответственностью «ООО "РУСТА ФИНАНС»</div>
+                </div>
+                <!-- 2-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">Юридический адрес</div>
+                  <div class="requisites-table__value">195112, Санкт–Петербург г, Новочеркасский пр–кт, дом № 32, корпус 1, литера А, помещение 11-H</div>
+                </div>
+                <!-- 3-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">Email</div>
+                  <div class="requisites-table__value"> <a href="mailto:info@rusta-financ.ru">info@rusta–financ.ru</a></div>
+                </div>
+                <!-- 4-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">Телефон (факс)</div>
+                  <div class="requisites-table__value"><a href="tel:+74872751052">+7 (4872) 75–10–52</a></div>
+                </div>
+                <!-- 5-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">ИНН</div>
+                  <div class="requisites-table__value">7806235184</div>
+                </div>
+                <!-- 6-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">КПП</div>
+                  <div class="requisites-table__value">780601001</div>
+                </div>
+                <!-- 7-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">ОГРН</div>
+                  <div class="requisites-table__value">1167847205866</div>
+                </div>
+                <!-- 8-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">Расчетный счет</div>
+                  <div class="requisites-table__value">40702810932000006670 в Филиале «Санкт-Петербургский» АО «АЛЬФА–БАНК»</div>
+                </div>
+                <!-- 9-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">Корр. Счет</div>
+                  <div class="requisites-table__value">30101810600000000786</div>
+                </div>
+                <!-- 10-->
+                <div class="requisites-table__row">
+                  <div class="requisites-table__prop">БИК банка</div>
+                  <div class="requisites-table__value">044030786</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Section-REQUEST ================================================== -->
+        <div class="section section_p-top request" id="consult">
+          <div class="container request__container">
+            <div class="request-row"> 
+              <div class="request__img img-frame__before">
+                <picture>
+                  <source media="(max-width: 767.98px)" srcset="img/415/request-415.jpg" type="image/jpg">
+                  <img src="img/request.jpg" alt="">
+                </picture>
+              </div>
+              <div class="request__content">
+                <div class="request__heading"> 
+                  <h2>
+                     Получить <span class="text-accent">консультацию</span></h2>
+                </div>
+                <div class="request__text"> 
+                  <p>Государственные и муниципальные заказчики включают в свои тендеры требование</p>
+                </div>
+                <div class="request-form"> 
+                  <form class="form get-consult loader-container">
+                    <div class="request-form-row">
+                      <div class="form-group get-consult__form-control-group request-form-row__col">
+                        <input class="form-control get-consult__form-control" id="userName2" type="text" placeholder="Имя" name="name" required>
+                      </div>
+                      <div class="form-group get-consult__form-control-group request-form-row__col">
+                        <input class="form-control get-consult__form-control" id="uerPhone2" type="text" placeholder="Телефон" name="phone" required>
+                      </div>
+                    </div>
+                    <div class="form-group get-consult__form-message-group">
+                      <textarea class="form-message get-consult__form-message" id="userMessage2" name="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn_primary btn_lg" type="submit">Получить консультацию</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Section-LOCATION ================================================== -->
+        <div class="location" id="location">
+          <div class="location__label d-none_md">
+            <div class="location__heading">Наши <span class="text-accent">контакты</span></div>
+            <div class="location__data"> 
+              <div class="location__address"><span class="location-prop">Адрес: </span><span>195112, Санкт–Петербург г, Новочеркасский пр–кт, дом № 32, корпус 1, литера А, помещение 11-H</span></div>
+              <div class="location__phone"><span class="location-prop">Телефон: </span><a href="tel:+74872751052"><span>+7 (4872) 75–10–52</span></a></div>
+              <div class="location__mail"><span class="location-prop">E–mal: </span><a href="mailto:info@rusta-financ.ru"><span>info@rusta-financ.ru</span></a></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      
+      <!--  Footer ================================================== -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container footer__logo-nav"><a href="#"> 
+              <div class="footer__logo">
+                <picture>
+                  <source srcset="img/logo.webp" type="image/webp">
+                  <img src="img/logo.png" alt="Лого">
+                </picture>
+              </div></a>
+            <nav class="footer-menu"><ul>
+<li class="footer-menu__item"><a href="#about">О компании</a></li>
+<li class="footer-menu__item"><a href="#consult">Условия договора</a></li>
+<li class="footer-menu__item"><a href="#requisites">Реквизиты</a></li>
+<li class="footer-menu__item"><a href="#location">Контакты</a></li>
+</ul>
+            </nav>
+          </div>
+          <div class="container">
+            <div class="footer__contacts"> 
+              <div class="footer__contacts-link"><a href="tel:+74872751052">+7 (4872) 75–10–52</a></div>
+              <div class="footer__contacts-link"><a href="mailto:info@rusta–financ.ru">info@rusta–financ.ru</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <p>Любое ислользование материалов сданного сайта, допскается не иначе как с письменного разрешения его правообладателя – ИП Смирнова Татьяна Александровна 400403924165/320508100034147. В случае Использования материала с сайта и нарушение авторских и смежных прав, правообпадателя наказывается в соответствии со ст 146 УК РФ. Вся информация предоставленная на сайте ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ</p>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" id="getConsult">
+        <div class="modal__content">
+          <button class="modal-close modal__close js-modal-close"><span class="modal-close__item"></span>
+            <span class="modal-close__item"></span>
+          </button>
+          <div class="modal__content-inner">
+            <div class="modal__header">
+              <div class="modal__title">
+                 Оставить <span class="text-accent">заявку</span></div>
+              <p>Государственные и муниципальные заказчики включают в свои тендеры требование</p>
+            </div>
+            <div class="modal__body">
+              <form class="form get-consult loader-container">
+                <div class="form-group get-consult__form-control-group">
+                  <input class="form-control get-consult__form-control" id="userName" type="text" placeholder="Имя" name="name" required>
+                </div>
+                <div class="form-group get-consult__form-control-group">
+                  <input class="form-control get-consult__form-control" id="uerPhone" type="text" placeholder="Телефон" name="phone" required>
+                </div>
+                <div class="form-group get-consult__form-message-group">
+                  <textarea class="form-message get-consult__form-message" id="userMessage" name="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_primary btn_lg" id="formSubmit" type="submit">Получить консультацию</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal__overlay js-modal-close"></div>
+      </div>
+      
+    </div>
+    
+    <!-- Scripts ================================================== -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

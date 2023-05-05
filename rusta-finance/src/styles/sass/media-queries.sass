@@ -1,0 +1,576 @@
+@use '_partials/_variables' as v
+@use '_partials/_mixins' as m
+
+/* VII. Media-queries
+ --------------------------------------- */
+
+@media (max-width: 1699.98px)
+  /* HEADER */
+  /* HERO */
+  /* ABOUT */
+  /* REQUISITES */
+  /* REQUEST */
+  /* LOCATION */
+  /* FOOTER */
+
+/* XL */
+@media (max-width: 1399.98px)
+  // html
+  //   font-size: 9px
+
+  .container
+    &,
+    &_xl,
+    &_lg,
+    &_md,
+    &_sm
+      max-width: 1140px
+    &_xxl
+      max-width: 100%
+  
+    /* HEADER */
+    /* HERO */
+    /* ABOUT */
+    /* REQUISITES */
+    /* REQUEST */
+    /* LOCATION */
+    /* FOOTER */
+
+  .modal__content
+    margin-top: 10rem
+
+  .d
+    &-block
+      &_xl
+        display: block
+    &-inline
+      &_xl
+        display: inline
+    &-none
+      &_xl
+        display: none
+
+/* LG */
+@media (max-width: 1199.98px)
+  // html
+  //   font-size: 8px
+
+  .container
+    &,
+    &_lg,
+    &_md,
+    &_sm
+      max-width: 960px
+    &_xl
+      max-width: 100%
+
+  /* HEADER */
+  /* HERO */
+  .hero
+    &__img
+      left: calc(50% + 14rem)
+  /* ABOUT */
+  /* REQUISITES */
+  .requisites
+    &-table
+      &__prop,
+      &__value
+        width: 50%
+        flex: 1
+      &__prop
+        padding-right: v.$gutter
+      &__value
+        padding-left: v.$gutter
+  /* REQUEST */
+  .request
+    &-row
+      align-items: flex-start
+    &__img
+      width: 40%
+    &__content
+      margin-top: -1.5rem
+      padding-top: 0
+      width: 60%
+    &__img
+      padding-right: v.$gutter 
+    &__content
+      padding-left: v.$gutter 
+  /* LOCATION */
+  .location
+    &__label
+      left: calc(50% + 0rem)
+
+
+
+  /* FOOTER */
+  .footer
+    &__logo 
+      img
+        width: 100%
+        max-width: 29.5rem
+      &-nav
+        align-items: center
+    &-menu
+      &__item
+        &:not(:last-child)
+          margin-right: 1.8rem
+
+  .d
+    &-block
+      &_lg
+        display: block
+    &-inline
+      &_lg
+        display: inline
+    &-none
+      &_lg
+        display: none
+
+
+
+/* MD */
+@media (max-width: 991.98px)
+  .scroll-hidden 
+    padding-right: 0
+
+  // html
+  //   font-size: 8px
+
+  // .btn
+  //   &_primary
+  //     padding-left: 2em
+  //     padding-right: 2em
+
+  //   &_secondary
+  //     padding: 0 1.9em
+  //     font-size: 15px
+  h1
+    font-size: 4.2rem
+  /* HEADER */
+  // Mobile menu
+  .navbar
+    &-top
+      border-bottom-color: #fff
+    &__logo
+      width: 88%
+      max-width: 26rem
+    &__contacts
+      display: none
+    &-get-consult
+      display: none
+
+    &-mobile
+      // padding: 1.3rem 2rem
+      position: fixed
+      top: 7.2rem
+      right: 0
+      bottom: 0
+      transform: translateX(100%)
+      z-index: 999
+      width: 100%
+      // max-width: 420px
+      // height: 100%
+      background: #fff
+      transition: all 0.3s
+      &-trigger
+        display: inline-block
+      &__inner
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        margin-left: auto
+        margin-right: auto
+        padding-left: v.$gutter
+        padding-right: v.$gutter
+        width: 100%
+        max-width: 720px
+      &__header
+        margin-bottom: 5rem
+      &__footer
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+      &__contacts
+        display: block
+        margin-bottom: 5rem
+        .contact-link
+          // transform: translateX(5px)
+          // opacity: 0
+          &:not(:last-child)
+            margin-bottom: 1.5rem
+      &-get-consult
+        display: inline-block
+        // transform: translateX(5px)
+        // opacity: 0
+      .js-menu-item
+        transform: translateX(5px)
+        opacity: 0
+
+      &.open
+        transform: translateX(0)
+        .js-menu-item
+
+          transition: 500ms
+          transform: translateX(0)
+          opacity: 1
+
+      &-trigger
+        display: block
+        position: relative
+        width: 30px
+        height: 24px
+        // box-shadow: 0 0 1px #000
+        &__item
+          position: absolute
+          left: 0
+          width: 30px
+          height: 4px
+          background: v.$text-primary-color
+          border-radius: 4px
+          transition: 500ms
+          &:first-child
+            top: 0
+          &:nth-child(2)
+            top: 10px
+          &:last-child
+            top: 20px   
+
+        &.open
+          .navbar-mobile-trigger__item
+            &:first-child
+              transform-origin: 0px 3px
+              transform: rotate(45deg)
+            &:nth-child(2)
+              opacity: 0
+            &:last-child
+              transform-origin: 2px 2px
+              transform: rotate(-45deg)  
+
+        // &-wrap
+        //   position: absolute
+        //   top: 0
+        //   right: 0
+      // &-logo,
+      &__footer
+        display: block
+
+  .top-menu
+    display: block
+    margin-bottom: 1.8rem
+    width: 100%
+    &__item
+      padding-top: 1.2rem
+      padding-bottom: 1.2rem
+      font-size: 19px
+      // transform: translateX(5px)
+      // opacity: 0
+
+      // a
+      //   color: v.$text-light
+
+  // .navbar-mobile-overl
+  //   position: fixed
+  //   top: 0
+  //   right: 0
+  //   bottom: 0
+  //   height: 0
+  //   z-index: -1
+  //   width: 100%
+  //   height: 100%
+  //   background: rgba(0, 0, 0, 0)
+  //   visibility: hidden
+  //   transition: 0.3s
+
+  //   &.open
+  //     z-index: 980
+  //     width: 100%
+  //     visibility: visible
+  //     background: rgba(0, 0, 0, 0.5)
+
+
+
+
+  /* HERO */
+  .hero
+    &__container 
+      h1
+        max-width: 54rem
+    &__img
+      left: calc(50% + 3rem)
+  /* ABOUT */
+  /* REQUISITES */
+  /* REQUEST */
+  .request
+    &-form
+      &-row
+        flex-direction: column
+        &__col
+          width: 100%
+          &:not(:last-child)
+            margin-right: 0
+
+        
+  /* LOCATION */
+  /* FOOTER */
+  .footer
+    &__logo
+      margin-bottom: 4rem
+      &-nav
+        flex-direction: column
+        align-items: flex-start
+
+  .container
+    &,
+    &_md,
+    &_sm
+      max-width: 720px
+    &_lg
+      max-width: 100%
+
+  .d
+    &-block
+      &_md
+        display: block
+    &-inline
+      &_md
+        display: inline
+    &-none
+      &_md
+        display: none
+
+  .modal
+    align-items: center
+    &__content
+      margin-top: auto
+      margin-bottom: auto
+
+/* SM */
+@media (max-width: 767.98px)
+  // html
+  // 	font-size: 7px
+  // 
+  .container
+    &,
+    &_sm
+      max-width: 540px
+    &_md
+      max-width: 100%
+
+  .section_p-top 
+    padding-top: 9rem
+
+  /* HEADER */
+  // Mobile menu
+  .navbar
+    &-mobile
+      &__inner
+        max-width: 540px
+    &-top
+      padding-top: 1.4rem
+      padding-bottom: 1.4rem
+    &-bottom
+      padding-top: 0
+      padding-bottom: 0
+  /* HERO */
+  .hero
+    padding-top: 5rem
+    padding-bottom: 48.5rem
+    &__img
+      left: calc(50% - 17rem)
+      img
+        max-width: 30.6rem
+  /* ABOUT */
+  .about
+    &__row
+      flex-direction: column
+  /* REQUISITES */
+  /* REQUEST */
+  .request
+    &-row
+      flex-direction: column
+      align-items: center
+    &__img
+      padding-right: 0
+      width: 100%
+      max-width: 40rem
+    &__content
+      margin-top: 5rem
+      padding-left: 0
+      width: 100%
+    &-form
+      max-width: 40rem
+  /* LOCATION */
+  .location
+    height: 100vw
+  /* FOOTER */
+  .footer
+    &-top
+      padding-bottom: 5rem
+    &__logo
+      margin-bottom: 3rem
+      &-nav
+        margin-bottom: 3rem
+    &-menu 
+      ul
+        flex-direction: column
+        align-items: flex-start
+
+      &__item
+        &:not(:last-child)
+          margin-right: 0
+          margin-bottom: 3rem
+    &__contacts
+      flex-direction: column
+      align-items: flex-start
+      &-link
+        &:not(:last-child)
+          margin-right: 0
+          margin-bottom: 1.2rem
+
+  .d
+    &-block
+      &_sm
+        display: block
+    &-inline
+      &_sm
+        display: inline
+    &-none
+      &_sm
+        display: none
+
+/* XS */
+@media (max-width: 575.98px)
+  // html
+  // 	font-size: 6px
+  // 
+  .container
+    padding-left: 2rem  
+    padding-right: 2rem
+    max-width: 410px
+    &_sm
+      max-width: 100%
+
+  /* HEADER */
+  // Mobile menu
+  .navbar
+    &-mobile
+      &__inner
+        max-width: 410px
+  /* HERO */
+  /* ABOUT */
+  /* REQUISITES */
+  .requisites
+    &-table
+      &__row
+        flex-direction: column
+      &__prop,
+      &__value
+        width: 100%
+      &__prop
+        margin-bottom: 1.2rem
+        padding-right: 0
+      &__value
+        padding-left: 0
+        
+
+  /* REQUEST */
+  /* LOCATION */
+  .location
+    height: 144vw
+  /* FOOTER */
+
+  .d
+    &-block
+      &_xs
+        display: block
+    &-inline
+      &_xs
+        display: inline
+    &-none
+      &_xs
+        display: none
+
+@media (max-width: 479.98px)
+  /* HEADER */
+  /* HERO */
+  /* ABOUT */
+  /* REQUISITES */
+  /* REQUEST */
+  /* LOCATION */
+  /* FOOTER */
+  .btn
+    &_lg
+      padding-left: 1em
+      padding-right: 1em
+  .modal
+    &__content
+      margin-top: 4rem
+      max-width: 33.5rem
+      height: auto
+      max-height: 72.8rem
+      &-inner
+        padding: 2.5rem 2rem
+    &__close
+      right: -2%
+
+  .form
+    &-control,
+    &-message
+      padding: 2rem 1.4rem
+
+/* XXS */
+@media (max-width: 413.98px)
+  .container
+    max-width: 100%
+
+  /* HEADER */
+  // Mobile menu
+  .navbar
+    &-mobile
+      padding: 1.3rem 2rem
+      &__inner
+        padding: 0
+        max-width: none
+  /* HERO */
+  /* ABOUT */
+  /* REQUISITES */
+  /* REQUEST */
+  .request
+    &__img
+      max-width: 32rem
+  /* LOCATION */
+  /* FOOTER */
+
+  .d
+    &-block
+      &_xxs
+        display: block2
+    &-inline
+      &_xxs
+        display: inline
+    &-none
+      &_xxs
+        display: none
+
+@media (max-width: 359.99px)
+
+  /* HEADER */
+  /* HERO */
+  .hero
+    &__container 
+      h1
+        font-size: 3.8rem
+    &__img
+      left: calc(50% - 16rem)
+  /* ABOUT */
+  /* REQUISITES */
+  /* REQUEST */
+  .request__img 
+    max-width: 26rem
+  /* LOCATION */
+  /* FOOTER */
+
+/* IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)

@@ -1,0 +1,55 @@
+extends ../_templates/_base.pug
+
+block page-vars
+    -
+        let page = pages['page-grid-test'];
+
+
+//- block head
+//-     h2 Wow, Block Head is undefined!
+
+
+//- block header
+//-     h2 Wow, Block Header is undefined!
+
+
+block main 
+    main
+        //
+            Section-name
+            ==================================================
+        section.section(style="padding-bottom: 20px")
+            .container
+                h1(style="text-align: center; font-size: 35px;") My Grid System
+            
+            .container 
+                .row(style="box-shadow: 0 0 0 1px rgba(0, 0, 0, .85); background-color: rgba(220, 220, 220, .75)")
+                    .col.col-2_xl.col_lg.col-6_md.col_sm(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)") .col.col-2_xl.col_lg.col-6_md.col_sm
+                    .col.col-2_xl.col_lg.col-6_md.col_sm(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)") .col.col-2_xl.col_lg.col-6_md.col_sm
+                    .col.col-2_xl.col_lg.col-6_md.col_sm(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)") .col.col-2_xl.col_lg.col-6_md.col_sm
+                br
+                br
+                .row(style="box-shadow: 0 0 0 1px rgba(0, 0, 0, .85); background-color: rgba(220, 220, 220, .75)")
+                    .offset-4.col-3.offset-1_lg.col-3_lg(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)") col-3
+                    .col-3(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)") col-3
+                    .col-3(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)") col-3
+                br
+                br
+            .container 
+                .col-3_xl(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)")
+                .col-3_xl(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)")
+                .col-3_xl(style="height: 75px; box-shadow: 0 0 0 1px rgb(0, 0, 255); background-color: rgba(200, 25, 25, .4)")
+
+            
+                
+
+
+block footer
+
+
+//- block modals
+//-     h2 Wow, Block Modals is undefined!
+
+
+//- block scripts
+//-     h2 Wow, Block Scripts is undefined!
