@@ -1,890 +1,1580 @@
 <!DOCTYPE html>
 <!-- saved from url=(0064)https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon -->
-<html dir="ltr" lang="en" style=""
-      class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths no-mobile">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta content="width=device-width,initial-scale=1.0" name="viewport">
-  <meta content="ThemeMascot" name="author">
-  <meta content="a5c49a078d38c5c9" name="yandex-verification">
-  <meta name="csrf-param" content="authenticity_token">
-  <meta name="csrf-token"
-        content="ro5bHbtS0kSEujDiquBX2MfkpmhZhVcgciOpX2KQMWb56DviitodkG5+ckIazgCdjn832uTGBV7F5Il2+qPRKg==">
-  <title>Toff</title>
-  <link href="https://toff-shop.ru/assets/favicon-355085fb0e6e62bcb4e6b0ec0c24fd9a99d24f7f2f26223193f806a39701559d.png"
-        rel="shortcut icon" type="image/png">
-  <link
-    href="https://toff-shop.ru/assets/apple-touch-icon-355085fb0e6e62bcb4e6b0ec0c24fd9a99d24f7f2f26223193f806a39701559d.png"
-    rel="apple-touch-icon">
-  <link
-    href="https://toff-shop.ru/assets/apple-touch-icon-72x72-b445d192396db3c04037930c3c51ce79de73e9bba3f4b0e56e27b2333a7487ca.png"
-    rel="apple-touch-icon" sizes="72x72">
-  <link
-    href="https://toff-shop.ru/assets/apple-touch-icon-114x114-6241815c7b810ae9ac5379e157f3e023cc0011601df4cefde1c63b7561864702.png"
-    rel="apple-touch-icon" sizes="114x114">
-  <link
-    href="https://toff-shop.ru/assets/apple-touch-icon-144x144-1d535207e233533b695cbd3f7a98b33fe045b6dc9c60617fb8a9a317a7821d22.png"
-    rel="apple-touch-icon" sizes="144x144">
-  <link rel="stylesheet" media="all"
-        href="./Toff_files/application-bc492a8f48ffc1d412c8f02f871146fe761b9e00e6bb541127b1d03c97d75f44.css">
-  
-  <!-- CSS КОНСТРУКТОРА -->
-  <link rel="stylesheet" href="./constructor.css">
-  
-  <script type="text/javascript" async="" src="./Toff_files/js"></script>
-  <script async="" src="./Toff_files/gtm.js"></script>
-  <script async="" src="./Toff_files/tag.js"></script>
-  <script src="./Toff_files/application-3d7475a0737539be251bd90509976e1513f78bec573edd9e2205f29fdc27d0d3.js"></script>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZH4XTZ"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <style id="fit-vids-style">.fluid-width-video-wrapper {
-      width: 100%;
-      position: relative;
-      padding: 0;
-  }
+<html
+  dir="ltr"
+  lang="en"
+  style=""
+  class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths no-mobile"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="ThemeMascot" name="author" />
+    <meta content="a5c49a078d38c5c9" name="yandex-verification" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta
+      name="csrf-token"
+      content="ro5bHbtS0kSEujDiquBX2MfkpmhZhVcgciOpX2KQMWb56DviitodkG5+ckIazgCdjn832uTGBV7F5Il2+qPRKg=="
+    />
+    <title>Toff</title>
+    <link
+      href="https://toff-shop.ru/assets/favicon-355085fb0e6e62bcb4e6b0ec0c24fd9a99d24f7f2f26223193f806a39701559d.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link
+      href="https://toff-shop.ru/assets/apple-touch-icon-355085fb0e6e62bcb4e6b0ec0c24fd9a99d24f7f2f26223193f806a39701559d.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://toff-shop.ru/assets/apple-touch-icon-72x72-b445d192396db3c04037930c3c51ce79de73e9bba3f4b0e56e27b2333a7487ca.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://toff-shop.ru/assets/apple-touch-icon-114x114-6241815c7b810ae9ac5379e157f3e023cc0011601df4cefde1c63b7561864702.png"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="https://toff-shop.ru/assets/apple-touch-icon-144x144-1d535207e233533b695cbd3f7a98b33fe045b6dc9c60617fb8a9a317a7821d22.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="./Toff_files/application-bc492a8f48ffc1d412c8f02f871146fe761b9e00e6bb541127b1d03c97d75f44.css"
+    />
 
-  .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-  }</style>
-</head>
-<body>
-<div class="clearfix" id="wrapper">
-  <div id="preloader" style="display: none;">
-    <div class="vertical-center">
-      <div class="phrase"><strong>Лошади – божественные создания,<br>мы им не чета...</strong> / Майкл Морпурго</div>
-      <div class="phrase"><strong>Знаешь, почему лошади живут так долго?<br>Они не выясняют отношения</strong> / А.
-        Солженицын
-      </div>
-      <div class="spinner large-icon" id="spinner"><img alt=""
-                                                        src="./Toff_files/13-b4b550ebbbb1887d980394bb5805eb2e6c57ebfb89168469270a5004497fe17e.gif">
-      </div>
-      <div class="phrase"><strong>Никогда не бойся лошади, не унижай ее и не разочаровывайся в ней. Она все
-        понимает…</strong></div>
-    </div>
-  </div>
-  <header class="header" id="header">
-    <div class="header-top bg-theme-colored sm-text-center p-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="widget no-border m-0">
-              <ul class="list-inline font-13 sm-text-center mt-5 xs-left">
-                <li><a class="text-white" href="https://toff-shop.ru/users/sign_up">Регистрация</a></li>
-                <li class="text-white">|</li>
-                <li><a class="text-white" href="https://toff-shop.ru/users/sign_in">Личный кабинет</a></li>
-              </ul>
-            </div>
+    <!-- CSS КОНСТРУКТОРА -->
+    <link rel="stylesheet" href="./constructor.css" />
+
+    <script type="text/javascript" async="" src="./Toff_files/js"></script>
+    <script async="" src="./Toff_files/gtm.js"></script>
+    <script async="" src="./Toff_files/tag.js"></script>
+    <script src="./Toff_files/application-3d7475a0737539be251bd90509976e1513f78bec573edd9e2205f29fdc27d0d3.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NZH4XTZ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <style id="fit-vids-style">
+      .fluid-width-video-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+
+      .fluid-width-video-wrapper iframe,
+      .fluid-width-video-wrapper object,
+      .fluid-width-video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix" id="wrapper">
+      <div id="preloader" style="display: none">
+        <div class="vertical-center">
+          <div class="phrase">
+            <strong
+              >Лошади – божественные создания,<br />мы им не чета...</strong
+            >
+            / Майкл Морпурго
           </div>
-          <div class="col-md-8">
-            <div class="widget no-border m-0 pull-right flip sm-pull-none sm-text-center">
-              <ul class="styled-icons icon-circled icon-sm pull-right flip sm-pull-none sm-text-center mt-sm-15">
-                <li><a href="https://vk.com/toff__shop" target="blank"><i class="fa fa-vk text-white"></i></a></li>
-              </ul>
-            </div>
+          <div class="phrase">
+            <strong
+              >Знаешь, почему лошади живут так долго?<br />Они не выясняют
+              отношения</strong
+            >
+            / А. Солженицын
+          </div>
+          <div class="spinner large-icon" id="spinner">
+            <img
+              alt=""
+              src="./Toff_files/13-b4b550ebbbb1887d980394bb5805eb2e6c57ebfb89168469270a5004497fe17e.gif"
+            />
+          </div>
+          <div class="phrase">
+            <strong
+              >Никогда не бойся лошади, не унижай ее и не разочаровывайся в ней.
+              Она все понимает…</strong
+            >
           </div>
         </div>
       </div>
-    </div>
-    <div class="header-middle p-0 xs-text-center">
-      <div class="container pt-0 pb-0">
-        <div class="flex-container"><a class="menuzord-brand pull-left flip mt-10 mb-10"
-                                       href="https://toff-shop.ru/"><img alt=""
-                                                                         src="./Toff_files/logo-8b85ce0738a27f5ca4921662f91c39db9630296f06d3cffaa1c2716d6376bf19.png"><img
-          alt="" class="sm"
-          src="./Toff_files/logo-sm-bbef11a4ecb9ec19443991ef6ccb7f915181c3b050b9b2d830b2716d7397f0c4.png"
-          style="display: none"></a>
-          <div class="search-and-cart">
-            <div class="cart">
-              <div id="header-cart">
-                <div class="top-dropdown-outer"><a class="top-cart-link has-dropdown text-white"><i
-                  class="fa fa-shopping-cart font-13">&nbsp;</i>0</a></div>
+      <header class="header" id="header">
+        <div class="header-top bg-theme-colored sm-text-center p-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="widget no-border m-0">
+                  <ul class="list-inline font-13 sm-text-center mt-5 xs-left">
+                    <li>
+                      <a
+                        class="text-white"
+                        href="https://toff-shop.ru/users/sign_up"
+                        >Регистрация</a
+                      >
+                    </li>
+                    <li class="text-white">|</li>
+                    <li>
+                      <a
+                        class="text-white"
+                        href="https://toff-shop.ru/users/sign_in"
+                        >Личный кабинет</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div
+                  class="widget no-border m-0 pull-right flip sm-pull-none sm-text-center"
+                >
+                  <ul
+                    class="styled-icons icon-circled icon-sm pull-right flip sm-pull-none sm-text-center mt-sm-15"
+                  >
+                    <li>
+                      <a href="https://vk.com/toff__shop" target="blank"
+                        ><i class="fa fa-vk text-white"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="contacts">
-            <div class="text-black-333 mb-0"><i class="fa fa-phone-square text-theme-colored font-18"></i>&nbsp; +7
-              (981) 717-88-62
+        </div>
+        <div class="header-middle p-0 xs-text-center">
+          <div class="container pt-0 pb-0">
+            <div class="flex-container">
+              <a
+                class="menuzord-brand pull-left flip mt-10 mb-10"
+                href="https://toff-shop.ru/"
+                ><img
+                  alt=""
+                  src="./Toff_files/logo-8b85ce0738a27f5ca4921662f91c39db9630296f06d3cffaa1c2716d6376bf19.png" /><img
+                  alt=""
+                  class="sm"
+                  src="./Toff_files/logo-sm-bbef11a4ecb9ec19443991ef6ccb7f915181c3b050b9b2d830b2716d7397f0c4.png"
+                  style="display: none"
+              /></a>
+              <div class="search-and-cart">
+                <div class="cart">
+                  <div id="header-cart">
+                    <div class="top-dropdown-outer">
+                      <a class="top-cart-link has-dropdown text-white"
+                        ><i class="fa fa-shopping-cart font-13">&nbsp;</i>0</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts">
+                <div class="text-black-333 mb-0">
+                  <i class="fa fa-phone-square text-theme-colored font-18"></i
+                  >&nbsp; +7 (981) 717-88-62
+                </div>
+                <div class="text-black-333 mb-0">
+                  <i class="fa fa-phone-square text-theme-colored font-18"
+                    >&nbsp;</i
+                  ><a href="mailto:equus.horse@mail.ru">equus.horse@mail.ru</a>
+                </div>
+              </div>
             </div>
-            <div class="text-black-333 mb-0"><i class="fa fa-phone-square text-theme-colored font-18">&nbsp;</i><a
-              href="mailto:equus.horse@mail.ru">equus.horse@mail.ru</a></div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="header-nav">
-      <div class="header-nav-wrapper navbar-scrolltofixed bg-lighter"
-           style="z-index: auto; position: static; top: auto;">
-        <div class="container">
-          <nav class="menuzord pull-left flip menuzord-responsive" id="menuzord"><a href="javascript:void(0)"
-                                                                                    class="showhide"
-                                                                                    style="display: none;"><em></em><em></em><em></em></a>
-            <ul class="menuzord-menu menuzord-indented scrollable" style="max-height: 400px;">
-              <li><a href="https://toff-shop.ru/catalog">
-                Каталог
-                <!-- <span class="indicator"><i class="fa fa-angle-down"></i></span> -->
-              </a>
-                <ul class="dropdown" style="right: auto; display: none;">
-                  <li><a href="https://toff-shop.ru/catalog/ekipirovka-naezdnikov">Экипировка для всадников</a></li>
-                  <li><a href="https://toff-shop.ru/catalog/popony">Попоны</a></li>
-                  <li><a href="https://toff-shop.ru/catalog/amuniciya">Амуниция</a></li>
-                  <li><a href="https://toff-shop.ru/catalog/kosmetika-dlya-loshadei-i-amunicii">Косметика бытовая</a>
+        <div class="header-nav">
+          <div
+            class="header-nav-wrapper navbar-scrolltofixed bg-lighter"
+            style="z-index: auto; position: static; top: auto"
+          >
+            <div class="container">
+              <nav
+                class="menuzord pull-left flip menuzord-responsive"
+                id="menuzord"
+              >
+                <a
+                  href="javascript:void(0)"
+                  class="showhide"
+                  style="display: none"
+                  ><em></em><em></em><em></em
+                ></a>
+                <ul
+                  class="menuzord-menu menuzord-indented scrollable"
+                  style="max-height: 400px"
+                >
+                  <li>
+                    <a href="https://toff-shop.ru/catalog">
+                      Каталог
+                      <!-- <span class="indicator"><i class="fa fa-angle-down"></i></span> -->
+                    </a>
+                    <ul class="dropdown" style="right: auto; display: none">
+                      <li>
+                        <a
+                          href="https://toff-shop.ru/catalog/ekipirovka-naezdnikov"
+                          >Экипировка для всадников</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/catalog/popony">Попоны</a>
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/catalog/amuniciya"
+                          >Амуниция</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://toff-shop.ru/catalog/kosmetika-dlya-loshadei-i-amunicii"
+                          >Косметика бытовая</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/catalog/zdorove"
+                          >Косметика оздоровительная</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://toff-shop.ru/catalog/oborudovanie-dlya-konyushni-i-furnitura-dlya-amunicii"
+                          >Оборудование для конюшни</a
+                        >
+                      </li>
+                    </ul>
                   </li>
-                  <li><a href="https://toff-shop.ru/catalog/zdorove">Косметика оздоровительная</a></li>
-                  <li><a href="https://toff-shop.ru/catalog/oborudovanie-dlya-konyushni-i-furnitura-dlya-amunicii">Оборудование
-                    для конюшни</a></li>
+                  <li>
+                    <a href="https://toff-shop.ru/quick-catalog"
+                      >Быстрый каталог</a
+                    >
+                  </li>
+                  <li><a href="https://toff-shop.ru/offers">Акции</a></li>
+                  <li>
+                    <a href="javascript:;">
+                      Условия покупки
+                      <!-- <span class="indicator"><i class="fa fa-angle-down"></i></span> -->
+                    </a>
+                    <ul class="dropdown" style="right: auto">
+                      <li>
+                        <a href="https://toff-shop.ru/pages/oplata">Оплата</a>
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/pages/sistema-skidok"
+                          >Система скидок</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/pages/usloviya-vozvrata"
+                          >Условия возврата</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/pages/usloviya-garantii"
+                          >Условия гарантии</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/pages/dostavka"
+                          >Доставка</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://toff-shop.ru/pages/zadat-vopros"
+                          >Частые вопросы</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="https://toff-shop.ru/pages/o-nas">
+                      О нас
+                      <!-- <span class="indicator"><i class="fa fa-angle-down"></i></span> -->
+                    </a>
+                    <ul class="dropdown" style="right: auto">
+                      <li>
+                        <a href="https://toff-shop.ru/pages/o-kompanii"
+                          >О компании</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="https://toff-shop.ru/tehnologii"
+                      >Наши технологии</a
+                    >
+                  </li>
+                  <li><a href="https://toff-shop.ru/blog">Блог</a></li>
+                  <li>
+                    <a href="https://toff-shop.ru/pages/kontakty">Контакты</a>
+                  </li>
+                  <li class="scrollable-fix"></li>
                 </ul>
-              </li>
-              <li><a href="https://toff-shop.ru/quick-catalog">Быстрый каталог</a></li>
-              <li><a href="https://toff-shop.ru/offers">Акции</a></li>
-              <li><a href="javascript:;">
-                Условия покупки
-                <!-- <span class="indicator"><i class="fa fa-angle-down"></i></span> -->
-              </a>
-                <ul class="dropdown" style="right: auto;">
-                  <li><a href="https://toff-shop.ru/pages/oplata">Оплата</a></li>
-                  <li><a href="https://toff-shop.ru/pages/sistema-skidok">Система скидок</a></li>
-                  <li><a href="https://toff-shop.ru/pages/usloviya-vozvrata">Условия возврата</a></li>
-                  <li><a href="https://toff-shop.ru/pages/usloviya-garantii">Условия гарантии</a></li>
-                  <li><a href="https://toff-shop.ru/pages/dostavka">Доставка</a></li>
-                  <li><a href="https://toff-shop.ru/pages/zadat-vopros">Частые вопросы</a></li>
-                </ul>
-              </li>
-              <li><a href="https://toff-shop.ru/pages/o-nas">
-                О нас
-                <!-- <span class="indicator"><i class="fa fa-angle-down"></i></span> -->
-              </a>
-                <ul class="dropdown" style="right: auto;">
-                  <li><a href="https://toff-shop.ru/pages/o-kompanii">О компании</a></li>
-                </ul>
-              </li>
-              <li><a href="https://toff-shop.ru/tehnologii">Наши технологии</a></li>
-              <li><a href="https://toff-shop.ru/blog">Блог</a></li>
-              <li><a href="https://toff-shop.ru/pages/kontakty">Контакты</a></li>
-              <li class="scrollable-fix"></li>
-            </ul>
-            <ul class="pull-right flip hidden-sm hidden-xs">
-              <li><a
-                class="btn btn-colored btn-flat top-left-triangle bg-theme-colored text-white font-14 p-10 mt-15 pr-30 pl-15"
-                href="https://toff-shop.ru/pages/zadat-vopros">Задать вопрос</a></li>
-            </ul>
-            <div class="collapse" id="top-search-bar">
-              <div class="container">
-                <form action="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon#" class="search_form_top"
-                      method="get" role="search"><input autocomplete="off" class="form-control" name="s"
-                                                        placeholder="Поиск по каталогу" type="text"><span
-                  class="search-close"><i class="fa fa-search"></i></span></form>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <div class="header-icons">
-          <div class="title">- КАТАЛОГ ПРОДУКЦИИ -</div>
-          <ul>
-            <li><a href="https://toff-shop.ru/catalog/ekipirovka-naezdnikov"><img alt="" class="lazyload"
-                                                                                  src="./Toff_files/medium_1.png"></a>
-            </li>
-            <li><a href="https://toff-shop.ru/catalog/popony"><img alt="" class="lazyload"
-                                                                   src="./Toff_files/medium_2.png"></a></li>
-            <li><a href="https://toff-shop.ru/catalog/amuniciya"><img alt="" class="lazyload"
-                                                                      src="./Toff_files/medium_3.png"></a></li>
-            <li><a href="https://toff-shop.ru/catalog/kosmetika-dlya-loshadei-i-amunicii"><img alt="" class="lazyload"
-                                                                                               src="./Toff_files/medium_4.png"></a>
-            </li>
-            <li><a href="https://toff-shop.ru/catalog/zdorove"><img alt="" class="lazyload"
-                                                                    src="./Toff_files/medium_5.png"></a></li>
-            <li><a href="https://toff-shop.ru/catalog/oborudovanie-dlya-konyushni-i-furnitura-dlya-amunicii"><img alt=""
-                                                                                                                  class="lazyload"
-                                                                                                                  src="./Toff_files/medium_6.png"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div style="display: none; width: 1512px; height: 72px; float: none;"></div>
-    </div>
-  </header>
-  <div class="main-content">
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="https://toff-shop.ru/uploads/bg3.jpg"
-             style="background-image: url('https://toff-shop.ru/uploads/bg3.jpg'); background-position: 50% 95px;">
-      <div class="container pt-90 pb-50">
-        <div class="section-content pt-100">
-          <div class="row">
-            <div class="col-md-12"><h3 class="title text-white">Конструктор</h3>
-              <ul class="list-inline text-white">
-                <li><a class="text-white" href="https://toff-shop.ru/">Главная &nbsp;&nbsp;/</a></li>
-                <li><span>Конструктор</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container pt-0 mb-30 pb-30">
-        
-         <!-- CONSTRUCTOR -->
-        <div class="constructor">
-          <div class="constructor__top">
-            <div class="constructor-switch">
-
-              <div class="radio constructor-switch-item">
-                <input type="radio" name="constructorSwitch" id="horse" value="horse" checked>
-                <label for="horse">Лошадь</label>
-              </div>
-
-              <div class="radio constructor-switch-item">
-                <input type="radio" name="constructorSwitch" id="pony" value="pony">
-                <label for="pony">Пони</label>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row constructor__inner">
-            <!-- LEFT MENU -->
-            <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0 constructor__left-menu">
-
-              <!-- МАСТИ -->
-              <div class="constructor-menu-group">
-                <!-- <button class="btn constructor-menu-btn" type="button" data-toggle="collapse" data-target="#horseSuit" aria-expanded="false" aria-controls="horseSuit">МАСТИ</button> -->
-                <div class="constructor-menu-btn">МАСТИ</div>
-
-                <div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseSuit" id="optionsHorseSuit1" value="suit1" checked>
-                    <label for="optionsHorseSuit1">СЕРАЯ лошадь</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseSuit" id="optionsHorseSuit2" value="suit2">
-                    <label for="optionsHorseSuit2">РЫЖАЯ лошадь</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseSuit" id="optionsHorseSuit3" value="suit3">
-                    <label for="optionsHorseSuit3">ГНЕДАЯ лошадь</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseSuit" id="optionsHorseSuit4" value="suit4">
-                    <label for="optionsHorseSuit4">ВОРОНАЯ лошадь</label>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- ГРИВА -->
-              <div class="constructor-menu-group">
-                <!-- <button class="btn constructor-menu-btn" type="button" data-toggle="collapse" data-target="#horseMane" aria-expanded="false" aria-controls="horseMane">ГРИВА</button> -->
-                <div class="constructor-menu-btn">ГРИВА</div>
-
-                <div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseMane" id="optionsHorseMane1" value="mane1" checked>
-                    <label for="optionsHorseMane1">длинная грива</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseMane" id="optionsHorseMane2" value="mane2">
-                    <label for="optionsHorseMane2">короткая грива</label>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- НАВИС -->
-              <div class="constructor-menu-group">
-                <!-- <button class="btn constructor-menu-btn" type="button" data-toggle="collapse" data-target="#horseNavis" aria-expanded="false" aria-controls="horseNavis">НАВИС</button> -->
-                <div class="constructor-menu-btn">НАВИС</div>
-
-                <div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseNavis" id="optionsHorseNavis1" value="navis1" checked>
-                    <label for="optionsHorseNavis1">навис белый</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseNavis" id="optionsHorseNavis2" value="navis2">
-                    <label for="optionsHorseNavis2">навис серый</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseNavis" id="optionsHorseNavis3" value="navis3">
-                    <label for="optionsHorseNavis3">навис черный</label>
-                  </div>
-   
-                </div>
-              </div>
-
-              <!-- МОРДА -->
-              <div class="constructor-menu-group">
-                <!-- <button class="btn constructor-menu-btn" type="button" data-toggle="collapse" data-target="#horseMuzzle" aria-expanded="false" aria-controls="horseMuzzle">МОРДА</button> -->
-                <div class="constructor-menu-btn">МОРДА</div>
-
-                <div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseMuzzle" id="optionsHorseMuzzle1" value="muzzle1" checked>
-                    <label for="optionsHorseMuzzle1">белая отметина “лысина”</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseMuzzle" id="optionsHorseMuzzle2" value="muzzle2">
-                    <label for="optionsHorseMuzzle2">белая отметина “проточина”</label>
-                  </div>
-
-                  <div class="radio constructor-menu-item">
-                    <input type="radio" name="optionsHorseMuzzle" id="optionsHorseMuzzle3" value="muzzle3">
-                    <label for="optionsHorseMuzzle3">белая отметина “звезда”</label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- КОПЫТА -->
-              <div class="constructor-menu-group">
-                <!-- <button class="btn constructor-menu-btn" type="button" data-toggle="collapse" data-target="#horseHooves" aria-expanded="false" aria-controls="horseHooves"> -->
-                <div class="constructor-menu-btn">КОПЫТА</div>
-                
-                <div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="horseHooves1" value="hooves1">
-                    <label for="horseHooves1">Правая передняя белая отметина</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="horseHooves2" value="hooves2">
-                    <label for="horseHooves2">Левая передняя белая отметина</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="horseHooves3" value="hooves3">
-                    <label for="horseHooves3">Правая задняя белая отметина</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="horseHooves4" value="hooves4">
-                    <label for="horseHooves4">Левая задняя белая отметина</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="horseHooves5" value="hooves5">
-                    <label for="horseHooves5">Черные отметины</label>
-                  </div>
-
-
-                </div>
-              </div>
-
-
-            <!-- /LEFT MENU -->
-            </div> 
-
-
-
-
-            <!-- CONSTRUCTOR-VISUAL -->
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 constructor-visual">
-              <img class="constructor__img constructor__horse" src="assets/img/horse-grey.png" alt="">
-            </div>
-            
-            
-
-
-            <!-- RIGHT MENU -->
-            <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0 constructor__right-menu">
-              
-
-              <!-- ДОЖДЕВАЯ ПОПОНА -->
-              <div class="constructor-menu-group">
-                <button class="btn constructor-menu-btn collapse-menu-btn collapsed" type="button" data-toggle="collapse" data-target="#rainBlanket" aria-expanded="false" aria-controls="rainBlanket">ДОЖДЕВАЯ ПОПОНА <br> СО СЪЕМНЫМ КАПОРОМ</button>
-                
-                <div class="collapse" id="rainBlanket">
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket1" value="rainBlanket1">
-                    <label for="rainBlanket1">BLUE SKY (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket2" value="rainBlanket2">
-                    <label for="rainBlanket2">BLUE SKY (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket3" value="rainBlanket3">
-                    <label for="rainBlanket3">AZURE SKY  (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket4" value="rainBlanket4">
-                    <label for="rainBlanket4">AZURE SKY (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket5" value="rainBlanket5">
-                    <label for="rainBlanket5">PURPLE SKY (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket6" value="rainBlanket6">
-                    <label for="rainBlanket6">PURPLE SKY (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket7" value="rainBlanket7">
-                    <label for="rainBlanket7">BRUSH PATTERN (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket8" value="rainBlanket8">
-                    <label for="rainBlanket8">BRUSH PATTERN (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket9" value="rainBlanket9">
-                    <label for="rainBlanket9">GEOMETRY(без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="rainBlanket10" value="rainBlanket10">
-                    <label for="rainBlanket10">GEOMETRY (с капором)</label>
-                  </div>
-
-
-
-                </div>
-              </div><!-- /ДОЖДЕВАЯ ПОПОНА -->
-              
-
-              <!-- ПРОГУЛОЧНАЯ ПОПОНА -->
-              <div class="constructor-menu-group">
-                <button class="btn constructor-menu-btn collapse-menu-btn collapsed" type="button" data-toggle="collapse" data-target="#walkingBlanket" aria-expanded="false" aria-controls="walkingBlanket">ПОПОНА ДЕННИКОВАЯ ИЛИ ПРОГУЛОЧНАЯ МЕМБРАННАЯ ИЗ <br> SOFTSHELL</button>
-                
-                <div class="collapse" id="walkingBlanket">
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket1" value="walkingBlanket1">
-                    <label for="walkingBlanket1">BLUE SKY (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket2" value="walkingBlanket2">
-                    <label for="walkingBlanket2">BLUE SKY (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket3" value="walkingBlanket3">
-                    <label for="walkingBlanket3">AZURE SKY  (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket4" value="walkingBlanket4">
-                    <label for="walkingBlanket4">AZURE SKY (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket5" value="walkingBlanket5">
-                    <label for="walkingBlanket5">PURPLE SKY (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket6" value="walkingBlanket6">
-                    <label for="walkingBlanket6">PURPLE SKY (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket7" value="walkingBlanket7">
-                    <label for="walkingBlanket7">BRUSH PATTERN (без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket8" value="walkingBlanket8">
-                    <label for="walkingBlanket8">BRUSH PATTERN (с капором)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket9" value="walkingBlanket9">
-                    <label for="walkingBlanket9">GEOMETRY(без капора)</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="walkingBlanket10" value="walkingBlanket10">
-                    <label for="walkingBlanket10">GEOMETRY (с капором)</label>
-                  </div>
-
-                </div>
-              </div><!-- /ПРОГУЛОЧНАЯ ПОПОНА -->
-              
-
-              <!-- МЕМБРАННАЯ ПОПОНА -->
-              <div class="constructor-menu-group">
-                <button class="btn constructor-menu-btn collapse-menu-btn collapsed" type="button" data-toggle="collapse" data-target="#membraneBlanket" aria-expanded="false" aria-controls="membraneBlanket">ПОПОНА С КАПОРОМ МЕМБРАННАЯ ИЗ <br> SOFTSHELL</button>
-                
-                <div class="collapse" id="membraneBlanket">
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="membraneBlanket1" value="membraneBlanket1">
-                    <label for="membraneBlanket1">MISTY GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="membraneBlanket2" value="membraneBlanket2">
-                    <label for="membraneBlanket2">SUNSET GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="membraneBlanket3" value="membraneBlanket3">
-                    <label for="membraneBlanket3">MARINE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="membraneBlanket4" value="membraneBlanket4">
-                    <label for="membraneBlanket4">PURPLE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="membraneBlanket5" value="membraneBlanket5">
-                    <label for="membraneBlanket5">BLUE MAGIC</label>
-                  </div>
-
-
-                </div>
-              </div><!-- /МЕМБРАННАЯ ПОПОНА -->
-              
-
-              <!-- ФЛИСОВАЯ ПОПОНА -->
-              <div class="constructor-menu-group">
-                <button class="btn constructor-menu-btn collapse-menu-btn collapsed" type="button" data-toggle="collapse" data-target="#fleeceBlanket" aria-expanded="false" aria-controls="fleeceBlanket">ПОПОНА ФЛИСОВАЯ <br>СО СТРОПАМИ</button>
-                
-                <div class="collapse" id="fleeceBlanket">
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="fleeceBlanket1" value="fleeceBlanket1">
-                    <label for="fleeceBlanket1">MISTY GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="fleeceBlanket2" value="fleeceBlanket2">
-                    <label for="fleeceBlanket2">SUNSET GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="fleeceBlanket3" value="fleeceBlanket3">
-                    <label for="fleeceBlanket3">MARINE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="fleeceBlanket4" value="fleeceBlanket4">
-                    <label for="fleeceBlanket4">PURPLE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="fleeceBlanket5" value="fleeceBlanket5">
-                    <label for="fleeceBlanket5">BLUE MAGIC</label>
-                  </div>
-
-
-                </div>
-              </div><!-- /ФЛИСОВАЯ ПОПОНА -->
-              
-
-              <!-- МОСКИТНАЯ ПОПОНА -->
-              <div class="constructor-menu-group">
-                <button class="btn constructor-menu-btn collapse-menu-btn collapsed" type="button" data-toggle="collapse" data-target="#mosquitoBlanket" aria-expanded="false" aria-controls="mosquitoBlanket">ПОПОНА МОСКИТНАЯ <br> WALK ALL DAY</button>
-                
-                <div class="collapse" id="mosquitoBlanket">
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="mosquitoBlanket1" value="mosquitoBlanket1">
-                    <label for="mosquitoBlanket1">MISTY GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="mosquitoBlanket2" value="mosquitoBlanket2">
-                    <label for="mosquitoBlanket2">SUNSET GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="mosquitoBlanket3" value="mosquitoBlanket3">
-                    <label for="mosquitoBlanket3">MARINE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="mosquitoBlanket4" value="mosquitoBlanket4">
-                    <label for="mosquitoBlanket4">PURPLE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="mosquitoBlanket5" value="mosquitoBlanket5">
-                    <label for="mosquitoBlanket5">BLUE MAGIC</label>
-                  </div>
-
-
-                </div>
-              </div><!-- /МОСКИТНАЯ ПОПОНА -->
-              
-
-              <!-- ПОПОНА-СЕТКА -->
-              <div class="constructor-menu-group">
-                <button class="btn constructor-menu-btn collapse-menu-btn collapsed" type="button" data-toggle="collapse" data-target="#gridBlanket" aria-expanded="false" aria-controls="gridBlanket">ПОПОНА-СЕТКА <br> SUMMER HELP</button>
-                
-                <div class="collapse" id="gridBlanket">
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="gridBlanket1" value="gridBlanket1">
-                    <label for="gridBlanket1">MISTY GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="gridBlanket2" value="gridBlanket2">
-                    <label for="gridBlanket2">SUNSET GARDEN</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="gridBlanket3" value="gridBlanket3">
-                    <label for="gridBlanket3">MARINE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="gridBlanket4" value="gridBlanket4">
-                    <label for="gridBlanket4">PURPLE MAGIC</label>
-                  </div>
-
-                  <div class="checkbox constructor-menu-item">
-                    <input type="checkbox" id="gridBlanket5" value="gridBlanket5">
-                    <label for="gridBlanket5">BLUE MAGIC</label>
-                  </div>
-
-
-                </div>
-              </div><!-- /ПОПОНА-СЕТКА -->
-
-            <!-- /RIGHT MENU -->
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="constructor__copy">
-                <p>© TOFF. Все материалы данного сайта являются объектами авторского права. Запрещается копирование, 
-                  распространение или любое иное использование информации и объектов без предварительного согласия правообладателя.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </div>
-  <footer id="footer">
-    <section class="divider layer-overlay overlay-dark-8"
-             data-bg-img="https://toff-shop.ru/assets/bg8-8192a25867c16162aa23497cf6871ef86c9177074131d6ce21fecd7fab9436c3.jpg"
-             style="background-image: url('https://toff-shop.ru/assets/bg8-8192a25867c16162aa23497cf6871ef86c9177074131d6ce21fecd7fab9436c3.jpg');">
-      <div class="container pt-60 pb-30">
-        <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="widget dark"><img alt="" class="mt-0 mb-10"
-                                          src="./Toff_files/logo-white-dff9861aa6e2de5284c994b5e3f179196e7923ddf9c495e22dfa42af73e3b4e1.png"
-                                          style="max-width: 160px">
-              <p>Если вы любите лошадей так же, как любим их мы</p>
-              <ul class="styled-icons icon-sm icon-bordered icon-theme-colored">
-                <li><a href="https://vk.com/toff__shop" target="blank"><i class="fa fa-vk"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="widget dark"><h4 class="widget-title line-bottom-theme-colored">Навигация</h4>
-              <ul class="list angle-double-right list-border">
-                <li><a href="https://toff-shop.ru/blog">Блог</a></li>
-                <li><a href="https://toff-shop.ru/tehnologii">Наши технологии</a></li>
-                <li><a href="https://toff-shop.ru/pages/o-nas">О нас</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="widget dark"><h4 class="widget-title line-bottom-theme-colored" style="opacity: 0">
-              Навигация</h4>
-              <ul class="list angle-double-right list-border">
-                <li><a href="https://toff-shop.ru/offers">Акции</a></li>
-                <li><a href="https://toff-shop.ru/pages/kontakty">Контакты</a></li>
-                <li><a href="https://toff-shop.ru/pages/politika-konfidencialnosti">Политика конфиденциальности</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="widget dark"><h4 class="widget-title line-bottom-theme-colored">Время работы</h4>
-              <div class="opening-hourse">
-                <ul class="list list-border text-gray-darkgray">
-                  <li class="clearfix"><span><i class="fa fa-clock-o mr-5"></i>С Пн по Вс:</span>
-                    <div class="value pull-right flip">10.00 - 20.00 МСК</div>
+                <ul class="pull-right flip hidden-sm hidden-xs">
+                  <li>
+                    <a
+                      class="btn btn-colored btn-flat top-left-triangle bg-theme-colored text-white font-14 p-10 mt-15 pr-30 pl-15"
+                      href="https://toff-shop.ru/pages/zadat-vopros"
+                      >Задать вопрос</a
+                    >
                   </li>
                 </ul>
+                <div class="collapse" id="top-search-bar">
+                  <div class="container">
+                    <form
+                      action="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon#"
+                      class="search_form_top"
+                      method="get"
+                      role="search"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="form-control"
+                        name="s"
+                        placeholder="Поиск по каталогу"
+                        type="text"
+                      /><span class="search-close"
+                        ><i class="fa fa-search"></i
+                      ></span>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="header-icons">
+              <div class="title">- КАТАЛОГ ПРОДУКЦИИ -</div>
+              <ul>
+                <li>
+                  <a href="https://toff-shop.ru/catalog/ekipirovka-naezdnikov"
+                    ><img
+                      alt=""
+                      class="lazyload"
+                      src="./Toff_files/medium_1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://toff-shop.ru/catalog/popony"
+                    ><img
+                      alt=""
+                      class="lazyload"
+                      src="./Toff_files/medium_2.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://toff-shop.ru/catalog/amuniciya"
+                    ><img
+                      alt=""
+                      class="lazyload"
+                      src="./Toff_files/medium_3.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://toff-shop.ru/catalog/kosmetika-dlya-loshadei-i-amunicii"
+                    ><img
+                      alt=""
+                      class="lazyload"
+                      src="./Toff_files/medium_4.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://toff-shop.ru/catalog/zdorove"
+                    ><img
+                      alt=""
+                      class="lazyload"
+                      src="./Toff_files/medium_5.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://toff-shop.ru/catalog/oborudovanie-dlya-konyushni-i-furnitura-dlya-amunicii"
+                    ><img
+                      alt=""
+                      class="lazyload"
+                      src="./Toff_files/medium_6.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            style="display: none; width: 1512px; height: 72px; float: none"
+          ></div>
+        </div>
+      </header>
+      <div class="main-content">
+        <section
+          class="inner-header divider parallax layer-overlay overlay-dark-5"
+          data-bg-img="https://toff-shop.ru/uploads/bg3.jpg"
+          style="
+            background-image: url('https://toff-shop.ru/uploads/bg3.jpg');
+            background-position: 50% 95px;
+          "
+        >
+          <div class="container pt-90 pb-50">
+            <div class="section-content pt-100">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="title text-white">Конструктор</h3>
+                  <ul class="list-inline text-white">
+                    <li>
+                      <a class="text-white" href="https://toff-shop.ru/"
+                        >Главная &nbsp;&nbsp;/</a
+                      >
+                    </li>
+                    <li><span>Конструктор</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container pt-0 mb-30 pb-30">
+            <!-- CONSTRUCTOR -->
+            <div class="constructor">
+              <!-- CONSTRUCTOR-TOP -->
+              <div class="constructor__top">
+                <div class="constructor-switch">
+                  <div class="radio constructor-switch-item">
+                    <input
+                      type="radio"
+                      name="constructorSwitch"
+                      id="horse"
+                      value="horse"
+                      checked
+                    />
+                    <label for="horse">Лошадь</label>
+                  </div>
+
+                  <div class="radio constructor-switch-item">
+                    <input
+                      type="radio"
+                      name="constructorSwitch"
+                      id="pony"
+                      value="pony"
+                    />
+                    <label for="pony">Пони</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /CONSTRUCTOR-TOP -->
+
+              <div class="row constructor__inner">
+                <!-- LEFT MENU -->
+                <div
+                  class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0 constructor__left-menu"
+                >
+                  <!-- МАСТИ -->
+                  <div class="constructor-menu-group">
+                    <div class="constructor-menu-title">МАСТИ</div>
+
+                    <div>
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseSuit"
+                          id="optionsHorseSuit1"
+                          value="suit1"
+                          checked
+                        />
+                        <label for="optionsHorseSuit1">СЕРАЯ лошадь</label>
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseSuit"
+                          id="optionsHorseSuit2"
+                          value="suit2"
+                        />
+                        <label for="optionsHorseSuit2">РЫЖАЯ лошадь</label>
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseSuit"
+                          id="optionsHorseSuit3"
+                          value="suit3"
+                        />
+                        <label for="optionsHorseSuit3">ГНЕДАЯ лошадь</label>
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseSuit"
+                          id="optionsHorseSuit4"
+                          value="suit4"
+                        />
+                        <label for="optionsHorseSuit4">ВОРОНАЯ лошадь</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ГРИВА -->
+                  <div class="constructor-menu-group">
+                    <div class="constructor-menu-title">ГРИВА</div>
+
+                    <div>
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseMane"
+                          id="optionsHorseMane1"
+                          value="mane1"
+                          checked
+                        />
+                        <label for="optionsHorseMane1">длинная грива</label>
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseMane"
+                          id="optionsHorseMane2"
+                          value="mane2"
+                        />
+                        <label for="optionsHorseMane2">короткая грива</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- НАВИС -->
+                  <div class="constructor-menu-group">
+                    <div class="constructor-menu-title">НАВИС</div>
+
+                    <div>
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseNavis"
+                          id="optionsHorseNavis1"
+                          value="navis1"
+                          checked
+                        />
+                        <label for="optionsHorseNavis1">навис белый</label>
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseNavis"
+                          id="optionsHorseNavis2"
+                          value="navis2"
+                        />
+                        <label for="optionsHorseNavis2">навис серый</label>
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseNavis"
+                          id="optionsHorseNavis3"
+                          value="navis3"
+                        />
+                        <label for="optionsHorseNavis3">навис черный</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- МОРДА -->
+                  <div class="constructor-menu-group">
+                    <div class="constructor-menu-title">МОРДА</div>
+
+                    <div>
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseMuzzle"
+                          id="optionsHorseMuzzle1"
+                          value="muzzle1"
+                          checked
+                        />
+                        <label for="optionsHorseMuzzle1"
+                          >белая отметина “лысина”</label
+                        >
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseMuzzle"
+                          id="optionsHorseMuzzle2"
+                          value="muzzle2"
+                        />
+                        <label for="optionsHorseMuzzle2"
+                          >белая отметина “проточина”</label
+                        >
+                      </div>
+
+                      <div class="radio constructor-menu-item">
+                        <input
+                          type="radio"
+                          name="optionsHorseMuzzle"
+                          id="optionsHorseMuzzle3"
+                          value="muzzle3"
+                        />
+                        <label for="optionsHorseMuzzle3"
+                          >белая отметина “звезда”</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- КОПЫТА -->
+                  <div class="constructor-menu-group">
+                    <div class="constructor-menu-title">КОПЫТА</div>
+
+                    <div>
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="horseHooves1"
+                          value="hooves1"
+                        />
+                        <label for="horseHooves1"
+                          >Правая передняя белая отметина</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="horseHooves2"
+                          value="hooves2"
+                        />
+                        <label for="horseHooves2"
+                          >Левая передняя белая отметина</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="horseHooves3"
+                          value="hooves3"
+                        />
+                        <label for="horseHooves3"
+                          >Правая задняя белая отметина</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="horseHooves4"
+                          value="hooves4"
+                        />
+                        <label for="horseHooves4"
+                          >Левая задняя белая отметина</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="horseHooves5"
+                          value="hooves5"
+                        />
+                        <label for="horseHooves5">Черные отметины</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- /LEFT MENU -->
+                </div>
+
+                <!-- CONSTRUCTOR-VISUAL -->
+                <div
+                  class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 constructor-visual"
+                >
+                  <img
+                    class="constructor__img constructor__horse"
+                    src="assets/img/horse-grey.png"
+                    alt=""
+                  />
+                </div>
+
+                <!-- RIGHT MENU -->
+                <div
+                  class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0 constructor__right-menu"
+                >
+                  <!-- ДОЖДЕВАЯ ПОПОНА -->
+                  <div class="constructor-menu-group">
+                    <button
+                      class="btn constructor-menu-title collapse-menu-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#rainBlanket"
+                      aria-expanded="false"
+                      aria-controls="rainBlanket"
+                    >
+                      ДОЖДЕВАЯ ПОПОНА <br />
+                      СО СЪЕМНЫМ КАПОРОМ
+                    </button>
+
+                    <div class="collapse" id="rainBlanket">
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket1"
+                          value="rainBlanket1"
+                        />
+                        <label for="rainBlanket1">BLUE SKY (без капора)</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket2"
+                          value="rainBlanket2"
+                        />
+                        <label for="rainBlanket2">BLUE SKY (с капором)</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket3"
+                          value="rainBlanket3"
+                        />
+                        <label for="rainBlanket3">AZURE SKY (без капора)</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket4"
+                          value="rainBlanket4"
+                        />
+                        <label for="rainBlanket4">AZURE SKY (с капором)</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket5"
+                          value="rainBlanket5"
+                        />
+                        <label for="rainBlanket5"
+                          >PURPLE SKY (без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket6"
+                          value="rainBlanket6"
+                        />
+                        <label for="rainBlanket6">PURPLE SKY (с капором)</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket7"
+                          value="rainBlanket7"
+                        />
+                        <label for="rainBlanket7"
+                          >BRUSH PATTERN (без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket8"
+                          value="rainBlanket8"
+                        />
+                        <label for="rainBlanket8"
+                          >BRUSH PATTERN (с капором)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket9"
+                          value="rainBlanket9"
+                        />
+                        <label for="rainBlanket9">GEOMETRY(без капора)</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="rainBlanket10"
+                          value="rainBlanket10"
+                        />
+                        <label for="rainBlanket10">GEOMETRY (с капором)</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /ДОЖДЕВАЯ ПОПОНА -->
+
+                  <!-- ПРОГУЛОЧНАЯ ПОПОНА -->
+                  <div class="constructor-menu-group">
+                    <button
+                      class="btn constructor-menu-title collapse-menu-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#walkingBlanket"
+                      aria-expanded="false"
+                      aria-controls="walkingBlanket"
+                    >
+                      ПОПОНА ДЕННИКОВАЯ ИЛИ ПРОГУЛОЧНАЯ МЕМБРАННАЯ ИЗ <br />
+                      SOFTSHELL
+                    </button>
+
+                    <div class="collapse" id="walkingBlanket">
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket1"
+                          value="walkingBlanket1"
+                        />
+                        <label for="walkingBlanket1"
+                          >BLUE SKY (без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket2"
+                          value="walkingBlanket2"
+                        />
+                        <label for="walkingBlanket2"
+                          >BLUE SKY (с капором)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket3"
+                          value="walkingBlanket3"
+                        />
+                        <label for="walkingBlanket3"
+                          >AZURE SKY (без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket4"
+                          value="walkingBlanket4"
+                        />
+                        <label for="walkingBlanket4"
+                          >AZURE SKY (с капором)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket5"
+                          value="walkingBlanket5"
+                        />
+                        <label for="walkingBlanket5"
+                          >PURPLE SKY (без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket6"
+                          value="walkingBlanket6"
+                        />
+                        <label for="walkingBlanket6"
+                          >PURPLE SKY (с капором)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket7"
+                          value="walkingBlanket7"
+                        />
+                        <label for="walkingBlanket7"
+                          >BRUSH PATTERN (без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket8"
+                          value="walkingBlanket8"
+                        />
+                        <label for="walkingBlanket8"
+                          >BRUSH PATTERN (с капором)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket9"
+                          value="walkingBlanket9"
+                        />
+                        <label for="walkingBlanket9"
+                          >GEOMETRY(без капора)</label
+                        >
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="walkingBlanket10"
+                          value="walkingBlanket10"
+                        />
+                        <label for="walkingBlanket10"
+                          >GEOMETRY (с капором)</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /ПРОГУЛОЧНАЯ ПОПОНА -->
+
+                  <!-- МЕМБРАННАЯ ПОПОНА -->
+                  <div class="constructor-menu-group">
+                    <button
+                      class="btn constructor-menu-title collapse-menu-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#membraneBlanket"
+                      aria-expanded="false"
+                      aria-controls="membraneBlanket"
+                    >
+                      ПОПОНА С КАПОРОМ МЕМБРАННАЯ ИЗ <br />
+                      SOFTSHELL
+                    </button>
+
+                    <div class="collapse" id="membraneBlanket">
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="membraneBlanket1"
+                          value="membraneBlanket1"
+                        />
+                        <label for="membraneBlanket1">MISTY GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="membraneBlanket2"
+                          value="membraneBlanket2"
+                        />
+                        <label for="membraneBlanket2">SUNSET GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="membraneBlanket3"
+                          value="membraneBlanket3"
+                        />
+                        <label for="membraneBlanket3">MARINE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="membraneBlanket4"
+                          value="membraneBlanket4"
+                        />
+                        <label for="membraneBlanket4">PURPLE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="membraneBlanket5"
+                          value="membraneBlanket5"
+                        />
+                        <label for="membraneBlanket5">BLUE MAGIC</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /МЕМБРАННАЯ ПОПОНА -->
+
+                  <!-- ФЛИСОВАЯ ПОПОНА -->
+                  <div class="constructor-menu-group">
+                    <button
+                      class="btn constructor-menu-title collapse-menu-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#fleeceBlanket"
+                      aria-expanded="false"
+                      aria-controls="fleeceBlanket"
+                    >
+                      ПОПОНА ФЛИСОВАЯ <br />СО СТРОПАМИ
+                    </button>
+
+                    <div class="collapse" id="fleeceBlanket">
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="fleeceBlanket1"
+                          value="fleeceBlanket1"
+                        />
+                        <label for="fleeceBlanket1">MISTY GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="fleeceBlanket2"
+                          value="fleeceBlanket2"
+                        />
+                        <label for="fleeceBlanket2">SUNSET GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="fleeceBlanket3"
+                          value="fleeceBlanket3"
+                        />
+                        <label for="fleeceBlanket3">MARINE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="fleeceBlanket4"
+                          value="fleeceBlanket4"
+                        />
+                        <label for="fleeceBlanket4">PURPLE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="fleeceBlanket5"
+                          value="fleeceBlanket5"
+                        />
+                        <label for="fleeceBlanket5">BLUE MAGIC</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /ФЛИСОВАЯ ПОПОНА -->
+
+                  <!-- МОСКИТНАЯ ПОПОНА -->
+                  <div class="constructor-menu-group">
+                    <button
+                      class="btn constructor-menu-title collapse-menu-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#mosquitoBlanket"
+                      aria-expanded="false"
+                      aria-controls="mosquitoBlanket"
+                    >
+                      ПОПОНА МОСКИТНАЯ <br />
+                      WALK ALL DAY
+                    </button>
+
+                    <div class="collapse" id="mosquitoBlanket">
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="mosquitoBlanket1"
+                          value="mosquitoBlanket1"
+                        />
+                        <label for="mosquitoBlanket1">MISTY GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="mosquitoBlanket2"
+                          value="mosquitoBlanket2"
+                        />
+                        <label for="mosquitoBlanket2">SUNSET GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="mosquitoBlanket3"
+                          value="mosquitoBlanket3"
+                        />
+                        <label for="mosquitoBlanket3">MARINE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="mosquitoBlanket4"
+                          value="mosquitoBlanket4"
+                        />
+                        <label for="mosquitoBlanket4">PURPLE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="mosquitoBlanket5"
+                          value="mosquitoBlanket5"
+                        />
+                        <label for="mosquitoBlanket5">BLUE MAGIC</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /МОСКИТНАЯ ПОПОНА -->
+
+                  <!-- ПОПОНА-СЕТКА -->
+                  <div class="constructor-menu-group">
+                    <button
+                      class="btn constructor-menu-title collapse-menu-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#gridBlanket"
+                      aria-expanded="false"
+                      aria-controls="gridBlanket"
+                    >
+                      ПОПОНА-СЕТКА <br />
+                      SUMMER HELP
+                    </button>
+
+                    <div class="collapse" id="gridBlanket">
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="gridBlanket1"
+                          value="gridBlanket1"
+                        />
+                        <label for="gridBlanket1">MISTY GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="gridBlanket2"
+                          value="gridBlanket2"
+                        />
+                        <label for="gridBlanket2">SUNSET GARDEN</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="gridBlanket3"
+                          value="gridBlanket3"
+                        />
+                        <label for="gridBlanket3">MARINE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="gridBlanket4"
+                          value="gridBlanket4"
+                        />
+                        <label for="gridBlanket4">PURPLE MAGIC</label>
+                      </div>
+
+                      <div class="checkbox constructor-menu-item">
+                        <input
+                          type="checkbox"
+                          id="gridBlanket5"
+                          value="gridBlanket5"
+                        />
+                        <label for="gridBlanket5">BLUE MAGIC</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /ПОПОНА-СЕТКА -->
+
+                  <!-- /RIGHT MENU -->
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="constructor__copy">
+                    <p>
+                      © TOFF. Все материалы данного сайта являются объектами
+                      авторского права. Запрещается копирование, распространение
+                      или любое иное использование информации и объектов без
+                      предварительного согласия правообладателя.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer id="footer">
+        <section
+          class="divider layer-overlay overlay-dark-8"
+          data-bg-img="https://toff-shop.ru/assets/bg8-8192a25867c16162aa23497cf6871ef86c9177074131d6ce21fecd7fab9436c3.jpg"
+          style="
+            background-image: url('https://toff-shop.ru/assets/bg8-8192a25867c16162aa23497cf6871ef86c9177074131d6ce21fecd7fab9436c3.jpg');
+          "
+        >
+          <div class="container pt-60 pb-30">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                  <img
+                    alt=""
+                    class="mt-0 mb-10"
+                    src="./Toff_files/logo-white-dff9861aa6e2de5284c994b5e3f179196e7923ddf9c495e22dfa42af73e3b4e1.png"
+                    style="max-width: 160px"
+                  />
+                  <p>Если вы любите лошадей так же, как любим их мы</p>
+                  <ul
+                    class="styled-icons icon-sm icon-bordered icon-theme-colored"
+                  >
+                    <li>
+                      <a href="https://vk.com/toff__shop" target="blank"
+                        ><i class="fa fa-vk"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                  <h4 class="widget-title line-bottom-theme-colored">
+                    Навигация
+                  </h4>
+                  <ul class="list angle-double-right list-border">
+                    <li><a href="https://toff-shop.ru/blog">Блог</a></li>
+                    <li>
+                      <a href="https://toff-shop.ru/tehnologii"
+                        >Наши технологии</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://toff-shop.ru/pages/o-nas">О нас</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                  <h4
+                    class="widget-title line-bottom-theme-colored"
+                    style="opacity: 0"
+                  >
+                    Навигация
+                  </h4>
+                  <ul class="list angle-double-right list-border">
+                    <li><a href="https://toff-shop.ru/offers">Акции</a></li>
+                    <li>
+                      <a href="https://toff-shop.ru/pages/kontakty">Контакты</a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://toff-shop.ru/pages/politika-konfidencialnosti"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                  <h4 class="widget-title line-bottom-theme-colored">
+                    Время работы
+                  </h4>
+                  <div class="opening-hourse">
+                    <ul class="list list-border text-gray-darkgray">
+                      <li class="clearfix">
+                        <span
+                          ><i class="fa fa-clock-o mr-5"></i>С Пн по Вс:</span
+                        >
+                        <div class="value pull-right flip">
+                          10.00 - 20.00 МСК
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            class="container-fluid p-20"
+            data-bg-color="#163f4a"
+            style="background: rgb(22, 63, 74) !important"
+          >
+            <div class="row text-center">
+              <div class="col-md-12">
+                <p class="text-white font-11 m-0">
+                  © 2023 TOFF. Все права защищены
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <a
+        class="scrollToTop"
+        href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon#"
+        ><i class="fa fa-angle-up"></i
+      ></a>
+    </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(80128519, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/80128519"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NZH4XTZ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+      function callMessage(text) {
+        new jBox("Notice", {
+          attributes: {
+            x: "right",
+            y: "bottom",
+          },
+          color: "green",
+          content: text,
+          autoClose: 7000,
+          animation: {
+            open: "slide:bottom",
+            close: "slide:right",
+          },
+        });
+      }
+
+      function renderJbox(text, time) {
+        let timeoutTime = time;
+        // setTimeout(callMessage(text), timeoutTime);
+        setTimeout(function () {
+          callMessage(text);
+        }, timeoutTime);
+      }
+
+      // for (let count = 1; count < 4; count++) {
+      // 	setTimeout(function() {
+      // 		console.log("Count = " + count);
+      // 	}, 1000 * count);
+
+      // }
+    </script>
+    <div class="modal fade modal-card" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-close-button">
+              <a
+                aria-hidden="true"
+                class="close"
+                data-dismiss="modal"
+                href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon"
+                type="button"
+                >Закрыть<img
+                  src="./Toff_files/close-6eadf2fed81609fd5a86bdfbec7f69dc277e8428834de41f0cc020f60782da8e.png"
+              /></a>
+            </div>
+            <div class="row modal-row">
+              <div class="col-sm-7 col-sm-push-5 modal-title">
+                <img
+                  src="./Toff_files/title-6d6d64f6317fe62fbce3d88d912539d23926ad6c9554e7c11e287eb232830e00.png"
+                />
+                <p>
+                  Ваш резерв никуда не&nbsp;пропадет, и&nbsp;вы&nbsp;сможете
+                  к&nbsp;нему вернуться в&nbsp;течение 24&nbsp;часов*
+                </p>
+              </div>
+              <div class="col-sm-5 col-sm-pull-7 d-md-none modal-horse">
+                <img
+                  src="./Toff_files/horse-f86c2e070c202929a0a8d78778237ff0a2bb719ad4c1c025c9544babf528f91c.png"
+                />
+              </div>
+            </div>
+            <form
+              action="https://toff-shop.ru/save_cart"
+              accept-charset="UTF-8"
+              data-remote="true"
+              method="post"
+            >
+              <div class="modal-form-email">
+                <input
+                  class="form-control font-14"
+                  placeholder="Ваш email"
+                  required="required"
+                  oninvalid="this.setCustomValidity(&#39;Введите ваш email&#39;)"
+                  oninput="this.setCustomValidity(&#39;&#39;)"
+                  type="email"
+                  name="save_cart[email]"
+                  id="save_cart_email"
+                />
+                <button class="btn btn-default font-14" type="submit">
+                  Отправить
+                </button>
+              </div>
+              <div class="modal-form-policy">
+                <div class="checkbox">
+                  <label
+                    ><input
+                      name="save_cart[is_agree]"
+                      type="hidden"
+                      value="0"
+                    /><input
+                      required="required"
+                      oninvalid="this.setCustomValidity(&#39;Необходимо согласие с политикой конфиденциальности&#39;)"
+                      oninput="this.setCustomValidity(&#39;&#39;)"
+                      type="checkbox"
+                      value="1"
+                      name="save_cart[is_agree]"
+                      id="save_cart_is_agree"
+                    /><span
+                      >Я подтверждаю, что ознакомлен с&nbsp;<a
+                        class="modal-link"
+                        href="https://toff-shop.ru/pages/politika-konfidencialnosti"
+                        target="_blank"
+                        >политикой конфиденциальности</a
+                      ></span
+                    ></label
+                  >
+                </div>
+              </div>
+              <div class="modal_footer">
+                <span
+                  >* - Через 24ч заказ<br />
+                  превратится в ...</span
+                ><img
+                  src="./Toff_files/pumpkin-5aa212d6b7b40d4e91374c763a6ca42a31240a532ce2c405cd2ebf48e65b1b94.png"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade modal-card-saved-user-exist"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-close-button">
+              <a
+                aria-hidden="true"
+                class="close"
+                data-dismiss="modal"
+                href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon"
+                type="button"
+                >Закрыть<img
+                  src="./Toff_files/close-6eadf2fed81609fd5a86bdfbec7f69dc277e8428834de41f0cc020f60782da8e.png"
+              /></a>
+            </div>
+            <div class="row modal-row">
+              <div class="modal-title">
+                <p>Корзина сохранена</p>
+                <p></p>
+                <p>Для использования личной накопительной скидкой</p>
+                <a
+                  class="btn btn-colored btn-flat bg-theme-colored text-white font-14 p-10 mt-15 pr-30 pl-15"
+                  href="https://toff-shop.ru/customer"
+                  >авторизуйтесь на сайте</a
+                >
+                <p></p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="container-fluid p-20" data-bg-color="#163f4a" style="background: rgb(22, 63, 74) !important;">
-        <div class="row text-center">
-          <div class="col-md-12"><p class="text-white font-11 m-0">© 2023 TOFF. Все права защищены</p></div>
-        </div>
-      </div>
-    </section>
-  </footer>
-  <a class="scrollToTop" href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon#"><i
-    class="fa fa-angle-up"></i></a></div><!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-  (function (m, e, t, r, i, k, a) {
-    m[i] = m[i] || function () {(m[i].a = m[i].a || []).push(arguments);};
-    m[i].l = 1 * new Date();
-    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a);
-  })
-  (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-  ym(80128519, 'init', {
-    clickmap: true,
-    trackLinks: true,
-    accurateTrackBounce: true,
-    webvisor: true,
-  });
-</script>
-<noscript>
-  <div><img src="https://mc.yandex.ru/watch/80128519" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
-
-<!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-  w[l] = w[l] || [];
-  w[l].push({
-    'gtm.start':
-      new Date().getTime(), event: 'gtm.js',
-  });
-  var f = d.getElementsByTagName(s)[0],
-    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-  j.async = true;
-  j.src =
-    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-  f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-NZH4XTZ');</script>
-<!-- End Google Tag Manager -->
-<script>function callMessage(text) {
-  new jBox('Notice', {
-    attributes: {
-      x: 'right',
-      y: 'bottom',
-    },
-    color: 'green',
-    content: text,
-    autoClose: 7000,
-    animation: {
-      open: 'slide:bottom',
-      close: 'slide:right',
-    },
-  });
-}
-
-function renderJbox(text, time) {
-  let timeoutTime = time;
-  // setTimeout(callMessage(text), timeoutTime);
-  setTimeout(function () {
-    callMessage(text);
-  }, timeoutTime);
-}
-
-// for (let count = 1; count < 4; count++) {
-// 	setTimeout(function() {
-// 		console.log("Count = " + count);
-// 	}, 1000 * count);
-
-// }</script>
-<div class="modal fade modal-card" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="modal-close-button"><a aria-hidden="true" class="close" data-dismiss="modal"
-                                           href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon"
-                                           type="button">Закрыть<img
-          src="./Toff_files/close-6eadf2fed81609fd5a86bdfbec7f69dc277e8428834de41f0cc020f60782da8e.png"></a></div>
-        <div class="row modal-row">
-          <div class="col-sm-7 col-sm-push-5 modal-title"><img
-            src="./Toff_files/title-6d6d64f6317fe62fbce3d88d912539d23926ad6c9554e7c11e287eb232830e00.png">
-            <p>Ваш резерв никуда не&nbsp;пропадет, и&nbsp;вы&nbsp;сможете к&nbsp;нему вернуться в&nbsp;течение 24&nbsp;часов*</p>
-          </div>
-          <div class="col-sm-5 col-sm-pull-7 d-md-none modal-horse"><img
-            src="./Toff_files/horse-f86c2e070c202929a0a8d78778237ff0a2bb719ad4c1c025c9544babf528f91c.png"></div>
-        </div>
-        <form action="https://toff-shop.ru/save_cart" accept-charset="UTF-8" data-remote="true" method="post">
-          <div class="modal-form-email"><input class="form-control font-14" placeholder="Ваш email" required="required"
-                                               oninvalid="this.setCustomValidity(&#39;Введите ваш email&#39;)"
-                                               oninput="this.setCustomValidity(&#39;&#39;)" type="email"
-                                               name="save_cart[email]" id="save_cart_email">
-            <button class="btn btn-default font-14" type="submit">Отправить</button>
-          </div>
-          <div class="modal-form-policy">
-            <div class="checkbox"><label><input name="save_cart[is_agree]" type="hidden" value="0"><input
-              required="required"
-              oninvalid="this.setCustomValidity(&#39;Необходимо согласие с политикой конфиденциальности&#39;)"
-              oninput="this.setCustomValidity(&#39;&#39;)" type="checkbox" value="1" name="save_cart[is_agree]"
-              id="save_cart_is_agree"><span>Я подтверждаю, что ознакомлен с&nbsp;<a class="modal-link"
-                                                                                    href="https://toff-shop.ru/pages/politika-konfidencialnosti"
-                                                                                    target="_blank">политикой
-              конфиденциальности</a></span></label></div>
-          </div>
-          <div class="modal_footer"><span>* - Через 24ч заказ<br> превратится в ...</span><img
-            src="./Toff_files/pumpkin-5aa212d6b7b40d4e91374c763a6ca42a31240a532ce2c405cd2ebf48e65b1b94.png"></div>
-        </form>
-      </div>
     </div>
-  </div>
-</div>
-<div class="modal fade modal-card-saved-user-exist" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="modal-close-button"><a aria-hidden="true" class="close" data-dismiss="modal"
-                                           href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon"
-                                           type="button">Закрыть<img
-          src="./Toff_files/close-6eadf2fed81609fd5a86bdfbec7f69dc277e8428834de41f0cc020f60782da8e.png"></a></div>
-        <div class="row modal-row">
-          <div class="modal-title"><p>Корзина сохранена</p>
-            <p></p>
-            <p>Для использования личной накопительной скидкой</p><a
-              class="btn btn-colored btn-flat bg-theme-colored text-white font-14 p-10 mt-15 pr-30 pl-15"
-              href="https://toff-shop.ru/customer">авторизуйтесь на сайте</a>
-            <p></p></div>
+    <div class="modal fade modal-card-saved" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-close-button">
+              <a
+                aria-hidden="true"
+                class="close"
+                data-dismiss="modal"
+                href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon"
+                type="button"
+                >Закрыть<img
+                  src="./Toff_files/close-6eadf2fed81609fd5a86bdfbec7f69dc277e8428834de41f0cc020f60782da8e.png"
+              /></a>
+            </div>
+            <div class="row modal-row">
+              <div class="modal-title"><p>Корзина сохранена</p></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="modal fade modal-card-saved" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="modal-close-button"><a aria-hidden="true" class="close" data-dismiss="modal"
-                                           href="https://toff-shop.ru/tehnologii/pochemu-my-ne-ispolzuem-sintepon"
-                                           type="button">Закрыть<img
-          src="./Toff_files/close-6eadf2fed81609fd5a86bdfbec7f69dc277e8428834de41f0cc020f60782da8e.png"></a></div>
-        <div class="row modal-row">
-          <div class="modal-title"><p>Корзина сохранена</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>

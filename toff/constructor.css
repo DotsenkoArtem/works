@@ -57,7 +57,6 @@
   position: relative;
   margin-top: 50px;
   padding-bottom: 50%;
-  /* height: 585px; */
   overflow: hidden;
 }
 
@@ -70,27 +69,20 @@
   left: 0;
 }
 
-
-
-/* .constructor-menu-group{
-  margin-top: 10px;
-  margin-bottom: 10px;
-} */
-
 .constructor-menu-item {
   position: relative;
   margin-bottom: 6px;
   margin-left: 0px;
 }
 
-.constructor-menu-btn,
+.constructor-menu-title,
 .constructor-menu-item {
   font-size: 14px;
   line-height: 1.35;
   color: #161211;
 }
 
-.constructor-menu-btn {
+.constructor-menu-title {
   margin-top: 5px;
   padding: 0 20px;
   max-width: 210px;
@@ -100,7 +92,7 @@
   white-space: initial;
 }
 
-.constructor-menu-btn:active {
+.constructor-menu-title:active {
   box-shadow: none;
 }
 
@@ -179,44 +171,49 @@
 }
 
 @media (max-width: 991.98px) {
-  .constructor__top{
+  .constructor__top {
     position: static;
     margin: 40px auto;
   }
-  .constructor__inner{
+
+  .constructor__inner {
     display: flex;
     flex-wrap: wrap;
   }
-  .constructor__left-menu{
+
+  .constructor__left-menu {
     order: 1;
   }
-  .constructor__right-menu{
+
+  .constructor__right-menu {
     order: 2;
   }
-  .constructor-visual{
+
+  .constructor-visual {
     margin-top: 0px;
     padding-bottom: 75%;
     order: 3;
-    
+
   }
-  .constructor__copy{
+
+  .constructor__copy {
     text-align: center;
   }
 }
 
 @media (max-width: 767.98px) {
-  .constructor__inner{
+  .constructor__inner {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 540px;
   }
 
-  .constructor-visual{
+  .constructor-visual {
     padding-bottom: 100%;
   }
 
-  .constructor__copy{
+  .constructor__copy {
     margin-left: auto;
     margin-right: auto;
     max-width: 350px;
