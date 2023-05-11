@@ -83,7 +83,7 @@
 }
 
 .constructor-menu-title {
-  margin-top: 5px;
+  margin-top: 15px;
   padding: 0 20px;
   max-width: 210px;
   font-weight: 600;
@@ -102,22 +102,26 @@
 
 .collapse-menu-btn::before {
   position: absolute;
-  top: .2em;
+  top: .15em;
   left: .05em;
   display: block;
   width: .6em;
   height: .6em;
-  font-family: 'FontAwesome';
+  font-family: 'arial';
   font-size: 1.5em;
   text-align: center;
+  color: #163f4a;
   line-height: .6;
-  content: '\f107';
-  transform: rotate(0deg);
+  content: '';
+  background: url('./assets/img/arr.png') center no-repeat;
+  background-size: contain;
+  font-weight: 900;
+  transform: rotate(90deg);
   transition: transform .3s;
 }
 
 .collapse-menu-btn.collapsed::before {
-  transform: rotate(-90deg)
+  transform: rotate(0deg)
 }
 
 .constructor-menu-item {
