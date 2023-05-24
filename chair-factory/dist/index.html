@@ -1,966 +1,2811 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Фабрика Кресел</title>
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/media.css">
-  <link rel="stylesheet" href="/css/slick.css">
-  <link rel="stylesheet" href="/css/slick-theme.css">
-  <link rel="stylesheet" href="/feedback/css/form-processing.css">
-  <script src="/feedback/js/form-processing.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src='/js/slick.min.js'></script>
-  <script src='/js/slick.options.js'></script>
-  <script src='/js/script.js'></script>
-  <script src='/js/accordion.min.js'></script>
-  
-</head>
-<body>
-
-  <nav id="top">
-    <div class="container">
-      <div class="nav-menu">
-        <ul class="list-unstyled">
-          <li><a href="/">О магазине</a></li>
-          <li><a href="">Оплата и доставка</a></li>
-          <li><a href="">Гарантии</a></li>
-          <li><a href="">Отзывы</a></li>
-          <li><a href="">Контакты</a></li>
-          <li><a href="">Ответы на вопросы</a></li>
-        </ul>
-      </div>
-      <div class="nav-info">
-        <address>
-          <a href="/">Санкт-Петербург, Красного Курсанта, 25В, оф.114</a>
-          <a href="tel:+78123350971">+7 (812) 335-09-71</a>
-        </address>
-      </div>
-    </div>
-  </nav>
-
-  <header>
-    <div class="container">
-      <div id="logo"><a href="/" class="logo-svg"></a></div>
-      <div id="search" class="input-group">
-        <input type="text" name="search" value="" placeholder="Поиск" class="form-control input-lg">
-      </div>
-      <div class="geo-list">
-        <div class="dropdown">
-          <div class="dropbtn-box"><a class="dropbtn">Санкт-Петербург</a></div>
-          <div class="dropdown-content">
-              <div class="head_city">
-                  <a href="/" class="cart-box__sets-secondary">Москва</a>
-              </div>
-              <div class="head_city">
-                  <a href="/" class="cart-box__sets-secondary">Новосибирск</a>
-              </div>
-              <div class="head_city">
-                  <a href="/" class="cart-box__sets-secondary">Нижний Новгород</a>
-              </div>
-              <div class="head_city">
-                  <a href="/" class="cart-box__sets-secondary">Ростов-на-Дону</a>
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-feedback"><a href="#" data-fancybox data-src="#feadback-content">Заказать звонок</a></div>
-      <div class="icon-favourites"><a href="/"></a></div>
-      <div id="cart" class="btn-group btn-block">
-        <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn-cart"></button>
-        <ul class="dropdown-menu pull-right">
-            <li>
-              <p class="text-center">Ваша корзина пуста!</p>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <nav id="menu" class="navbar">
-      <ul class="nav navbar-nav">
-        <li><a href="/">полный каталог</a></li>
-        <li><a href="/">офисные кресла</a></li>
-        <li><a href="/">офисные стулья</a></li>
-        <li><a href="/">офисные диваны</a></li>
-        <li><a href="/">запчасти и аксессуары</a></li>
-        <li><a href="/">каталог обивок</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="promo-banner">
-    <div class="container">
-      <h1>Кресела и диваны <br>
-        для офиса и дома</h1>
-      <p>Оборудуйте ваше домашнее рабочее место так, чтобы работа стала комфортной, как никогда</p>
-      <a href="" class="btn btn-white">Перейти в каталог</a>
-    </div>
-    <div class="promo-img"><img src="image/banner/banner-samurai.png" alt=""></div>
-  </div>
-
-  <div class="container">
-
-    <div class="advateges-box">
-      <div class="sklad">Собственный склад <br> и быстрая доставка</div>
-      <div class="cash">Низкие цены при <br> высоком качестве</div>
-      <div class="garant">Гарантия на всю нашу <br> продукцию 1 год</div>
-      <div class="info-product">Полная информация о <br> товаре, его преимущества</div>
-    </div>
-  
-
-  
-    <div class="promo-best">
-      <div class="promo-title-icon">
-        <h2>Только на <br>
-          этой неделе</h2>
-      </div>
-      <div class="container-best">
-        <div class="product-layout">
-          <div class="product-thumb transition">
-            <div class="image">
-              <div class="stiker-best"></div>
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                7900 ₽
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="product-layout">
-          <div class="product-thumb transition">
-            <div class="image">
-              <div class="stiker-best"></div>
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                7900 ₽
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="product-layout">
-          <div class="product-thumb transition">
-            <div class="image">
-              <div class="stiker-best"></div>
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                7900 ₽
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  
-
-  
-    <div class="promo-category">
-      <div class="promo-banner-img">
-        <div class="promo-banner-title">
-          <h2>Кресла</h2>
-          <div class="promo-banner-info">700+ моделей</div>
-        </div>
-        <div class="promo-banner-new">Новые модели</div>
-      </div>
-      <div class="promo-banner-img">
-        <div class="promo-banner-title">
-          <h2>Стулья</h2>
-          <div class="promo-banner-info">650+ моделей</div>
-        </div>
-        <div class="promo-banner-new">Новые модели</div>
-      </div>
-      <div class="promo-banner-img">
-        <div class="promo-banner-title">
-          <h2>Диваны</h2>
-          <div class="promo-banner-info">300+ моделей</div>
-        </div>
-        <div class="promo-banner-new">Новые модели</div>
-      </div>
-    </div>
-  
-
-   <!-- Начало блока рекомендуемых товаров -->
-
-  
-    <h2 class="recommended-title">Кресла для сотрудников</h2>
-    <div class="recommended">
-
-          <div class="product-box">
-            <div class="image">
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-              </p>
-            </div>
-            <div class="atribut-group">
-              <div class="atr-box">
-                  <div class="atr-name"><span>Ширина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Высота</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Глубина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-            </div>
-            <div class="button-group">
-              <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-              <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-            </div>
-          </div>
-
-          <div class="product-box">
-            <div class="image">
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-              </p>
-            </div>
-            <div class="atribut-group">
-              <div class="atr-box">
-                  <div class="atr-name"><span>Ширина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Высота</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Глубина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-            </div>
-            <div class="button-group">
-              <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-              <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-            </div>
-          </div>
-
-          <div class="product-box">
-            <div class="image">
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-              </p>
-            </div>
-            <div class="atribut-group">
-              <div class="atr-box">
-                  <div class="atr-name"><span>Ширина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Высота</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Глубина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-            </div>
-            <div class="button-group">
-              <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-              <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-            </div>
-          </div>
-
-          <div class="product-box">
-            <div class="image">
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-              </p>
-            </div>
-            <div class="atribut-group">
-              <div class="atr-box">
-                  <div class="atr-name"><span>Ширина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Высота</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Глубина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-            </div>
-            <div class="button-group">
-              <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-              <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-            </div>
-          </div>
-
-          
-          <div class="product-box">
-            <div class="image">
-              <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-            </div>
-            <div class="category"><a href="#">Офисные кресла</a></div>
-            <div class="caption">
-              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-              <p class="price">
-                <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-              </p>
-            </div>
-            <div class="atribut-group">
-              <div class="atr-box">
-                  <div class="atr-name"><span>Ширина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Высота</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-              <div class="atr-box">
-                <div class="atr-name"><span>Глубина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-              </div>
-            </div>
-            <div class="button-group">
-              <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-              <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-            </div>
-          </div>
-      </div>
-    
-  </div>
-
-  <div class="promo-banner-slider">
-
-    <div class="container">
-      <div class="promo-title">
-        <h2>Кресла для <br>
-          домашнего офиса</h2>
-          <p>Оборудуйте ваше домашнее рабочее место так, чтобы работа <br> стала комфортной, как никогда</p>
-      </div>
-      <div class="promo-slider">
-
-
-        <div class="product-box">
-          <div class="image">
-            <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-          </div>
-          <div class="category"><a href="#">Офисные кресла</a></div>
-          <div class="caption">
-            <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-            <p class="price">
-              <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-            </p>
-          </div>
-          <div class="atribut-group">
-            <div class="atr-box">
-                <div class="atr-name"><span>Ширина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Высота</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Глубина</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-          </div>
-          <div class="button-group">
-            <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-            <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-          </div>
-        </div>
-
-        
-
-        <div class="product-box">
-          <div class="image">
-            <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-          </div>
-          <div class="category"><a href="#">Офисные кресла</a></div>
-          <div class="caption">
-            <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-            <p class="price">
-              <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-            </p>
-          </div>
-          <div class="atribut-group">
-            <div class="atr-box">
-                <div class="atr-name"><span>Ширина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Высота</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Глубина</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-          </div>
-          <div class="button-group">
-            <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-            <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-          </div>
-        </div>
-
-        
-
-        <div class="product-box">
-          <div class="image">
-            <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-          </div>
-          <div class="category"><a href="#">Офисные кресла</a></div>
-          <div class="caption">
-            <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-            <p class="price">
-              <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-            </p>
-          </div>
-          <div class="atribut-group">
-            <div class="atr-box">
-                <div class="atr-name"><span>Ширина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Высота</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Глубина</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-          </div>
-          <div class="button-group">
-            <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-            <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-          </div>
-        </div>
-
-        
-
-        <div class="product-box">
-          <div class="image">
-            <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-          </div>
-          <div class="category"><a href="#">Офисные кресла</a></div>
-          <div class="caption">
-            <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-            <p class="price">
-              <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-            </p>
-          </div>
-          <div class="atribut-group">
-            <div class="atr-box">
-                <div class="atr-name"><span>Ширина</span></div>
-                <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Высота</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-            <div class="atr-box">
-              <div class="atr-name"><span>Глубина</span></div>
-              <div class="atr-info"><span>62 см</span></div>
-            </div>
-          </div>
-          <div class="button-group">
-            <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-            <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="container">
-    <div class="promo-filter-box">
-      <div class="promo-filter-img">
-        <div class="promo-filter-coll"><div class="promo-banner-new">Подборка 120+</div></div>
-        <div class="promo-filter-name"><h3>Откидная <br> спинка</h3></div>
-      </div>
-      <div class="promo-filter-img">
-        <div class="promo-filter-coll"><div class="promo-banner-new">Подборка 200+</div></div>
-        <div class="promo-filter-name"><h3>Сетчатое <br> сидение</h3></div>
-      </div>
-      <div class="promo-filter-img">
-        <div class="promo-filter-coll"><div class="promo-banner-new">Подборка 70+</div></div>
-        <div class="promo-filter-name"><h3>Прочная <br> крестовина</h3></div>
-      </div>
-    </div>
-  </div>
-
-     <!-- Начало блока рекомендуемых товаров -->
-
-     <div class="container">
-      <h2 class="recommended-title">Кресла для сотрудников</h2>
-  
-      <div class="recommended">
-  
-            <div class="product-box">
-              <div class="image">
-                <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-              </div>
-              <div class="category"><a href="#">Офисные кресла</a></div>
-              <div class="caption">
-                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-                <p class="price">
-                  <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-                </p>
-              </div>
-              <div class="atribut-group">
-                <div class="atr-box">
-                    <div class="atr-name"><span>Ширина</span></div>
-                    <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Высота</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Глубина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-              </div>
-              <div class="button-group">
-                <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-                <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-              </div>
-            </div>
-  
-            <div class="product-box">
-              <div class="image">
-                <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-              </div>
-              <div class="category"><a href="#">Офисные кресла</a></div>
-              <div class="caption">
-                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-                <p class="price">
-                  <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-                </p>
-              </div>
-              <div class="atribut-group">
-                <div class="atr-box">
-                    <div class="atr-name"><span>Ширина</span></div>
-                    <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Высота</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Глубина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-              </div>
-              <div class="button-group">
-                <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-                <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-              </div>
-            </div>
-  
-            <div class="product-box">
-              <div class="image">
-                <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-              </div>
-              <div class="category"><a href="#">Офисные кресла</a></div>
-              <div class="caption">
-                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-                <p class="price">
-                  <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-                </p>
-              </div>
-              <div class="atribut-group">
-                <div class="atr-box">
-                    <div class="atr-name"><span>Ширина</span></div>
-                    <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Высота</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Глубина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-              </div>
-              <div class="button-group">
-                <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-                <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-              </div>
-            </div>
-  
-            <div class="product-box">
-              <div class="image">
-                <a href="/"><img src="/image/product/viking-91-925x550.jpg" alt=""></a>
-              </div>
-              <div class="category"><a href="#">Офисные кресла</a></div>
-              <div class="caption">
-                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
-                <p class="price">
-                  <span class="price-new">35 500 ₽</span><span class="price-old"><del>45 500 ₽</del></span>
-                </p>
-              </div>
-              <div class="atribut-group">
-                <div class="atr-box">
-                    <div class="atr-name"><span>Ширина</span></div>
-                    <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Высота</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-                <div class="atr-box">
-                  <div class="atr-name"><span>Глубина</span></div>
-                  <div class="atr-info"><span>62 см</span></div>
-                </div>
-              </div>
-              <div class="button-group">
-                <button type="button" class="btn-add-cart"><span class="text-btn">В корзину</span></button>
-                <button type="button" data-toggle="tooltip" title="" data-original-title="В закладки" class="favorite-btn"></button>
-              </div>
-            </div>
-
-          </div>
-          </div>
-  
-            <!-- Конец блока рекомендуемых товаров -->
-
-            <!-- Начало блока - Слайдер для промо товаров VIKING -->
-            <div class="slider-main">
-              <div class="container">
-                <div class="slider-nizbox">
-                  <div class="slider-nizbox-group">
-                    <h2>Кресло Viking-22 Strong<br>оранжевый</h2>
-                    <div class="slider-desc">Кресло высшего эргономического класса. Потрясающая<br> эстетика спинки кресла невероятным способом совмещает <br> индустриальные и природные мотивы.</div>
-                    <div class="slider-atr">
-                      <div class="atribut-group">
-                        <div class="atr-box">
-                            <div class="atr-name"><span>Высота</span></div>
-                            <div class="atr-info"><span>117-123 см</span></div>
-                        </div>
-                        <div class="atr-box">
-                          <div class="atr-name"><span>Высота сиденья</span></div>
-                          <div class="atr-info"><span>45–51 см</span></div>
-                        </div>
-                        <div class="atr-box">
-                          <div class="atr-name"><span>Ширина сиденья</span></div>
-                          <div class="atr-info"><span>52 см</span></div>
-                        </div>
-                        <div class="atr-box">
-                          <div class="atr-name"><span>Глубина сиденья</span></div>
-                          <div class="atr-info"><span>51 см</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="btn-slider">
-                      <a href="#" class="btn btn-white">Купить кресло</a>
-                      <a href="https://www.youtube.com/watch?v=meyUdOkgKnQ" class="btn btn-red" data-fancybox="video-gallery">Видео ревью</a>
-                    </div>
-                  </div>
-
-                  <div class="slider-nizbox-group">
-                    <h2>Кресло Viking-21 Strong<br>черный</h2>
-                    <div class="slider-desc">Кресло высшего эргономического класса. Потрясающая<br> эстетика спинки кресла невероятным способом совмещает <br> индустриальные и природные мотивы.</div>
-                    <div class="slider-atr">
-                      <div class="atribut-group">
-                        <div class="atr-box">
-                            <div class="atr-name"><span>Высота</span></div>
-                            <div class="atr-info"><span>117-123 см</span></div>
-                        </div>
-                        <div class="atr-box">
-                          <div class="atr-name"><span>Высота сиденья</span></div>
-                          <div class="atr-info"><span>45–51 см</span></div>
-                        </div>
-                        <div class="atr-box">
-                          <div class="atr-name"><span>Ширина сиденья</span></div>
-                          <div class="atr-info"><span>52 см</span></div>
-                        </div>
-                        <div class="atr-box">
-                          <div class="atr-name"><span>Глубина сиденья</span></div>
-                          <div class="atr-info"><span>51 см</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="btn-slider">
-                      <a href="#" class="btn btn-white">Купить кресло</a>
-                      <a href="https://www.youtube.com/watch?v=meyUdOkgKnQ" class="btn btn-red" data-fancybox="video-gallery">Видео ревью</a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <!-- Конец блока - Слайдер для промо товаров VIKING -->
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фабрика Кресел</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media.css" />
+    <link rel="stylesheet" href="/css/slick.css" />
+    <link rel="stylesheet" href="/css/slick-theme.css" />
+    <link rel="stylesheet" href="/feedback/css/form-processing.css" />
+    <script src="/feedback/js/form-processing.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Catalog-menu -->
+    <link rel="stylesheet" href="/css/catalog-menu.css" />
+    <!-- /Catalog-menu -->
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/slick.options.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/accordion.min.js"></script>
+  </head>
+  <body>
+    <div id="pageWrapper">
+      <nav id="top">
         <div class="container">
-
-          <div class="service-box">
-            <div class="service-zapchasti">
-              <h3>Запчасти <br>
-                и аксессуары</h3>
+          <div class="nav-menu">
+            <ul class="list-unstyled">
+              <li><a href="/">О магазине</a></li>
+              <li><a href="">Оплата и доставка</a></li>
+              <li><a href="">Гарантии</a></li>
+              <li><a href="">Отзывы</a></li>
+              <li><a href="">Контакты</a></li>
+              <li><a href="">Ответы на вопросы</a></li>
+            </ul>
+          </div>
+          <div class="nav-info">
+            <address>
+              <a href="/">Санкт-Петербург, Красного Курсанта, 25В, оф.114</a>
+              <a href="tel:+78123350971">+7 (812) 335-09-71</a>
+            </address>
+          </div>
+        </div>
+      </nav>
+      <header>
+        <div class="container">
+          <div id="logo"><a href="/" class="logo-svg"></a></div>
+          <div id="search" class="input-group">
+            <input
+              type="text"
+              name="search"
+              value=""
+              placeholder="Поиск"
+              class="form-control input-lg"
+            />
+          </div>
+          <div class="geo-list">
+            <div class="dropdown">
+              <div class="dropbtn-box">
+                <a class="dropbtn">Санкт-Петербург</a>
+              </div>
+              <div class="dropdown-content">
+                <div class="head_city">
+                  <a href="/" class="cart-box__sets-secondary">Москва</a>
+                </div>
+                <div class="head_city">
+                  <a href="/" class="cart-box__sets-secondary">Новосибирск</a>
+                </div>
+                <div class="head_city">
+                  <a href="/" class="cart-box__sets-secondary"
+                    >Нижний Новгород</a
+                  >
+                </div>
+                <div class="head_city">
+                  <a href="/" class="cart-box__sets-secondary"
+                    >Ростов-на-Дону</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="service-info">
-              <div class="service-info-box">
-                <h3>Сервисные услуги</h3>
-                <div class="service-desc">У нас вы можете не только купить качественное офисное кресло, но и получить полный спектр сервисных услуг. Мы оказываем услуги по сборке и настройке кресел, чтобы вы могли сразу приступить к работе в удобных условиях. Гарантируем быструю и надежную доставку кресел по городу.</div>
-                <div class="service-link">
+          </div>
+          <div class="btn-feedback">
+            <a href="#" data-fancybox data-src="#feadback-content"
+              >Заказать звонок</a
+            >
+          </div>
+          <div class="icon-favourites"><a href="/"></a></div>
+          <div id="cart" class="btn-group btn-block">
+            <button
+              type="button"
+              data-toggle="dropdown"
+              data-loading-text="Загрузка..."
+              class="btn-cart"
+            ></button>
+            <ul class="dropdown-menu pull-right">
+              <li>
+                <p class="text-center">Ваша корзина пуста!</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <nav id="menu" class="navbar">
+          <ul class="nav navbar-nav">
+            <li class="catalog-menu-trigger">
+              <a href="/">полный каталог</a>
+
+              <!-- Catalog-menu -->
+              <div class="catalog-menu-wrap">
+                <div class="catalog-menu">
+                  <div class="catalog-menu__row">
+                    <!-- Category 1 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Кресла</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для руководителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для сотрудников</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Эргономичные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Детские кресла</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Геймерские</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 1 -->
+
+                    <!-- Category 2 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Стулья</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные Samba</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для посетителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В конференц зал</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В кафе и ресторан</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 2 -->
+
+                    <!-- Category 3 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Диваны</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Euroforma38</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Chairman69</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бин"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бонд"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Грант"</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 3 -->
+
+                    <!-- Category 4 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Услуги</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Доставка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Сборка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обслуживание</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Гарантия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 4 -->
+
+                    <!-- Category 5 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Прочее</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Запчасти</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Аксессуары</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обивки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 5 -->
+                  </div>
+                  <div class="collections">
+                    <div class="collections__title">
+                      <span>Подборки</span>
+                      <div class="separ"></div>
+                    </div>
+
+                    <div class="catalog-menu__row">
+                      <!-- Collect Category 1 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_red text-red"
+                            >
+                              <a href="#">Кресла со скидкой</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 1 -->
+                      <!-- Collect Category 2 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 2 -->
+                      <!-- Collect Category 3 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Домашний офис</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_blue text-blue"
+                            >
+                              <a href="#">Стулья из «12 стульев»</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 3 -->
+                      <!-- Collect Category 4 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai Lite</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 4 -->
+                      <!-- Collect Category 5 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 5 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-backdrop"></div>
+              </div>
+              <!-- /Catalog-menu -->
+            </li>
+
+            <li class="catalog-menu-trigger">
+              <a href="/">офисные кресла</a>
+              <!-- Catalog-menu -->
+              <div class="catalog-menu-wrap">
+                <div class="catalog-menu">
+                  <div class="catalog-menu__row">
+                    <!-- Category 1 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Кресла 2</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для руководителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для сотрудников</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Эргономичные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Детские кресла</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Геймерские</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 1 -->
+
+                    <!-- Category 2 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Стулья</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные Samba</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для посетителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В конференц зал</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В кафе и ресторан</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 2 -->
+
+                    <!-- Category 3 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Диваны</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Euroforma38</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Chairman69</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бин"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бонд"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Грант"</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 3 -->
+
+                    <!-- Category 4 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Услуги</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Доставка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Сборка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обслуживание</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Гарантия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 4 -->
+
+                    <!-- Category 5 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Прочее</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Запчасти</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Аксессуары</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обивки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 5 -->
+                  </div>
+                  <div class="collections">
+                    <div class="collections__title">
+                      <span>Подборки</span>
+                      <div class="separ"></div>
+                    </div>
+
+                    <div class="catalog-menu__row">
+                      <!-- Collect Category 1 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_red text-red"
+                            >
+                              <a href="#">Кресла со скидкой</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 1 -->
+                      <!-- Collect Category 2 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 2 -->
+                      <!-- Collect Category 3 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Домашний офис</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_blue text-blue"
+                            >
+                              <a href="#">Стулья из «12 стульев»</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 3 -->
+                      <!-- Collect Category 4 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai Lite</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 4 -->
+                      <!-- Collect Category 5 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 5 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-backdrop"></div>
+              </div>
+              <!-- /Catalog-menu -->
+            </li>
+
+            <li class="catalog-menu-trigger">
+              <a href="/">офисные стулья</a>
+
+              <!-- Catalog-menu -->
+              <div class="catalog-menu-wrap">
+                <div class="catalog-menu">
+                  <div class="catalog-menu__row">
+                    <!-- Category 1 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Кресла 3</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для руководителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для сотрудников</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Эргономичные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Детские кресла</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Геймерские</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 1 -->
+
+                    <!-- Category 2 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Стулья</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные Samba</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для посетителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В конференц зал</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В кафе и ресторан</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 2 -->
+
+                    <!-- Category 3 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Диваны</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Euroforma38</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Chairman69</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бин"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бонд"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Грант"</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 3 -->
+
+                    <!-- Category 4 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Услуги</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Доставка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Сборка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обслуживание</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Гарантия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 4 -->
+
+                    <!-- Category 5 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Прочее</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Запчасти</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Аксессуары</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обивки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 5 -->
+                  </div>
+                  <div class="collections">
+                    <div class="collections__title">
+                      <span>Подборки</span>
+                      <div class="separ"></div>
+                    </div>
+
+                    <div class="catalog-menu__row">
+                      <!-- Collect Category 1 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_red text-red"
+                            >
+                              <a href="#">Кресла со скидкой</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 1 -->
+                      <!-- Collect Category 2 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 2 -->
+                      <!-- Collect Category 3 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Домашний офис</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_blue text-blue"
+                            >
+                              <a href="#">Стулья из «12 стульев»</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 3 -->
+                      <!-- Collect Category 4 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai Lite</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 4 -->
+                      <!-- Collect Category 5 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 5 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-backdrop"></div>
+              </div>
+              <!-- /Catalog-menu -->
+            </li>
+
+            <li class="catalog-menu-trigger">
+              <a href="/">офисные диваны</a>
+
+              <!-- Catalog-menu -->
+              <div class="catalog-menu-wrap">
+                <div class="catalog-menu">
+                  <div class="catalog-menu__row">
+                    <!-- Category 1 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Кресла 4</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для руководителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для сотрудников</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Эргономичные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Детские кресла</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Геймерские</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 1 -->
+
+                    <!-- Category 2 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Стулья</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные Samba</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для посетителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В конференц зал</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В кафе и ресторан</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 2 -->
+
+                    <!-- Category 3 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Диваны</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Euroforma38</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Chairman69</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бин"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бонд"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Грант"</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 3 -->
+
+                    <!-- Category 4 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Услуги</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Доставка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Сборка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обслуживание</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Гарантия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 4 -->
+
+                    <!-- Category 5 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Прочее</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Запчасти</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Аксессуары</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обивки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 5 -->
+                  </div>
+                  <div class="collections">
+                    <div class="collections__title">
+                      <span>Подборки</span>
+                      <div class="separ"></div>
+                    </div>
+
+                    <div class="catalog-menu__row">
+                      <!-- Collect Category 1 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_red text-red"
+                            >
+                              <a href="#">Кресла со скидкой</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 1 -->
+                      <!-- Collect Category 2 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 2 -->
+                      <!-- Collect Category 3 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Домашний офис</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_blue text-blue"
+                            >
+                              <a href="#">Стулья из «12 стульев»</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 3 -->
+                      <!-- Collect Category 4 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai Lite</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 4 -->
+                      <!-- Collect Category 5 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 5 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-backdrop"></div>
+              </div>
+              <!-- /Catalog-menu -->
+            </li>
+
+            <li class="catalog-menu-trigger">
+              <a href="/">запчасти и аксессуары</a>
+
+              <!-- Catalog-menu -->
+              <div class="catalog-menu-wrap">
+                <div class="catalog-menu">
+                  <div class="catalog-menu__row">
+                    <!-- Category 1 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Кресла 5</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для руководителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для сотрудников</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Эргономичные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Детские кресла</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Геймерские</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 1 -->
+
+                    <!-- Category 2 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Стулья</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные Samba</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для посетителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В конференц зал</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В кафе и ресторан</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 2 -->
+
+                    <!-- Category 3 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Диваны</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Euroforma38</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Chairman69</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бин"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бонд"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Грант"</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 3 -->
+
+                    <!-- Category 4 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Услуги</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Доставка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Сборка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обслуживание</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Гарантия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 4 -->
+
+                    <!-- Category 5 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Прочее</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Запчасти</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Аксессуары</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обивки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 5 -->
+                  </div>
+                  <div class="collections">
+                    <div class="collections__title">
+                      <span>Подборки</span>
+                      <div class="separ"></div>
+                    </div>
+
+                    <div class="catalog-menu__row">
+                      <!-- Collect Category 1 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_red text-red"
+                            >
+                              <a href="#">Кресла со скидкой</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 1 -->
+                      <!-- Collect Category 2 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 2 -->
+                      <!-- Collect Category 3 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Домашний офис</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_blue text-blue"
+                            >
+                              <a href="#">Стулья из «12 стульев»</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 3 -->
+                      <!-- Collect Category 4 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai Lite</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 4 -->
+                      <!-- Collect Category 5 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 5 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-backdrop"></div>
+              </div>
+              <!-- /Catalog-menu -->
+            </li>
+
+            <li class="catalog-menu-trigger">
+              <a href="/">каталог обивок</a>
+
+              <!-- Catalog-menu -->
+              <div class="catalog-menu-wrap">
+                <div class="catalog-menu">
+                  <div class="catalog-menu__row">
+                    <!-- Category 1 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Кресла 6</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для руководителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для сотрудников</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Эргономичные</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Детские кресла</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Геймерские</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 1 -->
+
+                    <!-- Category 2 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Стулья</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Офисные Samba</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Для посетителей</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В конференц зал</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">В кафе и ресторан</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 2 -->
+
+                    <!-- Category 3 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Диваны</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Euroforma38</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Chairman69</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бин"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Бонд"</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Мистер "Грант"</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 3 -->
+
+                    <!-- Category 4 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Услуги</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Доставка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Сборка</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обслуживание</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Гарантия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 4 -->
+
+                    <!-- Category 5 -->
+                    <div class="catalog-menu__col catalog-cat">
+                      <div class="catalog-cat__title">
+                        <h3>Прочее</h3>
+                      </div>
+                      <div class="catalog-cat__list">
+                        <ul>
+                          <li class="catalog-cat__item">
+                            <a href="#">Запчасти</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Аксессуары</a>
+                          </li>
+                          <li class="catalog-cat__item">
+                            <a href="#">Обивки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Category 5 -->
+                  </div>
+                  <div class="collections">
+                    <div class="collections__title">
+                      <span>Подборки</span>
+                      <div class="separ"></div>
+                    </div>
+
+                    <div class="catalog-menu__row">
+                      <!-- Collect Category 1 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_red text-red"
+                            >
+                              <a href="#">Кресла со скидкой</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 1 -->
+                      <!-- Collect Category 2 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 2 -->
+                      <!-- Collect Category 3 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Домашний офис</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey star star_blue text-blue"
+                            >
+                              <a href="#">Стулья из «12 стульев»</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 3 -->
+                      <!-- Collect Category 4 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Samurai Lite</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла геймерские Trident</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 4 -->
+                      <!-- Collect Category 5 -->
+                      <div class="catalog-menu__col catalog-cat">
+                        <div class="catalog-cat__list">
+                          <ul>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла Yoga</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Кресла до 250 кг</a>
+                            </li>
+                            <li
+                              class="catalog-cat__item catalog-cat__item_grey"
+                            >
+                              <a href="#">Стулья на дачу</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Collect Category 5 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-backdrop"></div>
+              </div>
+              <!-- /Catalog-menu -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="promo-banner">
+        <div class="container">
+          <h1>
+            Кресела и диваны <br />
+            для офиса и дома
+          </h1>
+          <p>
+            Оборудуйте ваше домашнее рабочее место так, чтобы работа стала
+            комфортной, как никогда
+          </p>
+          <a href="" class="btn btn-white">Перейти в каталог</a>
+        </div>
+        <div class="promo-img">
+          <img src="image/banner/banner-samurai.png" alt="" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="advateges-box">
+          <div class="sklad">
+            Собственный склад <br />
+            и быстрая доставка
+          </div>
+          <div class="cash">
+            Низкие цены при <br />
+            высоком качестве
+          </div>
+          <div class="garant">
+            Гарантия на всю нашу <br />
+            продукцию 1 год
+          </div>
+          <div class="info-product">
+            Полная информация о <br />
+            товаре, его преимущества
+          </div>
+        </div>
+        <div class="promo-best">
+          <div class="promo-title-icon">
+            <h2>
+              Только на <br />
+              этой неделе
+            </h2>
+          </div>
+          <div class="container-best">
+            <div class="product-layout">
+              <div class="product-thumb transition">
+                <div class="image">
+                  <div class="stiker-best"></div>
+                  <a href="/"
+                    ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                  /></a>
+                </div>
+                <div class="category"><a href="#">Офисные кресла</a></div>
+                <div class="caption">
+                  <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                  <p class="price">7900 ₽</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-layout">
+              <div class="product-thumb transition">
+                <div class="image">
+                  <div class="stiker-best"></div>
+                  <a href="/"
+                    ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                  /></a>
+                </div>
+                <div class="category"><a href="#">Офисные кресла</a></div>
+                <div class="caption">
+                  <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                  <p class="price">7900 ₽</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-layout">
+              <div class="product-thumb transition">
+                <div class="image">
+                  <div class="stiker-best"></div>
+                  <a href="/"
+                    ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                  /></a>
+                </div>
+                <div class="category"><a href="#">Офисные кресла</a></div>
+                <div class="caption">
+                  <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                  <p class="price">7900 ₽</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-category">
+          <div class="promo-banner-img">
+            <div class="promo-banner-title">
+              <h2>Кресла</h2>
+              <div class="promo-banner-info">700+ моделей</div>
+            </div>
+            <div class="promo-banner-new">Новые модели</div>
+          </div>
+          <div class="promo-banner-img">
+            <div class="promo-banner-title">
+              <h2>Стулья</h2>
+              <div class="promo-banner-info">650+ моделей</div>
+            </div>
+            <div class="promo-banner-new">Новые модели</div>
+          </div>
+          <div class="promo-banner-img">
+            <div class="promo-banner-title">
+              <h2>Диваны</h2>
+              <div class="promo-banner-info">300+ моделей</div>
+            </div>
+            <div class="promo-banner-new">Новые модели</div>
+          </div>
+        </div>
+        <!-- Начало блока рекомендуемых товаров -->
+        <h2 class="recommended-title">Кресла для сотрудников</h2>
+        <div class="recommended">
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="promo-banner-slider">
+        <div class="container">
+          <div class="promo-title">
+            <h2>
+              Кресла для <br />
+              домашнего офиса
+            </h2>
+            <p>
+              Оборудуйте ваше домашнее рабочее место так, чтобы работа <br />
+              стала комфортной, как никогда
+            </p>
+          </div>
+          <div class="promo-slider">
+            <div class="product-box">
+              <div class="image">
+                <a href="/"
+                  ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                /></a>
+              </div>
+              <div class="category"><a href="#">Офисные кресла</a></div>
+              <div class="caption">
+                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                <p class="price">
+                  <span class="price-new">35 500 ₽</span
+                  ><span class="price-old"><del>45 500 ₽</del></span>
+                </p>
+              </div>
+              <div class="atribut-group">
+                <div class="atr-box">
+                  <div class="atr-name"><span>Ширина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Высота</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Глубина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button type="button" class="btn-add-cart">
+                  <span class="text-btn">В корзину</span>
+                </button>
+                <button
+                  type="button"
+                  data-toggle="tooltip"
+                  title=""
+                  data-original-title="В закладки"
+                  class="favorite-btn"
+                ></button>
+              </div>
+            </div>
+            <div class="product-box">
+              <div class="image">
+                <a href="/"
+                  ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                /></a>
+              </div>
+              <div class="category"><a href="#">Офисные кресла</a></div>
+              <div class="caption">
+                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                <p class="price">
+                  <span class="price-new">35 500 ₽</span
+                  ><span class="price-old"><del>45 500 ₽</del></span>
+                </p>
+              </div>
+              <div class="atribut-group">
+                <div class="atr-box">
+                  <div class="atr-name"><span>Ширина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Высота</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Глубина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button type="button" class="btn-add-cart">
+                  <span class="text-btn">В корзину</span>
+                </button>
+                <button
+                  type="button"
+                  data-toggle="tooltip"
+                  title=""
+                  data-original-title="В закладки"
+                  class="favorite-btn"
+                ></button>
+              </div>
+            </div>
+            <div class="product-box">
+              <div class="image">
+                <a href="/"
+                  ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                /></a>
+              </div>
+              <div class="category"><a href="#">Офисные кресла</a></div>
+              <div class="caption">
+                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                <p class="price">
+                  <span class="price-new">35 500 ₽</span
+                  ><span class="price-old"><del>45 500 ₽</del></span>
+                </p>
+              </div>
+              <div class="atribut-group">
+                <div class="atr-box">
+                  <div class="atr-name"><span>Ширина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Высота</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Глубина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button type="button" class="btn-add-cart">
+                  <span class="text-btn">В корзину</span>
+                </button>
+                <button
+                  type="button"
+                  data-toggle="tooltip"
+                  title=""
+                  data-original-title="В закладки"
+                  class="favorite-btn"
+                ></button>
+              </div>
+            </div>
+            <div class="product-box">
+              <div class="image">
+                <a href="/"
+                  ><img src="/image/product/viking-91-925x550.jpg" alt=""
+                /></a>
+              </div>
+              <div class="category"><a href="#">Офисные кресла</a></div>
+              <div class="caption">
+                <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+                <p class="price">
+                  <span class="price-new">35 500 ₽</span
+                  ><span class="price-old"><del>45 500 ₽</del></span>
+                </p>
+              </div>
+              <div class="atribut-group">
+                <div class="atr-box">
+                  <div class="atr-name"><span>Ширина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Высота</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+                <div class="atr-box">
+                  <div class="atr-name"><span>Глубина</span></div>
+                  <div class="atr-info"><span>62 см</span></div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button type="button" class="btn-add-cart">
+                  <span class="text-btn">В корзину</span>
+                </button>
+                <button
+                  type="button"
+                  data-toggle="tooltip"
+                  title=""
+                  data-original-title="В закладки"
+                  class="favorite-btn"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="promo-filter-box">
+          <div class="promo-filter-img">
+            <div class="promo-filter-coll">
+              <div class="promo-banner-new">Подборка 120+</div>
+            </div>
+            <div class="promo-filter-name">
+              <h3>
+                Откидная <br />
+                спинка
+              </h3>
+            </div>
+          </div>
+          <div class="promo-filter-img">
+            <div class="promo-filter-coll">
+              <div class="promo-banner-new">Подборка 200+</div>
+            </div>
+            <div class="promo-filter-name">
+              <h3>
+                Сетчатое <br />
+                сидение
+              </h3>
+            </div>
+          </div>
+          <div class="promo-filter-img">
+            <div class="promo-filter-coll">
+              <div class="promo-banner-new">Подборка 70+</div>
+            </div>
+            <div class="promo-filter-name">
+              <h3>
+                Прочная <br />
+                крестовина
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Начало блока рекомендуемых товаров -->
+      <div class="container">
+        <h2 class="recommended-title">Кресла для сотрудников</h2>
+        <div class="recommended">
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="image">
+              <a href="/"
+                ><img src="/image/product/viking-91-925x550.jpg" alt=""
+              /></a>
+            </div>
+            <div class="category"><a href="#">Офисные кресла</a></div>
+            <div class="caption">
+              <h4><a href="#">Viking-91 Викинг Черный</a></h4>
+              <p class="price">
+                <span class="price-new">35 500 ₽</span
+                ><span class="price-old"><del>45 500 ₽</del></span>
+              </p>
+            </div>
+            <div class="atribut-group">
+              <div class="atr-box">
+                <div class="atr-name"><span>Ширина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Высота</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+              <div class="atr-box">
+                <div class="atr-name"><span>Глубина</span></div>
+                <div class="atr-info"><span>62 см</span></div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-add-cart">
+                <span class="text-btn">В корзину</span>
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="В закладки"
+                class="favorite-btn"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Конец блока рекомендуемых товаров -->
+      <!-- Начало блока - Слайдер для промо товаров VIKING -->
+      <div class="slider-main">
+        <div class="container">
+          <div class="slider-nizbox">
+            <div class="slider-nizbox-group">
+              <h2>Кресло Viking-22 Strong<br />оранжевый</h2>
+              <div class="slider-desc">
+                Кресло высшего эргономического класса. Потрясающая<br />
+                эстетика спинки кресла невероятным способом совмещает <br />
+                индустриальные и природные мотивы.
+              </div>
+              <div class="slider-atr">
+                <div class="atribut-group">
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Высота</span></div>
+                    <div class="atr-info"><span>117-123 см</span></div>
+                  </div>
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Высота сиденья</span></div>
+                    <div class="atr-info"><span>45–51 см</span></div>
+                  </div>
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Ширина сиденья</span></div>
+                    <div class="atr-info"><span>52 см</span></div>
+                  </div>
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Глубина сиденья</span></div>
+                    <div class="atr-info"><span>51 см</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-slider">
+                <a href="#" class="btn btn-white">Купить кресло</a>
+                <a
+                  href="https://www.youtube.com/watch?v=meyUdOkgKnQ"
+                  class="btn btn-red"
+                  data-fancybox="video-gallery"
+                  >Видео ревью</a
+                >
+              </div>
+            </div>
+            <div class="slider-nizbox-group">
+              <h2>Кресло Viking-21 Strong<br />черный</h2>
+              <div class="slider-desc">
+                Кресло высшего эргономического класса. Потрясающая<br />
+                эстетика спинки кресла невероятным способом совмещает <br />
+                индустриальные и природные мотивы.
+              </div>
+              <div class="slider-atr">
+                <div class="atribut-group">
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Высота</span></div>
+                    <div class="atr-info"><span>117-123 см</span></div>
+                  </div>
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Высота сиденья</span></div>
+                    <div class="atr-info"><span>45–51 см</span></div>
+                  </div>
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Ширина сиденья</span></div>
+                    <div class="atr-info"><span>52 см</span></div>
+                  </div>
+                  <div class="atr-box">
+                    <div class="atr-name"><span>Глубина сиденья</span></div>
+                    <div class="atr-info"><span>51 см</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-slider">
+                <a href="#" class="btn btn-white">Купить кресло</a>
+                <a
+                  href="https://www.youtube.com/watch?v=meyUdOkgKnQ"
+                  class="btn btn-red"
+                  data-fancybox="video-gallery"
+                  >Видео ревью</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Конец блока - Слайдер для промо товаров VIKING -->
+      <div class="container">
+        <div class="service-box">
+          <div class="service-zapchasti">
+            <h3>
+              Запчасти <br />
+              и аксессуары
+            </h3>
+          </div>
+          <div class="service-info">
+            <div class="service-info-box">
+              <h3>Сервисные услуги</h3>
+              <div class="service-desc">
+                У нас вы можете не только купить качественное офисное кресло, но
+                и получить полный спектр сервисных услуг. Мы оказываем услуги по
+                сборке и настройке кресел, чтобы вы могли сразу приступить к
+                работе в удобных условиях. Гарантируем быструю и надежную
+                доставку кресел по городу.
+              </div>
+              <div class="service-link">
+                <ul>
+                  <li><a href="#">Доставка по России</a></li>
+                  <li><a href="#">Обслуживание и гарантия</a></li>
+                  <li><a href="#">Услуги сборки</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Аккордеон Вопрос-Ответ -->
+        <div class="vopros-otvet">
+          <div class="vopros-title">
+            <h2>Ответы на <br />ваши вопросы</h2>
+            <p>
+              Если у вас остались вопросы, наш специалист ответит на них в
+              ближайшее время
+            </p>
+          </div>
+          <div class="acordeon-box">
+            <ul id="my-accordion" class="accordionjs">
+              <!-- Section 1 -->
+              <li>
+                <div>Возможен ли самовывоз заказанного товара?</div>
+                <div>
+                  <p>
+                    Вы можете самостоятельно забрать заказанные товары в нашем
+                    пункте самовывоза, если Вы находитесь в Санкт-Петербурге.
+                  </p>
+                  <p>
+                    Пункт выдачи: г. Санкт-Петербург, ул. Киевская д. 5 А3
+                    <br />
+                    Режим работы с 09:00 до 18:00 по будням. <br />
+                  </p>
+                  <p>
+                    Также таким способом можно воспользоваться, если Вы заказали
+                    машину транспортной компании и они осуществляют забор груза
+                    самостоятельно.
+                  </p>
+                </div>
+              </li>
+              <!-- Section 2 -->
+              <li>
+                <div>При каких условиях можно вернуть товар?</div>
+                <div>
+                  <p>
+                    В законе РФ «О защите прав потребителей» (ч. 1 ст. 25) есть
+                    определенные условия, при которых можно вернуть товар
+                    надлежащего качества.
+                  </p>
                   <ul>
-                    <li><a href="#">Доставка по России</a></li>
-                    <li><a href="#">Обслуживание и гарантия</a></li>
-                    <li><a href="#">Услуги сборки</a></li>
+                    <li>Товар не был в употреблении.</li>
+                    <li>
+                      Сохранены его товарный вид, потребительские свойства,
+                      пломбы, фабричные ярлыки.
+                    </li>
+                    <li>
+                      Имеется товарный чек или кассовый чек либо иной
+                      подтверждающий оплату указанного товара документ.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Section 3 -->
+              <li>
+                <div>
+                  Где можно посмотреть кресла, представленные в вашем
+                  интернет-магазине?
+                </div>
+                <div>
+                  Вот вам яркий пример современных тенденций — базовый вектор
+                  развития способствует подготовке и реализации анализа
+                  существующих паттернов.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Форма обратной связи -->
+        <div class="feadback-main-box">
+          <div class="feadback-main-title">
+            <h2>Если У вас остались вопросы</h2>
+            <p>
+              Если у вас остались вопросы, наш специалист ответит на них в
+              ближайшее время
+            </p>
+          </div>
+          <div class="feadback-main-form">
+            <form action=""></form>
+          </div>
+        </div>
+        <!-- Статьи -->
+        <div class="articles-box">
+          <div class="articles-title"><h2>Полезный материал</h2></div>
+          <div class="articles-content">
+            <div class="artticles-post">
+              <div class="art-img"><img src="" alt="" /></div>
+              <div class="art-name"></div>
+              <div class="art-desc"></div>
+            </div>
+            <div class="artticles-post"></div>
+            <div class="artticles-post"></div>
+          </div>
+        </div>
+        <!-- Карта -->
+        <div class="map-box">
+          <div class="map-title">
+            <h2>24 салона по всей стране</h2>
+            <p>
+              Если у вас остались вопросы, наш специалист ответит на них в
+              ближайшее время.
+            </p>
+          </div>
+          <div class="map-contetainer"></div>
+        </div>
+        <!-- Сео текст -->
+        <div class="seo-box">
+          <div class="seo-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="footer-box">
+            <div class="footer-column">
+              <div class="logo-footer">
+                <a href="/" class="logo-svg-footer"></a>
+              </div>
+              <div class="logo-desc">
+                2023 © «Фабрика кресел» — магазин офисной <br />
+                мебели от производителя. Все права защищены. <br />
+                Согласие на обработку персональных данных. <br />
+                Политика конфиденциальности. <br />
+              </div>
+            </div>
+            <div class="footer-column">
+              <div class="nav-menu">
+                <ul class="list-unstyled">
+                  <li><a href="">О магазине</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                  <li><a href="">Гарантии</a></li>
+                  <li><a href="">Отзывы</a></li>
+                  <li><a href="">Контакты</a></li>
+                  <li><a href="">Ответы на вопросы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-column">
+              <nav id="menu" class="navbar-footer">
+                <ul class="nav">
+                  <li><a href="">полный каталог</a></li>
+                  <li><a href="">офисные кресла</a></li>
+                  <li><a href="">офисные стулья</a></li>
+                  <li><a href="">офисные диваны</a></li>
+                  <li><a href="">запчасти и аксессуары</a></li>
+                  <li><a href="">каталог обивок</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <div class="footer-info">
+                <address>
+                  <a href="tel:+78123350971" class="tel-footer"
+                    >+7 (812) 335-09-71</a
+                  >
+                  <a href="/" class="address-footer"
+                    >Санкт-Петербург, Красного Курсанта, 25В, оф.114</a
+                  >
+                </address>
+                <div class="time-toshop">Пн.-Пт.: с 10:00 до 18:00</div>
+                <div class="social-icon">
+                  <div><a href="/" class="youtube"></a></div>
+                  <div><a href="/" class="telegram"></a></div>
+                </div>
+                <div class="pay-icon">
+                  <ul>
+                    <li><a class="visa"></a></li>
+                    <li><a class="mir"></a></li>
+                    <li><a class="mc"></a></li>
+                    <li><a class="sbp"></a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-
-
-          <!-- Аккордеон Вопрос-Ответ -->
-          <div class="vopros-otvet">
-            <div class="vopros-title">
-              <h2>Ответы на <br>ваши вопросы</h2>
-              <p>Если у вас остались вопросы, наш специалист ответит на них в ближайшее время</p>
-            </div>
-            
-            <div class="acordeon-box">
-              <ul id="my-accordion" class="accordionjs">
-
-                <!-- Section 1 -->
-                <li>
-                    <div>Возможен ли самовывоз заказанного товара?</div>
-                    <div>
-                      <p>Вы можете самостоятельно забрать заказанные товары в нашем пункте самовывоза, если Вы находитесь в Санкт-Петербурге.</p>
-                      <p>Пункт выдачи: г. Санкт-Петербург, ул. Киевская д. 5 А3 <br>
-                      Режим работы с 09:00 до 18:00 по будням. <br></p>
-                      <p>Также таким способом можно воспользоваться, если Вы заказали машину транспортной компании и они осуществляют забор груза самостоятельно.</p>
-                    </div>
-                </li>
-            
-                <!-- Section 2 -->
-                <li>
-                    <div>При каких условиях можно вернуть товар?</div>
-                    <div>
-                      <p>В законе РФ «О защите прав потребителей» (ч. 1 ст. 25) есть определенные условия, при которых можно вернуть товар надлежащего качества.</p>
-                      <ul>
-                        <li>Товар не был в употреблении.</li>
-                        <li>Сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки.</li>
-                        <li>Имеется товарный чек или кассовый чек либо иной подтверждающий оплату указанного товара документ.</li>
-                      </ul>
-                    </div>
-                </li>
-            
-                <!-- Section 3 -->
-                <li>
-                    <div>Где можно посмотреть кресла, представленные в вашем интернет-магазине?</div>
-                    <div>
-                      Вот вам яркий пример современных тенденций — базовый вектор развития способствует подготовке и реализации анализа существующих паттернов.
-                    </div>
-                </li>
-            
-              </ul>
-            </div>
-          </div>
-
-          <!-- Форма обратной связи -->
-
-          <div class="feadback-main-box">
-            <div class="feadback-main-title">
-              <h2>Если У вас остались вопросы</h2>
-              <p>Если у вас остались вопросы, наш специалист ответит на них в ближайшее время</p>
-            </div>
-            <div class="feadback-main-form">
-              <form action=""></form>
-            </div>
-          </div>
-
-          <!-- Статьи -->
-
-          <div class="articles-box">
-            <div class="articles-title"><h2>Полезный материал</h2></div>
-            <div class="articles-content">
-              <div class="artticles-post">
-                <div class="art-img"><img src="" alt=""></div>
-                <div class="art-name"></div>
-                <div class="art-desc"></div>
-              </div>
-              <div class="artticles-post"></div>
-              <div class="artticles-post"></div>
-            </div>
-          </div>
-
-          <!-- Карта -->
-
-          <div class="map-box">
-            <div class="map-title">
-              <h2>24 салона по всей стране</h2>
-              <p>Если у вас остались вопросы, наш специалист ответит на них в ближайшее время.</p>
-            </div>
-            <div class="map-contetainer"></div>
-          </div>
-
-          <!-- Сео текст -->
-
-          <div class="seo-box">
-            <div class="seo-content"></div>
-          </div>
-
         </div>
-
-<footer>
-  <div class="container">
-    <div class="footer-box">
-      <div class="footer-column">
-        <div class="logo-footer">
-          <a href="/" class="logo-svg-footer"></a>
-        </div>
-        <div class="logo-desc">
-          2023 © «Фабрика кресел» — магазин офисной <br> мебели от производителя. 
-          Все права защищены. <br>
-          Согласие на обработку персональных данных. <br>
-          Политика конфиденциальности. <br>
-        </div>
-      </div>
-      <div class="footer-column">
-        <div class="nav-menu">
-          <ul class="list-unstyled">
-            <li><a href="">О магазине</a></li>
-            <li><a href="">Оплата и доставка</a></li>
-            <li><a href="">Гарантии</a></li>
-            <li><a href="">Отзывы</a></li>
-            <li><a href="">Контакты</a></li>
-            <li><a href="">Ответы на вопросы</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-column">
-        <nav id="menu" class="navbar-footer">
-          <ul class="nav">
-            <li><a href="">полный каталог</a></li>
-            <li><a href="">офисные кресла</a></li>
-            <li><a href="">офисные стулья</a></li>
-            <li><a href="">офисные диваны</a></li>
-            <li><a href="">запчасти и аксессуары</a></li>
-            <li><a href="">каталог обивок</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer-column">
-        <div class="footer-info">
-          <address>
-            <a href="tel:+78123350971" class="tel-footer">+7 (812) 335-09-71</a>
-            <a href="/" class="address-footer">Санкт-Петербург, Красного Курсанта, 25В, оф.114</a>  
-          </address>
-          <div class="time-toshop">Пн.-Пт.: с 10:00 до 18:00</div>
-          <div class="social-icon">
-            <div><a href="/" class="youtube"></a></div>
-            <div><a href="/" class="telegram"></a></div>
+      </footer>
+      <div id="feadback-content" style="display: none; max-width: 500px">
+        <h3>Заказать звонок!</h3>
+        <form
+          id="feedback-form"
+          action="/feedback/form-processing.php"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <div class="form-row">
+            <!-- Имя пользователя -->
+            <div class="form-group">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="form-control"
+                value=""
+                placeholder="Имя"
+                minlength="2"
+                maxlength="30"
+                required="required"
+              />
+              <div class="invalid-feedback"></div>
+            </div>
+            <!-- Телефон пользователя -->
+            <div class="form-group">
+              <input
+                id="phone"
+                type="tel"
+                name="phone"
+                class="form-control"
+                value=""
+                pattern="^(?[0-9]{3})?(s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"
+                placeholder="Телефон"
+              />
+              <div class="invalid-feedback"></div>
+            </div>
           </div>
-          <div class="pay-icon">
-            <ul>
-              <li><a class="visa"></a></li>
-              <li><a class="mir"></a></li>
-              <li><a class="mc"></a></li>
-              <li><a class="sbp"></a></li>
-            </ul>
+          <!-- Капча -->
+          <div class="form-group form-captcha">
+            <img
+              class="form-captcha__image"
+              src="/feedback/captcha/captcha.php"
+              data-src="/feedback/captcha/captcha.php"
+              width="132"
+              height="46"
+              alt="Капча"
+            />
+            <div class="form-captcha__refresh">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill="currentColor"
+                  d="M440.65 12.57l4 82.77A247.16 247.16 0 0 0 255.83 8C134.73 8 33.91 94.92 12.29 209.82A12 12 0 0 0 24.09 224h49.05a12 12 0 0 0 11.67-9.26 175.91 175.91 0 0 1 317-56.94l-101.46-4.86a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12H500a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12h-47.37a12 12 0 0 0-11.98 12.57zM255.83 432a175.61 175.61 0 0 1-146-77.8l101.8 4.87a12 12 0 0 0 12.57-12v-47.4a12 12 0 0 0-12-12H12a12 12 0 0 0-12 12V500a12 12 0 0 0 12 12h47.35a12 12 0 0 0 12-12.6l-4.15-82.57A247.17 247.17 0 0 0 255.83 504c121.11 0 221.93-86.92 243.55-201.82a12 12 0 0 0-11.8-14.18h-49.05a12 12 0 0 0-11.67 9.26A175.86 175.86 0 0 1 255.83 432z"
+                ></path>
+              </svg>
+            </div>
+            <div class="form-group form-captcha__input">
+              <label for="captcha" class="control-label d-none"
+                >Код, показанный на изображении</label
+              >
+              <input
+                type="text"
+                name="captcha"
+                maxlength="6"
+                required="required"
+                id="captcha"
+                class="form-control captcha"
+                placeholder="******"
+                autocomplete="off"
+                value=""
+              />
+              <div class="invalid-feedback"></div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</footer>
-
-<div id="feadback-content" style="display:none;max-width:500px;">
-  <h3>Заказать звонок!</h3>
-  <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
-    <div class="form-row">
-      <!-- Имя пользователя -->
-      <div class="form-group">
-        <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
-          maxlength="30" required="required">
-        <div class="invalid-feedback"></div>
-      </div>
-      <!-- Телефон пользователя -->
-      <div class="form-group">
-        <input id="phone" type="tel" name="phone" class="form-control" value="" pattern="^(?[0-9]{3})?(s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" placeholder="Телефон">
-        <div class="invalid-feedback"></div>
-      </div>
-    </div>
-    <!-- Капча -->
-    <div class="form-group form-captcha">
-      <img class="form-captcha__image" src="/feedback/captcha/captcha.php" data-src="/feedback/captcha/captcha.php"
-        width="132" height="46" alt="Капча">
-      <div class="form-captcha__refresh">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-          <path fill="currentColor"
-            d="M440.65 12.57l4 82.77A247.16 247.16 0 0 0 255.83 8C134.73 8 33.91 94.92 12.29 209.82A12 12 0 0 0 24.09 224h49.05a12 12 0 0 0 11.67-9.26 175.91 175.91 0 0 1 317-56.94l-101.46-4.86a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12H500a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12h-47.37a12 12 0 0 0-11.98 12.57zM255.83 432a175.61 175.61 0 0 1-146-77.8l101.8 4.87a12 12 0 0 0 12.57-12v-47.4a12 12 0 0 0-12-12H12a12 12 0 0 0-12 12V500a12 12 0 0 0 12 12h47.35a12 12 0 0 0 12-12.6l-4.15-82.57A247.17 247.17 0 0 0 255.83 504c121.11 0 221.93-86.92 243.55-201.82a12 12 0 0 0-11.8-14.18h-49.05a12 12 0 0 0-11.67 9.26A175.86 175.86 0 0 1 255.83 432z">
-          </path>
-        </svg>
-      </div>
-      <div class="form-group form-captcha__input">
-        <label for="captcha" class="control-label d-none">Код, показанный на изображении</label>
-        <input type="text" name="captcha" maxlength="6" required="required" id="captcha"
-          class="form-control captcha" placeholder="******" autocomplete="off" value="">
-        <div class="invalid-feedback"></div>
+          <!-- Пользовательское солашение -->
+          <div class="form-group form-agree form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="agree"
+              id="agree"
+              required
+              value="true"
+            />
+            <label class="form-check-label" for="agree"
+              >Нажимая кнопку, я принимаю условия
+              <a href="#">Пользовательского соглашения</a> и даю своё согласие
+              на обработку моих персональных данных</label
+            >
+            <div class="invalid-feedback"></div>
+          </div>
+          <!-- Сообщение об ошибке -->
+          <div class="form-error form-error_hide">
+            Исправьте данные и отправьте форму ещё раз.
+          </div>
+          <!-- Кнопка для отправки формы на сервер -->
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red">Оставить заявку</button>
+          </div>
+        </form>
       </div>
     </div>
 
-    <!-- Пользовательское солашение -->
-    <div class="form-group form-agree form-check">
-      <input class="form-check-input" type="checkbox" name="agree" id="agree" required value="true">
-      <label class="form-check-label" for="agree">Нажимая кнопку, я принимаю условия <a href="#">Пользовательского
-          соглашения</a> и даю своё согласие на обработку моих персональных данных</label>
-      <div class="invalid-feedback"></div>
-    </div>
-
-    <!-- Сообщение об ошибке -->
-    <div class="form-error form-error_hide">Исправьте данные и отправьте форму ещё раз.</div>
-
-    <!-- Кнопка для отправки формы на сервер -->
-    <div class="form-submit">
-      <button type="submit" class="btn btn-red">Оставить заявку</button>
-    </div>
-  </form>
-</div>
-
-
-</body>
+    <script src="/js/catalog-menu.js"></script>
+  </body>
 </html>

@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Roboto';
     src: local('Roboto'),
@@ -5,11 +6,23 @@
          url('/css/fonts/Roboto.woff') format('woff'),
          url('/css/fonts/Roboto.ttf') format('ttf'),
          url('/css/fonts/Roboto.eot') format('eot');
-    font-family: 'Actay Wide';
-    src: local('Actay Wide'),
-         url('/css/fonts/actay-regular.woff') format('woff'), 
-         url('/css/fonts/actaywide-bold.woff') format('woff');
   }
+@font-face {
+    font-family: 'Roboto';
+    src: local('Robotomedium'),
+         url('/css/fonts/Robotomedium.woff2') format('woff2'), 
+         url('/css/fonts/Robotomedium.woff') format('woff'),
+         url('/css/fonts/Robotomedium.ttf') format('ttf'),
+         url('/css/fonts/Robotomedium.eot') format('eot');
+    font-weight: 500;
+    font-style: normal;
+  }
+@font-face {
+font-family: 'Actay Wide';
+src: local('Actay Wide'),
+        url('/css/fonts/actay-regular.woff') format('woff'), 
+        url('/css/fonts/actaywide-bold.woff') format('woff');
+}
 
 body {font-family: 'Roboto';}
 h1, h2, h3 {font-family: 'Actay Wide'; font-weight: 700; font-style: normal; text-decoration: none; text-transform: uppercase; letter-spacing: -1px;}
