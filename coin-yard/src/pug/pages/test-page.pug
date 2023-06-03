@@ -1,0 +1,110 @@
+//- !!!
+    СТРАНИЦА СОЗДАНА ИСКЛЮЧИТЕЛЬНО ДЛЯ ПРОСМОТРА И ТЕСТИРОВАНИЯ СЕТКИ, КОНТЕЙНЕРОВ И ДРУГИХ ЭЛЕМЕНТОВ.
+extends ../_templates/_base.pug
+
+block page-vars
+    -
+        let page = pages.index;
+
+
+//- MIXINS
+//- Создание контейнера
+mixin container(media) 
+  div(class=`container${media}`, class=attributes.class, style="font-size: 3rem; text-align: center; margin-top: 2rem; height: 5rem; border: solid 2px #00f; background: #aff;") Container
+    span(style="color: blue; font-weight: 700") #{media}
+//- End of Создание контейнера
+
+
+block head
+    | 
+    //
+        Basic Page Needs 
+        ==============================================
+    meta(charset="UTF-8")
+    title Проект - Тестовая
+    meta(name="description", content= (page) ? page.descr : 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+    meta(name="author", content= (page) ? page.author : 'John Doe')
+    meta(name="robots", content="index, nofollow")
+    meta(name="theme-color", content= (themeColor) ? themeColor : '#000')
+    |
+    |
+    //
+        Mobile Specific Metas 
+        ==================================================
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    |
+    |
+    //
+        CSS
+        ==================================================
+    link(rel="stylesheet", href="css/style.css")
+    |
+    |
+    //
+        Favicons
+        ==================================================
+    //- Старый способ - подержка в IE10 
+    //- link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+
+    //- SVG иконка для вкладок, размер "любой"
+    link(rel="icon" href="img/favicons/favicon.svg" sizes="any" type="image/svg+xml")
+    //- Или .png иконка размерами 16x16 и 32x32-для ретины
+    //- Touch иконка работает на iPad4,
+        //- не работает svg, формат .png для Apple 180x180
+    link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" type="image/png")
+    //- Manifest пока в основном для touch иконок для Android - минимум 192x192
+    link(rel="manifest", href="manifest.webmanifest")
+
+
+block header
+    h2 Wow, Block Header is undefined!
+
+
+block main 
+  //
+    Section-name
+    ==================================================
+  section.section
+    .container
+      h1(style="text-align: center; font-size: 35px;") Страница для тестирования элементов
+      
+    .container 
+      p Пример спользоания svg-иконки
+      i.svg-user.svg-user-dims
+      
+    .container 
+      p Пример спользоания png-иконки
+      i.house-blue
+
+    //- Тестирование сетки
+    .container 
+      .row(style="box-shadow: 0 0 1px #00a;")
+        .col-5.col-4_xl.col-1_lg.col-3_md.offset-3.offset-none_sm.col-6_xs.col-12_xxs(style="height: 5rem;box-shadow: 0 0 1px #000; background: #aff;")
+        .col-5.col-4_xl.col-1_lg.col-3_md.col-6_xs.col-12_xxs(style="height: 5rem;box-shadow: 0 0 1px #000; background: #aff;")
+    //- End of Тестирование сетки
+
+
+    //- Тестирование контейнеров
+    +container('')
+    +container('_xxl')
+    +container('_xl')
+    +container('_lg')
+    +container('_md')
+    +container('_sm')
+      //- End of Тестирование контейнеров
+
+    //- Тестирование классов свойства display в зависимости от разрешения экрана
+    //- +container()(class='d-none d-block_xl d-none_lg d-block_md d-none_sm d-block_xs d-none_xxs ')
+    //- End of Тестирование классов свойства display в зависимости от разрешения экрана
+
+
+//- block footer
+//-     h2 Wow, Block Footer is undefined!
+
+
+//- block modals
+//-     h2 Wow, Block Modals is undefined!
+
+
+//- block scripts
+//-     h2 Wow, Block Scripts is undefined!

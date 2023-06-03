@@ -1,0 +1,537 @@
+@use '_partials/variables' as v
+@use '_partials/mixins' as m
+
+@import "comments.sass"
+@import "fonts.sass"
+@import "default.sass"
+
+@import "grid.sass"
+
+/* V. Sprite
+ --------------------------------------- */ 
+
+/* 1. Sprite:svg 
+ -------------------------*/
+// Для добавления svg-спрайтов: необходимо только задать нужный класс а html.
+// например     i.svg-icons.svg-icons-dims
+@import "../../../tmp/sass/sprite-svg.scss"
+
+/* 2. Sprite:png  
+ -------------------------*/
+// sass-свойства спрайтов не добавлены по умочанию, свойство каждого спрайта нужно добавлять отдельно.
+// Для добавления png-спрайтов:
+//      - добавить в html разметку
+//                                  div.sprite-class либо 
+//                                  i.sprite-class
+//      - добавить в sass-файл свойство 
+//                                   .icon-home 
+//                                          @include sprite($icon-email)
+//                                  
+// 
+
+@import "../../../tmp/sass/sprite-png.sass"
+
+// Sprite:png styles
+// .icon-email 
+//   @include sprite($icon-email)
+// 
+
+.house-blue
+  +sprite($house-blue)
+
+.sad-icon
+  +sprite($sad-icon)
+
+.chrome
+  +sprite($chrome)
+
+.yandex
+  +sprite($yandex)
+
+.firefox
+  +sprite($firefox)
+
+.opera
+  +sprite($opera)
+
+.edge
+  +sprite($edge)
+
+// Здесь будут основные стили проекта
+
+/* VI. Layout
+ --------------------------------------- */
+
+  
+/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
+
+
+// Backgrounds
+.bg
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: -1
+
+  img
+    display: block
+    width: 100%
+    height: 100%
+  
+  &_cover
+    img
+      object-fit: cover
+  
+  &_contain
+    img
+      object-fit: contain
+
+.preloader
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 9999
+  background: #fff
+
+  &.fade-out
+    opacity: 0
+
+.blue-panel 
+  padding-top: 1.1rem
+  padding-bottom: 1.6rem
+  color: v.$blue-panel-text-color
+  background-color: v.$primary-color
+  &__container
+    padding-left: 0
+    padding-right: 0
+    max-width: 130.8rem
+    text-align: center
+    p
+      letter-spacing: -.01em
+
+.card
+  padding: 1.3rem 2.2rem 1.6rem
+  font-size: 1.6rem
+  border-radius: 2rem
+  overflow: hidden
+  &_secondary
+    color: v.$text-secondary-color
+    background: v.$secondary-color
+
+/* Header 
+ -------------------------*/
+.header
+  &-row
+    margin-top: 0.5rem
+    justify-content: space-between
+    align-items: center
+    flex-wrap: nowrap
+  &-logo
+    max-width: 35.2rem
+  &-heading 
+    max-width: 91.2rem
+    .text-accent
+      font:
+        weight: 700
+        style: italic
+
+
+.hero
+  &__container
+    position: relative
+  &__row
+    // width: 100%
+  &-king
+    position: relative
+    max-width: 43.2rem
+    
+    &__img 
+      position: relative
+      top: -3rem
+      left: 2rem
+      z-index: 5
+      img 
+
+        max-width: 44.3rem
+
+    &__paints
+      width: 100%
+      max-width: 33rem
+      position: absolute
+      top: 0
+      bottom: 0
+      left: -16.5rem
+      z-index: 1
+
+  &-text 
+    font-size: 2.4rem
+    .text-accent
+      font-weight: 700
+
+  &-coin,
+  &-event
+    padding-top: 1.5rem
+  &-event
+    max-width: 43rem
+  &-coin
+    flex-grow: 1
+    &-img 
+      img 
+        max-width: 45rem
+
+  &__list
+    margin-top: 2rem
+  &-list 
+    ul
+      padding-left: 5rem
+      max-width: 46rem
+    li
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        left: -2.5em
+        top: 50%
+        z-index: 0
+        transform: translateY(-50%)
+        width: 3.5rem
+        height: 3.5rem
+        border-radius: 50%
+        background: #F8E2B7
+        border: solid 3px #E8BB74
+      &::after
+        content: ''
+        position: absolute
+        left: -2.5em
+        top: 50%
+        z-index: 0
+        transform: translateY(-50%)
+        width: 3.5rem
+        height: 3.5rem
+        background: url(../img/arrow-gold.svg) center no-repeat
+        background-size: 50%
+
+      &:not(:last-child)  
+        margin-bottom: 2.6rem
+
+
+.paints
+  &__item
+    position: absolute
+    &-1
+      top: 1rem
+      left: 0rem
+      z-index: 40
+      img
+        max-width: 29.6rem
+    
+    &-2
+      top: 19.5rem
+      left: 0rem
+      z-index: 35
+      img
+        max-width: 23.8rem
+    
+    &-3
+      top: 30rem
+      left: -6rem
+      z-index: 30
+      img
+        max-width: 32.4rem
+    
+    &-4
+      top: 46rem
+      left: 5rem
+      z-index: 35
+      img
+        max-width: 20.8rem
+    
+    &-5
+      top: 64rem
+      left: -1rem
+      z-index: 25
+      img
+        max-width: 29.6rem
+
+
+.event-card
+  margin-top: 1rem
+  width: 100%
+  max-width: 42.6rem 
+  text-align: center
+  border-radius: 2rem
+  overflow: hidden 
+  &__header
+
+    color: v.$text-secondary-color
+    background: v.$secondary-color
+  &__body
+    padding: 3.2rem 4.5rem 3.4rem
+    color: #93B0E1
+    background: v.$primary-color
+    font-size: 1.6rem
+  
+
+  &__title,
+  &__form-caption
+    color: v.$text-light
+
+  &__title
+    margin-bottom: 2.4rem
+    font-size: 2.4rem
+  &__form-caption
+    margin-bottom: 1.5rem
+    font-size: 1.8rem
+
+  &__form
+    margin-bottom: 3rem
+
+.round-digit
+  margin-top: 0.5rem
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 4rem
+  height: 4rem
+  font-size: 2.6rem
+  color: v.$blue-panel-text-color
+  border-radius: 50%
+  border: 1px solid v.$blue-panel-text-color
+
+
+
+
+.timer
+  padding-top: 0.8rem
+  padding-bottom: 1rem
+  padding-left: 3rem
+  padding-right: 3rem
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: center
+  font-size: 2.8rem
+  background: #DEB670
+
+  &-label
+    padding-top: 1.4rem
+    padding-bottom: 1.2rem
+    padding-left: 3rem
+    padding-right: 3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2.4rem
+  &-lamp
+    display: inline-block
+    margin-right: 1rem
+    width: 1rem
+    height: 1rem
+    border-radius: 50%
+    background: #FF2E00
+  &__item
+    padding-top: 0.4rem
+    padding-bottom: 0.4rem
+    padding-left: 1.3rem
+    padding-right: 1.3rem
+    &:not(:last-child)
+      border-right: 1px solid #CCA55E
+  &-unit
+    margin-left: .5em
+    font-size: 1.5rem
+
+
+.advantages
+  margin-top: 1rem
+  margin-bottom: 1.5rem
+  font-size: 2rem
+  color: v.$primary-color
+  text-align: center
+  &__item
+    padding-top: 1.9rem
+    padding-bottom: 1.2rem
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    &:first-child
+      border-right: solid 2px v.$primary-color
+  &__img
+    margin-bottom: 1rem
+    img
+      margin-left: auto
+      margin-right: auto
+
+
+.col
+  flex: 1
+
+// .logo
+//    max-width: 10.1rem
+//    &-wrapper
+//       display: flex
+//    
+// 
+
+.form
+  font-size: 2.8rem
+  &-control
+    margin-bottom: 1.8rem
+    padding: 1.4rem 2.2rem  
+    width: 100%
+    font-size: 2.8rem
+    border-radius: 1rem
+// 	&__group
+// 		position: relative
+// 		margin-bottom: 2.5rem
+// 		padding-top: .8rem
+// 		width: 100%
+// 		overflow: hidden
+
+// 		&.focused
+// 			.form__control
+// 				border-color: v.$form-control-border-focus
+
+// 			.form__label_control
+// 				margin-top: 1rem
+// 				margin-left: .8rem
+// 				padding: 0 0.5rem
+// 				height: auto
+// 				color: v.$form-control-border-focus
+// 				background-color: rgb(255, 255, 255)
+// 				transform-origin: 0 50%
+// 				transform: translateY(calc(-100% + 1rem)) scale(.8)
+
+// 		&.valid
+// 			.form__label_control
+// 				  margin-top: 1rem
+// 					margin-left: .8rem
+// 					padding: 0 0.5rem
+// 					height: auto
+// 					color: v.$form-control-border-focus
+// 					background-color: rgb(255, 255, 255)
+// 					transform-origin: 0 50%
+// 					transform: translateY(calc(-100% + 1rem)) scale(.8)
+
+// 			.form__control
+// 				border-color:v.$form-control-border-focus
+
+// 		&.form__group_search:not(.focused):not(.valid)
+// 			.form__label_search
+// 				color: blue
+
+  // &-control
+  //   padding: 1.4rem 2.2rem  
+  //   width: 100%
+// 		height: 7rem
+// 		font-family: "Raleway", "Helvetica", sans-serif
+// 		font-size: 1.8rem
+// 		font-weight: 400
+// 		color: v.$form-control-color
+// 		background: v.$form-control-bg
+// 		border: 1px solid v.$form-control-border
+    // border-radius: 1rem
+// 		box-shadow: inset 0px 2px 15px v.$form-control-shadow
+// 		outline: none
+// 		&:hover
+// 			border-color: v.$form-control-border-hover
+
+// 	&__label
+// 		&_control
+// 			position: absolute
+// 			left: 0
+// 			top: 0
+// 			padding: 1.2rem 1.2rem 0rem v.$form-label-padding-left
+// 			padding-left: v.$form-label-padding-left
+// 			display: flex
+// 			align-items: center
+// 			height: 100%
+// 			color: v.$form-label-color
+// 			white-space: nowrap
+// 			transition: transform .2s
+// 			cursor: text
+// 			user-select: none
+
+// 	&-icon
+// 		position: absolute
+// 		top: 50%
+// 		transform: translateY(-30%)
+// 		left: calc(v.$form-label-padding-left / 2)
+
+// 	&__submit
+// 		height: 7rem
+
+
+
+.copy
+  position: absolute
+  right: 0
+  bottom: 5rem
+  z-index: 0
+  color: #8F8F8F
+  font-size: 1.5rem
+  font-weight: 300
+
+.text-link
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.space
+  display: inline-block
+  width: .25em
+  opacity: 0
+
+
+/* Modal 
+ -------------------------*/
+.modal
+  &-trigger
+    cursor: pointer
+
+/* Lazy 
+ -------------------------*/
+// .lazy 
+//    width: 100%
+//    height: 100%
+//    position: relative
+//       background-image: -o-linear-gradient(left, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 100%), -o-linear-gradient(#DDD 100%, transparent 0)
+//       background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, rgba(255, 255, 255, 0.5)), to(transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #DDD), color-stop(0, transparent))
+//       background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 100%), linear-gradient(#DDD 100%, transparent 0)
+//       background-repeat: no-repeat
+//       background-size: 26% 100%, cover
+//       background-position: 0 0, 0 0, 0px 85px, 0px 110px
+//       animation: animloader 1s linear infinite
+//    img
+//       visibility: hidden
+//    
+// 
+
+// @-webkit-keyframes animloader 
+//    0%  background-position:  0 0, 0 0, 0px 85px, 0px 110px
+//    100%  background-position:  150% 0, 0 0, 0px 85px, 0px 110px
+// 
+
+// @keyframes animloader 
+//    0%  background-position:  0 0, 0 0, 0px 85px, 0px 110px
+//    100%  background-position:  150% 0, 0 0, 0px 85px, 0px 110px
+// 
+
+/* ANIMATIONS
+ ------------------------------  */
+// !!! Добавляется любой пустой селектор перед @import, так как после использования @include в свойствах выше директива @import смещается на один tab и некорректно отрабатывает импорт
+// ! То есть, после @include следует запускать @import только после объявления нормаьного свойства
+.fake-class-to-add-import-rule
+  visibility: inherit
+
+@import "animations"
+@import "media-queries"
+@import "gte-ie10-style"

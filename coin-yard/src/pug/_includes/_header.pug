@@ -1,0 +1,23 @@
+header.header
+  .blue-panel 
+    .container.blue-panel__container
+      p 
+        |Уникальное коллекционное издание в честь последнего Российского Императора - 
+        span.text-uppercase.text-light БЕСПЛАТНО
+        |. Не упустите редчайшую возможность оформить заказ
+
+  
+  .container 
+    .row.header-row
+      .logo.header-logo
+        picture
+          //- source(media='(max-width: 575px)', srcset='img/', type='image/webp')
+          //- source(media='(max-width: 575px)', srcset='img/', type='image/png')
+          source(srcset='img/logo.webp', type='image/webp')
+          |
+          |
+          img(src='img/logo.png', alt='Логотип')
+      .header-heading 
+        h1
+          |Сегодня для вас юбилейная медаль 
+          span.text-accent бесплатно
