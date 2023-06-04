@@ -5,11 +5,23 @@
  --------------------------------------- */
 
 @media (max-width: 1699.98px)
-
-/* XL */
-@media (max-width: 1399.98px)
   html
     font-size: 9px
+
+  .header
+    &-heading
+      max-width: 82rem
+
+  .hero
+    &__container
+      max-width: 1400px
+    &__row
+      margin: 0 0
+/* XL */
+@media (max-width: 1399.98px)
+  $foto-scale: .8
+  html
+    font-size: 8px
 
   .container
     &,
@@ -20,6 +32,55 @@
       max-width: 1140px
     &_xxl
       max-width: 100%
+
+
+  .header
+    &-heading 
+      max-width: 88.5rem
+
+  .hero
+    &__container
+      max-width: 1200px
+      padding-bottom: 5rem
+    &-king
+      &__img 
+        img
+          max-width: 40rem
+      &__paints
+        height: 100% * $foto-scale
+        left: -7.5rem
+    &-coin
+      &-img 
+        img
+          max-width: 40rem
+
+  .paints
+    &__item
+      &-1 
+        top: 1.5%
+        img
+          // max-width: 26.6rem * $foto-scale
+          max-width: 26.6rem * $foto-scale
+      &-2
+        top: 25%
+        img
+          max-width: 23.8rem * $foto-scale
+      &-3 
+        top: 37%
+        img
+          max-width: 32.4rem * $foto-scale
+      &-4 
+        top: 57%
+        img
+          max-width: 20.8rem * $foto-scale
+      &-5 
+        top: 79%
+        img
+          max-width: 29.6rem * $foto-scale
+
+  .copy
+    right: v.$gutter
+    bottom: 2rem
 
   .d
     &-block
@@ -35,7 +96,7 @@
 /* LG */
 @media (max-width: 1199.98px)
   html
-    font-size: 8px
+    font-size: 7px
 
   .container
     &,
@@ -45,6 +106,22 @@
       max-width: 960px
     &_xl
       max-width: 100%
+
+  .header-heading 
+    max-width: 84.5rem
+
+  .hero
+    &__container
+      max-width: 992px
+    &-coin
+      padding-left: v.$gutter
+      padding-right: v.$gutter
+      max-width: 44rem
+    &-king
+      &__img
+        right: -4rem
+      &__paints
+        left: -5.5rem
 
   .d
     &-block

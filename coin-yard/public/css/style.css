@@ -117,7 +117,7 @@ p {
 .container, .container_xxl, .container_xl, .container_lg, .container_md, .container_sm {
   margin: 0 auto;
   padding: 0 1.2rem;
-  max-width: 1350px;
+  max-width: 135rem;
 }
 
 .d-block {
@@ -478,14 +478,25 @@ select::-ms-expand {
 .hero__container {
   position: relative;
 }
+.hero__row {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
 .hero-king {
   position: relative;
   max-width: 43.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 .hero-king__img {
   position: relative;
   top: -3rem;
-  left: 2rem;
+  right: -2rem;
   z-index: 5;
 }
 .hero-king__img img {
@@ -494,9 +505,9 @@ select::-ms-expand {
 .hero-king__paints {
   width: 100%;
   max-width: 33rem;
+  height: 100%;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: -16.5rem;
   z-index: 1;
 }
@@ -516,6 +527,7 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  max-width: 48rem;
 }
 .hero-coin-img img {
   max-width: 45rem;
@@ -925,16 +937,81 @@ select::-ms-expand {
 }
 /* VII. Media-queries
  * --------------------------------------- */
+@media (max-width: 1699.98px) {
+  html {
+    font-size: 9px;
+  }
+  .header-heading {
+    max-width: 82rem;
+  }
+  .hero__container {
+    max-width: 1400px;
+  }
+  .hero__row {
+    margin: 0 0;
+  }
+}
 /* XL */
 @media (max-width: 1399.98px) {
   html {
-    font-size: 9px;
+    font-size: 8px;
   }
   .container, .container_xl, .container_lg, .container_md, .container_sm {
     max-width: 1140px;
   }
   .container_xxl {
     max-width: 100%;
+  }
+  .header-heading {
+    max-width: 88.5rem;
+  }
+  .hero__container {
+    max-width: 1200px;
+    padding-bottom: 5rem;
+  }
+  .hero-king__img img {
+    max-width: 40rem;
+  }
+  .hero-king__paints {
+    height: 80%;
+    left: -7.5rem;
+  }
+  .hero-coin-img img {
+    max-width: 40rem;
+  }
+  .paints__item-1 {
+    top: 1.5%;
+  }
+  .paints__item-1 img {
+    max-width: 21.28rem;
+  }
+  .paints__item-2 {
+    top: 25%;
+  }
+  .paints__item-2 img {
+    max-width: 19.04rem;
+  }
+  .paints__item-3 {
+    top: 37%;
+  }
+  .paints__item-3 img {
+    max-width: 25.92rem;
+  }
+  .paints__item-4 {
+    top: 57%;
+  }
+  .paints__item-4 img {
+    max-width: 16.64rem;
+  }
+  .paints__item-5 {
+    top: 79%;
+  }
+  .paints__item-5 img {
+    max-width: 23.68rem;
+  }
+  .copy {
+    right: 1.2rem;
+    bottom: 2rem;
   }
   .d-block_xl {
     display: block;
@@ -949,13 +1026,30 @@ select::-ms-expand {
 /* LG */
 @media (max-width: 1199.98px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
   .container, .container_lg, .container_md, .container_sm {
     max-width: 960px;
   }
   .container_xl {
     max-width: 100%;
+  }
+  .header-heading {
+    max-width: 84.5rem;
+  }
+  .hero__container {
+    max-width: 992px;
+  }
+  .hero-coin {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    max-width: 44rem;
+  }
+  .hero-king__img {
+    right: -4rem;
+  }
+  .hero-king__paints {
+    left: -5.5rem;
   }
   .d-block_lg {
     display: block;

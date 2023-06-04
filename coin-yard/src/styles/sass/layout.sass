@@ -146,15 +146,17 @@
   &__container
     position: relative
   &__row
-    // width: 100%
+    justify-content: flex-end
   &-king
     position: relative
     max-width: 43.2rem
+    display: flex
+    justify-content: flex-end
     
     &__img 
       position: relative
       top: -3rem
-      left: 2rem
+      right: -2rem
       z-index: 5
       img 
 
@@ -163,9 +165,10 @@
     &__paints
       width: 100%
       max-width: 33rem
+      height: 100%
       position: absolute
       top: 0
-      bottom: 0
+      // bottom: 0
       left: -16.5rem
       z-index: 1
 
@@ -181,6 +184,7 @@
     max-width: 43rem
   &-coin
     flex-grow: 1
+    max-width: 48rem
     &-img 
       img 
         max-width: 45rem
