@@ -82,6 +82,9 @@
     right: v.$gutter
     bottom: 2rem
 
+  .modal__content
+    max-height: calc(100vh - 12rem)
+
   .d
     &-block
       &_xl
@@ -122,6 +125,8 @@
         right: -4rem
       &__paints
         left: -5.5rem
+
+
 
   .d
     &-block
@@ -291,6 +296,24 @@
     position: static
     text-align: right
 
+  .modal
+    &__content
+      max-width: 68rem
+      // height: 100%
+      height: auto
+      max-height: calc(100vh - 12rem)
+      font-size: 1.8rem
+      &-inner
+        padding-top: 2rem
+      h3
+        text-align: left
+        font-size: 2rem
+    // &__header
+    .modal__title
+      font-size: 2.4rem
+    &__close
+      right: -5%
+
   .d
     &-block
       &_md
@@ -350,6 +373,11 @@
     font-size: 2.8rem * $scale-sm
     &-label
       font-size: 2.4rem * $scale-sm
+
+
+  .modal
+    &__close
+      right: -3%
 
 
 
@@ -490,11 +518,37 @@
         display: none
 
 @media (max-width: 479.98px)
+  .modal
+    &__header,
+    &__body
+      padding-left: 1.5rem
+      padding-right: 1.5rem
+    &__content
+      &-inner
+        padding-bottom: 2rem
+    &__close
+      right: .75rem
+      top: .75rem
+      &:hover
+        .modal-close__item
+          background: rgba(0, 0, 0, .45)
+    &-close
+      &__item
+        background: rgba(0, 0, 0, .75)
 
 /* XXS */
 @media (max-width: 413.98px)
   .container
     max-width: 100%
+
+  .modal
+    &__content
+      word-break: break-word
+      font-size: 1.6rem
+      h3
+        font-size: 1.8rem
+    .modal__title
+      font-size: 2rem
 
   .d
     &-block

@@ -1,25 +1,4 @@
 "use strict"
-// const images = document.querySelectorAll('.lazy');
-// for (let image of images) {
-
-// 	let img = document.createElement('img');
-// 	img.src = image.dataset.src;
-// 	img.addEventListener('load', ()=>{
-// 		image.src = img.src;
-// 		image.classList.remove('lazy');
-//     delete image.dataset.src
-
-
-//     // Или так
-//     // image.removeAttribute('data-src');
-// 		// image.parentElement.classList.add('loaded');
-//     // console.dir(image);
-
-
-// 	})
-// }
-
-
 
 // PAGE PRELOADER FUNCTION
 // добавить #preloader.preloader в html
@@ -35,9 +14,43 @@ window.onload = function() {
 }
 // - - - - - - - - - - - - - - - - - - - 
 
+// INPUT MASK
+const selector = document.querySelector('[name="userPhone"]');
+const im = new Inputmask("+7 (\\999) 999-99-99");
+im.mask(selector);
+// - - - - - - - - - - - - - - - - - - - 
 
 
+// MODALS
+const modalOpenBtns = document.querySelectorAll(".js-modal-trigger");
 
-// new WOW({
-// 	offset:       300,
-// }).init();
+if (modalOpenBtns) {
+  for (let i = 0; i < modalOpenBtns.length; i++) {
+    let modalOpenBtn = modalOpenBtns[i];
+    modalOpenBtn.addEventListener("click", () => {
+      openModal(modalOpenBtn);
+    });
+  }
+}
+
+// Functions
+function openModal(modalOpenBtn) {
+  let modal = document.getElementById(modalOpenBtn.dataset.target);
+  modal.classList.remove("closed");
+  modal.classList.add("opened");
+
+  let modalCloseBtns = modal.getElementsByClassName("js-modal-close");
+
+  for (let i = 0; i < modalCloseBtns.length; i++) {
+    let modalCloseBtn = modalCloseBtns[i];
+    modalCloseBtn.addEventListener("click", () => {
+      closeModal(modal);
+    });
+  }
+}
+
+function closeModal(modal) {
+  modal.classList.remove("opened");
+  modal.classList.add("closed");
+}
+// - - - - - - - - - - - - - - - - - - - 

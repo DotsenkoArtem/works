@@ -141,7 +141,7 @@ block main
                                 form.form.event-card__form.loader-container
 
                                     .form-group
-                                        input#uerPhone.form-control(type="text", placeholder="+7 (___) ___-__-__", name="phone", required) 
+                                        input#uerPhone.form-control(type="text", placeholder="+7 (___) ___-__-__", name="userPhone", required) 
 
                                     .form-group
                                         .btn-wrap_primary
@@ -186,9 +186,9 @@ block main
                 .copy
                     .copy__wrapper
                         .d-inline.d-block_md (с) 2023 ООО “Европейский Монетный Двор” Все права защищены. 
-                        span.text-link.modal-trigger.d-block_xs Публичная оферта. 
+                        span.text-link.modal-trigger.d-block_xs.js-modal-trigger(data-target="offer") Публичная оферта. 
                         span.space.d-none_xs
-                        span.text-link.modal-trigger.d-block_xs Политика конфиденциальности.  
+                        span.text-link.modal-trigger.d-block_xs.js-modal-trigger(data-target="policy") Политика конфиденциальности.  
 
                                 
 
