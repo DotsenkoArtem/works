@@ -136,17 +136,14 @@
 
 /* MD */
 @media (max-width: 991.98px)
-  // html
-  //   font-size: 8px
+  html
+    font-size: 10px
+  body
+    font-size: 1.5rem
+  h1
+    font-size: 3.8rem
 
-  // .btn
-  //   &_primary
-  //     padding-left: 2em
-  //     padding-right: 2em
 
-  //   &_secondary
-  //     padding: 0 1.9em
-  //     font-size: 15px
 
   .container
     &,
@@ -155,6 +152,144 @@
       max-width: 720px
     &_lg
       max-width: 100%
+
+  .blue-panel 
+    padding-top: 0
+    padding-bottom: 0
+    &__container
+      justify-content: space-between
+      align-items: center
+      max-width: 76.8rem
+      padding-left: 2rem
+      padding-right: 2rem
+      padding-left: 2rem
+      padding-right: 2rem
+    &__logo 
+      display: block
+      width: 100%
+      max-width: 15rem
+    &__text
+      max-width: 54.2rem
+      text-align: left
+
+  .header
+    &-row
+      margin-top: 2rem
+    &-logo
+      display: none
+    &-heading
+      text-align: center
+
+  .hero
+    &__container
+      padding-bottom: 3rem
+      max-width: 76.8rem
+      padding-left: 2rem
+      padding-right: 2rem
+    &__row
+      justify-content: space-between
+    &-coin
+      order: 1
+      padding-top: 1rem
+      padding-left: 0
+      padding-right: 0
+      width: 100%
+      flex-basis: 76.8rem
+      max-width: 76.8rem
+      display: flex
+      flex-wrap: wrap
+      &-img
+        width: 27.3rem
+        img
+          max-width: 100%
+          position: relative
+          left: -2.5rem
+    &-list 
+      li::before,
+      li::after
+        left: -2.7em,
+
+      li
+        &:not(:last-child) 
+          margin-bottom: unset
+        &:first-child
+          margin-bottom: 1rem
+        &:nth-child(2)
+          margin-bottom: 1.8rem
+        &:nth-child(3)
+          margin-bottom: 2.5rem
+    &__list
+      margin-top: 3rem
+      margin-left: auto
+      width: 42.6rem
+      font-size: 1.8rem
+    &-text
+      width: 100%
+      text-align: center
+    &-king
+      order: 2
+      width: 27.3rem
+      flex: none
+      justify-content: flex-start
+      &__img
+        z-index: 1
+        left: 1rem
+        right: auto
+      &__paints
+        left: auto
+        top: 16.3rem
+        right: -.7rem
+        
+    &-event
+      order: 3
+      width: 42.6rem
+      margin-top: -5rem
+      // position: relative
+      // top: -5rem
+      &__card
+        max-width: 42.6rem
+
+  
+  .paints
+    &__item
+      &-1 
+        top: 1.5%
+        img
+          max-width: 26.6rem
+      &-2
+        top: 23%
+        left: 1.5rem
+        img
+          max-width: 26.2rem
+      &-3 
+        top: 49%
+        left: -1.5rem
+        z-index: 35
+        img
+          max-width: 21.5rem
+      &-4 
+        top: 50.5%
+        left: 10.5rem
+        img
+          max-width: 18.1rem
+      &-5 
+        top: 76.5%
+        left: -0.5rem
+        img
+          max-width: 25.1rem
+
+  .advantages
+    margin-top: 2rem
+    font-size: 1.8rem
+    &__item
+      padding-top: 0
+      padding-bottom: 0
+
+
+  .copy
+    margin-top: 5rem
+    position: static
+    text-align: right
 
   .d
     &-block
@@ -169,15 +304,55 @@
 
 /* SM */
 @media (max-width: 767.98px)
-  // html
-  // 	font-size: 7px
-  // 
+  html
+    font-size: 9px
+  $scale-sm: .75
   .container
     &,
     &_sm
       max-width: 540px
     &_md
       max-width: 100%
+
+  .blue-panel 
+    &__container
+      max-width: 57.6rem
+    &__text
+      margin-left: 2rem
+
+  .hero
+    &__container
+      max-width: 57.6rem
+    &-coin
+      margin-bottom: 4rem
+      max-width: 57.6rem
+      &-img
+        margin-top: 3rem
+        display: flex
+        align-items: center
+        width: 27.3rem * $scale-sm
+
+    &__list
+      max-width: 42.6rem * $scale-sm
+
+    &-king
+      width: 27.3rem * $scale-sm
+      &__img
+        left: -7rem
+      &__paints
+        right: 7rem
+
+    &-event
+      margin-top: -3rem
+      width: 42.6rem * $scale-sm
+
+    .timer
+      font-size: 2.8rem * $scale-sm
+      &-label
+        font-size: 2.4rem * $scale-sm
+
+
+
 
   .d
     &-block

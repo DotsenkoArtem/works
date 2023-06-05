@@ -1,10 +1,17 @@
 header.header
   .blue-panel 
     .container.blue-panel__container
-      p 
-        |Уникальное коллекционное издание в честь последнего Российского Императора - 
-        span.text-uppercase.text-light БЕСПЛАТНО
-        |. Не упустите редчайшую возможность оформить заказ
+      .blue-panel__logo 
+        picture
+          source(srcset='img/768/logo-white-tabl.webp', type='image/webp')
+          |
+          |
+          img(src='img/768/logo-white-tabl.png', alt='Логотип')
+      .blue-panel__text
+        p 
+          |Уникальное коллекционное издание в честь последнего Российского Императора - 
+          span.text-uppercase.text-light БЕСПЛАТНО
+          |. Не упустите редчайшую возможность оформить заказ
 
   
   .container 
