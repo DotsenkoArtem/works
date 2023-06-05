@@ -81,8 +81,8 @@ block main
 
                         .hero-coin-img 
                             picture
-                                //- source(media='(max-width: 575px)', srcset='img/', type='image/webp')
-                                //- source(media='(max-width: 575px)', srcset='img/', type='image/png')
+                                source(media='(max-width: 575.98px)', srcset='img/360/coin-mob.webp', type='image/webp')
+                                source(media='(max-width: 575.98px)', srcset='img/360/coin-mob.png', type='image/png')
                                 source(srcset='img/coin.webp', type='image/webp')
                                 |
                                 |
@@ -95,7 +95,7 @@ block main
                                     span.text-bold драгоценного 
                                     | металла
                                 li 
-                                    |Лимитированное издание: всего  
+                                    span.d-block_xs Лимитированное издание: всего  
                                     span.text-bold 2 000 шт. 
                                     | на Россию
                                 li 
@@ -108,7 +108,7 @@ block main
 
 
                     .col.hero-event
-                        .event-card
+                        .event-card.hero__event-card
                             .event-card__header
                                 .timer-wrap 
                                     .timer-label 
@@ -184,11 +184,11 @@ block main
                                 | со своей семьёй.
 
                 .copy
-                    p 
-                        div.d-inline.d-block_md (с) 2023 ООО “Европейский Монетный Двор” Все права защищены. 
-                        span.text-link.modal-trigger Публичная оферта. 
-                        span.space
-                        span.text-link.modal-trigger Политика конфиденциальности.         
+                    .copy__wrapper
+                        .d-inline.d-block_md (с) 2023 ООО “Европейский Монетный Двор” Все права защищены. 
+                        span.text-link.modal-trigger.d-block_xs Публичная оферта. 
+                        span.space.d-none_xs
+                        span.text-link.modal-trigger.d-block_xs Политика конфиденциальности.  
 
                                 
 

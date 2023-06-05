@@ -346,10 +346,10 @@
       margin-top: -3rem
       width: 42.6rem * $scale-sm
 
-    .timer
-      font-size: 2.8rem * $scale-sm
-      &-label
-        font-size: 2.4rem * $scale-sm
+  .timer
+    font-size: 2.8rem * $scale-sm
+    &-label
+      font-size: 2.4rem * $scale-sm
 
 
 
@@ -367,13 +367,116 @@
 
 /* XS */
 @media (max-width: 575.98px)
-  // html
-  // 	font-size: 6px
-  // 
+  html
+    font-size: 10px
+  
   .container
     max-width: 410px
     &_sm
       max-width: 100%
+
+  .blue-panel
+    padding-top: 1rem
+    padding-bottom: 1.2rem
+    &__container
+      justify-content: center
+    &__logo 
+      display: none
+    &__text
+      margin-left: 0
+      max-width: 33rem
+      text-align: center
+
+  .header
+    &-row
+      margin-top: 0.5rem
+      flex-direction: column
+      align-items: center
+    &-logo
+      max-width: 15rem
+      display: flex
+      justify-content: center
+
+  .hero
+    margin-top: 1.8rem
+    &__container
+      padding-bottom: 12rem
+      position: static
+    &-coin
+      margin-bottom: 2.5rem
+      padding-top: 0
+      justify-content: center
+      &-img
+        margin-top: 0rem
+        margin-bottom: 1.5rem
+        width: 100%
+        max-width: 29.5rem
+        img
+          position: static
+          left: auto
+    &-text
+      max-width: 33rem  
+    &__list
+      margin-top: 0
+      margin-left: unset
+    &-list 
+      li
+        &:nth-child(2)
+          margin-bottom: 1.2rem
+        &:nth-child(3)
+          margin-bottom: 1.2rem
+    &-event
+      order: 2
+    &-king
+      order: 3
+      margin-top: -4rem
+      width: 100%
+      justify-content: center
+      &__img
+        top: 0
+        left: auto
+      &__paints
+        display: none
+
+    &__event-card
+      margin-left: -2rem
+      margin-right: -2rem
+      margin-top: 2rem
+      width: calc( 100% +  4rem )
+
+  .event-card
+    &__title
+      margin-bottom: 2rem
+    &__body
+      padding: 2rem 2rem 3rem
+
+  .timer
+    font-size: 2.4rem
+    &-label
+      padding-bottom: 1.5rem
+      font-size: 2.4rem
+
+  .advantages
+    margin-top: 1.5rem
+    margin-bottom: 2.5rem
+
+  .copy
+    margin-top: 0
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    width: 100%
+    height: 12.3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    color: v.$blue-panel-text-color
+    background: v.$primary-color
+    &__wrapper
+      max-width: 31rem
+      text-align: center
 
   .d
     &-block
@@ -405,6 +508,13 @@
         display: none
 
 @media (max-width: 359.99px)
+  .hero
+    &-event
+      width: 100%
+  .timer
+    &-label
+      padding-left: 2rem
+      padding-right: 2rem
 
 /* IE */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
