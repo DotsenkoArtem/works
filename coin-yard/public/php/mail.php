@@ -1,53 +1,113 @@
-<?php 
+<?php
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-require_once('phpmailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
-$mail->CharSet = 'utf-8';
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
 
-$formTheme = $_POST['formTheme'];
-$name = $_POST['userName'];
-$phone = $_POST['userPhone'];
+//Load Composer's autoloader
+// require 'vendor/autoload.php';
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'ys-send@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'Q3P68hiHpLqYW3vqT7Yc'; // Ваш пароль от почты с которой будут отправляться письма
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
 
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+// $name       = $_POST['name'];
+$phone      = $_POST['userPhone'];
+// $email      = $_POST['email'];
+// $message    = $_POST['message'];
+// $myuploads  = $_FILES['file'];
 
-$mail->setFrom('ys-send@mail.ru', 'internet-boosters'); // от кого будет уходить письмо?
+try {
+    //Server settings
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                       //Enable verbose debug output
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+    // $mail->isSMTP();                                             //Send using SMTP
+    $mail->CharSet = 'UTF-8';
+    $mail->SMTPAuth   = true;                                       //Enable SMTP authentication
 
-$mail->addAddress('internet.booster@mail.ru');     // Кому будет уходить письмо 
-$mail->addAddress('doclko31@gmail.com');     // Кому будет уходить письмо 
-$mail->addAddress('artemdoc1@inbox.ru');     // Кому будет уходить письмо 
-// $mail->addAddress('info@uneversum.com');     // Кому будет уходить письмо /добавил еще один email
-//$mail->addAddress('ellen@example.com');               // Name is optional
-//$mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Host       = 'smtp.yandex.ru';                             //Set the SMTP server to send through
+    $mail->Username   = 'dots.send@yandex.ru';                       //SMTP username
+    $mail->Password   = 'sosihuqtsavbxkhn';                     //SMTP password
 
-// $mail->Subject = 'Заявка с тестового сайта';
-// $mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
-// $mail->AltBody = '';
+    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             //Enable implicit TLS encryption
 
-$mail->Subject = 'Заявка с сайта internet-boosters.ru';
-$mail->Body    =    
-                    '<b>Форма, с которой отправлена заявка: </b> '.$formTheme.'<br>
-                    <b>Пользователь: </b>'.$name.'<br>
-				    <b>Номер телефона: </b> '.$phone.'<br>';
-$mail->AltBody = '';
+    $mail->SMTPSecure = 'ssl';                                      //Enable implicit TLS encryption
+    $mail->Port       = 465;                                        //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    
 
-if($mail->send()) {
-    return true;
-} else {
-    return false;
+
+    //Recipients
+    $mail->setFrom('dots.send@yandex.ru', 'Европейский Монетный Двор');
+    $mail->addAddress('doclko31@gmail.com');                        //Add a recipient
+
+    // $mail->addAddress('mail@mai.ru');                        //Add a recipient
+    // $mail->addAddress('ellen@example.com');                      //Name is optional
+    // $mail->addReplyTo('info@example.com', 'Information');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
+
+    //Attachments
+    // $mail->addAttachment('/var/tmp/file.tar.gz');                //Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');           //Optional name
+
+    $attachmentSize = 0;
+    // Прикрепление файлов
+    if (!empty($myuploads['name'][0])) {
+        for ($ct = 0; $ct < count($myuploads['tmp_name']); $ct++) {
+            $uploadfile = tempnam(sys_get_temp_dir(), sha1($myuploads['name'][$ct]));
+            $filename = $myuploads['name'][$ct];
+            $attachmentSize += $myuploads['size'][$ct];
+
+            if (move_uploaded_file($myuploads['tmp_name'][$ct], $uploadfile)) {
+                $mail->addAttachment($uploadfile, $filename);
+                $rfile[] = "Файл $filename прикреплён";
+            } else {
+                $rfile[] = "Не удалось прикрепить файл $filename";
+            }
+        }   
+    }
+    //  - - - - - - - - - - - - 
+
+
+    //Content
+    $mail->isHTML(true);                                            //Set email format to HTML
+    $mail->Subject = 'Заявка с сайта "Европейский Монетный Двор"';
+    $mail->Body    =    
+                    "<b>Телефон: </b>{$phone}";
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+
+
+
+
+    // if ($mail->send()) {$result = "success";}       //Дефолтная отправка писем
+    // else {$result = "error";}
+
+
+
+
+   
+    if ($attachmentSize > 10485760) {                  //Отправка с ограничением по суммарному размеру вложений
+        $result = "limitExceeded";
+    } else {
+        $mail->isSMTP();
+        if ($mail->send()) {
+            $result = "success"; 
+        } else {
+            $result = "error";
+        }
+    }
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
+
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status, "myuploads['size']" => $myuploads['size'], "attachmentSize" => $attachmentSize]);
 ?>

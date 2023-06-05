@@ -670,15 +670,196 @@
 
 
 
+/* Forms processing 
+ -------------------------*/
+.thanks 
+  padding: 1em
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: cente
+  width: calc(100% - 3rem)
+  max-width: 17em
+  position: fixed
+  right: 1.5rem
+  bottom: 1.5rem
+  text-align: center
+  border-radius: 15px
+  -webkit-box-shadow: 0 15px 55px 0px rgba(0, 0, 0, 0.35)
+  box-shadow: 0 15px 55px 0px rgba(0, 0, 0, 0.35)
+  opacity: 1
+  z-index: 99999
 
 
+.thanks_success 
+  color: #146c43
+  border: solid 1px #a3cfbb
+  background: rgb(209, 232, 222)
+
+.thanks_error 
+  color: #b02a37
+  border: solid 1px #f1aeb5
+  background: #f8d7da
 
 
+.thanks__close 
+  position: absolute
+  top: 1rem
+  right: 1rem
+  width: 2.4rem
+  height: 2.4rem
+  -webkit-transition: -webkit-transform 0.2s
+  transition: -webkit-transform 0.2s
+  -o-transition: transform 0.2s
+  transition: transform 0.2s
+  transition: transform 0.2s, -webkit-transform 0.2s
+
+.thanks__close::before,
+.thanks__close::after 
+  display: block
+  position: absolute
+  top: 50%
+  content: ""
+  width: 100%
+  height: 0.3rem
+  border-radius: 10px
+  background: rgb(75, 75, 75)
+  -webkit-transition: background-color 0.2s
+  -o-transition: background-color 0.2s
+  transition: background-color 0.2s
+
+.thanks__close::before 
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.thanks__close::after 
+  -webkit-transform: rotate(-45deg)
+  -ms-transform: rotate(-45deg)
+  transform: rotate(-45deg)
 
 
+.thanks__close:hover 
+  -webkit-transform: scale(1.05)
+  -ms-transform: scale(1.05)
+  transform: scale(1.05)
+
+.thanks__close:hover.thanks__close::before,
+.thanks__close:hover.thanks__close::after 
+  background: rgb(25, 25, 25)
 
 
+.thanks__close:active 
+  -webkit-transform: scale(1)
+  -ms-transform: scale(1)
+  transform: scale(1)
+  -webkit-transition: -webkit-transform 0s
+  transition: -webkit-transform 0s
+  -o-transition: transform 0s
+  transition: transform 0s
+  transition: transform 0s, -webkit-transform 0s
+
+
+.thanks.active 
+  -webkit-animation: slideInRightBottom 0.5s ease forwards
+  animation: slideInRightBottom 0.5s ease forwards
+
+.thanks h3 
+  font-size: 2rem
+  font-weight: 500
+  font-family: sans-serif
+
+
+.thanks span 
+  display: block
+  margin-bottom: 2rem
+
+.thanks h3 span 
+  font-weight: 700
+  font-size: 2.4rem
+
+.loader-container 
+  position: relative
+  z-index: 50
+
+
+.submit-loader 
+  display: block
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 55
+  background: rgba(255, 255, 255, 0.5) url("../img/loader.gif") center no-repeat
+  // background-size: 100px 100px
+  background-size: contain
+  border-radius: 10px
+
+
+@-webkit-keyframes slideInRightBottom 
+  from 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
   
+  to 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+
+
+@keyframes slideInRightBottom 
+  from 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+  
+  to 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+
+@-webkit-keyframes slideOutRightBottom 
+  from 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+  to 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+  
+
+@keyframes slideOutRightBottom 
+  from 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+  to 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+
+
+
+
+
+
+
+
+
 
 /* Lazy 
  -------------------------*/
