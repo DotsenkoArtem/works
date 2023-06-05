@@ -721,6 +721,13 @@ select::-ms-expand {
   height: 1rem;
   border-radius: 50%;
   background: #FF2E00;
+  -webkit-box-shadow: 0 0 2px rgba(255, 47, 0, 0.911), 0 0 5px rgba(255, 47, 0, 0.911), 0 0 15px rgba(255, 47, 0, 0.911);
+  box-shadow: 0 0 2px rgba(255, 47, 0, 0.911), 0 0 5px rgba(255, 47, 0, 0.911), 0 0 15px rgba(255, 47, 0, 0.911);
+}
+.timer-lamp.turned-off {
+  background: #8f0000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .timer__item {
   padding-top: 0.4rem;
