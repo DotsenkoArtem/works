@@ -1,0 +1,584 @@
+@use '_partials/_variables' as v
+@use '_partials/_mixins' as m
+
+/* Media-queries
+ --------------------------------------- */
+
+@media (max-width: 1699.98px)
+  html
+    font-size: 9px
+
+  .header
+    &-heading
+      max-width: 82rem
+
+  .hero
+    &__container
+      max-width: 1400px
+    &__row
+      margin: 0 0
+/* XL */
+@media (max-width: 1399.98px)
+  $foto-scale: .8
+  html
+    font-size: 8px
+
+  .container
+    &,
+    &_xl,
+    &_lg,
+    &_md,
+    &_sm
+      max-width: 1140px
+    &_xxl
+      max-width: 100%
+
+
+  .header
+    &-heading 
+      max-width: 88.5rem
+
+  .hero
+    &__container
+      max-width: 1200px
+      padding-bottom: 5rem
+    &-king
+      position: relative
+      top: 5rem
+      right: 1rem
+      &__img 
+        img
+          max-width: 40rem
+      &__paints
+        height: 100% * $foto-scale
+        left: -7.5rem
+    &-coin
+      &-img 
+        img
+          max-width: 40rem
+
+  .paints
+    &__item
+      &-1 
+        top: 1.5%
+        img
+          // max-width: 26.6rem * $foto-scale
+          max-width: 26.6rem * $foto-scale
+      &-2
+        top: 25%
+        img
+          max-width: 23.8rem * $foto-scale
+      &-3 
+        top: 37%
+        img
+          max-width: 32.4rem * $foto-scale
+      &-4 
+        top: 57%
+        img
+          max-width: 20.8rem * $foto-scale
+      &-5 
+        top: 79%
+        img
+          max-width: 29.6rem * $foto-scale
+
+  .copy
+    right: v.$gutter
+    bottom: 2rem
+
+  .modal__content
+    max-height: calc(100vh - 12rem)
+
+  .d
+    &-block
+      &_xl
+        display: block
+    &-inline
+      &_xl
+        display: inline
+    &-none
+      &_xl
+        display: none
+
+/* LG */
+@media (max-width: 1199.98px)
+  html
+    font-size: 7px
+
+  .container
+    &,
+    &_lg,
+    &_md,
+    &_sm
+      max-width: 960px
+    &_xl
+      max-width: 100%
+
+  .header-heading 
+    max-width: 84.5rem
+
+  .hero
+    &__container
+      max-width: 992px
+    &-coin
+      padding-left: v.$gutter
+      padding-right: v.$gutter
+      max-width: 44rem
+    &-king
+      right: 2rem
+      &__img
+        right: -4rem
+      &__paints
+        left: -5.5rem
+
+
+
+  .d
+    &-block
+      &_lg
+        display: block
+    &-inline
+      &_lg
+        display: inline
+    &-none
+      &_lg
+        display: none
+
+/* MD */
+@media (max-width: 991.98px)
+  html
+    font-size: 10px
+  body
+    font-size: 1.5rem
+  h1
+    font-size: 3.8rem
+
+
+
+  .container
+    &,
+    &_md,
+    &_sm
+      max-width: 720px
+    &_lg
+      max-width: 100%
+
+  .blue-panel 
+    padding-top: 1.3rem
+    padding-bottom: 1.3rem
+    &__container
+      justify-content: center
+      align-items: center
+      max-width: 76.8rem
+      padding-left: 2rem
+      padding-right: 2rem
+      padding-left: 2rem
+      padding-right: 2rem
+    &__logo 
+      display: block
+      width: 100%
+      max-width: 15rem
+    &__text
+      max-width: 54.2rem
+      text-align: center
+
+  .header
+    &-row
+      margin-top: 2rem
+      padding-top: 0
+      padding-bottom: 0
+    &-logo
+      display: none
+    &-heading
+      text-align: center
+
+  .hero
+    &__container
+      padding-bottom: 3rem
+      max-width: 76.8rem
+      padding-left: 2rem
+      padding-right: 2rem
+    &__row
+      justify-content: space-between
+    &-coin
+      order: 1
+      padding-top: 1rem
+      padding-left: 0
+      padding-right: 0
+      width: 100%
+      flex-basis: 76.8rem
+      max-width: 76.8rem
+      display: flex
+      flex-wrap: wrap
+      &-img
+        width: 27.3rem
+        img
+          max-width: 100%
+          position: relative
+          left: -2.5rem
+    &-list 
+      li::before,
+      li::after
+        left: -2.7em,
+
+      li
+        &:not(:last-child) 
+          margin-bottom: unset
+        &:first-child
+          margin-bottom: 1rem
+        &:nth-child(2)
+          margin-bottom: 1.8rem
+        &:nth-child(3)
+          margin-bottom: 2.5rem
+    &__list
+      margin-top: 3rem
+      margin-left: auto
+      width: 42.6rem
+      font-size: 1.8rem
+    &-text
+      width: 100%
+      text-align: center
+    &-king
+      order: 2
+      width: 27.3rem
+      flex: none
+      justify-content: flex-start
+      right: auto
+      top: auto
+      &__img
+        z-index: 1
+        left: 1rem
+        right: auto
+      &__paints
+        left: auto
+        top: 16.3rem
+        right: -.7rem
+        
+    &-event
+      order: 3
+      width: 42.6rem
+      margin-top: -5rem
+      // position: relative
+      // top: -5rem
+      &__card
+        max-width: 42.6rem
+
+  
+  .paints
+    &__item
+      &-1 
+        top: 1.5%
+        img
+          max-width: 26.6rem
+      &-2
+        top: 23%
+        left: 1.5rem
+        img
+          max-width: 26.2rem
+      &-3 
+        top: 49%
+        left: -1.5rem
+        z-index: 35
+        img
+          max-width: 21.5rem
+      &-4 
+        top: 50.5%
+        left: 10.5rem
+        img
+          max-width: 18.1rem
+      &-5 
+        top: 76.5%
+        left: -0.5rem
+        img
+          max-width: 25.1rem
+
+  .advantages
+    margin-top: 2rem
+    font-size: 1.8rem
+    &__item
+      padding-top: 0
+      padding-bottom: 0
+
+
+  .copy
+    margin-top: 5rem
+    position: static
+    text-align: right
+
+  .modal
+    &__content
+      max-width: 68rem
+      // height: 100%
+      height: auto
+      max-height: calc(100vh - 12rem)
+      font-size: 1.8rem
+      &-inner
+        padding-top: 2rem
+      h3
+        text-align: left
+        font-size: 2rem
+    // &__header
+    .modal__title
+      font-size: 2.4rem
+    &__close
+      right: -5%
+
+  .d
+    &-block
+      &_md
+        display: block
+    &-inline
+      &_md
+        display: inline
+    &-none
+      &_md
+        display: none
+
+/* SM */
+@media (max-width: 767.98px)
+  html
+    font-size: 9px
+  $scale-sm: .75
+  .container
+    &,
+    &_sm
+      max-width: 540px
+    &_md
+      max-width: 100%
+
+  .blue-panel 
+    &__container
+      max-width: 57.6rem
+    &__text
+      margin-left: 2rem
+
+  .hero
+    &__container
+      max-width: 57.6rem
+    &-coin
+      margin-bottom: 4rem
+      max-width: 57.6rem
+      &-img
+        margin-top: 3rem
+        display: flex
+        align-items: center
+        width: 27.3rem * $scale-sm
+
+    &__list
+      max-width: 42.6rem * $scale-sm
+
+    &-king
+      width: 27.3rem * $scale-sm
+      &__img
+        left: -7rem
+      &__paints
+        right: 7rem
+
+    &-event
+      margin-top: -3rem
+      width: 42.6rem * $scale-sm
+
+  .timer
+    font-size: 2.8rem * $scale-sm
+    &-label
+      font-size: 2.4rem * $scale-sm
+
+
+  .modal
+    &__close
+      right: -3%
+
+
+
+
+  .d
+    &-block
+      &_sm
+        display: block
+    &-inline
+      &_sm
+        display: inline
+    &-none
+      &_sm
+        display: none
+
+/* XS */
+@media (max-width: 575.98px)
+  html
+    font-size: 10px
+  
+  .container
+    max-width: 410px
+    &_sm
+      max-width: 100%
+
+  .blue-panel
+    padding-top: 1rem
+    padding-bottom: 1.2rem
+    &__container
+      justify-content: center
+    &__logo 
+      display: none
+    &__text
+      margin-left: 0
+      max-width: 33rem
+      text-align: center
+
+  .header
+    &-row
+      margin-top: 0.5rem
+      padding-top: 2rem
+      padding-bottom: 2rem
+      flex-direction: column
+      align-items: center
+    &-logo
+      max-width: 15rem
+      display: flex
+      justify-content: center
+
+  .hero
+    margin-top: 1.8rem
+    &__container
+      padding-bottom: 12rem
+      position: static
+    &-coin
+      margin-bottom: 2.5rem
+      padding-top: 0
+      justify-content: center
+      &-img
+        margin-top: 0rem
+        margin-bottom: 1.5rem
+        width: 100%
+        max-width: 29.5rem
+        img
+          position: static
+          left: auto
+    &-text
+      max-width: 33rem  
+    &__list
+      margin-top: 0
+      margin-left: unset
+    &-list 
+      li
+        &:nth-child(2)
+          margin-bottom: 1.2rem
+        &:nth-child(3)
+          margin-bottom: 1.2rem
+    &-event
+      order: 2
+    &-king
+      order: 3
+      margin-top: -4rem
+      width: 100%
+      justify-content: center
+      &__img
+        top: 0
+        left: auto
+      &__paints
+        display: none
+
+    &__event-card
+      margin-left: -2rem
+      margin-right: -2rem
+      margin-top: 2rem
+      width: calc( 100% +  4rem )
+
+  .event-card
+    &__title
+      margin-bottom: 2rem
+    &__body
+      padding: 2rem 2rem 3rem
+
+  .timer
+    font-size: 2.4rem
+    &-label
+      padding-bottom: 1.5rem
+      font-size: 2.4rem
+
+  .advantages
+    margin-top: 1.5rem
+    margin-bottom: 2.5rem
+
+  .copy
+    margin-top: 0
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    width: 100%
+    height: 12.3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    color: v.$blue-panel-text-color
+    background: v.$primary-color
+    &__wrapper
+      max-width: 31rem
+      text-align: center
+
+  .d
+    &-block
+      &_xs
+        display: block
+    &-inline
+      &_xs
+        display: inline
+    &-none
+      &_xs
+        display: none
+
+@media (max-width: 479.98px)
+  .modal
+    &__header,
+    &__body
+      padding-left: 1.5rem
+      padding-right: 1.5rem
+    &__content
+      &-inner
+        padding-bottom: 2rem
+    &__close
+      right: .75rem
+      top: .75rem
+      &:hover
+        .modal-close__item
+          background: rgba(0, 0, 0, .45)
+    &-close
+      &__item
+        background: rgba(0, 0, 0, .75)
+
+/* XXS */
+@media (max-width: 413.98px)
+  .container
+    max-width: 100%
+
+  .modal
+    &__content
+      word-break: break-word
+      font-size: 1.6rem
+      h3
+        font-size: 1.8rem
+    .modal__title
+      font-size: 2rem
+
+  .d
+    &-block
+      &_xxs
+        display: block2
+    &-inline
+      &_xxs
+        display: inline
+    &-none
+      &_xxs
+        display: none
+
+@media (max-width: 359.99px)
+  .hero
+    &-event
+      width: 100%
+  .timer
+    &-label
+      padding-left: 2rem
+      padding-right: 2rem
+
+/* IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
