@@ -63,6 +63,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
   // Высчитали время таймера
   var timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
   var timerTmpStartValue = parseInt(window.localStorage.getItem("timerTmpStartValue"));
+
+  // Очистка хранилища при изменении диапазона таймера
   if (timerTmpStartValue && timerTmpStartValue !== timerStartValue) {
     localStorage.clear();
   }
@@ -80,39 +82,42 @@ function setTimer(startHours, startMinutes, startSeconds) {
   var minutes = document.querySelector(".timer .js-timer-min");
   var seconds = document.querySelector(".timer .js-timer-sec");
   var timerLamp = document.querySelector(".js-timer-lamp");
-  function updateTimer() {
-    setTimeout(function () {
-      timerLamp.classList.toggle("turned-off");
-      // Текущий timestamp
-      var currentTime = new Date().getTime();
 
-      // Возобновление счетчика
-      if (timerStopStamp <= currentTime) {
-        timerStopStamp += timerStartValue;
-      }
+  // function updateTimer() {
+  var timerId = setTimeout(function updateTimer() {
+    timerLamp.classList.toggle("turned-off");
+    // Текущий timestamp
+    var currentTime = new Date().getTime();
 
-      // Текущий таймстамп-остаток таймера
-      var timerCurrentValue = timerStopStamp - currentTime;
+    // Возобновление счетчика
+    if (timerStopStamp <= currentTime) {
+      timerStopStamp += timerStartValue;
+    }
 
-      // Получение значений таймера
-      var timerCurrentHours = new Date(timerCurrentValue).getUTCHours();
-      var timerCurrentMinutes = new Date(timerCurrentValue).getUTCMinutes();
-      var timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
+    // Текущий таймстамп-остаток таймера
+    var timerCurrentValue = timerStopStamp - currentTime;
 
-      // Вставка значений с добавлением нуля
-      hours.innerHTML = "".concat(setZero(timerCurrentHours));
-      minutes.innerHTML = "".concat(setZero(timerCurrentMinutes));
-      seconds.innerHTML = "".concat(setZero(timerCurrentSeconds));
+    // Получение значений таймера
+    var timerCurrentHours = new Date(timerCurrentValue).getUTCHours();
+    var timerCurrentMinutes = new Date(timerCurrentValue).getUTCMinutes();
+    var timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
 
-      // Запись в LocalStorage
-      window.localStorage.setItem("timerEnd", timerStopStamp);
-      setTimeout(updateTimer, 1000);
-    }, 0);
-  }
+    // Вставка значений с добавлением нуля
+    hours.innerHTML = "".concat(setZero(timerCurrentHours));
+    minutes.innerHTML = "".concat(setZero(timerCurrentMinutes));
+    seconds.innerHTML = "".concat(setZero(timerCurrentSeconds));
+
+    // Запись в LocalStorage
+    window.localStorage.setItem("timerEnd", timerStopStamp);
+    timerId = setTimeout(updateTimer, 1000);
+  }, 1000);
+  // }
+
   function setZero(val) {
     return val < 10 ? "0".concat(val) : "".concat(val);
   }
-  updateTimer();
+
+  // updateTimer();
 }
 
 // FORM

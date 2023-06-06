@@ -70,6 +70,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
   let timerTmpStartValue = parseInt(
     window.localStorage.getItem("timerTmpStartValue")
   );
+
+  // Очистка хранилища при изменении диапазона таймера
   if (timerTmpStartValue && timerTmpStartValue !== timerStartValue) {
     localStorage.clear();
   }
@@ -90,42 +92,42 @@ function setTimer(startHours, startMinutes, startSeconds) {
   const seconds = document.querySelector(".timer .js-timer-sec");
   const timerLamp = document.querySelector(".js-timer-lamp");
 
-  function updateTimer() {
-    setTimeout(function () {
-      timerLamp.classList.toggle("turned-off");
-      // Текущий timestamp
-      let currentTime = new Date().getTime();
+  // function updateTimer() {
+  let timerId = setTimeout(function updateTimer() {
+    timerLamp.classList.toggle("turned-off");
+    // Текущий timestamp
+    let currentTime = new Date().getTime();
 
-      // Возобновление счетчика
-      if (timerStopStamp <= currentTime) {
-        timerStopStamp += timerStartValue;
-      }
+    // Возобновление счетчика
+    if (timerStopStamp <= currentTime) {
+      timerStopStamp += timerStartValue;
+    }
 
-      // Текущий таймстамп-остаток таймера
-      let timerCurrentValue = timerStopStamp - currentTime;
+    // Текущий таймстамп-остаток таймера
+    let timerCurrentValue = timerStopStamp - currentTime;
 
-      // Получение значений таймера
-      let timerCurrentHours = new Date(timerCurrentValue).getUTCHours();
-      let timerCurrentMinutes = new Date(timerCurrentValue).getUTCMinutes();
-      let timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
+    // Получение значений таймера
+    let timerCurrentHours = new Date(timerCurrentValue).getUTCHours();
+    let timerCurrentMinutes = new Date(timerCurrentValue).getUTCMinutes();
+    let timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
 
-      // Вставка значений с добавлением нуля
-      hours.innerHTML = `${setZero(timerCurrentHours)}`;
-      minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
-      seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
+    // Вставка значений с добавлением нуля
+    hours.innerHTML = `${setZero(timerCurrentHours)}`;
+    minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
+    seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
 
-      // Запись в LocalStorage
-      window.localStorage.setItem("timerEnd", timerStopStamp);
+    // Запись в LocalStorage
+    window.localStorage.setItem("timerEnd", timerStopStamp);
 
-      setTimeout(updateTimer, 1000);
-    }, 0);
-  }
+    timerId = setTimeout(updateTimer, 1000);
+  }, 1000);
+  // }
 
   function setZero(val) {
     return val < 10 ? `0${val}` : `${val}`;
   }
 
-  updateTimer();
+  // updateTimer();
 }
 
 // FORM
