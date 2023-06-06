@@ -3,7 +3,7 @@
 window.addEventListener("load", function () {
   setPreloader();
   modalsHandle();
-  setTimer(0, 1, 11);
+  setTimer(0, 2, 11);
 
   // INPUT MASK
   var selector = document.querySelector('[name="userPhone"]');
@@ -60,10 +60,7 @@ function modalsHandle() {
 // - - - - - - - - - - - - - - - - - - -
 
 // TIMER
-function setTimer() {
-  var startHours = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 11;
-  var startMinutes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 11;
-  var startSeconds = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 11;
+function setTimer(startHours, startMinutes, startSeconds) {
   // localStorage.lear()
   // Высчитали время таймера
   var timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;

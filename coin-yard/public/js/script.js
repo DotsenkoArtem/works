@@ -3,7 +3,7 @@
 window.addEventListener("load", function () {
   setPreloader();
   modalsHandle();
-  setTimer(0, 1, 11);
+  setTimer(0, 2, 11);
 
   // INPUT MASK
   const selector = document.querySelector('[name="userPhone"]');
@@ -63,7 +63,7 @@ function modalsHandle() {
 
 
 // TIMER
-function setTimer(startHours = 11, startMinutes = 11, startSeconds = 11) {
+function setTimer(startHours, startMinutes, startSeconds) {
   // localStorage.lear()
   // Высчитали время таймера
   let timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
