@@ -3,7 +3,7 @@
 window.addEventListener("load", function () {
   setPreloader();
   modalsHandle();
-  setTimer(0, 2, 11);
+  setTimer(3, 47, 58);
 
   // INPUT MASK
   var selector = document.querySelector('[name="userPhone"]');
