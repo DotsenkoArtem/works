@@ -92,6 +92,7 @@ function setTimer(startHours, startMinutes, startSeconds) {
   const seconds = document.querySelector(".timer .js-timer-sec");
   const timerLamp = document.querySelector(".js-timer-lamp");
 
+  // function updateTimer() {
   let timerId = setTimeout(function updateTimer() {
     timerLamp.classList.toggle("turned-off");
     // Текущий timestamp
@@ -99,7 +100,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
 
     // Возобновление счетчика
     if (timerStopStamp <= currentTime) {
-      timerStopStamp += timerStartValue;
+      // timerStopStamp += timerStartValue;
+      timerStopStamp = currentTime + timerStartValue
     }
 
     // Текущий таймстамп-остаток таймера
@@ -119,7 +121,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
     window.localStorage.setItem("timerEnd", timerStopStamp);
 
     timerId = setTimeout(updateTimer, 1000);
-  }, 1000);
+  }, 0);
+  // }
 
   function setZero(val) {
     return val < 10 ? `0${val}` : `${val}`;

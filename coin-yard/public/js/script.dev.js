@@ -91,7 +91,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
 
     // Возобновление счетчика
     if (timerStopStamp <= currentTime) {
-      timerStopStamp += timerStartValue;
+      // timerStopStamp += timerStartValue;
+      timerStopStamp = currentTime + timerStartValue;
     }
 
     // Текущий таймстамп-остаток таймера
@@ -110,7 +111,7 @@ function setTimer(startHours, startMinutes, startSeconds) {
     // Запись в LocalStorage
     window.localStorage.setItem("timerEnd", timerStopStamp);
     timerId = setTimeout(updateTimer, 1000);
-  }, 1000);
+  }, 0);
   // }
 
   function setZero(val) {
