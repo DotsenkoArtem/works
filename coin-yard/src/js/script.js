@@ -38,7 +38,6 @@ function modalsHandle() {
     }
   }
 
-  // Functions
   function openModal(modalOpenBtn) {
     let modal = document.getElementById(modalOpenBtn.dataset.target);
     modal.classList.remove("closed");
@@ -61,34 +60,29 @@ function modalsHandle() {
 }
 // - - - - - - - - - - - - - - - - - - -
 
-
 // TIMER
 function setTimer(startHours, startMinutes, startSeconds) {
   // localStorage.lear()
   // Высчитали время таймера
-  let timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
+  let timerStartValue =
+    (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
 
-
-  let timerTmpStartValue = parseInt(window.localStorage.getItem('timerTmpStartValue'))
-  if(timerTmpStartValue && timerTmpStartValue !== timerStartValue) {
-    localStorage.clear()
+  let timerTmpStartValue = parseInt(
+    window.localStorage.getItem("timerTmpStartValue")
+  );
+  if (timerTmpStartValue && timerTmpStartValue !== timerStartValue) {
+    localStorage.clear();
   }
 
-
-  window.localStorage.setItem('timerTmpStartValue', timerStartValue)
-  // console.log('timerTmpStartValue: ', timerTmpStartValue);
+  window.localStorage.setItem("timerTmpStartValue", timerStartValue);
 
   // Таймстамп-окончание таймера
-  let timerStopStamp = new Date().getTime() + timerStartValue
+  let timerStopStamp = new Date().getTime() + timerStartValue;
 
-
-  let finishTimer =  parseInt(localStorage.getItem('timerEnd'))
-  if(finishTimer) {
-    timerStopStamp = finishTimer
+  let finishTimer = parseInt(localStorage.getItem("timerEnd"));
+  if (finishTimer) {
+    timerStopStamp = finishTimer;
   }
-
-
-
 
   // const days = document.querySelector(".timer .js-timer-day");
   const hours = document.querySelector(".timer .js-timer-hour");
@@ -98,9 +92,7 @@ function setTimer(startHours, startMinutes, startSeconds) {
 
   function updateTimer() {
     setTimeout(function () {
-
-
-      timerLamp.classList.toggle('turned-off')
+      timerLamp.classList.toggle("turned-off");
       // Текущий timestamp
       let currentTime = new Date().getTime();
 
@@ -109,12 +101,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
         timerStopStamp += timerStartValue;
       }
 
-
       // Текущий таймстамп-остаток таймера
       let timerCurrentValue = timerStopStamp - currentTime;
-
-      // window.localStorage.setItem("timerStop", timerCurrentValue.getTime());
-      // console.log("timerStop.getTime(): ", +timerStop);
 
       // Получение значений таймера
       let timerCurrentHours = new Date(timerCurrentValue).getUTCHours();
@@ -126,10 +114,8 @@ function setTimer(startHours, startMinutes, startSeconds) {
       minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
       seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
 
-
-
       // Запись в LocalStorage
-      window.localStorage.setItem('timerEnd', timerStopStamp)
+      window.localStorage.setItem("timerEnd", timerStopStamp);
 
       setTimeout(updateTimer, 1000);
     }, 0);
@@ -142,39 +128,33 @@ function setTimer(startHours, startMinutes, startSeconds) {
   updateTimer();
 }
 
-
-
-
 // FORM
 const sounds = {
-  success:  'audio/success.mp3',
-  error:    'audio/error-1.mp3' 
-}
-let soundSuccess = new Sound(sounds.success)
-let soundError = new Sound(sounds.error)
-let alertSound = soundSuccess
+  success: "audio/success.mp3",
+  error: "audio/error-1.mp3",
+};
+let soundSuccess = new Sound(sounds.success);
+let soundError = new Sound(sounds.error);
+let alertSound = soundSuccess;
 
 function Sound(src) {
-  let audio = document.createElement('audio')
-  audio.src = src
-  this.play = function() {
-    audio.play()
-  }
+  let audio = document.createElement("audio");
+  audio.src = src;
+  this.play = function () {
+    audio.play();
+  };
 }
-
-
 
 // Массив всех форм
 let forms = document.forms;
 for (let i = 0; i < forms.length; i++) {
   let form = forms[i];
 
-  form.addEventListener('submit', function(event) {
-    send(event, 'php/mail.php')
-  })
+  form.addEventListener("submit", function (event) {
+    send(event, "php/mail.php");
+  });
 
   function send(event, php) {
-    
     // Установка лоадера на кнопку submit
     setupLoader(form);
 
@@ -293,7 +273,7 @@ for (let i = 0; i < forms.length; i++) {
 function setupLoader(form) {
   let loader = document.createElement("div");
   loader.className = "submit-loader";
-  form.querySelector('.loader-container ').appendChild(loader);
+  form.querySelector(".loader-container ").appendChild(loader);
 }
 
 function removeLoader(form) {

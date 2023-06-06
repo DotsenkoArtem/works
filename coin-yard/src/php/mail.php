@@ -16,11 +16,7 @@ require 'SMTP.php';
 $mail = new PHPMailer(true);
 
 
-// $name       = $_POST['name'];
 $phone      = $_POST['userPhone'];
-// $email      = $_POST['email'];
-// $message    = $_POST['message'];
-// $myuploads  = $_FILES['file'];
 
 try {
     //Server settings
@@ -45,33 +41,6 @@ try {
     $mail->setFrom('dots.send@yandex.ru', 'Европейский Монетный Двор');
     $mail->addAddress('doclko31@gmail.com');                        //Add a recipient
 
-    // $mail->addAddress('mail@mai.ru');                        //Add a recipient
-    // $mail->addAddress('ellen@example.com');                      //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
-
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');                //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');           //Optional name
-
-    $attachmentSize = 0;
-    // Прикрепление файлов
-    if (!empty($myuploads['name'][0])) {
-        for ($ct = 0; $ct < count($myuploads['tmp_name']); $ct++) {
-            $uploadfile = tempnam(sys_get_temp_dir(), sha1($myuploads['name'][$ct]));
-            $filename = $myuploads['name'][$ct];
-            $attachmentSize += $myuploads['size'][$ct];
-
-            if (move_uploaded_file($myuploads['tmp_name'][$ct], $uploadfile)) {
-                $mail->addAttachment($uploadfile, $filename);
-                $rfile[] = "Файл $filename прикреплён";
-            } else {
-                $rfile[] = "Не удалось прикрепить файл $filename";
-            }
-        }   
-    }
-    //  - - - - - - - - - - - - 
 
 
     //Content
@@ -85,23 +54,16 @@ try {
 
 
 
-    // if ($mail->send()) {$result = "success";}       //Дефолтная отправка писем
-    // else {$result = "error";}
-
-
-
 
    
-    if ($attachmentSize > 10485760) {                  //Отправка с ограничением по суммарному размеру вложений
-        $result = "limitExceeded";
+
+    $mail->isSMTP();
+    if ($mail->send()) {
+        $result = "success"; 
     } else {
-        $mail->isSMTP();
-        if ($mail->send()) {
-            $result = "success"; 
-        } else {
-            $result = "error";
-        }
+        $result = "error";
     }
+    
 
 } catch (Exception $e) {
     $result = "error";
@@ -109,5 +71,5 @@ try {
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status, "myuploads['size']" => $myuploads['size'], "attachmentSize" => $attachmentSize]);
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
 ?>

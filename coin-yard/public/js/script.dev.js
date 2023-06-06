@@ -38,8 +38,6 @@ function modalsHandle() {
       _loop();
     }
   }
-
-  // Functions
   function openModal(modalOpenBtn) {
     var modal = document.getElementById(modalOpenBtn.dataset.target);
     modal.classList.remove("closed");
@@ -64,16 +62,15 @@ function setTimer(startHours, startMinutes, startSeconds) {
   // localStorage.lear()
   // Высчитали время таймера
   var timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
-  var timerTmpStartValue = parseInt(window.localStorage.getItem('timerTmpStartValue'));
+  var timerTmpStartValue = parseInt(window.localStorage.getItem("timerTmpStartValue"));
   if (timerTmpStartValue && timerTmpStartValue !== timerStartValue) {
     localStorage.clear();
   }
-  window.localStorage.setItem('timerTmpStartValue', timerStartValue);
-  // console.log('timerTmpStartValue: ', timerTmpStartValue);
+  window.localStorage.setItem("timerTmpStartValue", timerStartValue);
 
   // Таймстамп-окончание таймера
   var timerStopStamp = new Date().getTime() + timerStartValue;
-  var finishTimer = parseInt(localStorage.getItem('timerEnd'));
+  var finishTimer = parseInt(localStorage.getItem("timerEnd"));
   if (finishTimer) {
     timerStopStamp = finishTimer;
   }
@@ -85,7 +82,7 @@ function setTimer(startHours, startMinutes, startSeconds) {
   var timerLamp = document.querySelector(".js-timer-lamp");
   function updateTimer() {
     setTimeout(function () {
-      timerLamp.classList.toggle('turned-off');
+      timerLamp.classList.toggle("turned-off");
       // Текущий timestamp
       var currentTime = new Date().getTime();
 
@@ -96,9 +93,6 @@ function setTimer(startHours, startMinutes, startSeconds) {
 
       // Текущий таймстамп-остаток таймера
       var timerCurrentValue = timerStopStamp - currentTime;
-
-      // window.localStorage.setItem("timerStop", timerCurrentValue.getTime());
-      // console.log("timerStop.getTime(): ", +timerStop);
 
       // Получение значений таймера
       var timerCurrentHours = new Date(timerCurrentValue).getUTCHours();
@@ -111,7 +105,7 @@ function setTimer(startHours, startMinutes, startSeconds) {
       seconds.innerHTML = "".concat(setZero(timerCurrentSeconds));
 
       // Запись в LocalStorage
-      window.localStorage.setItem('timerEnd', timerStopStamp);
+      window.localStorage.setItem("timerEnd", timerStopStamp);
       setTimeout(updateTimer, 1000);
     }, 0);
   }
@@ -123,14 +117,14 @@ function setTimer(startHours, startMinutes, startSeconds) {
 
 // FORM
 var sounds = {
-  success: 'audio/success.mp3',
-  error: 'audio/error-1.mp3'
+  success: "audio/success.mp3",
+  error: "audio/error-1.mp3"
 };
 var soundSuccess = new Sound(sounds.success);
 var soundError = new Sound(sounds.error);
 var alertSound = soundSuccess;
 function Sound(src) {
-  var audio = document.createElement('audio');
+  var audio = document.createElement("audio");
   audio.src = src;
   this.play = function () {
     audio.play();
@@ -141,8 +135,8 @@ function Sound(src) {
 var forms = document.forms;
 var _loop2 = function _loop2() {
   var form = forms[i];
-  form.addEventListener('submit', function (event) {
-    send(event, 'php/mail.php');
+  form.addEventListener("submit", function (event) {
+    send(event, "php/mail.php");
   });
   function send(event, php) {
     // Установка лоадера на кнопку submit
@@ -261,7 +255,7 @@ for (var i = 0; i < forms.length; i++) {
 function setupLoader(form) {
   var loader = document.createElement("div");
   loader.className = "submit-loader";
-  form.querySelector('.loader-container ').appendChild(loader);
+  form.querySelector(".loader-container ").appendChild(loader);
 }
 function removeLoader(form) {
   var loader = form.querySelector(".submit-loader");

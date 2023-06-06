@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*  I. Font settings
  * --------------------------------------- */ 
 @font-face {
@@ -310,105 +309,12 @@ select::-ms-expand {
   display: none;
 }
 
-/*  III. Grid
- * ---------------------------------------   */
 .row > * {
   width: 100%;
 }
 
-/* V. Sprite
- * --------------------------------------- */ 
-/* 1. Sprite:svg 
- * -------------------------*/
-.svg-user {
-  background: url("sprite.svg") no-repeat;
-}
-
-.svg-user {
-  background-position: 0 0;
-}
-
-.svg-user-dims {
-  width: 16px;
-  height: 17px;
-}
-
-/* 2. Sprite:png  
- * -------------------------*/
-.house-blue {
-  background-image: url(sprite.png);
-  background-position: 0px 0px;
-  width: 20px;
-  height: 20px;
-}
-
-.sad-icon {
-  background-image: url(sprite.png);
-  background-position: 0px -212px;
-  width: 48px;
-  height: 48px;
-}
-
-.chrome {
-  background-image: url(sprite.png);
-  background-position: 0px -20px;
-  width: 48px;
-  height: 48px;
-}
-
-.yandex {
-  background-image: url(sprite.png);
-  background-position: 0px -260px;
-  width: 48px;
-  height: 48px;
-}
-
-.firefox {
-  background-image: url(sprite.png);
-  background-position: 0px -116px;
-  width: 47px;
-  height: 48px;
-}
-
-.opera {
-  background-image: url(sprite.png);
-  background-position: 0px -164px;
-  width: 47px;
-  height: 48px;
-}
-
-.edge {
-  background-image: url(sprite.png);
-  background-position: 0px -68px;
-  width: 48px;
-  height: 48px;
-}
-
 /* VI. Layout
  * --------------------------------------- */
-/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
-.bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-.bg img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.bg_cover img {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-.bg_contain img {
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
 .preloader {
   width: 100%;
   height: 100%;
@@ -907,7 +813,7 @@ select::-ms-expand {
 }
 .modal__header p {
   font-size: 2rem;
-  font-weght: 400;
+  font-weight: 400;
 }
 .modal__body {
   padding-top: 1.2rem;
@@ -1187,25 +1093,8 @@ select::-ms-expand {
     transform: translateX(150%);
   }
 }
-/* Lazy 
- * -------------------------*/
-/* ANIMATIONS
- * ------------------------------  */
 .fake-class-to-add-import-rule {
   visibility: inherit;
-}
-
-.d-anim-delay-1000 {
-  -webkit-animation-delay: 1000ms;
-  animation-delay: 1000ms;
-}
-.d-anim-delay-1100 {
-  -webkit-animation-delay: 1100ms;
-  animation-delay: 1100ms;
-}
-.d-anim-delay-1200 {
-  -webkit-animation-delay: 1200ms;
-  animation-delay: 1200ms;
 }
 
 .slideUpIn {
@@ -1213,8 +1102,6 @@ select::-ms-expand {
   animation-name: slideUpIn;
 }
 
-/* VI. Animations
- * --------------------------------------- */
 @-webkit-keyframes fadeIn {
   from {
     visibility: hidden;
@@ -1225,6 +1112,7 @@ select::-ms-expand {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     visibility: hidden;
@@ -1311,7 +1199,7 @@ select::-ms-expand {
     transform: translateY(-10%);
   }
 }
-/* VII. Media-queries
+/* Media-queries
  * --------------------------------------- */
 @media (max-width: 1699.98px) {
   html {
@@ -1960,6 +1848,4 @@ select::-ms-expand {
   }
 }
 /* IE */
-/* VIII. IE >= 10 - media-queries
- * --------------------------------------- */
 /*# sourceMappingURL=style.css.map */

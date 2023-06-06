@@ -79,86 +79,72 @@ gulp.task("libs", function () {
 });
 
 // ПРОСТО КОПИРОВАНИЕ ИКОНОК:SVG В ПАПКУ  СОХРАНЕНИЕМ СТРУКТУРЫ
-gulp.task("sprite:svg", function () {
-  return gulp
-    .src("src/assets/img/icons/**/*.svg")
-    .pipe(
-      gulpIf(
-        function (file) {
-          return file;
-        },
+// gulp.task("sprite:svg", function () {
+//   return gulp
+//     .src("src/assets/img/icons/**/*.svg")
+//     .pipe(
+//       gulpIf(
+//         function (file) {
+//           return file;
+//         },
 
-        svgSprite({
-          mode: {
-            css: {
-              dest: ".",
-              bust: false, //хеши в файле sprite.svg
-              sprite: "sprite.svg", //имя файла from relative to dest
-              layout: "vertical",
-              // prefix:     '%',
-              //dimensions: true,           //размеры картинки в одно классе с бэкграундом
-              render: {
-                scss: {
-                  dest: "sprite-svg.scss",
-                },
-                // css: true
-              },
-            },
-          },
-        })
-      )
-    )
-    .pipe(gulpIf("*.scss", gulp.dest("tmp/sass"), gulp.dest("public/css")));
-});
+//         svgSprite({
+//           mode: {
+//             css: {
+//               dest: ".",
+//               bust: false, //хеши в файле sprite.svg
+//               sprite: "sprite.svg", //имя файла from relative to dest
+//               layout: "vertical",
+//               // prefix:     '%',
+//               //dimensions: true,           //размеры картинки в одно классе с бэкграундом
+//               render: {
+//                 scss: {
+//                   dest: "sprite-svg.scss",
+//                 },
+//                 // css: true
+//               },
+//             },
+//           },
+//         })
+//       )
+//     )
+//     .pipe(gulpIf("*.scss", gulp.dest("tmp/sass"), gulp.dest("public/css")));
+// });
 
-// SPRITE:PNG
-// gulp.task('sprite:png', function () {
-//     return  gulp.src('src/assets/img/icons/**/*.png')
-//             .pipe(spritesmith({
-//                 imgName: 'sprite.png',
-//                 cssName: 'sprite.css',
-//                 algorithm: 'top-down',
-//                 cssName: 'sprite-png.scss',
-//               }))
-//             .pipe(gulpIf('*.scss',
-//                 gulp.dest('tmp/scss'),
-//                 gulp.dest('public/css'))
-//             );
-//   });
 
 // SPRITE:PNG
-gulp.task("sprite:png", function () {
-  // Generate our spritesheet
-  var spriteData = gulp.src("src/assets/img/icons/**/*.png").pipe(
-    spritesmith({
-      imgName: "sprite.png",
-      algorithm: "top-down",
-      cssName: "sprite-png.sass",
-    })
-  );
+// gulp.task("sprite:png", function () {
+//   // Generate our spritesheet
+//   var spriteData = gulp.src("src/assets/img/icons/**/*.png").pipe(
+//     spritesmith({
+//       imgName: "sprite.png",
+//       algorithm: "top-down",
+//       cssName: "sprite-png.sass",
+//     })
+//   );
 
-  // Pipe image stream through image optimizer and onto disk
-  var imgStream = spriteData.img
-    // DEV: We must buffer our stream into a Buffer for `imagemin`
-    .pipe(buffer())
-    .pipe(imagemin())
-    .pipe(gulp.dest("public/css"));
+//   // Pipe image stream through image optimizer and onto disk
+//   var imgStream = spriteData.img
+//     // DEV: We must buffer our stream into a Buffer for `imagemin`
+//     .pipe(buffer())
+//     .pipe(imagemin())
+//     .pipe(gulp.dest("public/css"));
 
-  // Pipe CSS stream through CSS optimizer and onto disk
-  var cssStream = spriteData.css
+//   // Pipe CSS stream through CSS optimizer and onto disk
+//   var cssStream = spriteData.css
 
-    // ХУЙНЯ ЕБАНАЯ - УБИРАЕТ ПЕРЕМЕННЫЕ ИЗ SCSS
-    //   .pipe(csso(
-    //       {
-    //         // restructure: false,
-    //         // debug: true,
-    //     }
-    //   ))
-    .pipe(gulp.dest("tmp/sass"));
+//     // ХУЙНЯ ЕБАНАЯ - УБИРАЕТ ПЕРЕМЕННЫЕ ИЗ SCSS
+//     //   .pipe(csso(
+//     //       {
+//     //         // restructure: false,
+//     //         // debug: true,
+//     //     }
+//     //   ))
+//     .pipe(gulp.dest("tmp/sass"));
 
-  // Return a merged stream to handle both `end` events
-  return merge(imgStream, cssStream);
-});
+//   // Return a merged stream to handle both `end` events
+//   return merge(imgStream, cssStream);
+// });
 
 // ======== END of TEST ========
 
@@ -200,7 +186,8 @@ gulp.task("imgmin", function () {
 gulp.task("img", gulp.series("imgmin", "webp"));
 
 // ОБЩАЯ ЗАДАЧА ДЛЯ СОДЕРЖИМОГО "ASSETS" (FONTS, IMG, ICONS)
-gulp.task("assets", gulp.parallel("fonts", "sprite:svg", "sprite:png", "img"));
+// gulp.task("assets", gulp.parallel("fonts", "sprite:svg", "sprite:png", "img"));
+gulp.task("assets", gulp.parallel("fonts", "img"));
 
 // JS
 gulp.task("js", function () {
@@ -295,8 +282,8 @@ gulp.task("pug", function () {
 // НАБЛЮДЕНИЕ
 gulp.task("watch", function () {
   gulp.watch("src/assets/fonts/", gulp.series("fonts"));
-  gulp.watch("src/assets/img/icons/**/*.svg", gulp.series("sprite:svg"));
-  gulp.watch("src/assets/img/icons/**/*.png", gulp.series("sprite:png"));
+  // gulp.watch("src/assets/img/icons/**/*.svg", gulp.series("sprite:svg"));
+  // gulp.watch("src/assets/img/icons/**/*.png", gulp.series("sprite:png"));
   gulp.watch(
     ["src/assets/img/**/*.*", "!src/assets/img/icons/**/*.svg"],
     gulp.series("img")

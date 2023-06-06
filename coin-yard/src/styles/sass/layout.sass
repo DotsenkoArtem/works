@@ -7,17 +7,17 @@
 
 @import "grid.sass"
 
-/* V. Sprite
- --------------------------------------- */ 
+//  V. Sprite
+//  --------------------------------------- 
 
-/* 1. Sprite:svg 
- -------------------------*/
+//  1. Sprite:svg 
+//  -------------------------
 // Для добавления svg-спрайтов: необходимо только задать нужный класс а html.
 // например     i.svg-icons.svg-icons-dims
-@import "../../../tmp/sass/sprite-svg.scss"
+// @import "../../../tmp/sass/sprite-svg.scss"
 
-/* 2. Sprite:png  
- -------------------------*/
+//  2. Sprite:png  
+//  -------------------------
 // sass-свойства спрайтов не добавлены по умочанию, свойство каждого спрайта нужно добавлять отдельно.
 // Для добавления png-спрайтов:
 //      - добавить в html разметку
@@ -29,64 +29,39 @@
 //                                  
 // 
 
-@import "../../../tmp/sass/sprite-png.sass"
+// @import "../../../tmp/sass/sprite-png.sass"
 
 // Sprite:png styles
 // .icon-email 
 //   @include sprite($icon-email)
 // 
 
-.house-blue
-  +sprite($house-blue)
+// .house-blue
+//   +sprite($house-blue)
 
-.sad-icon
-  +sprite($sad-icon)
+// .sad-icon
+//   +sprite($sad-icon)
 
-.chrome
-  +sprite($chrome)
+// .chrome
+//   +sprite($chrome)
 
-.yandex
-  +sprite($yandex)
+// .yandex
+//   +sprite($yandex)
 
-.firefox
-  +sprite($firefox)
+// .firefox
+//   +sprite($firefox)
 
-.opera
-  +sprite($opera)
+// .opera
+//   +sprite($opera)
 
-.edge
-  +sprite($edge)
+// .edge
+//   +sprite($edge)
 
 // Здесь будут основные стили проекта
 
 /* VI. Layout
  --------------------------------------- */
 
-  
-/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
-
-
-// Backgrounds
-.bg
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: -1
-
-  img
-    display: block
-    width: 100%
-    height: 100%
-  
-  &_cover
-    img
-      object-fit: cover
-  
-  &_contain
-    img
-      object-fit: contain
 
 .preloader
   width: 100%
@@ -582,7 +557,7 @@
     p
       font:
         size: 2rem
-        weght: 400
+        weight: 400
 
 
   &__body
@@ -861,8 +836,8 @@
 
 
 
-/* Lazy 
- -------------------------*/
+// Lazy 
+// -------------------------
 // .lazy 
 //    width: 100%
 //    height: 100%
@@ -889,8 +864,8 @@
 //    100%  background-position:  150% 0, 0 0, 0px 85px, 0px 110px
 // 
 
-/* ANIMATIONS
- ------------------------------  */
+// ANIMATIONS
+// ------------------------------  
 // !!! Добавляется любой пустой селектор перед @import, так как после использования @include в свойствах выше директива @import смещается на один tab и некорректно отрабатывает импорт
 // ! То есть, после @include следует запускать @import только после объявления нормаьного свойства
 .fake-class-to-add-import-rule
