@@ -64,6 +64,7 @@ function setTimer() {
   var startHours = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 11;
   var startMinutes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 11;
   var startSeconds = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 11;
+  localStorage.lear();
   // Высчитали время таймера
   var timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
   var timerTmpStartValue = parseInt(window.localStorage.getItem('timerTmpStartValue'));
@@ -79,12 +80,6 @@ function setTimer() {
   if (finishTimer) {
     timerStopStamp = finishTimer;
   }
-  // console.log('finishTimer: ', finishTimer);
-
-  // localStorage.clear()
-
-  // if(finishTimer && finishTimer < new Date().getTime()) {
-  // }
 
   // const days = document.querySelector(".timer .js-timer-day");
   var hours = document.querySelector(".timer .js-timer-hour");

@@ -64,6 +64,7 @@ function modalsHandle() {
 
 // TIMER
 function setTimer(startHours = 11, startMinutes = 11, startSeconds = 11) {
+  localStorage.lear()
   // Высчитали время таймера
   let timerStartValue = (startHours * 3600 + startMinutes * 60 + startSeconds) * 1000;
 
@@ -85,12 +86,7 @@ function setTimer(startHours = 11, startMinutes = 11, startSeconds = 11) {
   if(finishTimer) {
     timerStopStamp = finishTimer
   }
-  // console.log('finishTimer: ', finishTimer);
 
-  // localStorage.clear()
-  
-  // if(finishTimer && finishTimer < new Date().getTime()) {
-  // }
 
 
 
