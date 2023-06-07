@@ -391,6 +391,7 @@ select::-ms-expand {
 }
 
 .hero__container {
+  padding-bottom: 7rem;
   position: relative;
 }
 .hero__row {
@@ -409,7 +410,8 @@ select::-ms-expand {
   justify-content: flex-end;
 }
 .hero-king__img {
-  position: relative;
+  position: absolute;
+  top: -3rem;
   right: -2rem;
   z-index: 5;
 }
@@ -421,7 +423,7 @@ select::-ms-expand {
   max-width: 33rem;
   height: 100%;
   position: absolute;
-  top: 3rem;
+  top: 0;
   left: -16.5rem;
   z-index: 1;
 }
@@ -706,7 +708,7 @@ select::-ms-expand {
 .copy {
   position: absolute;
   right: 0;
-  bottom: 5rem;
+  bottom: 2rem;
   z-index: 0;
   color: #8F8F8F;
   font-size: 1.5rem;
@@ -1237,7 +1239,7 @@ select::-ms-expand {
   }
   .hero-king {
     position: relative;
-    top: 5rem;
+    top: 7.5rem;
     right: 1rem;
   }
   .hero-king__img img {
@@ -1320,6 +1322,7 @@ select::-ms-expand {
     max-width: 44rem;
   }
   .hero-king {
+    top: 8rem;
     right: 2rem;
   }
   .hero-king__img {
@@ -1465,11 +1468,13 @@ select::-ms-expand {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    position: relative;
     right: auto;
     top: auto;
   }
   .hero-king__img {
     z-index: 1;
+    top: auto;
     left: 1rem;
     right: auto;
   }
@@ -1736,6 +1741,7 @@ select::-ms-expand {
     justify-content: center;
   }
   .hero-king__img {
+    position: relative;
     top: 0;
     left: auto;
   }
