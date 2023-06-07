@@ -27,8 +27,8 @@ try {
     $mail->SMTPAuth   = true;                                       //Enable SMTP authentication
 
     $mail->Host       = 'smtp.yandex.ru';                             //Set the SMTP server to send through
-    $mail->Username   = 'dots.send@yandex.ru';                       //SMTP username
-    $mail->Password   = 'sosihuqtsavbxkhn';                     //SMTP password
+    $mail->Username   = 'd.monetniy@yandex.ru';                       //SMTP username
+    $mail->Password   = 'kkuhpupqtsgwbhus';                     //SMTP password
 
     // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             //Enable implicit TLS encryption
 
@@ -38,8 +38,9 @@ try {
 
 
     //Recipients
-    $mail->setFrom('dots.send@yandex.ru', 'Европейский Монетный Двор');
-    $mail->addAddress('doclko31@gmail.com');                        //Add a recipient
+    $mail->setFrom('d.monetniy@yandex.ru', 'Европейский Монетный Двор');
+    //Add a recipient              
+    $mail->addAddress('to.pavel.box@gmail.com');                        
 
 
 
