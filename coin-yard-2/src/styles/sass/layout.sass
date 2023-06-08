@@ -1,0 +1,948 @@
+@use '_partials/variables' as v
+@use '_partials/mixins' as m
+
+@import "comments.sass"
+@import "fonts.sass"
+@import "default.sass"
+
+@import "grid.sass"
+
+//  V. Sprite
+//  --------------------------------------- 
+
+//  1. Sprite:svg 
+//  -------------------------
+// Для добавления svg-спрайтов: необходимо только задать нужный класс а html.
+// например     i.svg-icons.svg-icons-dims
+// @import "../../../tmp/sass/sprite-svg.scss"
+
+//  2. Sprite:png  
+//  -------------------------
+// sass-свойства спрайтов не добавлены по умочанию, свойство каждого спрайта нужно добавлять отдельно.
+// Для добавления png-спрайтов:
+//      - добавить в html разметку
+//                                  div.sprite-class либо 
+//                                  i.sprite-class
+//      - добавить в sass-файл свойство 
+//                                   .icon-home 
+//                                          @include sprite($icon-email)
+//                                  
+// 
+
+// @import "../../../tmp/sass/sprite-png.sass"
+
+// Sprite:png styles
+// .icon-email 
+//   @include sprite($icon-email)
+// 
+
+// .house-blue
+//   +sprite($house-blue)
+
+// .sad-icon
+//   +sprite($sad-icon)
+
+// .chrome
+//   +sprite($chrome)
+
+// .yandex
+//   +sprite($yandex)
+
+// .firefox
+//   +sprite($firefox)
+
+// .opera
+//   +sprite($opera)
+
+// .edge
+//   +sprite($edge)
+
+// Здесь будут основные стили проекта
+
+/* VI. Layout
+ --------------------------------------- */
+
+
+.preloader
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 9999
+  background: #fff
+
+  &.fade-out
+    opacity: 0
+
+
+.header,
+.main
+  position: relative
+  z-index: 10
+
+
+
+.bg
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: red
+  &-grid
+    background: url(../img/bg-grid.png)
+    z-index: 5
+
+.bg
+  &-img
+    position: absolute
+  &-family
+    max-width: 43rem
+    left: calc(50vw - 67rem)
+    bottom: 39rem
+    &-mob
+      display: none
+  &-nikolay
+    max-width: 26rem
+    left: calc(50vw + 32rem)
+    bottom: 43rem
+
+
+
+.top-panel 
+  padding-top: 1rem
+  padding-bottom: 1rem
+  color: v.$top-panel-text-color
+  background-color: v.$top-panel-bg-color
+  &__container
+    padding-left: 0
+    padding-right: 0
+    width: 100%
+    max-width: 130.8rem
+    display: flex
+    justify-content: center
+    text-align: center
+  &__text
+    max-width: 116.5rem
+    font-size: 1.6rem
+    p
+      letter-spacing: -.01em
+  &__logo 
+    display: none
+
+
+
+/* Header 
+ -------------------------*/
+.header
+  &-row
+    margin-top: 2.6rem
+    margin-bottom: 3rem
+    align-items: center
+    flex-wrap: nowrap
+  &-logo
+    max-width: 31.2rem
+  &-heading 
+    max-width: 60rem
+    text-align: center
+    flex: none
+    .text-accent
+      font:
+        weight: 700
+        style: italic
+  &__logo
+    margin-right: 6.5rem
+  &__small-coin 
+    margin-top: 0px
+    margin-left: 11rem
+    transform: translateY(1rem)
+
+.small-coin
+  max-width: 14.2rem
+
+
+.hero
+  &__container
+    padding-bottom: 7rem
+    position: relative
+  &__row
+    margin-top: 1.2rem
+    justify-content: flex-start
+  &__col
+    flex: none
+  &-king
+    margin-right: 2.6rem
+    max-width: 36.9rem
+    display: flex
+    justify-content: center
+    
+    &__img 
+      img 
+        max-width: 47rem
+  &-subtitle 
+    margin-left: auto
+    margin-right: auto
+    max-width: 50rem
+    text-align: center
+    font-size: 2.4rem
+    .text-accent
+      font-weight: 700
+
+   
+  &-event
+    position: relative
+    max-width: 38.6rem
+    &__leftover
+      position: absolute
+      top: -6rem
+      left: 0
+      right: 0
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 2.2rem
+      color: #595959
+  &__event-card
+    margin-top: 3.5rem
+  &-coin
+    margin-right: 2.6rem
+    max-width: 53.1rem
+    &-img 
+      margin-bottom: 4.5rem
+      img 
+        margin-top: -.5rem
+        max-width: 53.1rem
+
+    &__leftover
+      // position: absolute
+      // top: -6rem
+      // left: 0
+      // right: 0
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 2.2rem
+      color: #595959
+  &-text
+    margin-left: auto
+    margin-right: auto
+    max-width: 48.5rem
+    text-align: center
+    font-size: 2rem
+
+
+
+.event-card
+  width: 100%
+  max-width: 42.6rem 
+  text-align: center
+  border-radius: 1rem
+  overflow: hidden 
+  &__header
+
+    color: v.$text-secondary-color
+    background: v.$secondary-color
+  &__body
+    padding: 4rem 2.5rem 5.5rem
+    color: #93B0E1
+    background: v.$secondary-color
+    font-size: 1.6rem
+    border-bottom-right-radius: 1rem
+    border-bottom-left-radius: 1rem
+    border: solid 1px #DEB670
+  
+
+  &__title,
+  &__form-caption
+    color: v.$text-light
+
+  &__title
+    margin-bottom: 3rem
+    font-size: 2rem
+    font-weight: 700
+    color: v.$primary-color
+    text-transform: uppercase
+  &__form-caption
+    margin-bottom: 1.5rem
+    font-size: 1.6rem
+
+  &__form
+    margin-bottom: 1rem
+
+.round-digit
+  margin-top: 0.5rem
+  margin-left: 1.2rem
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 5.6rem
+  height: 5.6rem
+  font-size: 3rem
+  font-weight: 700
+  color: #595959
+  border-radius: 50%
+  border: 2px solid #595959
+
+
+
+
+.timer
+  padding-top: 0.8rem
+  padding-bottom: 1rem
+  padding-left: 3rem
+  padding-right: 3rem
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: center
+  font-size: 2.8rem
+  background: #DEB670
+  &-wrap
+    background: v.$primary-color
+
+  &-label
+    padding-top: 1.4rem
+    padding-bottom: 1.2rem
+    padding-left: 3rem
+    padding-right: 3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2rem
+  &-lamp
+    display: inline-block
+    margin-right: 1rem
+    width: 1rem
+    height: 1rem
+    border-radius: 50%
+    background: #FF2E00
+    box-shadow: 0 0 2px rgba(255, 47, 0, 0.911), 0 0 5px rgba(255, 47, 0, 0.911), 0 0 15px rgba(255, 47, 0, 0.911)
+    &.turned-off
+      background: #8f0000
+      box-shadow: none
+  &__item
+    padding-top: 0.4rem
+    padding-bottom: 0.4rem
+    padding-left: 1.3rem
+    padding-right: 1.3rem
+    &:not(:last-child)
+      border-right: 1px solid #CCA55E
+  &-unit
+    margin-left: .5em
+    font-size: 1.5rem
+
+
+.event-advantages
+  margin-top: 4rem
+  margin-bottom: 1.5rem
+  font-size: 1.6rem
+  color: v.$text-tertiary-color
+  text-align: center
+  &__item
+    padding-top: 0rem
+    padding-bottom: 0rem
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    &:first-child
+      border-right: solid 2px #484848
+  &__img
+    margin-bottom: .5rem
+    img
+      margin-left: auto
+      margin-right: auto
+
+  &-delivery
+    max-width: 5.3rem 
+
+  &-guarant
+    max-width: 4.3rem 
+
+
+
+
+// .logo
+//    max-width: 10.1rem
+//    &-wrapper
+//       display: flex
+//    
+// 
+
+.form
+  font-size: 2.8rem
+  &-control
+    margin-bottom: 2rem
+    padding: 1.4rem 2.2rem  
+    width: 100%
+    font-size: 2.8rem
+    border-radius: v.$btn-radius
+// 	&__group
+// 		position: relative
+// 		margin-bottom: 2.5rem
+// 		padding-top: .8rem
+// 		width: 100%
+// 		overflow: hidden
+
+// 		&.focused
+// 			.form__control
+// 				border-color: v.$form-control-border-focus
+
+// 			.form__label_control
+// 				margin-top: 1rem
+// 				margin-left: .8rem
+// 				padding: 0 0.5rem
+// 				height: auto
+// 				color: v.$form-control-border-focus
+// 				background-color: rgb(255, 255, 255)
+// 				transform-origin: 0 50%
+// 				transform: translateY(calc(-100% + 1rem)) scale(.8)
+
+// 		&.valid
+// 			.form__label_control
+// 				  margin-top: 1rem
+// 					margin-left: .8rem
+// 					padding: 0 0.5rem
+// 					height: auto
+// 					color: v.$form-control-border-focus
+// 					background-color: rgb(255, 255, 255)
+// 					transform-origin: 0 50%
+// 					transform: translateY(calc(-100% + 1rem)) scale(.8)
+
+// 			.form__control
+// 				border-color:v.$form-control-border-focus
+
+// 		&.form__group_search:not(.focused):not(.valid)
+// 			.form__label_search
+// 				color: blue
+
+  // &-control
+  //   padding: 1.4rem 2.2rem  
+  //   width: 100%
+// 		height: 7rem
+// 		font-family: "Raleway", "Helvetica", sans-serif
+// 		font-size: 1.8rem
+// 		font-weight: 400
+// 		color: v.$form-control-color
+// 		background: v.$form-control-bg
+// 		border: 1px solid v.$form-control-border
+    // border-radius: 1rem
+// 		box-shadow: inset 0px 2px 15px v.$form-control-shadow
+// 		outline: none
+// 		&:hover
+// 			border-color: v.$form-control-border-hover
+
+// 	&__label
+// 		&_control
+// 			position: absolute
+// 			left: 0
+// 			top: 0
+// 			padding: 1.2rem 1.2rem 0rem v.$form-label-padding-left
+// 			padding-left: v.$form-label-padding-left
+// 			display: flex
+// 			align-items: center
+// 			height: 100%
+// 			color: v.$form-label-color
+// 			white-space: nowrap
+// 			transition: transform .2s
+// 			cursor: text
+// 			user-select: none
+
+// 	&-icon
+// 		position: absolute
+// 		top: 50%
+// 		transform: translateY(-30%)
+// 		left: calc(v.$form-label-padding-left / 2)
+
+// 	&__submit
+// 		height: 7rem
+
+
+
+.advantages 
+  margin-top: 4.5rem
+  margin-bottom: 6.5rem
+  padding-top: 6.8rem
+  padding-bottom: 7.8rem
+  position: relative
+  background: v.$secondary-color
+  &::before,
+  &::after
+    position: absolute
+    content: ''
+    display: block
+    width: 28.3rem
+    height: 5.1rem
+    left: 50%
+    background: url(../img/copy-ornament.png) no-repeat center
+    background-size: contain
+  &::before
+    top: .6rem
+    transform: translate(-50%, -100%)
+  &::after
+    bottom: .6rem
+    transform: rotate(180deg) translate(50%, -100%)
+
+  &__box
+    display: flex
+    width: 100%
+  
+  &__item
+    width: 25%
+
+  &__img 
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 2.5rem
+    width: 9rem
+    height: 9rem
+    display: flex
+    justify-content: center
+    align-items: center
+    background: v.$primary-color
+    border: .4rem solid #BDA06C
+    border-radius: 50%
+    &-gold img
+      max-width: 5.6rem
+    &-coin img
+      max-width: 5.9rem
+    &-like img
+      max-width: 5.6rem
+    &-diam img
+      max-width: 5.2rem
+
+
+  &__text
+    font-size: 2rem
+    text-align: center
+    .text-accent
+      font-family: v.$ff-secondary
+
+
+.copy
+  margin-top: 10px
+  margin-right: auto
+  margin-left: auto
+  margin-bottom: 5rem
+  max-width: 52rem
+  text-align: center
+  color: #8F8F8F
+  font-size: 1.5rem
+  font-weight: 300
+
+.text-link
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.space
+  display: inline-block
+  width: .25em
+  opacity: 0
+
+
+/* Modal 
+ -------------------------*/
+.modal
+  &-trigger
+    font-family: v.$ff-secondary
+    cursor: pointer
+
+.modal 
+  padding: 2rem
+  display: flex
+  // align-items: flex-start
+  align-items: center
+  width: 100vw
+  height: 100vh
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 999
+  overflow: auto
+  opacity: 0
+  visibility: hidden
+  &__content
+    margin-top: 0rem
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    // flex-direction: column
+    max-width: 114rem
+    // height: 65.5rem
+    height: auto
+    max-height: calc( 100vh - 20rem )
+    position: relative
+    z-index: 1001
+    border-radius: 1.2rem
+    font-size: 2.4rem
+    line-height: 1.15
+    color: v.$modal-content-color
+    opacity: 0
+    h3
+      font-size: 2.8rem
+      font-weight: 400
+      margin-top: 1em
+      margin-bottom: .5em
+    ol,ul
+      margin-top: .5em
+      padding-left: 0.75em
+      li
+        margin-bottom: 0.5em
+    p
+      margin-bottom: 1em
+    
+    &-inner
+      display: flex
+      flex-direction: column
+      padding: 3rem 0rem 3.5rem 0rem
+      width: 100%
+      // height: 100%
+      border-radius: 1.2rem
+      background-color: v.$modal-content-bg
+      overflow: auto
+
+  &__header
+    // margin-bottom: 2rem
+    padding-right: 2.5rem
+    padding-right: 3rem
+    padding-left: 3rem
+    position: relative
+    border-bottom: solid 1px v.$input-placeholder-color
+    .modal__title 
+      margin-bottom: 1.2rem
+      text-transform: uppercase
+      font:
+        // family: v.$ff-headings
+        size: 3.6rem
+        weight: 400
+      text-align: center
+    p
+      font:
+        size: 2rem
+        weight: 400
+
+
+  &__body
+    // margin-bottom: 5rem
+    padding-top: 1.2rem
+    padding-right: 3rem
+    padding-left: 3rem
+    flex-grow: 1
+    text-align: justify
+    overflow: auto
+
+  &__footer
+    padding-top: 0rem
+
+  &__close
+    padding: 0
+    width: 2.5rem
+    height: 2.5rem
+    position: absolute
+    top: -6%
+    right: -8%
+    z-index: 999
+    border: none
+    background: none
+
+  &-close
+    &__item
+      display: block
+      width: 2.3rem
+      height: 2px
+      position: absolute
+      left: 0
+      top: 50%
+      border-radius: 2px
+      background-color: v.$modal-close-item-bg
+      transition: background-color .3s
+      &:first-child
+        transform: rotate(45deg)
+
+      &:last-child
+        transform: rotate(-45deg)
+
+
+    &:hover
+      .modal
+        &-close
+          &__item
+            background-color: v.$modal-close-item-bg-hover
+
+  &__overlay
+    display: block
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1000
+    background-color: v.$modal-overlay-bg
+    opacity: 0
+    visibility: hidden
+
+
+  &.opened
+    animation: fadeIn .5s ease-out forwards
+    .modal
+      &__content
+        animation: slideUpIn .3s ease-out forwards
+
+      &__overlay
+        animation: fadeIn 0.5s ease forwards
+
+
+
+  &.closed
+    animation: fadeOut .5s ease-in forwards
+    .modal
+      &__content
+        animation: slideUpOut .3s ease-in forwards
+
+      &__overlay
+        animation: fadeOut .5s ease-in forwards
+
+
+
+
+/* Forms processing 
+ -------------------------*/
+.thanks 
+  padding: 1em
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: cente
+  width: calc(100% - 3rem)
+  max-width: 17em
+  position: fixed
+  right: 1.5rem
+  bottom: 1.5rem
+  text-align: center
+  border-radius: 15px
+  -webkit-box-shadow: 0 15px 55px 0px rgba(0, 0, 0, 0.35)
+  box-shadow: 0 15px 55px 0px rgba(0, 0, 0, 0.35)
+  opacity: 1
+  z-index: 99999
+
+
+.thanks_success 
+  color: #146c43
+  border: solid 1px #a3cfbb
+  background: rgb(209, 232, 222)
+
+.thanks_error 
+  color: #b02a37
+  border: solid 1px #f1aeb5
+  background: #f8d7da
+
+
+.thanks__close 
+  position: absolute
+  top: 1rem
+  right: 1rem
+  width: 2.4rem
+  height: 2.4rem
+  -webkit-transition: -webkit-transform 0.2s
+  transition: -webkit-transform 0.2s
+  -o-transition: transform 0.2s
+  transition: transform 0.2s
+  transition: transform 0.2s, -webkit-transform 0.2s
+
+.thanks__close::before,
+.thanks__close::after 
+  display: block
+  position: absolute
+  top: 50%
+  content: ""
+  width: 100%
+  height: 0.3rem
+  border-radius: 10px
+  background: rgb(75, 75, 75)
+  -webkit-transition: background-color 0.2s
+  -o-transition: background-color 0.2s
+  transition: background-color 0.2s
+
+.thanks__close::before 
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.thanks__close::after 
+  -webkit-transform: rotate(-45deg)
+  -ms-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+
+
+.thanks__close:hover 
+  -webkit-transform: scale(1.05)
+  -ms-transform: scale(1.05)
+  transform: scale(1.05)
+
+.thanks__close:hover.thanks__close::before,
+.thanks__close:hover.thanks__close::after 
+  background: rgb(25, 25, 25)
+
+
+.thanks__close:active 
+  -webkit-transform: scale(1)
+  -ms-transform: scale(1)
+  transform: scale(1)
+  -webkit-transition: -webkit-transform 0s
+  transition: -webkit-transform 0s
+  -o-transition: transform 0s
+  transition: transform 0s
+  transition: transform 0s, -webkit-transform 0s
+
+
+.thanks.active 
+  -webkit-animation: slideInRightBottom 0.5s ease forwards
+  animation: slideInRightBottom 0.5s ease forwards
+
+.thanks h3 
+  font-size: 2rem
+  font-weight: 500
+  font-family: sans-serif
+
+
+.thanks span 
+  display: block
+  margin-bottom: 2rem
+
+.thanks h3 span 
+  font-weight: 700
+  font-size: 2.4rem
+
+.loader-container 
+  position: relative
+  z-index: 50
+
+
+.submit-loader 
+  display: block
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 55
+  background: rgba(255, 255, 255, 0.5) url("../img/loader.gif") center no-repeat
+  // background-size: 100px 100px
+  background-size: contain
+  border-radius: 10px
+
+
+@-webkit-keyframes slideInRightBottom 
+  from 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+  
+  to 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+
+
+@keyframes slideInRightBottom 
+  from 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+  
+  to 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+
+@-webkit-keyframes slideOutRightBottom 
+  from 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+  to 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+  
+
+@keyframes slideOutRightBottom 
+  from 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+  to 
+    opacity: 0.5
+    -webkit-transform: translateX(150%)
+    transform: translateX(150%)
+
+
+
+
+
+
+
+
+
+
+// Lazy 
+// -------------------------
+// .lazy 
+//    width: 100%
+//    height: 100%
+//    position: relative
+//       background-image: -o-linear-gradient(left, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 100%), -o-linear-gradient(#DDD 100%, transparent 0)
+//       background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, rgba(255, 255, 255, 0.5)), to(transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #DDD), color-stop(0, transparent))
+//       background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 100%), linear-gradient(#DDD 100%, transparent 0)
+//       background-repeat: no-repeat
+//       background-size: 26% 100%, cover
+//       background-position: 0 0, 0 0, 0px 85px, 0px 110px
+//       animation: animloader 1s linear infinite
+//    img
+//       visibility: hidden
+//    
+// 
+
+// @-webkit-keyframes animloader 
+//    0%  background-position:  0 0, 0 0, 0px 85px, 0px 110px
+//    100%  background-position:  150% 0, 0 0, 0px 85px, 0px 110px
+// 
+
+// @keyframes animloader 
+//    0%  background-position:  0 0, 0 0, 0px 85px, 0px 110px
+//    100%  background-position:  150% 0, 0 0, 0px 85px, 0px 110px
+// 
+
+// ANIMATIONS
+// ------------------------------  
+// !!! Добавляется любой пустой селектор перед @import, так как после использования @include в свойствах выше директива @import смещается на один tab и некорректно отрабатывает импорт
+// ! То есть, после @include следует запускать @import только после объявления нормаьного свойства
+.fake-class-to-add-import-rule
+  visibility: inherit
+
+@import "animations"
+@import "media-queries"
+@import "gte-ie10-style"

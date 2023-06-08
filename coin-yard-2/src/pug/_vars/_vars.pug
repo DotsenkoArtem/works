@@ -1,0 +1,27 @@
+//- Common variables
+-
+  let author = 'Artem Dots'
+  let themeColor = '#e6c282'
+
+  // Если требуется заглушка для Internet Explorer
+  let ieBung = false
+
+  //- Массив наименований шрифтов для перебора в head.pug и предзагрузки
+  let fontsPreload = [
+    'GillSansC-Light.woff2',
+    'GillSansC-Regular.woff2',
+    'Helvetica-Light.woff2',
+    'Helvetica-Regular.woff2',
+    'Helvetica-Bold.woff2',
+    'Helvetica-BoldItalic.woff2'
+    ]
+  
+  //- ! URL определяется автоматом в миксине "меню" : pages-key+.html
+  let pages = {
+    index: {
+      name:   'главная',
+      title:  'Европейский монетный двор - главная',
+      descr:  'Сегодня для вас юбилейная медаль бесплатно',
+      author:  author,
+    }
+  };
