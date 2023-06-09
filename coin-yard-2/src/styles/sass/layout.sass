@@ -279,6 +279,8 @@
 .round-digit
   margin-top: 0.5rem
   margin-left: 1.2rem
+  padding-right: 0.15em
+  padding-bottom: 0.15em
   display: flex
   justify-content: center
   align-items: center
@@ -510,6 +512,7 @@
     border: .4rem solid #BDA06C
     border-radius: 50%
     &-gold img
+      margin-top: -0.5em
       max-width: 5.6rem
     &-coin img
       max-width: 5.9rem
@@ -523,7 +526,7 @@
     font-size: 2rem
     text-align: center
     .text-accent
-      font-family: v.$ff-secondary
+      // font-family: v.$ff-secondary
 
 
 .copy
@@ -577,6 +580,7 @@
     margin-right: auto
     display: flex
     // flex-direction: column
+    width: 100%
     max-width: 114rem
     // height: 65.5rem
     height: auto
@@ -649,7 +653,8 @@
     width: 2.5rem
     height: 2.5rem
     position: absolute
-    top: -6%
+    // top: -6%
+    top: -2.5rem
     right: -8%
     z-index: 999
     border: none
@@ -713,6 +718,28 @@
 
       &__overlay
         animation: fadeOut .5s ease-in forwards
+
+
+.modal-callback
+  .modal
+    &__header
+      padding-left: 3rem
+      padding-right: 3rem
+    &__content
+      max-width: 36rem
+      &-inner
+        padding-bottom: 0
+        background: v.$primary-color
+    &__title
+      font-size: 1.8rem
+      color: v.$text-secondary-color
+    &__body
+      padding-top: 0
+      padding-left: 0
+      padding-right: 0
+
+  .event-card__body 
+    padding: 5rem 2rem 4.5rem
 
 
 

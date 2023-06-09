@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
   setTimer(3, 24, 57);
 
   // INPUT MASK
-  var selector = document.querySelector('[name="userPhone"]');
+  var selector = document.querySelectorAll('[name="userPhone"]');
   var im = new Inputmask("+7 (\\999) 999-99-99");
   im.mask(selector);
   // - - - - - - - - - - - - - - - - - - -
@@ -42,6 +42,7 @@ function modalsHandle() {
     var modal = document.getElementById(modalOpenBtn.dataset.target);
     modal.classList.remove("closed");
     modal.classList.add("opened");
+    document.body.classList.add('scroll-hidden');
     var modalCloseBtns = modal.getElementsByClassName("js-modal-close");
     for (var _i = 0; _i < modalCloseBtns.length; _i++) {
       var modalCloseBtn = modalCloseBtns[_i];
@@ -53,6 +54,7 @@ function modalsHandle() {
   function closeModal(modal) {
     modal.classList.remove("opened");
     modal.classList.add("closed");
+    document.body.classList.remove('scroll-hidden');
   }
 }
 // - - - - - - - - - - - - - - - - - - -
@@ -76,16 +78,17 @@ function setTimer(startHours, startMinutes, startSeconds) {
   if (finishTimer) {
     timerStopStamp = finishTimer;
   }
-
-  // const days = document.querySelector(".timer .js-timer-day");
-  var hours = document.querySelector(".timer .js-timer-hour");
-  var minutes = document.querySelector(".timer .js-timer-min");
-  var seconds = document.querySelector(".timer .js-timer-sec");
-  var timerLamp = document.querySelector(".js-timer-lamp");
+  var hours = document.querySelectorAll(".timer .js-timer-hour");
+  var minutes = document.querySelectorAll(".timer .js-timer-min");
+  var seconds = document.querySelectorAll(".timer .js-timer-sec");
+  var timerLamp = document.querySelectorAll(".js-timer-lamp");
 
   // function updateTimer() {
   var timerId = setTimeout(function updateTimer() {
-    timerLamp.classList.toggle("turned-off");
+    // timerLamp.classList.toggle("turned-off");
+    timerLamp.forEach(function (elem) {
+      elem.classList.toggle("turned-off");
+    });
     // Текущий timestamp
     var currentTime = new Date().getTime();
 
@@ -104,9 +107,18 @@ function setTimer(startHours, startMinutes, startSeconds) {
     var timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
 
     // Вставка значений с добавлением нуля
-    hours.innerHTML = "".concat(setZero(timerCurrentHours));
-    minutes.innerHTML = "".concat(setZero(timerCurrentMinutes));
-    seconds.innerHTML = "".concat(setZero(timerCurrentSeconds));
+    // hours.innerHTML = `${setZero(timerCurrentHours)}`;
+    // minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
+    // seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
+    hours.forEach(function (elem) {
+      elem.innerHTML = "".concat(setZero(timerCurrentHours));
+    });
+    minutes.forEach(function (elem) {
+      elem.innerHTML = "".concat(setZero(timerCurrentMinutes));
+    });
+    seconds.forEach(function (elem) {
+      elem.innerHTML = "".concat(setZero(timerCurrentSeconds));
+    });
 
     // Запись в LocalStorage
     window.localStorage.setItem("timerEndCoin2", timerStopStamp);

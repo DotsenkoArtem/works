@@ -104,9 +104,9 @@
                 <div class="hero-text d-none_md">
                   <p>Его отречение от власти <span class="text-accent">стало концом </span>Российской империи и 300-летнего правления династии Романовых. В историю государь вошёл как <span class="text-accent">«Николай Кровавый». В 1918 г. </span>последний император <span class="text-accent">был расстрелян </span>со своей семьёй.</p>
                 </div>
-                <div class="hero-coin__leftover d-none d-flex_md"><span>Осталось медалей: </span><span class="round-digit">12</span></div>
+                <div class="hero-coin__leftover d-none d-flex_md d-none_xs"><span>Осталось медалей: </span><span class="round-digit">12</span></div>
               </div>
-              <div class="col hero__col hero-event">
+              <div class="col hero__col hero-event d-none_xs">
                 <div class="hero-event__leftover d-none_md"><span>Осталось медалей: </span><span class="round-digit">12</span></div>
                 <div class="event-card hero__event-card">
                   <div class="event-card__header">
@@ -178,7 +178,7 @@
                     </picture>
                   </div>
                   <div class="advantages__text"> 
-                    <p>Лимитированное издание: <br><span class="text-accent">всего 2 000 шт. </span>на Россию</p>
+                    <p><span class="d-block d-inline_xs">Лимитированное издание: </span><span class="text-accent">всего </span><span class="d-block_xs"> <span class="text-accent">2 000 шт. </span>на Россию </span></p>
                   </div>
                 </div>
                 <div class="advantages__item"> 
@@ -210,13 +210,51 @@
               </div>
             </div>
           </div>
-          <div class="container bg-family-mob-wrap">
-            <div class="bg-family-mob">
-              <picture>
-                <source srcset="img/768/bg-family-tabl.webp" type="image/webp">
-                <img src="img/768/bg-family-tabl.png" alt="">
-              </picture>
+          <div class="hero-event hero-event-mob d-none d-block_xs">
+            <div class="hero-event__leftover d-none d-flex_xs"><span>Осталось медалей: </span><span class="round-digit">12</span></div>
+            <div class="event-card hero__event-card">
+              <div class="event-card__header">
+                <div class="timer-wrap"> 
+                  <div class="timer-label"> <span class="timer-lamp js-timer-lamp"></span><span>Акция закончится через: </span></div>
+                  <div class="timer">
+                    <div class="timer__item"><span class="timer-day js-timer-day">00</span><span class="timer-unit">дней</span></div>
+                    <div class="timer__item"><span class="timer-hour js-timer-hour">00</span><span class="timer-unit">час</span></div>
+                    <div class="timer__item"><span class="timer-min js-timer-min">00</span><span class="timer-unit">мин</span></div>
+                    <div class="timer__item"><span class="timer-sec js-timer-sec">00</span><span class="timer-unit">сек</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="event-card__body">
+                <div class="event-card__title"> 
+                  <p>Уникальное предложение </p>
+                </div>
+                <div class="event-card__form-caption">
+                  <p>Заказать бесплатную медаль:</p>
+                </div>
+                <form class="form event-card__form">
+                  <div class="form-group">
+                    <input class="form-control" id="uerPhone" type="text" placeholder="+7 (___) ___-__-__" name="userPhone" required>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-wrap_primary loader-container">
+                      <button class="btn btn_primary btn_fluid" type="submit">Оформить заявку</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
+            <div class="row event-advantages"> 
+              <div class="col event-advantages__item"> 
+                <div class="event-advantages__img event-advantages-delivery"><img width="53" height="37" src="img/delivery-icon.svg" alt="Иконка автомобиля доставки"></div>
+                <div class="event-advantages__caption"><span>Быстрая доставка</span></div>
+              </div>
+              <div class="col event-advantages__item"> 
+                <div class="event-advantages__img event-advantages-guarant"><img width="43" height="44" src="img/guarant-icon.svg" alt="Иконка гарантии качества"></div>
+                <div class="event-advantages__caption"><span>Гарантия качества</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="container bg-family-mob-wrap">
             <div class="hero-king-mob d-none d-flex_md">
               <div class="hero-king-mob__img"> 
                 <picture>
@@ -226,6 +264,17 @@
               </div>
               <div class="hero-text hero-king-mob__text d-none d-block_md">
                 <p>Его отречение от власти <span class="text-accent">стало концом </span>Российской империи и 300-летнего правления династии Романовых. В историю государь вошёл как <span class="text-accent">«Николай Кровавый». В 1918 г. </span>последний император <span class="text-accent">был расстрелян </span>со своей семьёй.</p>
+              </div>
+            </div>
+            <div class="bg-family-mob">
+              <picture>
+                <source srcset="img/768/bg-family-tabl.webp" type="image/webp">
+                <img src="img/768/bg-family-tabl.png" alt="">
+              </picture>
+              <div class="bg-family-mob__btn-container">
+                <div class="btn-wrap_primary bg-family-mob__btn">
+                  <button class="btn btn_primary btn_fluid js-modal-trigger" type="submit" data-target="callbackModal">Оформить заявку</button>
+                </div>
               </div>
             </div>
             <div class="copy">
@@ -408,6 +457,34 @@
           </div>
         </div>
         <div class="modal__overlay js-modal-close"></div>
+      </div>
+      <div class="modal modal-callback" id="callbackModal">
+        <div class="modal__content">
+          <button class="modal-close modal__close js-modal-close"><span class="modal-close__item"></span>
+            <span class="modal-close__item"></span>
+          </button>
+          <div class="modal__content-inner">
+            <div class="modal__header">
+              <div class="modal__title">
+                 Заказать бесплатную медаль:</div>
+            </div>
+            <div class="modal__body">
+              <div class="event-card__body">
+                <form class="form event-card__form">
+                  <div class="form-group">
+                    <input class="form-control" id="uerPhone" type="text" placeholder="+7 (___) ___-__-__" name="userPhone" required>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-wrap_primary loader-container">
+                      <button class="btn btn_primary btn_fluid" type="submit">Оформить заявку</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__overlay js-modal-close modal" id="offer"></div>
       </div>
       <div class="bg bg-grid"></div>
       <div class="bg-img bg-family d-none_md">

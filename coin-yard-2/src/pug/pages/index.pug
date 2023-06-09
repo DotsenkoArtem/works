@@ -60,14 +60,14 @@ block main
                                 span.text-accent был расстрелян 
                                 | со своей семьёй.
 
-                        .hero-coin__leftover.d-none.d-flex_md
+                        .hero-coin__leftover.d-none.d-flex_md.d-none_xs
                             span Осталось медалей: 
                             span.round-digit 12
 
                                     
 
 
-                    .col.hero__col.hero-event
+                    .col.hero__col.hero-event.d-none_xs
 
                         .hero-event__leftover.d-none_md
                             span Осталось медалей: 
@@ -112,9 +112,6 @@ block main
                                     .form-group
                                         .btn-wrap_primary.loader-container
                                             button.btn.btn_primary.btn_fluid(type="submit") Оформить заявку
-
-
-
 
 
                         .row.event-advantages 
@@ -162,10 +159,13 @@ block main
                                     img(src='img/adv-coin.png', alt='')
                             .advantages__text 
                                 p
-                                    |Лимитированное издание: 
-                                    br
-                                    span.text-accent всего 2 000 шт. 
-                                    | на Россию
+                                    span.d-block.d-inline_xs Лимитированное издание: 
+                                    
+                                    span.text-accent всего 
+                                    span.d-block_xs 
+                                        span.text-accent 2 000 шт. 
+                                        | на Россию 
+                                    
 
                     
                         .advantages__item 
@@ -200,6 +200,66 @@ block main
                                     span.text-accent Диаметр 39 мм! 
 
 
+            .hero-event.hero-event-mob.d-none.d-block_xs
+
+                .hero-event__leftover.d-none.d-flex_xs
+                    span Осталось медалей: 
+                    span.round-digit 12
+
+
+                .event-card.hero__event-card
+                    .event-card__header
+                        .timer-wrap 
+                            .timer-label 
+                                span.timer-lamp.js-timer-lamp
+                                span Акция закончится через: 
+                            .timer
+                                .timer__item
+                                    span.timer-day.js-timer-day 00
+                                    span.timer-unit дней
+
+                                .timer__item
+                                    span.timer-hour.js-timer-hour 00
+                                    span.timer-unit час
+
+                                .timer__item
+                                    span.timer-min.js-timer-min 00
+                                    span.timer-unit мин
+
+                                .timer__item
+                                    span.timer-sec.js-timer-sec 00
+                                    span.timer-unit сек
+
+                    .event-card__body
+                        .event-card__title 
+                            p Уникальное предложение 
+                        .event-card__form-caption
+                            p Заказать бесплатную медаль:
+
+
+                        form.form.event-card__form
+
+                            .form-group
+                                input#uerPhone.form-control(type="text", placeholder="+7 (___) ___-__-__", name="userPhone", required) 
+
+                            .form-group
+                                .btn-wrap_primary.loader-container
+                                    button.btn.btn_primary.btn_fluid(type="submit") Оформить заявку
+
+
+                .row.event-advantages 
+                    .col.event-advantages__item 
+                        .event-advantages__img.event-advantages-delivery
+                            img(width="53" height="37" src="img/delivery-icon.svg", alt="Иконка автомобиля доставки")
+                        .event-advantages__caption
+                            span Быстрая доставка
+                    .col.event-advantages__item 
+                        .event-advantages__img.event-advantages-guarant
+                            img(width="43" height="44" src="img/guarant-icon.svg", alt="Иконка гарантии качества")
+                        .event-advantages__caption
+                            span Гарантия качества
+                     
+
 
 
 
@@ -208,14 +268,6 @@ block main
 
         
             .container.bg-family-mob-wrap
-                .bg-family-mob
-                    picture
-                        //- source(media='(max-width: 575px)', srcset='img/', type='image/webp')
-                        //- source(media='(max-width: 575px)', srcset='img/', type='image/png')
-                        source(srcset='img/768/bg-family-tabl.webp', type='image/webp')
-                        |
-                        |
-                        img(src='img/768/bg-family-tabl.png', alt='')
 
 
                 .hero-king-mob.d-none.d-flex_md
@@ -238,6 +290,22 @@ block main
                             | последний император 
                             span.text-accent был расстрелян 
                             | со своей семьёй.
+
+
+
+                .bg-family-mob
+                    picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/webp')
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/png')
+                        source(srcset='img/768/bg-family-tabl.webp', type='image/webp')
+                        |
+                        |
+                        img(src='img/768/bg-family-tabl.png', alt='')
+
+
+                    .bg-family-mob__btn-container
+                        .btn-wrap_primary.bg-family-mob__btn
+                            button.btn.btn_primary.btn_fluid(type="submit").js-modal-trigger(data-target="callbackModal") Оформить заявку
 
 
 

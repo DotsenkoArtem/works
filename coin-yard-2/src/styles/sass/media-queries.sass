@@ -139,6 +139,11 @@
   h1
     font-size: 4.5rem
 
+  .scroll-hidden
+    // для скрытия полосы прокрутки
+    padding-right: 0px
+    overflow: hidden
+
 
 
   .container
@@ -311,6 +316,8 @@
     &-wrap
       position: relative
       max-width: 75.6rem
+    &__btn-container
+      display: none
 
 
   .copy
@@ -363,21 +370,28 @@
 
   .top-panel 
     &__container
+      padding-top: 1rem
+      padding: 1rem
       max-width: 57.6rem
+    &__logo
+      // display: none
     &__text
       margin-left: 2rem
+      // text-align: center
 
   .hero
     &__container
-      max-width: 57.6rem
+      max-width: 576px
     &-coin
       margin-bottom: 4rem
-      max-width: 57.6rem
+      max-width: 25rem
       &-img
         margin-top: 3rem
         display: flex
         align-items: center
         width: 27.3rem * $scale-sm
+      &__leftover
+        font-size: 1.8rem
 
     &__list
       max-width: 42.6rem * $scale-sm
@@ -388,13 +402,60 @@
         left: -7rem
 
     &-event
-      margin-top: -3rem
+      margin-top: 0rem
+      margin-left: 1.2rem
+      flex-grow: 1
       width: 42.6rem * $scale-sm
+      // &__leftover
+      //   top: -8rem
+      //   font-size: 1.8rem
 
   .timer
     font-size: 2.8rem * $scale-sm
     &-label
+      // padding-bottom: 1.8rem
       font-size: 2.4rem * $scale-sm
+
+  
+  .advantages
+    margin-bottom: 6rem
+    padding-bottom: 4.5rem
+    &__box
+      flex-wrap: wrap
+    &__item
+      width: 50%
+      &:first-child,
+      &:nth-child(2)
+        margin-bottom: 3rem
+
+  .hero-king-mob
+    &__img
+      max-width: 28rem
+      img
+        margin-top: .5rem
+        margin-left: -2.5rem
+        max-width: 32rem
+    &__text
+      margin-top: 0
+      margin-right: 0
+
+  .bg-family-mob
+    top: 0
+    bottom: 0
+    &-wrap
+      padding-bottom: 3rem
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      object-position: center bottom
+
+  .copy
+    margin-top: 1rem
+    margin-bottom: 0
+        
+        
+
 
 
   .modal
@@ -419,6 +480,10 @@
 @media (max-width: 575.98px)
   html
     font-size: 10px
+
+  h1
+    font-size: 3.4rem
+    letter-spacing: -0.01em
   
   .container
     max-width: 410px
@@ -429,6 +494,8 @@
     padding-top: 1rem
     padding-bottom: 1.2rem
     &__container
+      padding-top: 0
+      padding-bottom: 0
       justify-content: center
     &__logo 
       display: none
@@ -439,33 +506,43 @@
 
   .header
     &-row
-      margin-top: 0.5rem
+      margin-top: 1rem
+      margin-bottom: 1rem
       flex-direction: column
       align-items: center
     &-logo
-      max-width: 15rem
+      margin-right: 0
+      margin-bottom: 1rem
+      max-width: 17rem
       display: flex
       justify-content: center
 
+
   .hero
-    margin-top: 1.8rem
+    margin-top: 1rem
     &__container
-      padding-bottom: 12rem
+      padding-bottom: 3.5rem
       position: static
+    &__row
+      margin-top: 4rem
     &-coin
-      margin-bottom: 2.5rem
+      margin-bottom: 0
       padding-top: 0
+      max-width: none
       justify-content: center
       &-img
         margin-top: 0rem
         margin-bottom: 1.5rem
+        margin-left: auto
+        margin-right: auto
         width: 100%
-        max-width: 29.5rem
+        max-width: 30rem
         img
           position: static
           left: auto
     &-subtitle
-      // max-width: 33rem  
+      max-width: 28rem  
+      font-size: 1.8rem 
     &__list
       margin-top: 0
       margin-left: unset
@@ -476,7 +553,15 @@
         &:nth-child(3)
           margin-bottom: 1.2rem
     &-event
-      order: 2
+      &-mob
+        margin-top: 12rem
+        margin-left: auto
+        margin-right: auto
+        width: 100%
+        max-width: 360px
+      &__leftover
+        top: -8rem
+        font-size: 1.8rem
     &-king
       order: 3
       margin-top: -4rem
@@ -491,36 +576,98 @@
 
   .event-card
     &__title
-      margin-bottom: 2rem
+      margin-bottom: 3rem
+      font-size: 1.8rem
     &__body
-      padding: 2rem 2rem 3rem
+      padding: 4rem 2rem 4.5rem
+    &__form-caption
+      margin-bottom: 1.8rem
+  
+  .event
+    &-advantages
+      margin-top: 2.5rem
 
   .timer
     font-size: 2.4rem
+    &__item
+      padding-left: 1rem
+      padding-right: 1rem
+      font-size: 2.8rem
     &-label
-      padding-bottom: 1.5rem
-      font-size: 2.4rem
+      padding-bottom: 1.8rem
+      font-size: 1.8rem
 
   .advantages
     margin-top: 1.5rem
     margin-bottom: 2.5rem
+    &__text
+      margin-left: auto
+      margin-right: auto
+      max-width: 16rem
+
+
+  .bg-family-mob
+    margin-top: 1.2rem
+    position: relative
+    z-index: 1
+    min-height: 15rem 
+    &-wrap
+      margin-top: 4rem
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 0
+      width: 100%
+      max-width: none
+    &__btn
+      width: 100%
+      max-width: 32rem  
+      &-container
+        display: flex
+        justify-content: center
+        width: 100%
+        position: absolute
+        bottom: 3rem
+        z-index: 10
+
+
+
+  .hero-king-mob
+    flex-direction: column
+    align-items: center
+    &__img
+      max-height: 31rem
+      img
+        margin-top: -1.2rem
+        margin-left: 1.2rem
+        margin-right: 0
+        max-width: 27rem
+    &__text
+      max-width: 32rem
+      text-align: center
+
+
+
+      
 
   .copy
     margin-top: 0
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    z-index: 10
+    padding-top: 1.5rem
+    padding-bottom: 2rem
+    max-width: none
+    // position: absolute
+    // bottom: 0
+    // left: 0
+    // right: 0
+    // z-index: 10
     width: 100%
-    height: 12.3rem
+    // height: 12.3rem
     display: flex
     justify-content: center
     align-items: center
-    color: v.$top-panel-text-color
-    background: v.$primary-color
+    // color: v.$top-panel-text-color
+    background: v.$secondary-color
     &__inner
-      max-width: 31rem
+      max-width: 34rem
       text-align: center
 
   .d
@@ -567,6 +714,11 @@
     .modal__title
       font-size: 2rem
 
+  .modal-callback
+    .modal
+      &__title
+        font-size: 1.8rem
+
   .d
     &-block
       &_xxs
@@ -579,9 +731,14 @@
         display: none
 
 @media (max-width: 359.99px)
+  html
+    font-size: 9px
   .hero
     &-event
       width: 100%
+  // .advantages
+  //   &__text
+  //     font-size: 1.3rem
   .timer
     &-label
       padding-left: 2rem

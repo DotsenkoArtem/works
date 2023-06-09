@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
   setTimer(3, 24, 57);
 
   // INPUT MASK
-  const selector = document.querySelector('[name="userPhone"]');
+  const selector = document.querySelectorAll('[name="userPhone"]');
   const im = new Inputmask("+7 (\\999) 999-99-99");
   im.mask(selector);
   // - - - - - - - - - - - - - - - - - - -
@@ -42,6 +42,7 @@ function modalsHandle() {
     let modal = document.getElementById(modalOpenBtn.dataset.target);
     modal.classList.remove("closed");
     modal.classList.add("opened");
+    document.body.classList.add('scroll-hidden')
 
     let modalCloseBtns = modal.getElementsByClassName("js-modal-close");
 
@@ -56,6 +57,7 @@ function modalsHandle() {
   function closeModal(modal) {
     modal.classList.remove("opened");
     modal.classList.add("closed");
+    document.body.classList.remove('scroll-hidden')
   }
 }
 // - - - - - - - - - - - - - - - - - - -
@@ -86,15 +88,18 @@ function setTimer(startHours, startMinutes, startSeconds) {
     timerStopStamp = finishTimer;
   }
 
-  // const days = document.querySelector(".timer .js-timer-day");
-  const hours = document.querySelector(".timer .js-timer-hour");
-  const minutes = document.querySelector(".timer .js-timer-min");
-  const seconds = document.querySelector(".timer .js-timer-sec");
-  const timerLamp = document.querySelector(".js-timer-lamp");
+
+  const hours = document.querySelectorAll(".timer .js-timer-hour");
+  const minutes = document.querySelectorAll(".timer .js-timer-min");
+  const seconds = document.querySelectorAll(".timer .js-timer-sec");
+  const timerLamp = document.querySelectorAll(".js-timer-lamp");
 
   // function updateTimer() {
   let timerId = setTimeout(function updateTimer() {
-    timerLamp.classList.toggle("turned-off");
+    // timerLamp.classList.toggle("turned-off");
+    timerLamp.forEach((elem) => {
+      elem.classList.toggle("turned-off")
+    })
     // Текущий timestamp
     let currentTime = new Date().getTime();
 
@@ -113,9 +118,18 @@ function setTimer(startHours, startMinutes, startSeconds) {
     let timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
 
     // Вставка значений с добавлением нуля
-    hours.innerHTML = `${setZero(timerCurrentHours)}`;
-    minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
-    seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
+    // hours.innerHTML = `${setZero(timerCurrentHours)}`;
+    // minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
+    // seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
+    hours.forEach((elem) => {
+      elem.innerHTML = `${setZero(timerCurrentHours)}`
+    })
+    minutes.forEach((elem) => {
+      elem.innerHTML = `${setZero(timerCurrentMinutes)}`
+    })
+    seconds.forEach((elem) => {
+      elem.innerHTML = `${setZero(timerCurrentSeconds)}`
+    })
 
     // Запись в LocalStorage
     window.localStorage.setItem("timerEndCoin2", timerStopStamp);
