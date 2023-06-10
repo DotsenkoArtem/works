@@ -50,6 +50,10 @@ function navBarHandle(menuToggle, menu) {
     document.body.classList.toggle("scroll-hidden");
   });
 
+  items.forEach((item) => {
+    item.addEventListener("click", menuClose);
+  })
+
   // menuOverl.addEventListener("click", menuClose);
 
   function menuClose() {
