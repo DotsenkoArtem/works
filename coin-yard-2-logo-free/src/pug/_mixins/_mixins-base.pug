@@ -1,0 +1,7 @@
+//- TOP MENU - 1 level
+mixin topMenu 
+  nav.menu
+    ul(style="display: flex; justify-content: center; font-size: 2.5rem;")
+      each menuItem, key in pages
+        li.menu__item(class= (menuItem.name == page.name) ? 'menu__item_current': '', style="margin: 1rem;")
+          a(href= `${key}.html`)= menuItem.name

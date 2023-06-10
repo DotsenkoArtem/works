@@ -1,0 +1,330 @@
+extends ../_templates/_base.pug
+
+block page-vars
+    -
+        let page = pages.index;
+
+
+//- block head
+//-     h2 Wow, Block Head is undefined!
+
+
+//- block header
+//-     h2 Wow, Block Header is undefined!
+
+
+block main 
+    main.main
+        .hero 
+            .container.hero__container
+                .row 
+                    .hero-subtitle 
+                        p 
+                            |В честь юбилея императорского дома Романовых 
+                            span.text-accent мы дарим вам 
+                            | коллекционную медаль «Николай II» 
+                .row.hero__row
+                    .col.hero__col.hero-king.d-none_md
+                        .hero-king__img 
+                            picture
+                                //- source(media='(max-width: 991.98px)', srcset='img/768/nikolay-tabl.webp', type='image/webp')
+                                //- source(media='(max-width: 991.98px)', srcset='img/768/nikolay-tabl.png', type='image/png')
+                                source(srcset='img/nikolay.webp', type='image/webp')
+                                |
+                                |
+                                img(src='img/nikolay.png', alt='Николай 2')
+
+
+
+
+                    .col.hero__col.hero-coin 
+
+
+                        .hero-coin-img 
+                            picture
+                                source(media='(max-width: 991.98px)', srcset='img/768/coin-tabl.webp', type='image/webp')
+                                source(media='(max-width: 991.98px)', srcset='img/768/coin-tabl.png', type='image/png')
+                                source(srcset='img/coin.webp', type='image/webp')
+                                |
+                                |
+                                img(src='img/coin.png', alt='Монета')
+
+                        
+                        .hero-text.d-none_md
+                            p
+                                |Его отречение от власти 
+                                span.text-accent стало концом 
+                                | Российской империи и 300-летнего правления династии Романовых. В историю государь вошёл как 
+                                span.text-accent «Николай Кровавый». В 1918 г. 
+                                | последний император 
+                                span.text-accent был расстрелян 
+                                | со своей семьёй.
+
+                        .hero-coin__leftover.d-none.d-flex_md.d-none_xs
+                            span Осталось медалей: 
+                            span.round-digit 12
+
+                                    
+
+
+                    .col.hero__col.hero-event.d-none_xs
+
+                        .hero-event__leftover.d-none_md
+                            span Осталось медалей: 
+                            span.round-digit 12
+
+
+                        .event-card.hero__event-card
+                            .event-card__header
+                                .timer-wrap 
+                                    .timer-label 
+                                        span.timer-lamp.js-timer-lamp
+                                        span Акция закончится через: 
+                                    .timer
+                                        .timer__item
+                                            span.timer-day.js-timer-day 00
+                                            span.timer-unit дней
+
+                                        .timer__item
+                                            span.timer-hour.js-timer-hour 00
+                                            span.timer-unit час
+
+                                        .timer__item
+                                            span.timer-min.js-timer-min 00
+                                            span.timer-unit мин
+
+                                        .timer__item
+                                            span.timer-sec.js-timer-sec 00
+                                            span.timer-unit сек
+
+                            .event-card__body
+                                .event-card__title 
+                                    p Уникальное предложение 
+                                .event-card__form-caption
+                                    p Заказать бесплатную медаль:
+
+
+                                form.form.event-card__form
+
+                                    .form-group
+                                        input#uerPhone.form-control(type="text", placeholder="+7 (___) ___-__-__", name="userPhone", required) 
+
+                                    .form-group
+                                        .btn-wrap_primary.loader-container
+                                            button.btn.btn_primary.btn_fluid(type="submit") Оформить заявку
+
+
+                        .row.event-advantages 
+                            .col.event-advantages__item 
+                                .event-advantages__img.event-advantages-delivery
+                                    img(width="53" height="37" src="img/delivery-icon.svg", alt="Иконка автомобиля доставки")
+                                .event-advantages__caption
+                                    span Быстрая доставка
+                            .col.event-advantages__item 
+                                .event-advantages__img.event-advantages-guarant
+                                    img(width="43" height="44" src="img/guarant-icon.svg", alt="Иконка гарантии качества")
+                                .event-advantages__caption
+                                    span Гарантия качества
+                        
+
+            .advantages
+                .container.advantages__container
+                    .advantages__box
+
+
+                        .advantages__item 
+                            .advantages__img.advantages__img-gold
+                                picture
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-gold-tabl.webp', type='image/webp')
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-gold-tabl.png', type='image/png')
+                                    source(srcset='img/adv-gold.webp', type='image/webp')
+                                    |
+                                    |
+                                    img(src='img/adv-gold.png', alt='')
+                            .advantages__text 
+                                p
+                                    |Покрытие из настоящего 
+                                    br
+                                    span.text-accent драгоценного металла
+
+                    
+                        .advantages__item 
+                            .advantages__img.advantages__img-coin 
+                                picture
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-coin-tabl.webp', type='image/webp')
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-coin-tabl.png', type='image/png')
+                                    source(srcset='img/adv-coin.webp', type='image/webp')
+                                    |
+                                    |
+                                    img(src='img/adv-coin.png', alt='')
+                            .advantages__text 
+                                p
+                                    span.d-block.d-inline_xs Лимитированное издание: 
+                                    
+                                    span.text-accent всего 
+                                    span.d-block_xs 
+                                        span.text-accent 2 000 шт. 
+                                        | на Россию 
+                                    
+
+                    
+                        .advantages__item 
+                            .advantages__img.advantages__img-like
+                                picture
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-like-tabl.webp', type='image/webp')
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-like-tabl.png', type='image/png')
+                                    source(srcset='img/adv-like.webp', type='image/webp')
+                                    |
+                                    |
+                                    img(src='img/adv-like.png', alt='')
+                            .advantages__text 
+                                p
+                                    span.text-accent Высочайшее качество 
+                                    br
+                                    | чеканки “пруф-лайк” 
+
+                    
+                        .advantages__item 
+                            .advantages__img.advantages__img-diam
+                                picture
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-diam-tabl.webp', type='image/webp')
+                                    source(media='(max-width: 991.98px)', srcset='img/768/adv-diam-tabl.png', type='image/png')
+                                    source(srcset='img/adv-diam.webp', type='image/webp')
+                                    |
+                                    |
+                                    img(src='img/adv-diam.png', alt='')
+                            .advantages__text 
+                                p
+                                    | Большой размер! 
+                                    br
+                                    span.text-accent Диаметр 39 мм! 
+
+
+            .hero-event.hero-event-mob.d-none.d-block_xs
+
+                .hero-event__leftover.d-none.d-flex_xs
+                    span Осталось медалей: 
+                    span.round-digit 12
+
+
+                .event-card.hero__event-card
+                    .event-card__header
+                        .timer-wrap 
+                            .timer-label 
+                                span.timer-lamp.js-timer-lamp
+                                span Акция закончится через: 
+                            .timer
+                                .timer__item
+                                    span.timer-day.js-timer-day 00
+                                    span.timer-unit дней
+
+                                .timer__item
+                                    span.timer-hour.js-timer-hour 00
+                                    span.timer-unit час
+
+                                .timer__item
+                                    span.timer-min.js-timer-min 00
+                                    span.timer-unit мин
+
+                                .timer__item
+                                    span.timer-sec.js-timer-sec 00
+                                    span.timer-unit сек
+
+                    .event-card__body
+                        .event-card__title 
+                            p Уникальное предложение 
+                        .event-card__form-caption
+                            p Заказать бесплатную медаль:
+
+
+                        form.form.event-card__form
+
+                            .form-group
+                                input#uerPhone.form-control(type="text", placeholder="+7 (___) ___-__-__", name="userPhone", required) 
+
+                            .form-group
+                                .btn-wrap_primary.loader-container
+                                    button.btn.btn_primary.btn_fluid(type="submit") Оформить заявку
+
+
+                .row.event-advantages 
+                    .col.event-advantages__item 
+                        .event-advantages__img.event-advantages-delivery
+                            img(width="53" height="37" src="img/delivery-icon.svg", alt="Иконка автомобиля доставки")
+                        .event-advantages__caption
+                            span Быстрая доставка
+                    .col.event-advantages__item 
+                        .event-advantages__img.event-advantages-guarant
+                            img(width="43" height="44" src="img/guarant-icon.svg", alt="Иконка гарантии качества")
+                        .event-advantages__caption
+                            span Гарантия качества
+                     
+
+
+
+
+
+
+
+        
+            .container.bg-family-mob-wrap
+
+
+                .hero-king-mob.d-none.d-flex_md
+                    .hero-king-mob__img 
+                        picture
+                            //- source(media='(max-width: 991.98px)', srcset='img/768/nikolay-tabl.webp', type='image/webp')
+                            //- source(media='(max-width: 991.98px)', srcset='img/768/nikolay-tabl.png', type='image/png')
+                            source(srcset='img/768/nikolay-tabl.webp', type='image/webp')
+                            |
+                            |
+                            img(src='img/768/nikolay-tabl.png', alt='Николай 2')
+
+                    
+                    .hero-text.hero-king-mob__text.d-none.d-block_md
+                        p
+                            |Его отречение от власти 
+                            span.text-accent стало концом 
+                            | Российской империи и 300-летнего правления династии Романовых. В историю государь вошёл как 
+                            span.text-accent «Николай Кровавый». В 1918 г. 
+                            | последний император 
+                            span.text-accent был расстрелян 
+                            | со своей семьёй.
+
+
+
+                .bg-family-mob
+                    picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/webp')
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/png')
+                        source(srcset='img/768/bg-family-tabl.webp', type='image/webp')
+                        |
+                        |
+                        img(src='img/768/bg-family-tabl.png', alt='')
+
+
+                    .bg-family-mob__btn-container
+                        .btn-wrap_primary.bg-family-mob__btn
+                            button.btn.btn_primary.btn_fluid.js-modal-trigger(data-target="callbackModal", type="submit") Оформить заявку
+
+
+
+                .copy
+                    .copy__inner
+                        .d-inline.d-block_md (с) 2023 ООО “Европейский Монетный Двор” Все права защищены. 
+                        span.text-link.modal-trigger.d-block_xs.js-modal-trigger(data-target="offer") Публичная оферта. 
+                        span.space.d-none_xs
+                        span.text-link.modal-trigger.d-block_xs.js-modal-trigger(data-target="policy") Политика конфиденциальности.  
+
+                                
+
+
+
+
+
+    |
+    |
+    
+
+
+
