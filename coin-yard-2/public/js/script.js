@@ -42,7 +42,7 @@ function modalsHandle() {
     let modal = document.getElementById(modalOpenBtn.dataset.target);
     modal.classList.remove("closed");
     modal.classList.add("opened");
-    document.body.classList.add('scroll-hidden')
+    document.body.classList.add("scroll-hidden");
 
     let modalCloseBtns = modal.getElementsByClassName("js-modal-close");
 
@@ -57,7 +57,7 @@ function modalsHandle() {
   function closeModal(modal) {
     modal.classList.remove("opened");
     modal.classList.add("closed");
-    document.body.classList.remove('scroll-hidden')
+    document.body.classList.remove("scroll-hidden");
   }
 }
 // - - - - - - - - - - - - - - - - - - -
@@ -88,7 +88,6 @@ function setTimer(startHours, startMinutes, startSeconds) {
     timerStopStamp = finishTimer;
   }
 
-
   const hours = document.querySelectorAll(".timer .js-timer-hour");
   const minutes = document.querySelectorAll(".timer .js-timer-min");
   const seconds = document.querySelectorAll(".timer .js-timer-sec");
@@ -98,15 +97,15 @@ function setTimer(startHours, startMinutes, startSeconds) {
   let timerId = setTimeout(function updateTimer() {
     // timerLamp.classList.toggle("turned-off");
     timerLamp.forEach((elem) => {
-      elem.classList.toggle("turned-off")
-    })
+      elem.classList.toggle("turned-off");
+    });
     // Текущий timestamp
     let currentTime = new Date().getTime();
 
     // Возобновление счетчика
     if (timerStopStamp <= currentTime) {
       // timerStopStamp += timerStartValue;
-      timerStopStamp = currentTime + timerStartValue
+      timerStopStamp = currentTime + timerStartValue;
     }
 
     // Текущий таймстамп-остаток таймера
@@ -118,18 +117,15 @@ function setTimer(startHours, startMinutes, startSeconds) {
     let timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
 
     // Вставка значений с добавлением нуля
-    // hours.innerHTML = `${setZero(timerCurrentHours)}`;
-    // minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
-    // seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
     hours.forEach((elem) => {
-      elem.innerHTML = `${setZero(timerCurrentHours)}`
-    })
+      elem.innerHTML = `${setZero(timerCurrentHours)}`;
+    });
     minutes.forEach((elem) => {
-      elem.innerHTML = `${setZero(timerCurrentMinutes)}`
-    })
+      elem.innerHTML = `${setZero(timerCurrentMinutes)}`;
+    });
     seconds.forEach((elem) => {
-      elem.innerHTML = `${setZero(timerCurrentSeconds)}`
-    })
+      elem.innerHTML = `${setZero(timerCurrentSeconds)}`;
+    });
 
     // Запись в LocalStorage
     window.localStorage.setItem("timerEndCoin2", timerStopStamp);
@@ -209,6 +205,7 @@ for (let i = 0; i < forms.length; i++) {
 
       // Удаление лоадера с кнопки submit
       removeLoader(form);
+      form.reset();
 
       if (req.status >= 200 && req.status < 400) {
         // console.log("req.status: ", req.status);

@@ -42,7 +42,7 @@ function modalsHandle() {
     var modal = document.getElementById(modalOpenBtn.dataset.target);
     modal.classList.remove("closed");
     modal.classList.add("opened");
-    document.body.classList.add('scroll-hidden');
+    document.body.classList.add("scroll-hidden");
     var modalCloseBtns = modal.getElementsByClassName("js-modal-close");
     for (var _i = 0; _i < modalCloseBtns.length; _i++) {
       var modalCloseBtn = modalCloseBtns[_i];
@@ -54,7 +54,7 @@ function modalsHandle() {
   function closeModal(modal) {
     modal.classList.remove("opened");
     modal.classList.add("closed");
-    document.body.classList.remove('scroll-hidden');
+    document.body.classList.remove("scroll-hidden");
   }
 }
 // - - - - - - - - - - - - - - - - - - -
@@ -107,9 +107,6 @@ function setTimer(startHours, startMinutes, startSeconds) {
     var timerCurrentSeconds = new Date(timerCurrentValue).getUTCSeconds();
 
     // Вставка значений с добавлением нуля
-    // hours.innerHTML = `${setZero(timerCurrentHours)}`;
-    // minutes.innerHTML = `${setZero(timerCurrentMinutes)}`;
-    // seconds.innerHTML = `${setZero(timerCurrentSeconds)}`;
     hours.forEach(function (elem) {
       elem.innerHTML = "".concat(setZero(timerCurrentHours));
     });
@@ -190,6 +187,7 @@ var _loop2 = function _loop2() {
 
       // Удаление лоадера с кнопки submit
       removeLoader(form);
+      form.reset();
       if (req.status >= 200 && req.status < 400) {
         // console.log("req.status: ", req.status);
         // console.log("this: ", this);

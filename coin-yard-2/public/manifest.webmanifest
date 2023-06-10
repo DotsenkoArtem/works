@@ -16,7 +16,7 @@
   ],
   "display": "standalone",
   "orientation": "any",
-  "theme_color": "#e6c282",
+  "theme_color": "#846123",
   "background_color": "#F5F5F5",
   "scope": "./",
   "start_url": "index.html"
