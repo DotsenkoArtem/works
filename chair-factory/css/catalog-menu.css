@@ -52,6 +52,39 @@
   animation: slideOutDown var(--catalog-menu-animation-duration) ease-out forwards;
 }
 
+.catalog-menu-trigger a.catalog-menu-close {
+  color: #fff !important;
+}
+
+.catalog-menu-trigger a.catalog-menu-close span.close-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  z-index: 1;
+  background: url('../image/x-lg-white.svg') center no-repeat;
+  background-size: contain;
+}
+
+.catalog-menu-trigger a.catalog-menu-close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+  border-radius: 20px;
+  background-color: #E6372A;
+}
+
+.catalog-menu-trigger a.catalog-menu-close::before {
+  display: none !important;
+}
+
 @keyframes fadeIn {
   from {
     visibility: hidden;
