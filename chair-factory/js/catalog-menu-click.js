@@ -14,6 +14,7 @@ function catalogMenuHandle() {
 
     // ADDING EVENTS
     item.addEventListener("click", openCatalogMenu);
+    // catalogMenuLink.addEventListener("click", openCatalogMenu);
 
     // FUNCTIONS
     // Выравнивание меню по центру окна
@@ -58,8 +59,11 @@ function catalogMenuHandle() {
     // Появление меню
     function openCatalogMenu(event) {
       // Отмена действия ссылки
-      event.preventDefault();
+      if(event.target === catalogMenuLink) {
+        event.preventDefault();
+      }
       event.stopPropagation();
+
 
       if (!catalogMenuWrap.classList.contains("shown")) {
         // Закрытие всех ранее открытых меню
