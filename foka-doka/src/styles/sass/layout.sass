@@ -319,11 +319,14 @@
 /* Services 
  -------------------------*/
 .services
+  &-box
+    margin-top: -1rem
+    margin-bottom: -1rem
   &-item
     margin: 1rem
     height: 47.4rem
     position: relative
-    border-radius: $btn-radius
+    border-radius: $main-radius
     overflow: hidden
 
     &__link
@@ -383,8 +386,7 @@
   &__box
     display: flex
     flex-wrap: wrap
-    margin-left: -10px
-    margin-right: -10px
+    margin: -1rem
 
   &__item
     margin: 10px
@@ -454,7 +456,7 @@
   &__number
     position: absolute
     z-index: 10
-    top: 1rem
+    top: .5rem
     right: 1rem
     font-size: 16px
     color: #F09898
@@ -514,6 +516,7 @@
     &_type-file
       display: inline-flex
       align-items: center
+      flex-wrap: wrap
       font-size: 1.8rem
       line-height: 2.4rem
       cursor: pointer
@@ -570,8 +573,9 @@
   &__submit
     padding: 1.4rem 3.4rem
     font-size: 1.8rem
+    flex: none
     &-row
-      margin-top: 5rem
+      margin-top: 3rem
       display: flex
       align-items: center
 
@@ -639,7 +643,7 @@
 
   &__header,
   &__body
-    margin-bottom: 5rem
+    margin-bottom: 4rem
 
   &__item
     display: flex
@@ -750,14 +754,15 @@
     display: flex
     flex-direction: column
     height: 100%
-    overflow: hidden
+    overflow-x: hidden
+    overflow-y: auto
   &__header
     padding-bottom: 0.75rem
   &__body
     padding-top: 0.75rem
     flex: 1
-    overflow-x: hidden
-    overflow-y: auto
+    // overflow-x: hidden
+    // overflow-y: auto
 
   &-backdrop
     display: block

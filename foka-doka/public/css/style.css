@@ -1324,11 +1324,15 @@ select::-ms-expand {
 
 /* Services 
  * -------------------------*/
+.services-box {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
 .services-item {
   margin: 1rem;
   height: 47.4rem;
   position: relative;
-  border-radius: 0.3rem;
+  border-radius: 5px;
   overflow: hidden;
 }
 .services-item__link:hover .services-item__figure::before {
@@ -1398,8 +1402,7 @@ select::-ms-expand {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin: -1rem;
 }
 .stages__item {
   margin: 10px;
@@ -1488,7 +1491,7 @@ select::-ms-expand {
 .stages__number {
   position: absolute;
   z-index: 10;
-  top: 1rem;
+  top: 0.5rem;
   right: 1rem;
   font-size: 16px;
   color: #F09898;
@@ -1560,6 +1563,8 @@ select::-ms-expand {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 1.8rem;
   line-height: 2.4rem;
   cursor: pointer;
@@ -1630,9 +1635,12 @@ select::-ms-expand {
 .form__submit {
   padding: 1.4rem 3.4rem;
   font-size: 1.8rem;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
 }
 .form__submit-row {
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1666,7 +1674,7 @@ select::-ms-expand {
   border-radius: 5px;
 }
 .contacts-card__header, .contacts-card__body {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 .contacts-card__item {
   display: -webkit-box;
@@ -1826,7 +1834,8 @@ select::-ms-expand {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .modal__header {
   padding-bottom: 0.75rem;
@@ -1836,8 +1845,6 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .modal-backdrop {
   display: block;
@@ -2038,6 +2045,12 @@ select::-ms-expand {
   }
 }
 @media (max-width: 1299.98px) {
+  .header__container {
+    max-width: 1138px;
+  }
+  .navbar__phone {
+    margin-bottom: 1rem;
+  }
   .logo {
     margin-left: 20px;
     margin-right: auto;
@@ -2157,11 +2170,28 @@ select::-ms-expand {
   .scroll-hidden {
     padding-right: 0;
   }
+  h1 {
+    font-size: 40px;
+  }
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+  }
   .container, .container_md, .container_sm {
     max-width: 730px;
   }
   .container_lg {
     max-width: 100%;
+  }
+  .baner__heading {
+    max-width: 66rem;
+  }
+  .services-box {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+  .stages__box {
+    margin: -2rem -1rem;
   }
   .stages__item {
     margin: 10px;
@@ -2171,6 +2201,9 @@ select::-ms-expand {
     width: calc(50% - 20px);
     border-radius: 5px;
     overflow: hidden;
+  }
+  .map-placement {
+    padding-top: 6rem;
   }
   .map-placement__container {
     margin-left: calc(50vw - 370px);
@@ -2183,6 +2216,29 @@ select::-ms-expand {
   }
   .w-100_md {
     width: calc(100% - 20px);
+  }
+  .modal__inner {
+    padding: 3rem;
+    max-width: 70rem;
+  }
+  .modal__header {
+    padding-bottom: 0;
+  }
+  .modal__body {
+    padding-top: 0;
+  }
+  .modal .calc-order__heading {
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 48rem;
+  }
+  .modal__close {
+    top: -3.5rem;
+    right: calc(50% - 1rem);
+  }
+  .form__label_type-file {
+    font-size: 1.6rem;
   }
   .d-block_md {
     display: block;
@@ -2274,6 +2330,16 @@ select::-ms-expand {
 }
 /* XS */
 @media (max-width: 575.98px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
   .container {
     max-width: 410px;
   }
@@ -2301,8 +2367,81 @@ select::-ms-expand {
     width: 36px;
     height: 36px;
   }
+  .baner {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .services-box {
+    margin-bottom: 0rem;
+  }
+  .stages__box {
+    margin: -2rem -1rem 0rem;
+  }
+  .form-row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .form-row .form__group:not(:first-child) {
+    margin-left: 0rem;
+  }
+  .form__submit-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .form__submit {
+    margin-bottom: 2rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.8rem;
+  }
+  .form__agree-text {
+    text-align: center;
+  }
+  .calc-order__heading {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+  }
+  .calc-order__heading h2 {
+    margin-bottom: 1rem;
+  }
+  .map-placement {
+    padding-top: 3rem;
+    height: 86rem;
+  }
   .map-placement__container {
     margin-left: calc(50vw - 210px);
+  }
+  .contacts-card {
+    padding: 4rem 2rem;
+  }
+  .contacts-card__header, .contacts-card__body {
+    margin-bottom: 2rem;
+  }
+  .contacts-card__logo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 17rem;
+  }
+  .contacts-card__item {
+    font-size: 1.4rem;
+  }
+  .contacts-card__item > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .site-dev {
+    text-align: center;
   }
   .w-100_xs {
     width: calc(100% - 20px);
@@ -2332,7 +2471,29 @@ select::-ms-expand {
 /* XXS */
 @media (max-width: 413.98px) {
   .container {
-    max-width: 100%;
+    max-width: 350px;
+  }
+  .menu-item-has-children::before, .menu-item-has-children::after {
+    top: 2.05em;
+  }
+  .modal__close {
+    left: calc(50% - 8px);
+  }
+  .baner__heading {
+    max-width: 28rem;
+  }
+  .form__label_type-file {
+    padding-left: 3.5rem;
+    position: relative;
+  }
+  .form-screp {
+    position: absolute;
+    left: 0;
+  }
+  .form__label_type-file {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   .d-block_xxs {
     display: block2;
@@ -2347,6 +2508,9 @@ select::-ms-expand {
 @media (max-width: 359.99px) {
   html {
     font-size: 8px;
+  }
+  .stages__caption {
+    padding: 5px 10px;
   }
 }
 /* IE */

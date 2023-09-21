@@ -40,6 +40,13 @@
         display: none
 
 @media (max-width: 1299.98px)
+  .header
+    &__container
+      max-width: 1138px
+
+  .navbar__phone
+    margin-bottom: 1rem
+
   .logo
     margin-left: 20px
     margin-right: auto
@@ -164,6 +171,13 @@
   .scroll-hidden
     padding-right: 0
 
+  h1
+    font-size: 40px
+
+  .section
+    padding-top: 5rem
+    padding-bottom: 8rem
+
   .container
     &,
     &_md,
@@ -172,13 +186,25 @@
     &_lg
       max-width: 100%
 
+  .baner__heading
+    max-width: 66rem
+
+  .services-box
+    margin-top: -2rem
+    margin-bottom: -2rem
+
   .stages
+    &__box
+      margin: -2rem -1rem
     &__item
       margin: 10px
       display: flex
       width: calc( 100% / 2 - 20px)
       border-radius: 5px
       overflow: hidden
+
+  .map-placement
+    padding-top: 6rem
 
   .map-placement__container
     margin-left: calc(50vw - 370px)
@@ -191,6 +217,28 @@
 
   .w-100_md
     width: calc( 100% - 20px)
+
+  .modal
+    &__inner
+      padding: 3rem
+      max-width: 70rem
+    &__header
+      padding-bottom: 0
+    &__body
+      padding-top: 0
+
+    .calc-order__heading
+      margin-bottom: 4rem
+      margin-left: auto
+      margin-right: auto
+      max-width: 48rem
+
+    &__close
+      top: -3.5rem
+      right: calc(50% - 1rem)
+
+  .form__label_type-file
+    font-size: 1.6rem
 
   .d
     &-block
@@ -244,8 +292,6 @@
     &__item
       width: calc( 100% - 0px)
 
-  
-
   .map-placement__container
     margin-left: calc(50vw - 275px)
 
@@ -281,13 +327,24 @@
   // html
   // 	font-size: 6px
   // 
+
+  h1
+    font-size: 30px
+
+  h2
+    font-size: 36px
+
+  .section
+    padding-top: 4rem
+    padding-bottom: 5rem
+
   .container
     max-width: 410px
     &_sm
       max-width: 100%
 
   .btn
-    padding: 0.8rem 1.6rem 
+    padding: 0.8rem 1.6rem
     font-size: 1.5rem
 
   .navbar
@@ -301,7 +358,7 @@
       height: 36px
 
   .logo
-    max-width: 13rem  
+    max-width: 13rem
 
   .menu
     &-mobile
@@ -309,9 +366,68 @@
         width: 36px
         height: 36px
 
+  .baner
+    padding-top: 6rem
+    padding-bottom: 6rem
 
+  h3
+    font-size: 24px
+
+  .services-box
+    margin-bottom: 0rem
+
+  .stages__box
+    margin: -2rem -1rem 0rem
+
+  .form-row
+    flex-wrap: wrap
+
+  .form-row .form__group:not(:first-child)
+    margin-left: 0rem
+
+  .form__submit-row
+    flex-direction: column
+
+  .form__submit
+    margin-bottom: 2rem
+    padding-top: 1.4rem
+    padding-bottom: 1.4rem
+    width: 100%
+    max-width: 32rem
+    font-size: 1.8rem
+
+  .form__agree-text
+    text-align: center
+
+  .calc-order__heading
+    margin-bottom: 3rem
+    font-size: 1.6rem
+    h2
+      margin-bottom: 1rem
+
+  .map-placement
+    padding-top: 3rem
+    height: 86rem
   .map-placement__container
     margin-left: calc(50vw - 210px)
+
+  .contacts-card
+    padding: 4rem 2rem
+    &__header,
+    &__body
+      margin-bottom: 2rem
+    &__logo
+      margin-left: auto
+      margin-right: auto
+      max-width: 17rem
+    &__item
+      font-size: 1.4rem
+      &>a
+        display: flex
+        align-items: center
+
+  .site-dev
+    text-align: center
 
   .w-100_xs
     width: calc( 100% - 20px)
@@ -341,7 +457,27 @@
 /* XXS */
 @media (max-width: 413.98px)
   .container
-    max-width: 100%
+    max-width: 350px
+
+  .menu-item-has-children::before, .menu-item-has-children::after
+    top: 2.05em
+
+  .modal__close
+    left: calc(50% - 8px)
+
+  .baner__heading
+    max-width: 28rem
+
+  .form__label_type-file
+    padding-left: 3.5rem
+    position: relative
+
+  .form-screp
+    position: absolute
+    left: 0
+
+  .form__label_type-file
+    align-items: flex-start
 
   .d
     &-block
@@ -357,6 +493,10 @@
 @media (max-width: 359.99px)
   html
     font-size: 8px
+
+  .stages__caption 
+    padding: 5px 10px
+
 
 /* IE */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
