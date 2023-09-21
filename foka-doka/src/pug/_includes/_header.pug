@@ -1,0 +1,47 @@
+header.header
+  .container.header__container
+    .navbar
+
+      // Menu-trigger
+      button.menu-mobile-trigger.js-menu-mobile-trigger
+        .menu-mobile-trigger__inner
+          .menu-mobile-trigger__item
+          .menu-mobile-trigger__item
+          .menu-mobile-trigger__item
+
+
+
+
+      .logo
+        a(href="#") 
+          img(src="img/logo.svg", alt="Логотип")
+
+
+      
+
+
+      +topMenu(pages)
+
+
+      //- .navbar__contacts 
+      .navbar__contacts-left
+          a.social.navbar__social(href="#") 
+            img(src="img/icon-wha.svg", alt="")
+          a.social.navbar__social(href="#") 
+            img(src="img/icon-tlg.svg", alt="")
+          a.social.navbar__social(href="#") 
+            img(src="img/icon-vk.svg", alt="")
+          
+    
+      .navbar__contacts-right
+        .navbar__phone
+          a(href="tel:+79523702442") +7 (952) 370-24-42
+
+        button.btn.btn_primary.js-modal-trigger(data-target="send-order-modal", data-duration="350") Рассчитать заказ
+
+    .menu-mobile-overl.js-menu-mobile-overl
+
+
+            
+
+

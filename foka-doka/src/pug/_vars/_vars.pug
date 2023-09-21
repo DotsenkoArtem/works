@@ -1,0 +1,98 @@
+//- Common variables
+-
+  let author = 'Artem Dots'
+  let themeColor = '#C1272D'
+
+  // Если требуется заглушка для Internet Explorer
+  let ieBung = false
+
+  //- Массив наименований шрифтов для перебора в head.pug и предзагрузки
+  let fontsPreload = [
+    'Montserrat-Regular.woff2',
+    'Montserrat-Medium.woff2',
+    'Montserrat-SemiBold.woff2',
+    'Oswald-ExtraLight.woff2',
+    'Oswald-Regular.woff2',
+    'Oswald-Medium.woff2'
+    ]
+  
+  //- ! URL определяется автоматом в миксине "меню" : pages-key+.html
+  let pages = {
+    index: {
+      name:   'Главная',
+      title:  'ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+      descr:  '',
+      author:  author,
+      isMenuItem: true
+    },
+    services: {
+      name:   'Услуги',
+      title:  'Услуги - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+      descr:  '',
+      author:  author,
+      isMenuItem: true,
+      isMenuItemHasChildren: {
+        chpuMehobrabotka: {
+          name:   'ЧПУ Мехобработка',
+          title:  'ЧПУ Мехобработка - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+          descr:  '',
+          fileStem: 'chpu-mehobrabotka',
+          author:  author,
+          isMenuItem: true,
+        },
+        liteMetallov: {
+          name:   'Литье металлов',
+          title:  'Литье металлов - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+          descr:  '',
+          fileStem: 'lite-metallov',
+          author:  author,
+          isMenuItem: true,
+        },
+        litePlastmass: {
+          name:   'Литье пластмасс',
+          title:  'Литье пластмасс - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+          descr:  '',
+          fileStem: 'lite-plastmass',
+          author:  author,
+          isMenuItem: true,
+        },
+        izgotovleniePressforma: {
+          name:   'Изготовление прессформ',
+          title:  'Изготовление прессформ - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+          descr:  '',
+          fileStem: 'izgotovlenie-pressform',
+          author:  author,
+          isMenuItem: true,
+        },
+        poektirovaniePlastmass: {
+          name:   'Проектирование прессформ',
+          title:  'Проектирование прессформ - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+          descr:  '',
+          fileStem: 'proektirovanie-pressform',
+          author:  author,
+          isMenuItem: true,
+        },
+      },
+    },
+    gallery: {
+      name:   'Галерея работ',
+      title:  'Галерея работ - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+      descr:  '',
+      author:  author,
+      isMenuItem: true
+    },
+    about: {
+      name:   'О компании',
+      title:  'О компании - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+      descr:  '',
+      author:  author,
+      isMenuItem: true
+    },
+    contacts: {
+      name:   'Контакты',
+      title:  'Контакты - ФОКА ДОКА - компания по проектированию и производству прессформ и литью пластмасс',
+      descr:  '',
+      author:  author,
+      isMenuItem: true,
+    },
+  };

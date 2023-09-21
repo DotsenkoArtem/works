@@ -1,0 +1,48 @@
+//- TOP MENU - 1 level
+//- mixin topMenu 
+//-   nav.menu
+//-     ul.menu__list
+//-       each menuItem, key in pages
+//-         if (menuItem.isMenuItem)
+//-           if(menuItem.isMenuItemHasChildren)
+//-             li.menu__item(class= (menuItem.name == page.name) ? 'menu__item-has-children menu__item_current': 'menu__item-has-children')
+//-               a(href= `${key}.html`)= menuItem.name
+
+//-           else
+//-             li.menu__item(class= (menuItem.name == page.name) ? 'menu__item_current': '')
+//-               a(href= `${key}.html`)= menuItem.name
+
+
+mixin topMenu(menu) 
+  nav.menu-mobile.js-menu-mobile
+    ul.navbar-menu
+      button.menu-mobile-close.js-menu-mobile-close
+        .menu-mobile-close__item
+        .menu-mobile-close__item
+
+      each menuItem, key in pages
+
+
+        if (menuItem.isMenuItemHasChildren)
+          li.menu-item.menu-item-has-children
+            a(href= `${key}.html`)= menuItem.name
+
+            ul.submenu
+              each subMenuItem, subkey in menuItem.isMenuItemHasChildren
+                li.menu-item 
+                  a(href= `${subMenuItem.fileStem}.html`)= subMenuItem.name
+            
+        else
+          li.menu-item
+            a(href= `${key}.html`)= menuItem.name
+    
+      
+
+
+
+
+
+
+          
+
+

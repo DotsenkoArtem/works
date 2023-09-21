@@ -1,0 +1,107 @@
+footer.footer#footer
+  |
+  |
+  .map-placement
+    .map#map
+
+    .container.map-placement__container
+      .contacts-card
+
+        .contacts-card__header
+          .logo
+            a(href="#") 
+              img(src="img/logo.svg" alt="Логотип")
+
+        .contacts-card__body 
+
+          .contacts-card__item 
+            .icon-rounded.contacts-card__icon 
+              img(src="img/icon-location.svg" alt="")
+            p Санкт-Петербург, Малый проспект Васильевского острова, 57к4, 
+
+          .contacts-card__item 
+            a(href="tel:79523702442" target="_balank") 
+              .icon-rounded.contacts-card__icon
+                img(src="img/icon-phone.svg" alt="")
+              span +7 (952) 370-24-42
+
+
+          .contacts-card__item 
+            a(href="mailto:zakaz@fokadoka.ru" target="_balank") 
+              .icon-rounded.contacts-card__icon 
+                img(src="img/icon-envelope.svg" alt="")
+              span zakaz@fokadoka.ru
+
+        .contacts-card__footer 
+          a.social.contacts-card__social(href="#") 
+            img(src="img/icon-wha.svg" alt="")
+          a.social.contacts-card__social(href="#") 
+            img(src="img/icon-tlg.svg" alt="")
+          a.social.contacts-card__social(href="#") 
+            img(src="img/icon-vk.svg" alt="")
+
+
+  |
+  |
+  .site-dev 
+    .container 
+      a.site-dev__link(href="#" target="_blank") Разработка - ProFox
+
+
+
+
+  |
+  |
+  // MODAL
+  .modal#send-order-modal
+    .modal__inner
+      button.modal__close 
+
+      .modal__content
+        .modal__header
+          .section__heading.section__heading_brand.text-center.calc-order__heading
+            h2 
+              span.font_xlite Рассчитать 
+              | заказ
+            p Опишите кратко желаемый результат и прикрепите файл для расчета
+
+
+        .modal__body
+          form#calcOrderFormModal.form.calc-order__form(enctype="multipart/form-data" name="calcOrderModal" data-action="send-order.php")
+            .form-row
+
+              .form__group.calc-order__form-group
+                label.form__label(for="userName2")  Ваше имя:
+                input#userName2.form__control(type="text" name="userName", required)
+
+              .form__group.calc-order__form-group
+                label.form__label(for="userPhone2")  Телефон:
+                input#userPhone2.form__control(type="text" name="userPhone", required)
+
+              .form__group.calc-order__form-group
+                label.form__label(for="userEmail2") Email:
+                input#userEmail2.form__control(type="email" name="userEmail", required)
+
+            .form__group.calc-order__form-group
+              label.form__label(for="userMsg2") Тираж деталей, материал:
+              textarea#userMsg2.form__textarea(name="userMsg")
+
+
+            .form__group.form__group_type-file
+              label.form__label.form__label_type-file(for="userFile2") 
+                i.form-screp.form-screp_red
+                span Прикрепить чертеж 
+                span.file-extname (pdf, jpg, jpeg),
+                span 3D модель 
+                span.file-extname (step, x_t, stl)
+
+              input#userFile2.form__file(type="file" name="file[]", multiple)
+              .form__file_selected
+
+
+            .form__submit-row 
+              button.btn.btn_primary.form__submit(type="submit") отправить заказ
+              .form__agree-text 
+                p Нажимая на кнопку “Отправить”, я даю согласие на обработку 
+                  a.text-link(href="#" target="_blank") персональных данных
+
