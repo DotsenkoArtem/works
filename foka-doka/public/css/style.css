@@ -223,9 +223,24 @@ a.text-link:hover, a.text-link:active {
 }
 a.text-link_lite {
   color: #ffffff;
+  text-decoration: underline;
 }
-a.text-link_lite, a.text-link_lite:visited {
+a.text-link_lite:hover, a.text-link_lite:visited {
   color: #ffffff;
+}
+a.text-link_lite:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+a.text-contact-link {
+  text-decoration: none;
+  outline: none;
+  color: #373737;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+a.text-contact-link:hover, a.text-contact-link:active {
+  color: #C1272D;
 }
 
 img {
@@ -1537,11 +1552,15 @@ select::-ms-expand {
   width: 100%;
   font-family: "Montserrat", "Helvetica", sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
   color: #373737;
   background: #F8F8F8;
   border: 1px solid #D9D9D9;
   border-radius: 5px;
   outline: none;
+}
+.form__control:focus {
+  border-color: #BDBDBD;
 }
 .form__label {
   display: block;
@@ -1587,11 +1606,15 @@ select::-ms-expand {
   min-height: 114px;
   font-family: "Montserrat", "Helvetica", sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
   color: #373737;
   background: #F8F8F8;
   border: 1px solid #D9D9D9;
   border-radius: 5px;
   outline: none;
+}
+.form__textarea:focus {
+  border-color: #BDBDBD;
 }
 .form__file {
   position: absolute;

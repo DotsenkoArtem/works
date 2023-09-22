@@ -189,16 +189,25 @@ a
       color: $primary-color
       text-decoration: underline
 
-
     &_lite
       color: $white
-      &,
+      text-decoration: underline
+      &:hover,
       &:visited
         color: $white
-    // &:hover,
-    // &:active,
-    // &:focus
-    //   text-decoration: none
+      &:hover
+        color: $white
+        text-decoration: none
+
+  &.text-contact-link
+    text-decoration: none
+    outline: none
+    color: $link-color
+    transition: color $link-transition ease-in-out
+    &:hover,
+    &:active
+      color: $primary-color
+
 
 //   4. Images
 //  -------------------------

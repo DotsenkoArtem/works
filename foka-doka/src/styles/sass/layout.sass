@@ -497,13 +497,17 @@
     width: 100%
     font-family: $ff-primary
     font-size: 1.6rem
+    font-weight: 500
     color: $text-primary-color
     background: $form-input-bg
     border: 1px solid #D9D9D9
     border-radius: 5px
     outline: none
-    // &:hover
-    //   border-color: $form-control-border-hover
+    &:focus
+      border-color: $input-focus-border-color
+    // &:invalid
+    //   color: $invalid-text-color
+    //   border-color: $invalid-border-color
 
   &__label
     display: block
@@ -536,11 +540,15 @@
     min-height: 114px
     font-family: $ff-primary
     font-size: 1.6rem
+    font-weight: 500
     color: $text-primary-color
     background: $form-input-bg
     border: 1px solid #D9D9D9
     border-radius: 5px
     outline: none
+    &:focus
+      border-color: $input-focus-border-color
+
 
   &__file
     position: absolute
