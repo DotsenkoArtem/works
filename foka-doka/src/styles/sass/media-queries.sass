@@ -47,6 +47,10 @@
   .navbar__phone
     margin-bottom: 1rem
 
+  .navbar-menu
+    &> .menu-item
+      padding-top: 1.8rem
+
   .logo
     margin-left: 20px
     margin-right: auto
@@ -59,8 +63,8 @@
     transform: translateX(-100%)
     z-index: 999
     padding-top: 2.4rem
-    padding-right: 3.8rem
-    padding-left: 4.7rem
+    padding-right: 2.7rem
+    padding-left: 1.3rem
     width: 100%
     max-width: 405px
     background: #F5F5F5
@@ -92,6 +96,7 @@
         margin-left: initial
 
   .submenu
+    padding-top: 1rem
     position: relative
     top: 0
     left: 0.4rem
@@ -100,8 +105,14 @@
     max-width: 0
     max-height: 0
     padding: 0
+    .menu-item
+      max-width: 28rem
+      a
+        padding-top: 0.9rem
+        padding-bottom: 0.9rem
 
   .menu-item-has-children
+    padding-right: 1rem
     &:hover
       & > .submenu
         animation: none
@@ -110,12 +121,12 @@
 
     &::before,
     &::after
-      top: 2.35em
+      top: 2.2em
     &::before
-      left: 5.5em
+      left: 5.8em
       right: auto
     &::after
-      left: calc( 5.5em + .4em )
+      left: calc( 5.8em + .4em )
       right: auto
 
   .stages
@@ -330,6 +341,7 @@
 
   h1
     font-size: 30px
+    line-height: 1.33
 
   h2
     font-size: 36px
@@ -337,6 +349,9 @@
   .section
     padding-top: 4rem
     padding-bottom: 5rem
+    &__heading 
+      h2
+        margin-bottom: 4rem
 
   .container
     max-width: 410px
@@ -405,6 +420,10 @@
     h2
       margin-bottom: 1rem
 
+  .modal
+    .calc-order__heading
+      font-size: 1.4rem
+
   .map-placement
     padding-top: 3rem
     height: 86rem
@@ -444,6 +463,8 @@
         display: none
 
 @media (max-width: 479.98px)
+  .section
+    padding-bottom: 4rem
   .map-placement__container
     display: block
     margin-left: auto
@@ -454,16 +475,65 @@
     margin-right: auto
     max-width: 320px
 
+  .services-item
+    margin: 1rem 1.5rem
+    height: 36rem
+
+  .stages__box 
+    margin: -1.5rem -1rem 0rem
+
+
+  .stages__item
+    margin-top: 0.5rem
+    margin-bottom: 0.5rem
+
 /* XXS */
 @media (max-width: 413.98px)
   .container
     max-width: 350px
 
-  .menu-item-has-children::before, .menu-item-has-children::after
-    top: 2.05em
+  
+
+  .section__heading_brand
+    &::before
+      margin-bottom: 1rem
+      width: 3.4rem
+      height: 1.6rem
+
+  .modal .section__heading_brand
+    p
+      margin-left: auto
+      margin-right: auto
+      max-width: 21rem
+
+  // .header__container
+  //   max-width: none
+  .navbar
+    padding-top: 2rem
+
+    .logo
+      margin-left: 1rem
+
+    &__social:not(:first-child) 
+      margin-left: 6px
+
 
   .modal__close
     left: calc(50% - 8px)
+
+  .modal 
+    .calc-order__heading
+      margin-bottom: 1.8rem
+      
+    .form__textarea
+      min-height: auto
+  .calc-order__form-group
+    margin-bottom: 1.5rem
+  .form__label
+    margin-bottom: 0.5rem
+  
+  .form__control
+    padding: 1.6rem 2.3rem
 
   .baner__heading
     max-width: 28rem
@@ -478,6 +548,31 @@
 
   .form__label_type-file
     align-items: flex-start
+
+  .form__submit-row
+    margin-top: 1rem
+
+  .contacts-card
+    &__header
+      margin-bottom: .5rem
+    &__item
+      margin-bottom: 0rem
+      padding-top: 1rem
+      padding-bottom: 1rem
+    &__footer
+      justify-content: center
+
+
+
+  .modal
+    &__inner
+      margin-top: 4rem
+      padding-top: 1.5rem
+      padding-left: 1.5rem
+      padding-right: 1.5rem
+      max-width: 32rem
+      max-height: 89vh
+
 
   .d
     &-block
@@ -494,9 +589,11 @@
   html
     font-size: 8px
 
-  .stages__caption 
-    padding: 5px 10px
+  .menu-item-has-children::before, .menu-item-has-children::after
+    top: 1.9em
 
+  .stages__caption
+    padding: 5px 10px
 
 /* IE */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)

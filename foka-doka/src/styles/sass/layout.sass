@@ -69,11 +69,14 @@
       text-transform: uppercase
     &_brand
       &::before
-        content: url(../img/icon-gear.svg)
+        content: ''
         display: block
         margin-left: auto
         margin-right: auto
-        max-width: 51px
+        width: 5.1rem
+        height: 2.4rem
+        background: url(../img/icon-gear.svg) center no-repeat
+        background-size: contain
 
     &_lite
       h2
@@ -197,7 +200,7 @@
       position: absolute
       display: block
       width: 18px
-      height: 2px
+      height: 3px
       border-radius: 2px
       background: $secondary-color
       &:first-child
