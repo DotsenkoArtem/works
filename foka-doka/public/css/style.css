@@ -206,6 +206,9 @@ h3 {
 .text-center {
   text-align: center;
 }
+.text_accent-prim {
+  color: #C1272D;
+}
 
 a, a:visited {
   text-decoration: none;
@@ -1689,6 +1692,177 @@ select::-ms-expand {
   color: #989898;
 }
 
+.thanks {
+  padding: 7rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 77.7rem;
+  position: fixed;
+  left: calc(50vw - 38.85rem);
+  top: 22rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  opacity: 1;
+  z-index: 99999;
+}
+.thanks__title {
+  margin-bottom: 2rem;
+  color: #242424;
+  font-family: "Oswald", "Helvetica", sans-serif;
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.thanks__title::before {
+  content: "";
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5.1rem;
+  height: 2.4rem;
+  background: url(../img/icon-gear.svg) center no-repeat;
+  background-size: contain;
+}
+.thanks__close {
+  position: absolute;
+  top: -22px;
+  right: -22px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+}
+.thanks__close::before, .thanks__close::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.thanks__close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.thanks__close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.thanks__backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99990;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.thanks.active {
+  -webkit-animation: slideUpIn 0.5s ease forwards;
+  animation: slideUpIn 0.5s ease forwards;
+}
+
+.loader-container {
+  position: relative;
+  z-index: 50;
+}
+
+.submit-loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 55;
+  background: rgba(0, 0, 0, 0.8) url("../img/loader.gif") center no-repeat;
+  background-size: 100px 100px;
+  border-radius: 10px;
+}
+.submit-loader_fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+@-webkit-keyframes slideInRightBottom {
+  from {
+    opacity: 0.5;
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRightBottom {
+  from {
+    opacity: 0.5;
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideOutRightBottom {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0.5;
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%);
+  }
+}
+@keyframes slideOutRightBottom {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0.5;
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%);
+  }
+}
 /* Footer 
  * -------------------------*/
 .contacts-card {
@@ -2277,6 +2451,15 @@ select::-ms-expand {
     top: -3.5rem;
     right: calc(50% - 1rem);
   }
+  .thanks {
+    padding: 5rem;
+    max-width: 70rem;
+    left: calc(50vw - 35rem);
+  }
+  .thanks__close {
+    top: -3.5rem;
+    right: calc(50% - 1rem);
+  }
   .form__label_type-file {
     font-size: 1.6rem;
   }
@@ -2344,14 +2527,20 @@ select::-ms-expand {
   .map-placement__container {
     margin-left: calc(50vw - 275px);
   }
-  .modal__close {
+  .modal__close,
+  .thanks__close {
     top: -4rem;
     right: auto;
-    left: calc(50% - 16px);
+    left: calc(50% - 10px);
     cursor: pointer;
     width: 2rem;
     height: 2rem;
     background: none;
+  }
+  .thanks {
+    max-width: calc(100vw - 3rem);
+    margin: 1.5rem;
+    left: unset;
   }
   .d-block_sm {
     display: block;
@@ -2490,6 +2679,12 @@ select::-ms-expand {
   .site-dev {
     text-align: center;
   }
+  .thanks {
+    font-size: 14px;
+  }
+  .thanks__title {
+    font-size: 36px;
+  }
   .w-100_xs {
     width: calc(100% - 20px);
   }
@@ -2527,6 +2722,9 @@ select::-ms-expand {
   .stages__item {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+  .thanks {
+    padding: 5rem 3rem;
   }
 }
 /* XXS */
@@ -2630,6 +2828,9 @@ select::-ms-expand {
   }
   .stages__caption {
     padding: 5px 10px;
+  }
+  .thanks {
+    padding: 3rem 1.5rem;
   }
 }
 /* IE */

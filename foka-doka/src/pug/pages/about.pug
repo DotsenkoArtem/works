@@ -18,9 +18,19 @@ block main
         //
             Section-name
             ==================================================
-        section.section
+        section.baner.has-bg
+            .bg.bg_cover.baner__bg
+                picture
+                //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
+                |
+                |
+                img(src='img/baner-bg.jpg' alt='')
+
             .container
-                h1 Фока Дока - О компании
+                .section__heading.section__heading_brand
+                    h2(style="color: #fafafa") Страница находится в разработке. 
+                    
+                    h1(style="color: #fafafa; text-align: center;") Скоро здесь появится много полезной информации.
 
 
 //- block footer

@@ -30,7 +30,8 @@ mixin topMenu(menu)
             ul.submenu
               each subMenuItem, subkey in menuItem.isMenuItemHasChildren
                 li.menu-item 
-                  a(href= `${subMenuItem.fileStem}.html`)= subMenuItem.name
+                  //- a(href= `${subMenuItem.fileStem}.html`)= subMenuItem.name
+                  a(href= `#`)= subMenuItem.name
             
         else
           li.menu-item

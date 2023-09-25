@@ -33,6 +33,8 @@ function preloaderInit(transition) {
   }, transition);
 }
 
+
+
 function handleModals() {
   let modalBtns = document.querySelectorAll(".js-modal-trigger");
 
@@ -46,8 +48,12 @@ function handleModals() {
     modalBackdrop.className = "modal-backdrop";
 
     modalBtn.addEventListener("click", openModal);
-    modalBackdrop.addEventListener("click", closeModal);
-    modalClose.addEventListener("click", closeModal);
+    modalBackdrop.addEventListener("click", function() {
+      closeModal(modal, duration)
+    });
+    modalClose.addEventListener("click", function() {
+      closeModal(modal, duration)
+    });
 
     // Open-close functions
     function openModal() {
@@ -75,6 +81,7 @@ function handleModals() {
     }
   });
 }
+
 // - - - - - - - - - - - - - - - - - - -
 
 // let map;
@@ -208,21 +215,7 @@ async function initMap() {
 
 
 
-// F O R M S
-const forms = Array.from(document.forms)
-forms.forEach((form)=>{
-  let inputTypeFile = form.querySelector('input[type="file"]')
-  let selectedFile = inputTypeFile.nextElementSibling
 
-  inputTypeFile.addEventListener('change', function() {
-    if(this.files.length == 1) {
-      selectedFile.innerHTML = `<div class="form__file_selected-label">Выбран файл: </div><div class="form__file_selected-value">${this.files[0].name}</div>`
-    } 
-    if(this.files.length > 1) {
-      selectedFile.innerHTML = `<div class="form__file_selected-label">Выбрано файлов: </div><div class="form__file_selected-value">${this.files.length}</div>`
-    }
-  })
-})
 
 
 

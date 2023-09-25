@@ -248,6 +248,14 @@
       top: -3.5rem
       right: calc(50% - 1rem)
 
+  .thanks
+    padding: 5rem
+    max-width: 70rem
+    left: calc( 50vw - 70rem / 2 )
+    &__close
+      top: -3.5rem
+      right: calc(50% - 1rem)
+
   .form__label_type-file
     font-size: 1.6rem
 
@@ -306,15 +314,21 @@
   .map-placement__container
     margin-left: calc(50vw - 275px)
 
-  .modal
+  .modal,
+  .thanks
     &__close
       top: -4rem
       right: auto
-      left: calc( 50% - 16px )
+      left: calc( 50% - 10px )
       cursor: pointer
       width: 2rem
       height: 2rem
       background: none
+
+  .thanks
+    max-width: calc( 100vw - 3rem )
+    margin: 1.5rem
+    left: unset
 
   .d
     &-block
@@ -349,7 +363,7 @@
   .section
     padding-top: 4rem
     padding-bottom: 5rem
-    &__heading 
+    &__heading
       h2
         margin-bottom: 4rem
 
@@ -448,6 +462,11 @@
   .site-dev
     text-align: center
 
+  .thanks
+    font-size: 14px
+    &__title
+      font-size: 36px
+
   .w-100_xs
     width: calc( 100% - 20px)
 
@@ -479,20 +498,20 @@
     margin: 1rem 1.5rem
     height: 36rem
 
-  .stages__box 
+  .stages__box
     margin: -1.5rem -1rem 0rem
-
 
   .stages__item
     margin-top: 0.5rem
     margin-bottom: 0.5rem
 
+  .thanks
+    padding: 5rem 3rem
+
 /* XXS */
 @media (max-width: 413.98px)
   .container
     max-width: 350px
-
-  
 
   .section__heading_brand
     &::before
@@ -514,24 +533,23 @@
     .logo
       margin-left: 1rem
 
-    &__social:not(:first-child) 
+    &__social:not(:first-child)
       margin-left: 6px
-
 
   .modal__close
     left: calc(50% - 8px)
 
-  .modal 
+  .modal
     .calc-order__heading
       margin-bottom: 1.8rem
-      
+
     .form__textarea
       min-height: auto
   .calc-order__form-group
     margin-bottom: 1.5rem
   .form__label
     margin-bottom: 0.5rem
-  
+
   .form__control
     padding: 1.6rem 2.3rem
 
@@ -562,8 +580,6 @@
     &__footer
       justify-content: center
 
-
-
   .modal
     &__inner
       margin-top: 4rem
@@ -572,7 +588,6 @@
       padding-right: 1.5rem
       max-width: 32rem
       max-height: 89vh
-
 
   .d
     &-block
@@ -594,6 +609,9 @@
 
   .stages__caption
     padding: 5px 10px
+
+  .thanks
+    padding: 3rem 1.5rem
 
 /* IE */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)

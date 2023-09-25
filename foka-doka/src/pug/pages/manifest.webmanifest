@@ -1,6 +1,6 @@
 {
   "name": "FOKA DOKA",
-  "short_name": "FD",
+  "short_name": "Foka Doka",
 
   "icons": [
     {
@@ -17,7 +17,7 @@
   "display": "standalone",
   "orientation": "any",
   "theme_color": "#C1272D",
-  "background_color": "#C1272D",
+  "background_color": "#D9D9D9",
   "scope": "./",
   "start_url": "index.html"
 }

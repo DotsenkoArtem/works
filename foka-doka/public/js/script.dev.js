@@ -45,8 +45,12 @@ function handleModals() {
     var modalBackdrop = document.createElement("div");
     modalBackdrop.className = "modal-backdrop";
     modalBtn.addEventListener("click", openModal);
-    modalBackdrop.addEventListener("click", closeModal);
-    modalClose.addEventListener("click", closeModal);
+    modalBackdrop.addEventListener("click", function () {
+      closeModal(modal, duration);
+    });
+    modalClose.addEventListener("click", function () {
+      closeModal(modal, duration);
+    });
 
     // Open-close functions
     function openModal() {
@@ -71,6 +75,7 @@ function handleModals() {
     }
   });
 }
+
 // - - - - - - - - - - - - - - - - - - -
 
 // let map;
@@ -172,7 +177,7 @@ function handleModals() {
 initMap();
 function initMap() {
   return _initMap.apply(this, arguments);
-} // F O R M S
+} // M E N U   M O B I L E
 function _initMap() {
   _initMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
     var _ymaps, YMap, YMapDefaultSchemeLayer, map;
@@ -204,21 +209,6 @@ function _initMap() {
   }));
   return _initMap.apply(this, arguments);
 }
-var forms = Array.from(document.forms);
-forms.forEach(function (form) {
-  var inputTypeFile = form.querySelector('input[type="file"]');
-  var selectedFile = inputTypeFile.nextElementSibling;
-  inputTypeFile.addEventListener('change', function () {
-    if (this.files.length == 1) {
-      selectedFile.innerHTML = "<div class=\"form__file_selected-label\">\u0412\u044B\u0431\u0440\u0430\u043D \u0444\u0430\u0439\u043B: </div><div class=\"form__file_selected-value\">".concat(this.files[0].name, "</div>");
-    }
-    if (this.files.length > 1) {
-      selectedFile.innerHTML = "<div class=\"form__file_selected-label\">\u0412\u044B\u0431\u0440\u0430\u043D\u043E \u0444\u0430\u0439\u043B\u043E\u0432: </div><div class=\"form__file_selected-value\">".concat(this.files.length, "</div>");
-    }
-  });
-});
-
-// M E N U   M O B I L E
 var menuTrigger = document.querySelector(".js-menu-mobile-trigger");
 var menu = document.querySelector(".js-menu-mobile");
 var menuOverl = document.querySelector(".js-menu-mobile-overl");
