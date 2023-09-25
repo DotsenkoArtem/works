@@ -1,8 +1,8 @@
 extends ../_templates/_base.pug
 
 block page-vars
-    -
-        let page = pages.about;
+  -
+    let page = pages.about;
 
 
 //- block head
@@ -14,23 +14,67 @@ block page-vars
 
 
 block main 
-    main
-        //
-            Section-name
-            ==================================================
-        section.baner.has-bg
-            .bg.bg_cover.baner__bg
-                picture
-                //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
-                |
-                |
-                img(src='img/baner-bg.jpg' alt='')
+  main
+    //
+      Section-name
+      ==================================================    
+    .page-content
+      .page-content-header
+        .container
 
-            .container
-                .section__heading.section__heading_brand
-                    h2(style="color: #fafafa") Страница находится в разработке. 
-                    
-                    h1(style="color: #fafafa; text-align: center;") Скоро здесь появится много полезной информации.
+          nav.breadcrumbs
+            ol 
+              li.breadcrumbs__item 
+                a(href="#") Главная
+              li.breadcrumbs__item О компании
+
+          .page-content-heading 
+            h1
+              span.font_xlite О компании
+
+
+
+
+      .post-wrapper
+        .container
+          article.post
+            .post-thumb.post-thumb_about 
+              picture
+                //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                |
+                |
+                img(src='img/about-banner-1920.jpg', alt='')
+
+            .post-content 
+              .post-heading 
+                h3 Фока Дока - изготовление прессформ
+
+              .post-content-section 
+                p Мы открыли предприятие в 2008 году. За годы работы мы помогли запустить около 400 проектов с более чем 100 компаниями в России. Большинство клиентов довольны нашим сотрудничествоми готовы рекомендовать нас как надежных поставщиков пресс-форм и продукции из пластика и цветного металла. Мы гордимся нашими результатами и готовы поделиться с вами отзывами наших клиентов. Обратитесь к нам за бесплатной консультацией и узнайте о всех наших услугах или звоните по телефону и мы с радостью расскажем вам о наших предложениях.
+
+              section.post-content-section 
+                .post-content-section-heading
+                  h4 Литье металлов в землю
+                p Литье металлов в землю, также известное как литье в земляную форму, является одним из традиционных методов литья металлов. Этот метод предполагает создание формы для литья, используя землю и специальный песчаный состав, который затем заполняется расплавленным металлом. Процесс литья металлов в землю начинается с изготовления формы, которая обычно состоит из земли, связующего материала и шаблона, который определяет форму детали. В земплю помещается шаблон, и затем форма уплотняется и закрепляется. После этого расплавленный металл заливается в форму через отверстие. Под воздействием гравитации металл заполняет полость формы и затвердевает.
+
+
+
+
+
+
+    section.baner.has-bg
+      .bg.bg_cover.baner__bg
+        picture
+        //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
+        |
+        |
+        img(src='img/baner-bg.jpg' alt='')
+
+      .container
+        .section__heading.section__heading_brand
+          h2(style="color: #fafafa") Страница находится в разработке. 
+
+          h1(style="color: #fafafa; text-align: center;") Скоро здесь появится много полезной информации.
 
 
 //- block footer
