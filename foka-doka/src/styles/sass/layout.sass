@@ -60,6 +60,9 @@
 .section
   padding-top: 8rem
   padding-bottom: 10rem
+  &_bands-bg
+    background: url(../img/stages-bg.jpg) center no-repeat
+    background-size: cover
 
   &__heading
     h2
@@ -300,8 +303,6 @@
     &:hover
       background: $white
 
-
-
 /* Breadcrumbs 
  -------------------------*/
 .breadcrumbs
@@ -336,8 +337,7 @@
       &:hover,
       &:active
         color: $primary-color
-        
-        
+
 .page-content
   &-header
     padding-top: 3.3rem
@@ -347,7 +347,7 @@
     .breadcrumbs
       margin-bottom: 2rem
 
-  &-heading 
+  &-heading
     h1
       color: $heading-black
       text-transform: uppercase
@@ -356,19 +356,21 @@
   &-wrapper
     padding-top: 2rem
     padding-bottom: 10rem
-  &-thumb 
+  &-thumb
     margin-bottom: 6rem
     width: 100%
     height: 51rem
     border-radius: $main-radius
     overflow: hidden
+    &_about
+      position: relative
     img
       width: 100%
       height: 100%
       object-fit: cover
       // object-fit: contain
       // object-position: left
-  &-heading 
+  &-heading
     margin-bottom: 4rem
     h3
       font-size: 4rem
@@ -376,8 +378,8 @@
       line-height: 1.25
       color: $heading-black
   &-content
-    &-section 
-      &:not(:last-child) 
+    &-section
+      &:not(:last-child)
         margin-bottom: 3rem
       &-heading
         margin-bottom: 1rem
@@ -390,7 +392,95 @@
       p
         font-weight: 500
 
+.adv-card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 3rem
+  width: 24rem
+  height: 19rem
+  font-family: $ff-secondary
+  font-size: 2rem
+  font-weight: 400
+  line-height: 1.5
+  text-align: center
+  color: $white
+  background: rgba(0, 0, 0, 0.30)
+  backdrop-filter: blur(12px)
+  border-radius: $main-radius
+  border: solid 1px rgba(255, 255, 255, .2 )
+  overflow: hidden
+  &__value
+    margin-bottom: 2rem
+    font-size: 6rem
+    font-weight: 400
+    line-height: 1
 
+  &-wrapper
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 10
+    padding: 5.5rem 5rem
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: space-between
+
+.gallery
+  &-grid
+    margin: -1rem -1rem 4rem
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    margin: 1rem
+    // width: 46rem
+    width: calc( 100% / 3 - 2rem )
+    height: 32rem
+    position: relative
+    border-radius: $main-radius
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-position: cover
+    &-overlay
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 100
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, .5)
+      opacity: 0
+      transition: opacity $prim-transition
+      &::before
+        content: ''
+        display: block
+        width: 5rem
+        height: 5rem
+        position: absolute
+        background: url(../img/icon-scale.svg) center no-repeat
+        background-size: contain
+    &:hover
+      .gallery__item-overlay
+        opacity: 1
+
+.gallery-more-btn
+  &-wrapper
+    display: flex
+    justify-content: center  
 /* Baner 
  -------------------------*/
 .baner
@@ -472,8 +562,6 @@
 /* Stages 
  -------------------------*/
 .stages
-  background: url(../img/stages-bg.jpg) center no-repeat
-  background-size: cover
 
   &__box
     display: flex

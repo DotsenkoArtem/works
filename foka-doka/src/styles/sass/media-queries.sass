@@ -3,6 +3,14 @@
 
 @media (max-width: 1699.98px)
 
+
+@media (max-width: 1499.98px)
+  .gallery
+    &__item
+      width: calc( 100% / 3 - 2rem )
+      height: 30rem
+
+
 /* XL */
 @media (max-width: 1399.98px)
   // html
@@ -24,6 +32,12 @@
 
   .navbar
     padding-right: 0
+
+  .gallery
+    &__item
+      // width: 35.5rem
+      height: 24.7rem
+
 
   .map-placement__container
     margin-left: calc(50vw - 570px)
@@ -129,6 +143,10 @@
       left: calc( 5.8em + .4em )
       right: auto
 
+  // .gallery
+  //   &__item
+  //     height: 20.7rem
+
   .stages
     &__caption
       font-size: 16px
@@ -147,6 +165,10 @@
       max-width: 1138px
     &_xl
       max-width: 100%
+
+  .gallery
+    &-container
+      max-width: 96rem
 
   .map-placement__container
     margin-left: calc(50vw - 570px)
@@ -210,6 +232,19 @@
       height: 32.2rem
     &-heading
       margin-bottom: 3rem
+
+  .adv-card
+    &:first-child
+      margin-right: 2rem
+    &-wrapper
+      flex-direction: row
+      justify-content: center
+      align-items: center
+
+  .gallery
+    &__item
+      width: calc( 100% / 2 - 2rem )
+      height: 23.6rem
 
   .baner__heading
     max-width: 66rem
@@ -330,6 +365,10 @@
         height: 37.5rem
     // &-heading
     //   margin-bottom: 3rem
+
+  .gallery
+    &__item
+      height: 17rem
 
   .stages
     &__item
@@ -453,6 +492,31 @@
       h4, p
         font-size: 1.6rem
         line-height: 1.6
+
+  .adv-card
+    padding: 12px 6px
+    width: 15rem
+    height: 11.4rem
+    font-size: 1.4rem
+    &:first-child
+      margin-right: .6rem
+    &__value
+      font-size: 4rem
+    &-wrapper
+      padding: 0.7rem
+      align-items: flex-end
+
+  .gallery
+    &-grid
+      margin-top: -2rem
+      margin-bottom: 3rem
+    &__item
+      height: 12.5rem
+    &-more-btn
+      margin-bottom: 1rem
+      width: 100%
+      // max-width: 320px
+
 
   .baner
     padding-top: 6rem
@@ -588,6 +652,10 @@
     // &-heading
     //   margin-bottom: 3rem
 
+  .gallery
+    &__item
+      height: 10.5rem
+
   .modal .section__heading_brand
     p
       margin-left: auto
@@ -675,6 +743,10 @@
 
   .menu-item-has-children::before, .menu-item-has-children::after
     top: 1.9em
+
+  .gallery
+    &__item
+      height: 12rem
 
   .stages__caption
     padding: 5px 10px
