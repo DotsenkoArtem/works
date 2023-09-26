@@ -99,32 +99,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <section class="baner has-bg">
-          <div class="bg bg_cover baner__bg">
-            <picture></picture>
-            <img src="img/baner-bg.jpg" alt="">
-          </div>
-          <div class="container">
-            <div class="section__heading section__heading_brand">
-              <h2 style="color: #fafafa">Страница находится в разработке. </h2>
-              <h1 style="color: #fafafa; text-align: center;">Скоро здесь появится много полезной информации.</h1>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <!--  Footer ================================================== -->
-      <footer class="footer" id="footer">
-        
-        
-        <div class="map-placement">
-          <div class="map" id="map"></div>
-          <div class="container map-placement__container">
-            <div class="contacts-card">
-              <div class="contacts-card__header">
-                <div class="logo contacts-card__logo"><a href="#"> <img src="img/logo.svg" alt="Логотип"></a></div>
-              </div>
+          <div class="container contacts-map-container">
+            <div class="contacts-map" id="map"></div>
+            <div class="contacts-card contacts-card_fluid">
               <div class="contacts-card__body"> 
                 <div class="contacts-card__item"> 
                   <div class="icon-rounded contacts-card__icon"> <img src="img/icon-location.svg" alt=""></div>
@@ -135,10 +112,62 @@
                 <div class="contacts-card__item"> <a class="text-contact-link" href="mailto:zakaz@fokadoka.ru" target="_balank"> 
                     <div class="icon-rounded contacts-card__icon"> <img src="img/icon-envelope.svg" alt=""></div><span>zakaz@fokadoka.ru</span></a></div>
               </div>
-              <div class="contacts-card__footer"> <a class="social contacts-card__social" href="#"> <img src="img/icon-wha.svg" alt=""></a><a class="social contacts-card__social" href="#"> <img src="img/icon-tlg.svg" alt=""></a><a class="social contacts-card__social" href="#"> <img src="img/icon-vk.svg" alt=""></a></div>
+              <div class="contacts-card__footer justify-start_xxs"> <a class="social contacts-card__social" href="#"> <img src="img/icon-wha.svg" alt=""></a><a class="social contacts-card__social" href="#"> <img src="img/icon-tlg.svg" alt=""></a><a class="social contacts-card__social" href="#"> <img src="img/icon-vk.svg" alt=""></a></div>
             </div>
           </div>
+          <section class="section calc-order has-bg section_text-lite">
+            <div class="bg bg_cover">
+              <picture>
+                
+                <img src="img/calc-order-bg.jpg" alt="">
+              </picture>
+            </div>
+            <div class="container"> 
+              <div class="section__heading section__heading_brand text-center calc-order__heading">
+                <h2> <span class="font_xlite">Рассчитать </span>заказ</h2>
+                <p>Опишите кратко желаемый результат и прикрепите файл для расчета</p>
+              </div>
+              <form class="form calc-order__form form_dark-bg" id="calcOrderForm" enctype="multipart/form-data" name="calcOrder" data-action="send-order.php">
+                <div class="form-row">
+                  <div class="form__group calc-order__form-group">
+                    <label class="form__label form__label_lite" for="userName"> Ваше имя:</label>
+                    <input class="form__control" id="userName" type="text" name="userName" required>
+                  </div>
+                  <div class="form__group calc-order__form-group">
+                    <label class="form__label form__label_lite" for="userPhone"> Телефон:</label>
+                    <input class="form__control" id="userPhone" type="text" name="userPhone" required>
+                  </div>
+                  <div class="form__group calc-order__form-group">
+                    <label class="form__label form__label_lite" for="userEmail">Email:</label>
+                    <input class="form__control" id="userEmail" type="email" name="userEmail" required>
+                  </div>
+                </div>
+                <div class="form__group calc-order__form-group">
+                  <label class="form__label form__label_lite" for="userMsg">Тираж деталей, материал:</label>
+                  <textarea class="form__textarea" id="userMsg" name="userMsg"></textarea>
+                </div>
+                <div class="form__group form__group_type-file">
+                  <label class="form__label form__label_lite form__label_type-file" for="userFile"> <i class="form-screp"></i><span>Прикрепить чертеж </span><span class="file-extname"> (pdf, </span><span class="file-extname"> jpg, </span><span class="file-extname"> jpeg), </span><span> 3D модель </span><span class="file-extname"> (step, x_t, stl)</span></label>
+                  <input class="form__file" id="userFile" type="file" name="file[]" multiple>
+                  <div class="form__file_selected form__file_selected-lite"></div>
+                </div>
+                <div class="form__submit-row"> 
+                  <button class="btn btn_primary form__submit" type="submit">отправить заказ</button>
+                  <div class="form__agree-text"> 
+                    <p>Нажимая на кнопку “Отправить”, я даю согласие на обработку <a class="text-link text-link_lite" href="#" target="_blank">персональных данных</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
         </div>
+      </main>
+      
+      <!--  Footer ================================================== -->
+      <footer class="footer" id="footer">
+        
+        
+        
         
         <div class="site-dev"> 
           <div class="container"> <a class="site-dev__link" href="https://profoxgroup.ru/" target="_blank">Разработка - ProFox</a></div>
@@ -198,7 +227,7 @@
     <!-- Scripts ================================================== -->
     <script src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&amp;lang=ru_RU"></script>
     <script src="libs/fancybox.umd.js"></script>
-    <script src="js/script.dev.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/form-process.js"></script>
     <script src="js/gallery.js"></script>
   </body>

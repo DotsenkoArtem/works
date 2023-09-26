@@ -283,8 +283,18 @@
   .map-placement__container
     margin-left: calc(50vw - 370px)
 
+
+  .contacts-map
+    height: 32rem
+
+    
+  .contacts-map-container
+    padding-bottom: 7rem
+
   .contacts-card
     max-width: 378px
+    &_fluid
+      max-width: none
 
   .w-50_md
     width: calc( 100% / 2 - 20px)
@@ -390,6 +400,7 @@
 
   .map-placement__container
     margin-left: calc(50vw - 275px)
+
 
   .modal,
   .thanks
@@ -602,6 +613,15 @@
   .map-placement__container
     margin-left: calc(50vw - 210px)
 
+  .contacts-map-container
+    padding-bottom: 5rem
+
+  
+  .contacts-map
+    height: 50rem
+    &-container
+      padding-top: 1rem
+
   .contacts-card
     padding: 4rem 2rem
     &__header,
@@ -616,6 +636,9 @@
       &>a
         display: flex
         align-items: center
+
+    &_fluid
+      padding-bottom: 0
 
   .site-dev
     text-align: center
@@ -771,6 +794,9 @@
     &-none
       &_xxs
         display: none
+
+  .justify-start_xxs
+    justify-content: flex-start
 
 @media (max-width: 359.99px)
   html

@@ -35,28 +35,107 @@ block main
 
 
 
+      .container.contacts-map-container
+        .contacts-map#map
+
+      
+        .contacts-card.contacts-card_fluid
+
+          .contacts-card__body 
+
+            .contacts-card__item 
+              .icon-rounded.contacts-card__icon 
+                img(src="img/icon-location.svg" alt="")
+              p Санкт-Петербург, Малый проспект Васильевского острова, 57к4, 
+
+            .contacts-card__item 
+              a(href="tel:79523702442" target="_balank").text-contact-link 
+                .icon-rounded.contacts-card__icon
+                  img(src="img/icon-phone.svg" alt="")
+                span +7 (952) 370-24-42
+
+
+            .contacts-card__item 
+              a(href="mailto:zakaz@fokadoka.ru" target="_balank").text-contact-link 
+                .icon-rounded.contacts-card__icon 
+                  img(src="img/icon-envelope.svg" alt="")
+                span zakaz@fokadoka.ru
+
+          .contacts-card__footer.justify-start_xxs 
+            a.social.contacts-card__social(href="#") 
+              img(src="img/icon-wha.svg" alt="")
+            a.social.contacts-card__social(href="#") 
+              img(src="img/icon-tlg.svg" alt="")
+            a.social.contacts-card__social(href="#") 
+              img(src="img/icon-vk.svg" alt="")
 
 
 
 
 
-    section.baner.has-bg
-      .bg.bg_cover.baner__bg
-        picture
-        //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
-        |
-        |
-        img(src='img/baner-bg.jpg' alt='')
 
-      .container
-        .section__heading.section__heading_brand
-          h2(style="color: #fafafa") Страница находится в разработке. 
-
-          h1(style="color: #fafafa; text-align: center;") Скоро здесь появится много полезной информации.
+      section.section.calc-order.has-bg.section_text-lite
+            .bg.bg_cover
+              picture
+                //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
+                |
+                |
+                img(src='img/calc-order-bg.jpg' alt='')
 
 
-//- block footer
-//-     h2 Wow, Block Footer is undefined!
+            .container 
+              .section__heading.section__heading_brand.text-center.calc-order__heading
+                h2 
+                  span.font_xlite Рассчитать 
+                  | заказ
+                p Опишите кратко желаемый результат и прикрепите файл для расчета
+
+
+              form#calcOrderForm.form.calc-order__form.form_dark-bg(enctype="multipart/form-data" name="calcOrder" data-action="send-order.php")
+                .form-row
+
+                  .form__group.calc-order__form-group
+                    label.form__label.form__label_lite(for="userName")  Ваше имя:
+                    input#userName.form__control(type="text", name="userName", required)
+
+                  .form__group.calc-order__form-group
+                    label.form__label.form__label_lite(for="userPhone")  Телефон:
+                    input#userPhone.form__control(type="text", name="userPhone", required)
+
+                  .form__group.calc-order__form-group
+                    label.form__label.form__label_lite(for="userEmail") Email:
+                    input#userEmail.form__control(type="email", name="userEmail", required)
+
+                .form__group.calc-order__form-group
+                  label.form__label.form__label_lite(for="userMsg") Тираж деталей, материал:
+                  textarea#userMsg.form__textarea(name="userMsg")
+
+
+                .form__group.form__group_type-file
+                  label.form__label.form__label_lite.form__label_type-file(for="userFile") 
+                    i.form-screp
+                    span Прикрепить чертеж 
+                    span.file-extname  (pdf, 
+                    span.file-extname  jpg, 
+                    span.file-extname  jpeg), 
+                    span  3D модель 
+                    span.file-extname  (step, x_t, stl)
+
+                  input#userFile.form__file(type="file", name="file[]", multiple)
+                  .form__file_selected.form__file_selected-lite
+
+
+                .form__submit-row 
+                  button.btn.btn_primary.form__submit(type="submit") отправить заказ
+                  .form__agree-text 
+                    p Нажимая на кнопку “Отправить”, я даю согласие на обработку 
+                      a.text-link.text-link_lite(href="#", target="_blank") персональных данных
+
+
+
+
+block footer
+  include ../_includes/_footer-contacts.pug
 
 
 //- block modals

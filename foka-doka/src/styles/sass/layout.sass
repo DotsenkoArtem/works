@@ -85,7 +85,6 @@
       color: $white
       background-color: $black
 
-
   &-content
     position: relative
     overflow: hidden
@@ -539,7 +538,7 @@
   &-wrapper
     display: flex
     justify-content: center
-    
+
 /* Baner 
  -------------------------*/
 .baner
@@ -1018,6 +1017,9 @@
   font-size: 16px
   font-weight: 500
   border-radius: 5px
+  &_fluid
+    padding: 6rem 0 0
+    max-width: none
 
   &__header,
   &__body
@@ -1055,19 +1057,20 @@
   border: dashed 1px #C9C9C9
 
 .map
-  position: absolute
-  width: 100%
-  height: 100%
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 0
   &-placement
     position: relative
     padding-top: 10rem
     padding-bottom: 10rem
     height: 70rem
+    &__map
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 0
     &__container
       position: relative
       // padding: 0
@@ -1090,6 +1093,18 @@
     font-weight: 500
     line-height: 28px
     color: #555555
+
+
+
+/* Contacts page - Map 
+ -------------------------*/
+.contacts-map
+  height: 51rem
+  border-radius: $main-radius
+  overflow: hidden
+  &-container
+    padding-top: 2rem
+    padding-bottom: 10rem
 
 /* Modal 
  -------------------------*/
