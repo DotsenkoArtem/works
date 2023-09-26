@@ -25,13 +25,13 @@ mixin topMenu(menu)
 
         if (menuItem.isMenuItemHasChildren)
           li.menu-item.menu-item-has-children
-            a(href= `${key}.html`)= menuItem.name
+            a= menuItem.name
 
             ul.submenu
               each subMenuItem, subkey in menuItem.isMenuItemHasChildren
                 li.menu-item 
-                  //- a(href= `${subMenuItem.fileStem}.html`)= subMenuItem.name
-                  a(href= `#`)= subMenuItem.name
+                  a(href= `${subMenuItem.fileStem}.html`)= subMenuItem.name
+                  //- a(href= `#`)= subMenuItem.name
             
         else
           li.menu-item
