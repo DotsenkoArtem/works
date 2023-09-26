@@ -210,6 +210,9 @@
   .section
     padding-top: 5rem
     padding-bottom: 8rem
+    &__heading
+      h2
+        margin-bottom: 4rem
 
   .container
     &,
@@ -218,6 +221,12 @@
       max-width: 730px
     &_lg
       max-width: 100%
+
+  .tabs
+    margin-bottom: 4rem
+    justify-content: center
+    &__btn
+      margin-bottom: 0.6rem
 
   .page-content
     &-heading 
@@ -242,9 +251,14 @@
       align-items: center
 
   .gallery
+    margin-bottom: 4rem
+    &-box
+      margin-bottom: 7rem
     &__item
       width: calc( 100% / 2 - 2rem )
       height: 23.6rem
+      &:last-child
+        display: none
 
   .baner__heading
     max-width: 66rem
@@ -428,7 +442,7 @@
     padding-bottom: 5rem
     &__heading
       h2
-        margin-bottom: 4rem
+        margin-bottom: 3rem
 
   .container
     max-width: 410px
@@ -506,14 +520,35 @@
       padding: 0.7rem
       align-items: flex-end
 
+  .tabs
+    margin-bottom: 3rem
+    flex-wrap: nowrap
+    justify-content: flex-start
+    overflow-x: auto 
+    &::-webkit-scrollbar
+      height: 0
+      width: 0
+    &__btn
+      margin-bottom: 0
+      padding: .4rem 1rem
+      flex: none
+      font-size: 1.4rem
+      &:not(:last-child)
+        margin-right: 0.4rem
+
   .gallery
+    margin-bottom: 3rem
+    &-box
+      margin-bottom: 5rem
     &-grid
       margin-top: -2rem
-      margin-bottom: 3rem
+      margin-bottom: -2rem
     &__item
       height: 12.5rem
     &-more-btn
-      margin-bottom: 1rem
+      padding: 1.4rem 3.4rem
+      font-size: 1.8rem
+      // margin-bottom: 1rem
       width: 100%
       // max-width: 320px
 
@@ -545,7 +580,7 @@
     padding-top: 1.4rem
     padding-bottom: 1.4rem
     width: 100%
-    max-width: 32rem
+    // max-width: 32rem
     font-size: 1.8rem
 
   .form__agree-text

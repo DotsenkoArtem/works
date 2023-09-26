@@ -33,6 +33,7 @@ block main
               span.font_xlite Галерея 
               | работ
 
+      
 
 
 
@@ -40,19 +41,430 @@ block main
 
 
 
-    section.baner.has-bg
-      .bg.bg_cover.baner__bg
-        picture
-        //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
-        |
-        |
-        img(src='img/baner-bg.jpg' alt='')
+      .gallery-box
+        .container 
+          
+          .tabs-wrap
+            .tabs
+              .tabs__btn.active(data-target="tabs-content1") ЧПУ Мехобработка
+              .tabs__btn(data-target="tabs-content2") Литье металлов
+              .tabs__btn(data-target="tabs-content3") Литье пластмасс
+              .tabs__btn(data-target="tabs-content4") Изготовление прессформ
 
-      .container
-        .section__heading.section__heading_brand
-          h2(style="color: #fafafa") Страница находится в разработке. 
+            .tabs-content.gallery
 
-          h1(style="color: #fafafa; text-align: center;") Скоро здесь появится много полезной информации.
+              .tabs-content__item.active#tabs-content1
+                .gallery-grid 
+
+                
+                  .gallery__item
+                    a(href="img/gal-itm-1-1920.png", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-1-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-2-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-2-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-3-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-3-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-4-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-4-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-5-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-5-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-6-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-6-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-7-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-7-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-8-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-8-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-9-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-9-1920.jpg', alt='')
+                      .gallery__item-overlay
+              
+
+              .tabs-content__item#tabs-content2
+                .gallery-grid 
+
+                
+                  .gallery__item
+                    a(href="img/gal-itm-2-1920.png", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-2-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-1-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-1-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-3-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-3-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-4-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-4-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-5-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-5-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-6-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-6-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-7-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-7-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-8-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-8-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-9-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-9-1920.jpg', alt='')
+                      .gallery__item-overlay
+              
+              
+              .tabs-content__item#tabs-content3
+                .gallery-grid 
+
+                
+                  .gallery__item
+                    a(href="img/gal-itm-3-1920.png", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-3-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-2-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-2-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-1-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-1-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-4-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-4-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-5-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-5-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-6-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-6-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-7-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-7-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-8-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-8-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-9-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-9-1920.jpg', alt='')
+                      .gallery__item-overlay
+              
+              
+              .tabs-content__item#tabs-content4
+                .gallery-grid 
+
+                
+                  .gallery__item
+                    a(href="img/gal-itm-4-1920.png", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-4-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-2-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-2-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-3-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-3-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-1-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-1-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-5-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-5-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-6-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-6-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-7-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-7-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-8-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-8-1920.jpg', alt='')
+                      .gallery__item-overlay
+                
+                  .gallery__item
+                    a(href="img/gal-itm-9-1920.jpg", data-fancybox="gallery") 
+                      picture
+                        //- source(media='(max-width: 575px)', srcset='img/', type='image/jpg')
+                        |
+                        |
+                        img(src='img/thumb-gal-itm-9-1920.jpg', alt='')
+                      .gallery__item-overlay
+
+
+            .gallery-more-btn-wrapper
+              button.btn.btn_primary.gallery-more-btn смотреть еще работы  
+
+
+
+
+
+
+      section.section.calc-order.has-bg.section_text-lite
+        .bg.bg_cover
+          picture
+            //- source(media='(max-width: 575px)' srcset='img/' type='image/jpg')
+            |
+            |
+            img(src='img/calc-order-bg.jpg' alt='')
+
+
+        .container 
+          .section__heading.section__heading_brand.text-center.calc-order__heading
+            h2 
+              span.font_xlite Рассчитать 
+              | заказ
+            p Опишите кратко желаемый результат и прикрепите файл для расчета
+
+
+          form#calcOrderForm.form.calc-order__form.form_dark-bg(enctype="multipart/form-data" name="calcOrder" data-action="send-order.php")
+            .form-row
+
+              .form__group.calc-order__form-group
+                label.form__label.form__label_lite(for="userName")  Ваше имя:
+                input#userName.form__control(type="text", name="userName", required)
+
+              .form__group.calc-order__form-group
+                label.form__label.form__label_lite(for="userPhone")  Телефон:
+                input#userPhone.form__control(type="text", name="userPhone", required)
+
+              .form__group.calc-order__form-group
+                label.form__label.form__label_lite(for="userEmail") Email:
+                input#userEmail.form__control(type="email", name="userEmail", required)
+
+            .form__group.calc-order__form-group
+              label.form__label.form__label_lite(for="userMsg") Тираж деталей, материал:
+              textarea#userMsg.form__textarea(name="userMsg")
+
+
+            .form__group.form__group_type-file
+              label.form__label.form__label_lite.form__label_type-file(for="userFile") 
+                i.form-screp
+                span Прикрепить чертеж 
+                span.file-extname  (pdf, 
+                span.file-extname  jpg, 
+                span.file-extname  jpeg), 
+                span  3D модель 
+                span.file-extname  (step, x_t, stl)
+
+              input#userFile.form__file(type="file", name="file[]", multiple)
+              .form__file_selected.form__file_selected-lite
+
+
+            .form__submit-row 
+              button.btn.btn_primary.form__submit(type="submit") отправить заказ
+              .form__agree-text 
+                p Нажимая на кнопку “Отправить”, я даю согласие на обработку 
+                  a.text-link.text-link_lite(href="#", target="_blank") персональных данных
+
+
+
+
 
 
 //- block footer
