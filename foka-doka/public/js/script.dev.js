@@ -107,19 +107,3 @@ function navBarHandle(menuTrigger, menu) {
   }
 }
 // ======================================================
-
-// M A P   S E T   L O C A T I O N
-var windowWidth;
-function setMapLocation() {
-  windowWidth = document.documentElement.clientWidth;
-  windowWidth > 575 ? map.setLocation({
-    center: [30.251826, 59.9455],
-    zoom: 17
-  }) : map.setLocation({
-    center: [30.2533, 59.9462],
-    zoom: 17
-  });
-}
-window.addEventListener('load', setMapLocation);
-window.addEventListener("resize", setMapLocation);
-// ======================================================

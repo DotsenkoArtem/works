@@ -2290,9 +2290,14 @@ select::-ms-expand {
 /* Contacts page - Map 
  * -------------------------*/
 .contacts-map {
+  position: relative;
+  z-index: 1;
   height: 51rem;
   border-radius: 5px;
   overflow: hidden;
+}
+.contacts-map-placement {
+  position: relative;
 }
 .contacts-map-container {
   padding-top: 2rem;

@@ -475,58 +475,68 @@
           </div>
         </div>
       </footer>
+      <script src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&amp;lang=ru_RU"></script>
+      <script src="js/map.js"> </script>
+      <script>
+        window.map = null;
+        
+        main();
+        async function main() {
+          await ymaps3.ready;
+          const {
+            YMap,
+            YMapDefaultSchemeLayer,
+            YMapMarker,
+            YMapControls,
+            YMapDefaultFeaturesLayer,
+          } = ymaps3;
+        
+          const { YMapZoomControl } = await ymaps3.import(
+            "@yandex/ymaps3-controls@0.0.1"
+          );
+          const { YMapDefaultMarker } = await ymaps3.import(
+            "@yandex/ymaps3-markers@0.0.1"
+          );
+        
+          map = new YMap(document.getElementById("fokaMap"), { location: LOCATION, behaviors: [
+            'drag',
+            'pinchZoom',
+            'dblClick',
+            ] });
+        
+          map.addChild((scheme = new YMapDefaultSchemeLayer()));
+          map.addChild(
+            new YMapControls({ position: "right" }).addChild(
+              new YMapZoomControl({})
+            )
+          );
+          map.addChild(new YMapDefaultFeaturesLayer({ id: "features" }));
+        
+          POINTS.forEach((point) => {
+            if (point.element) {
+              map.addChild(new YMapMarker(point, point.element(point)));
+            } else {
+              map.addChild(new YMapDefaultMarker(point));
+            }
+          });
+        }
+        
+        // M A P   S E T   L O C A T I O N
+        let windowWidth;
+        function setMapLocation() {
+          windowWidth = document.documentElement.clientWidth;
+          windowWidth > 575
+            ? map.setLocation({ center: [30.251826, 59.9455], zoom: 17 })
+            : map.setLocation({center: [30.2533, 59.9462], zoom: 17})
+        }
+        window.addEventListener('load', setMapLocation)
+        window.addEventListener("resize", setMapLocation);
+        // ======================================================
+      </script>
       
     </div>
     
     <!-- Scripts ================================================== -->
-    <script src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&amp;lang=ru_RU"></script>
-    <script src="js/map.js"> </script>
-    <script>
-      window.map = null;
-      
-      main();
-      async function main() {
-        await ymaps3.ready;
-        const {
-          YMap,
-          YMapDefaultSchemeLayer,
-          YMapMarker,
-          YMapControls,
-          YMapDefaultFeaturesLayer,
-        } = ymaps3;
-      
-        const { YMapZoomControl } = await ymaps3.import(
-          "@yandex/ymaps3-controls@0.0.1"
-        );
-        const { YMapDefaultMarker } = await ymaps3.import(
-          "@yandex/ymaps3-markers@0.0.1"
-        );
-      
-        map = new YMap(document.getElementById("fokaMap"), { location: LOCATION, behaviors: [
-          'drag',
-          'pinchZoom',
-          'dblClick',
-          ] });
-      
-        map.addChild((scheme = new YMapDefaultSchemeLayer()));
-        map.addChild(
-          new YMapControls({ position: "right" }).addChild(
-            new YMapZoomControl({})
-          )
-        );
-        map.addChild(new YMapDefaultFeaturesLayer({ id: "features" }));
-      
-        POINTS.forEach((point) => {
-          if (point.element) {
-            map.addChild(new YMapMarker(point, point.element(point)));
-          } else {
-            map.addChild(new YMapDefaultMarker(point));
-          }
-        });
-      }
-      
-      
-    </script>
     <script src="libs/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
     <script src="js/gallery.js"></script>
