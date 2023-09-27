@@ -25,10 +25,7 @@ meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit
 |
 |
 //  CSS ==================================================
-//- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css")
 link(rel="stylesheet" href="libs/fancybox.css")
-//- link(rel="stylesheet" href="libs/swiper.min.css")
-//- link(rel="stylesheet" href="libs/animate.min.css")
 link(rel="stylesheet" href="css/style.css")
 
 
@@ -61,50 +58,6 @@ link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-
 //- Manifest пока в основном для touch иконок для Android - минимум 192x192
 link(rel="manifest" href="manifest.webmanifest")
 
-
-//- script(src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&lang=ru_RU")
-//- //- script(src="https://api-maps.yandex.ru/v3/?apikey=a13b032f-1317-4300-b260-6e7d33049787&lang=ru_RU")
-//- script(src="js/common.js") 
-//- script(src="js/map.js") 
-//- script.
-//-   window.map = null;
-
-//-   main();
-//-   async function main() {
-//-     await ymaps3.ready;
-//-     const {
-//-       YMap,
-//-       YMapDefaultSchemeLayer,
-//-       YMapMarker,
-//-       YMapControls,
-//-       YMapDefaultFeaturesLayer,
-//-     } = ymaps3;
-
-//-     const { YMapZoomControl } = await ymaps3.import(
-//-       "@yandex/ymaps3-controls@0.0.1"
-//-     );
-//-     const { YMapDefaultMarker } = await ymaps3.import(
-//-       "@yandex/ymaps3-markers@0.0.1"
-//-     );
-
-//-     map = new YMap(document.getElementById("fokaMap"), { location: LOCATION });
-
-//-     map.addChild((scheme = new YMapDefaultSchemeLayer()));
-//-     map.addChild(
-//-       new YMapControls({ position: "right" }).addChild(
-//-         new YMapZoomControl({})
-//-       )
-//-     );
-//-     map.addChild(new YMapDefaultFeaturesLayer({ id: "features" }));
-
-//-     POINTS.forEach((point) => {
-//-       if (point.element) {
-//-         map.addChild(new YMapMarker(point, point.element(point)));
-//-       } else {
-//-         map.addChild(new YMapDefaultMarker(point));
-//-       }
-//-     });
-//-   }
 
 
 
