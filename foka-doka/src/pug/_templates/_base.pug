@@ -64,7 +64,7 @@ html(lang="ru")
 
       script(src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&lang=ru_RU")
       //- script(src="https://api-maps.yandex.ru/v3/?apikey=a13b032f-1317-4300-b260-6e7d33049787&lang=ru_RU")
-      
+
       //- LOCAL SCRIPTS  
       //- Map
       script(src="js/map.js") 
@@ -89,7 +89,11 @@ html(lang="ru")
             "@yandex/ymaps3-markers@0.0.1"
           );
 
-          map = new YMap(document.getElementById("fokaMap"), { location: LOCATION });
+          map = new YMap(document.getElementById("fokaMap"), { location: LOCATION, behaviors: [
+            'drag',
+            'pinchZoom',
+            'dblClick',
+            ] });
 
           map.addChild((scheme = new YMapDefaultSchemeLayer()));
           map.addChild(

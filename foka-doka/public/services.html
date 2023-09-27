@@ -231,6 +231,7 @@
         
         <div class="map-placement">
           <div class="map map-placement__map" id="fokaMap"></div>
+          <div class="map-placement__interlayer"></div>
           <div class="container map-placement__container">
             <div class="contacts-card">
               <div class="contacts-card__header">
@@ -330,7 +331,11 @@
           "@yandex/ymaps3-markers@0.0.1"
         );
       
-        map = new YMap(document.getElementById("fokaMap"), { location: LOCATION });
+        map = new YMap(document.getElementById("fokaMap"), { location: LOCATION, behaviors: [
+          'drag',
+          'pinchZoom',
+          'dblClick',
+          ] });
       
         map.addChild((scheme = new YMapDefaultSchemeLayer()));
         map.addChild(

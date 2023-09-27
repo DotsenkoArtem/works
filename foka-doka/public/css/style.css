@@ -2247,8 +2247,20 @@ select::-ms-expand {
   left: 0;
   z-index: 0;
 }
+.map-placement__interlayer {
+  display: none;
+  position: absolute;
+  width: calc(100% - 52px);
+  height: 100%;
+  top: 0;
+  right: 52px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
 .map-placement__container {
   position: relative;
+  z-index: 50;
   margin-left: calc(50vw - 725px);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2488,8 +2500,8 @@ select::-ms-expand {
   transition: 0.3s;
   border: 1px solid #BDBDBD;
   border-radius: 0.3rem;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0px 11px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 11px rgba(0, 0, 0, 0.3);
 }
 
 /* XS */
@@ -3233,6 +3245,17 @@ select::-ms-expand {
     padding-top: 3rem;
     height: 86rem;
   }
+  .map-placement__interlayer {
+    display: block;
+  }
+  .map-placement .ymaps3x0--controls {
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+  }
+  .map-placement .ymaps3x0--control {
+    margin-bottom: 5rem !important;
+  }
   .map-placement__container {
     margin-left: calc(50vw - 210px);
   }
@@ -3439,6 +3462,10 @@ select::-ms-expand {
   }
   .stages__caption {
     padding: 5px 10px;
+  }
+  .icon-title {
+    max-width: 198px;
+    left: -111%;
   }
   .thanks {
     padding: 3rem 1.5rem;

@@ -1071,8 +1071,19 @@
       bottom: 0
       left: 0
       z-index: 0
+    &__interlayer
+      display: none
+      position: absolute
+      width: calc( 100% - 52px )
+      height: 100%
+      top: 0
+      right: 52px
+      bottom: 0
+      left: 0
+      z-index: 10
     &__container
       position: relative
+      z-index: 50
       // padding: 0
       margin-left: calc(50vw - 725px)
       display: inline-flex
@@ -1093,8 +1104,6 @@
     font-weight: 500
     line-height: 28px
     color: #555555
-
-
 
 /* Contacts page - Map 
  -------------------------*/

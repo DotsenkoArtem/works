@@ -248,7 +248,11 @@
           "@yandex/ymaps3-markers@0.0.1"
         );
       
-        map = new YMap(document.getElementById("fokaMap"), { location: LOCATION });
+        map = new YMap(document.getElementById("fokaMap"), { location: LOCATION, behaviors: [
+          'drag',
+          'pinchZoom',
+          'dblClick',
+          ] });
       
         map.addChild((scheme = new YMapDefaultSchemeLayer()));
         map.addChild(
