@@ -2412,6 +2412,93 @@ select::-ms-expand {
  * -------------------------*/
 /* ANIMATIONS
  * ------------------------------  */
+.pie-marker {
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.pie-marker-title {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  padding: 2px 4px;
+  background-color: #fff;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+:root {
+  --radius: 20px;
+  --icon: #fff;
+}
+
+.circle {
+  position: relative;
+  width: var(--radius, 20px);
+  height: var(--radius, 20px);
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.circle::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  content: "";
+  border-radius: 50%;
+  background: no-repeat center center #fff;
+  background-image: var(--icon);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+:root {
+  --size: 50px;
+}
+
+.icon {
+  position: relative;
+  width: var(--size, 20px);
+  height: var(--size, 20px);
+  background: no-repeat center center;
+  background-size: contain;
+}
+
+.icon-title {
+  position: absolute;
+  top: -1%;
+  color: #242424;
+  left: 111%;
+  font-size: 14px;
+  padding: 2px 4px;
+  background-color: #fff;
+  width: 1000px;
+  max-width: 280px;
+  overflow: hidden;
+  font-weight: 500;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid #BDBDBD;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* XS */
+@media (max-width: 575.98px) {
+  .icon-title {
+    top: 115%;
+    left: -155%;
+  }
+}
 .fake-class-to-add-import-rule {
   visibility: inherit;
 }

@@ -1,6 +1,7 @@
 "use strict";
 
-// F O R M S
+// F O R M S   P R O C E S S I N G
+
 var sounds = {
   success: "php/audio/success.mp3",
   error: "php/audio/error-1.mp3"
@@ -11,11 +12,9 @@ var alertSound = soundSuccess;
 function Sound(src) {
   var audio = document.createElement("audio");
   audio.src = src;
-  console.log(audio);
   this.play = function () {
     audio.play();
   };
-  console.log(this);
 }
 
 // Массив всех форм
@@ -35,23 +34,8 @@ forms.forEach(function (form) {
     send(event, "../php/send-order.php");
   });
   function send(event, php) {
-    // Отключаю поля формы на врем отправки данных - тогда не работает отправка вложений
-    // for (let i = 0; i < form.elements.length; i++) {
-    //   form.elements[i].disabled = true;
-    // }
-
-    // Установка лоадера на кнопку submit
+    // Установка лоадера
     setupLoader(form);
-    console.log("Отправка запроса");
-
-    // Вычисляю объем выбранных файлов - чисто для себя - в консоль
-    // let fSizes = 0;
-    // for (let i = 0; i < file.files.length; i++) {
-    //   fSizes += file.files[i].size;
-    // }
-    // console.log(`fSizes: ${fSizes} байт`);
-    // console.log(`file.files.length: ${file.files.length} файлов`);
-
     event.preventDefault ? event.preventDefault() : event.returnValue = false;
     var req = new XMLHttpRequest();
     req.open("POST", php, true);
@@ -81,38 +65,30 @@ forms.forEach(function (form) {
         };
       }
 
-      // Удаление лоадера с кнопки submit
+      // Удаление лоадера
       removeLoader(form);
       if (req.status >= 200 && req.status < 400) {
-        console.log("this: ", this);
-        console.log("this.response: ", this.response);
-        var json = JSON.parse(this.response); // Ебанный internet explorer 11
-        console.log(json);
+        var json = JSON.parse(this.response);
 
-        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+        // ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
         if (json.result == "success") {
-          // Текстовое содержимое для окна оповещения в зависимости от результата
+          // Если сообщение отправлено
           thanksContent.innerHTML = messageSuccessful;
           thanks.classList.remove("thanks_error");
           thanks.classList.add("thanks_success");
           alertSound = soundSuccess;
-          // Если сообщение отправлено
-          // alert("Сообщение отправлено");
         } else if (json.result == "limitExceeded") {
-          // Текстовое содержимое для окна оповещения в зависимости от результата
+          // Превышен максимальный размер прикрепляемых файлов (10мб)
           thanksContent.innerHTML = limitExceeded;
           thanks.classList.remove("thanks_success");
           thanks.classList.add("thanks_error");
           alertSound = soundError;
-          // alert("Ошибка. Превышен максимальный размер прикрепляемых файлов (10мб).");
         } else {
-          // Текстовое содержимое для окна оповещения в зависимости от результата
+          // Ошибка. Сообщение не отправлено
           thanksContent.innerHTML = messageError;
           thanks.classList.remove("thanks_success");
           thanks.classList.add("thanks_error");
           alertSound = soundError;
-          // Если произошла ошибка
-          // alert("Ошибка. Сообщение не отправлено");
         }
         // Если не удалось связаться с php файлом
       } else {
@@ -121,17 +97,13 @@ forms.forEach(function (form) {
 
       // Вывод окна оповещения на страницу
       thanks.classList.add("active");
-      //!!!!!!!!!!!!!!!!!!!!!!!!!!
+      // Звуковое оповещение
       soundPlay(alertSound);
       function soundPlay(sound) {
         sound.play();
       }
-      //!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      // Включаю поля формы после отправки данных
-      // for (let i = 0; i < form.elements.length; i++) {
-      //   form.elements[i].disabled = false;
-      // }
+      // Затрем поля формы
       form.reset();
       selectedFile.innerHTML = "";
 
@@ -148,8 +120,6 @@ forms.forEach(function (form) {
           thanks.remove();
           thanksBackdrop.remove();
         }, 500);
-        console.log("Выполнено: removeThanks()");
-        console.log("\u0410 \u044D\u0442\u043E thanks: ".concat(thanks));
       }
     };
 
@@ -161,16 +131,13 @@ forms.forEach(function (form) {
   }
 });
 
-// Функции установки, удаления лоадера кнопки формы
+// Функции установки, удаления лоадера
 function setupLoader(form) {
   var loader = document.createElement("div");
-  // loader.className = "submit-loader";
   loader.className = "submit-loader submit-loader_fixed";
-  // form.appendChild(loader);
   wrapper.appendChild(loader);
 }
 function removeLoader(form) {
-  // let loader = form.querySelector(".submit-loader");
   var loader = wrapper.querySelector(".submit-loader");
   loader.remove();
 }

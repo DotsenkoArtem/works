@@ -2,75 +2,115 @@ doctype html
 html(lang="ru")
 
 
-    //- Common variables
-    include ../_vars/_vars.pug
+  //- Common variables
+  include ../_vars/_vars.pug
 
 
-    //- Page`s variables
-    block page-vars
+  //- Page`s variables
+  block page-vars
 
 
-    //- Mixins
-    include ../_mixins/_mixins-base
+  //- Mixins
+  include ../_mixins/_mixins-base
 
 
-    head
-        block head
-            include ../_includes/_head.pug
-        if (ieBung)
-            block ie-bung-styles
-                include ../_includes/_ie-bung-styles.pug
+  head
+    block head
+      include ../_includes/_head.pug
+    if (ieBung)
+      block ie-bung-styles
+        include ../_includes/_ie-bung-styles.pug
 
-    
-    body 
-        //- 
-            Заглушка для Internet Explorer
-                - разметка в _includes/_ie-bung.pug
-                - стили для IE > 9 в _includes/_ie-bung-styles.pug
-                - стили для IE <= 9 в _includes/_ie-bung-styles.pug
-                - изображения для ссылок собираются в srite.png
-        if (ieBung) 
-            block ie-bung
-                include ../_includes/_ie-bung.pug
 
-        #preloader.preloader
+  body 
+    //- 
+      Заглушка для Internet Explorer
+        - разметка в _includes/_ie-bung.pug
+        - стили для IE > 9 в _includes/_ie-bung-styles.pug
+        - стили для IE <= 9 в _includes/_ie-bung-styles.pug
+        - изображения для ссылок собираются в srite.png
+    if (ieBung) 
+      block ie-bung
+        include ../_includes/_ie-bung.pug
 
-        #wrapper.wrapper
+    #preloader.preloader
 
-            |
-            |
-            //  Header ================================================== 
-            block header
-                include ../_includes/_header.pug
-            
-            |
-            |
-            block main
-                main
-                
+    #wrapper.wrapper
 
-            |
-            |
-            //  Footer ================================================== 
-            block footer
-                include ../_includes/_footer.pug
+      |
+      |
+      //  Header ================================================== 
+      block header
+        include ../_includes/_header.pug
 
-            |
-            |
-        |
-        |
-        // Scripts ================================================== 
-        block scripts
-            script(src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&lang=ru_RU")
-            //- script(src="https://api-maps.yandex.ru/v3/?apikey=3d8fe157-11c4-40a8-a7e4-963d4103b79e&lang=ru_RU")
+      |
+      |
+      block main
+        main
 
-            //- LOCAL SCRIPTS  
-            //- script(src="libs/jQuery-3.6.0.js")
-            script(src="libs/fancybox.umd.js")
-            //- script(src="libs/swiper.min.js")
-            //- script(src="libs/wow.min.js")
-            //- script(src="js/script.dev.js")
-            script(src="js/script.js")
-            script(src="js/form-process.js")
-            script(src="js/gallery.js")
-            
+
+      |
+      |
+      //  Footer ================================================== 
+      block footer
+        include ../_includes/_footer.pug
+
+      |
+      |
+    |
+    |
+    // Scripts ================================================== 
+    block scripts
+
+      script(src="https://api-maps.yandex.ru/v3/?apikey=3992c7b0-d1fe-4f2d-bb99-d8fe4dbbdde3&lang=ru_RU")
+      //- script(src="https://api-maps.yandex.ru/v3/?apikey=a13b032f-1317-4300-b260-6e7d33049787&lang=ru_RU")
+      
+      //- LOCAL SCRIPTS  
+      //- Map
+      script(src="js/map.js") 
+      script.
+        window.map = null;
+
+        main();
+        async function main() {
+          await ymaps3.ready;
+          const {
+            YMap,
+            YMapDefaultSchemeLayer,
+            YMapMarker,
+            YMapControls,
+            YMapDefaultFeaturesLayer,
+          } = ymaps3;
+
+          const { YMapZoomControl } = await ymaps3.import(
+            "@yandex/ymaps3-controls@0.0.1"
+          );
+          const { YMapDefaultMarker } = await ymaps3.import(
+            "@yandex/ymaps3-markers@0.0.1"
+          );
+
+          map = new YMap(document.getElementById("fokaMap"), { location: LOCATION });
+
+          map.addChild((scheme = new YMapDefaultSchemeLayer()));
+          map.addChild(
+            new YMapControls({ position: "right" }).addChild(
+              new YMapZoomControl({})
+            )
+          );
+          map.addChild(new YMapDefaultFeaturesLayer({ id: "features" }));
+
+          POINTS.forEach((point) => {
+            if (point.element) {
+              map.addChild(new YMapMarker(point, point.element(point)));
+            } else {
+              map.addChild(new YMapDefaultMarker(point));
+            }
+          });
+        }
+
+
+      script(src="libs/fancybox.umd.js")
+      //- script(src="js/script.dev.js")
+      script(src="js/script.js")
+      script(src="js/gallery.js")
+      script(src="js/form-process.js")
