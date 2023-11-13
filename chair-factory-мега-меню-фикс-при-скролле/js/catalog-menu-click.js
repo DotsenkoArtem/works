@@ -1,30 +1,32 @@
+const scrollValue = 200;
+const topPositionFixed = 20;
+
 window.addEventListener("load", catalogMenuHandle);
 
 function catalogMenuHandle() {
   const menuAnimDuration = 350;
-  const catalogMenuTriggers = document.querySelectorAll(
-    ".catalog-menu-trigger"
-  );
+  const catalogMenuTriggers = document.querySelectorAll(".js-menu-trigger");
 
   catalogMenuTriggers.forEach((item) => {
-    let catalogMenuWrap = item.querySelector(".catalog-menu-wrap");
-    let catalogMenuLink = item.querySelector(".catalog-menu-trigger > a");
+    let catalogMenuWrap = item.querySelector(".js-menu-wrap");
+    let catalogMenuLink = item.querySelector(".js-menu-trigger > a");
 
     alignCatCenter();
 
     // ADDING EVENTS
     item.addEventListener("click", openCatalogMenu);
-    // catalogMenuLink.addEventListener("click", openCatalogMenu);
 
     // FUNCTIONS
     // Выравнивание меню по центру окна
     function alignCatCenter() {
-      catalogMenuWrap.style.left = `-${
-        (catalogMenuWrap.getBoundingClientRect().left -
+      if (window.scrollY < scrollValue) {
+        catalogMenuWrap.style.left = `${
           (document.documentElement.clientWidth -
-            catalogMenuWrap.getBoundingClientRect().right)) /
-        2
-      }px`;
+            catalogMenuWrap.getBoundingClientRect().width) /
+            2 -
+          catalogMenuWrap.getBoundingClientRect().left
+        }px`;
+      }
     }
 
     // Установка бэкдропа
@@ -59,24 +61,19 @@ function catalogMenuHandle() {
     // Появление меню
     function openCatalogMenu(event) {
       // Отмена действия ссылки
-      if(event.target === catalogMenuLink) {
-        event.preventDefault();
-      }
+      event.preventDefault();
       event.stopPropagation();
-
 
       if (!catalogMenuWrap.classList.contains("shown")) {
         // Закрытие всех ранее открытых меню
         catalogMenuTriggers.forEach((elem) => {
-          let catalogMenuWrapShown = elem.querySelector(
-            ".catalog-menu-wrap.shown"
-          );
+          let catalogMenuWrapShown = elem.querySelector(".js-menu-wrap.shown");
           // Если есть открытое меню
           if (catalogMenuWrapShown) {
             catalogMenuWrapShown.classList.remove("shown");
             catalogMenuWrapShown.classList.add("hidden");
             let catalogMenuLinkShown = elem.querySelector(
-              ".catalog-menu-trigger > a"
+              ".js-menu-trigger > a"
             );
             catalogMenuLinkShown.classList.remove("catalog-menu-close");
             removeCloseIcon();
@@ -95,11 +92,11 @@ function catalogMenuHandle() {
         // Закрытие по клику на body
         document.body.addEventListener("click", closeCatalogMenu);
       } else if (
-        (catalogMenuWrap.classList.contains("shown") &&
-          event.target === catalogMenuLink) ||
-        (catalogMenuWrap.classList.contains("shown") &&
-          event.target.parentNode === catalogMenuLink)
+        catalogMenuWrap.classList.contains("shown") &&
+        event.target === catalogMenuLink
       ) {
+        // console.log(event.target);
+        // console.log(event.target === catalogMenuLink);
         closeCatalogMenu();
       }
     }
@@ -120,7 +117,6 @@ function catalogMenuHandle() {
       let closeIcon = document.createElement("span");
       closeIcon.className = "close-icon";
       catalogMenuLink.prepend(closeIcon);
-      // closeIcon.addEventListener("click", closeCatalogMenu);
     }
     // Удаление иконки Х
     function removeCloseIcon() {
@@ -130,4 +126,45 @@ function catalogMenuHandle() {
       }
     }
   });
+
+  let catalogMenuWraps = document.querySelectorAll(".js-menu-wrap");
+  const initiaTopPosition = parseInt(
+    getComputedStyle(document.querySelector(".js-menu-wrap")).top
+  );
+
+  fixMenuWrap(scrollValue, topPositionFixed);
+
+  window.addEventListener("scroll", function () {
+    fixMenuWrap(scrollValue, topPositionFixed);
+  });
+
+  function fixMenuWrap(scrollValue, topPositionFixed) {
+    if (window.scrollY >= scrollValue) {
+      catalogMenuWraps.forEach((item) => {
+        if (item.style.position != "fixed") {
+          catalogMenuWraps.forEach((item) => {
+            item.style.left = `${
+              (document.documentElement.clientWidth -
+                item.getBoundingClientRect().width) /
+              2
+            }px`;
+            item.style.top = `${topPositionFixed}px`;
+            item.style.position = `fixed`;
+          });
+        }
+      });
+    } else if (window.scrollY < scrollValue) {
+      catalogMenuWraps.forEach((item) => {
+        if (item.style.position === "fixed") {
+          item.style.left = `${
+            item.getBoundingClientRect().left -
+            item.parentElement.getBoundingClientRect().left
+          }px`;
+          item.style.top = `${initiaTopPosition}px`;
+          item.style.position = `absolute`;
+          console.log("Else worked!");
+        }
+      });
+    }
+  }
 }
